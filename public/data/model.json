@@ -1,0 +1,31 @@
+{
+  "version": "2026.08.28",
+  "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
+  "hfa": { "ncaaf": 2.5, "nfl": 2.0, "neutral": 0 },
+  "formula": "model_home_margin = home_fpi - away_fpi + HFA",
+  "watchThreshold": 3.0,
+  "playThreshold": "Disabled until first regular-season week is graded.",
+  "sampleWeights": {
+    "nflPreseason": 0.25,
+    "ncaafWeek0": 0.15,
+    "regular": 1.0
+  },
+  "ensembleSpec": {
+    "source": "Fluff421/custom-claude-skills/betting-intelligence SKILL.md",
+    "weights": {
+      "xgboost": 0.28,
+      "lightgbm": 0.24,
+      "bayesian": 0.18,
+      "monteCarlo": 0.15,
+      "lstm": 0.1,
+      "logistic": 0.05
+    },
+    "fittedOn2026": false
+  },
+  "changelog": [
+    {
+      "date": "2026-08-28",
+      "change": "Locked ESPN FPI priors. Empty ledger. Calendar honesty. No plays issued."
+    }
+  ]
+}
