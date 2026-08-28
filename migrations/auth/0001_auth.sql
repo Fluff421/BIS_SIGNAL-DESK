@@ -1,0 +1,2 @@
+-- Better Auth schema migration placeholder
+-- Full SQL is in the original workspace zip under migrations/auth/
