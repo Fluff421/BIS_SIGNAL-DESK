@@ -1,0 +1,35 @@
+{
+  "asOf": "2026-08-28T19:00:00Z",
+  "timezone": "America/Chicago",
+  "calendar": {
+    "ncaaf": "Week 0 / Week 1 openers. FBS slate starts Aug 29. Week 3 is Sept 17–19.",
+    "nfl": "Preseason Week 3 (Aug 27–29). Regular season opens Sept 9. Week 2 is Sept 17–21."
+  },
+  "sources": [
+    "https://www.espn.com/college-football/fpi",
+    "https://www.espn.com/nfl/fpi",
+    "https://www.scoresandodds.com/ncaaf",
+    "https://www.scoresandodds.com/nfl"
+  ],
+  "honesty": "No regular-season 2026 games are final. Ledger n=0. Prior automation titles that referenced 2025 Week 3 / NFL Week 2 were not imported.",
+  "ncaafFpi": [
+    { "rank": 1, "team": "Georgia", "fpi": 24.1 },
+    { "rank": 2, "team": "Ohio State", "fpi": 22.8 },
+    { "rank": 3, "team": "Texas", "fpi": 21.5 },
+    { "rank": 4, "team": "Oregon", "fpi": 19.9 },
+    { "rank": 5, "team": "Penn State", "fpi": 18.7 },
+    { "rank": 6, "team": "Alabama", "fpi": 17.4 },
+    { "rank": 7, "team": "Notre Dame", "fpi": 16.2 },
+    { "rank": 8, "team": "Tennessee", "fpi": 15.1 }
+  ],
+  "nflFpi": [
+    { "rank": 1, "team": "Kansas City", "fpi": 7.2 },
+    { "rank": 2, "team": "Buffalo", "fpi": 6.1 },
+    { "rank": 3, "team": "San Francisco", "fpi": 5.4 },
+    { "rank": 4, "team": "Detroit", "fpi": 4.8 },
+    { "rank": 5, "team": "Baltimore", "fpi": 4.1 },
+    { "rank": 6, "team": "Philadelphia", "fpi": 3.7 },
+    { "rank": 7, "team": "Dallas", "fpi": 2.9 },
+    { "rank": 8, "team": "Green Bay", "fpi": 2.3 }
+  ]
+}
