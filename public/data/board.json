@@ -1,0 +1,31 @@
+{
+  "issuedPlays": [],
+  "watch": [
+    {
+      "league": "NCAAF",
+      "kick": "2026-08-29",
+      "away": "North Carolina",
+      "home": "TCU",
+      "neutral": true,
+      "marketHome": -9.5,
+      "modelHome": -1.5,
+      "edgeTo": "North Carolina",
+      "edge": 8.0,
+      "total": 46.5,
+      "note": "Dublin. FPI gap is 1.5; market is a TD+ lay. Research only."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-08-29",
+      "away": "San Jose State",
+      "home": "USC",
+      "neutral": false,
+      "marketHome": -38.5,
+      "modelHome": -29.9,
+      "edgeTo": "San Jose State",
+      "edge": 8.6,
+      "total": 61.5,
+      "note": "Pass the lay. Huge-number dogs are not auto-plays."
+    }
+  ]
+}
