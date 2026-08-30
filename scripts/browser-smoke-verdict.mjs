@@ -6,9 +6,15 @@ export function smokeVerdict(results = []) {
     ok: failed.length === 0,
     failed: failed.length,
     total: results.length,
+    failures: failed,
   };
 }
 
-if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith("browser-smoke-verdict.mjs")) {
+export function formatVerdict(verdict) {
+  if (verdict.ok) return `PASS ${verdict.total}/${verdict.total}`;
+  return `FAIL ${verdict.failed}/${verdict.total}`;
+}
+
+if (process.argv[1]?.endsWith("browser-smoke-verdict.mjs")) {
   console.log(JSON.stringify(smokeVerdict([])));
 }
