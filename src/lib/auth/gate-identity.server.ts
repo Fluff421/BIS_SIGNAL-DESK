@@ -18,6 +18,7 @@ export type GateIdentity = {
 };
 
 export type GateJwks = { keys: JWK[] };
+
 export type JwksFetch = (url: string) => Promise<GateJwks | null>;
 
 function env(key: string): string | undefined {
