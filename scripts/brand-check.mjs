@@ -1,13 +1,16 @@
 #!/usr/bin/env node
-/** Brand asset checks for public/og.jpg and site metadata. */
-import { existsSync, statSync, readFileSync } from "node:fs";
-import { join, dirname } from "node:path";
+/**
+ * Brand-asset gate: canvas apps must ship a custom share card.
+ *   node scripts/brand-check.mjs [--game] [--placeholder-ok] [--root <dir>]
+ */
+import { existsSync, statSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { OG_SITE_REL_PATH, readOgSite, siteHasCustomCard } from "./grok-pwa-shared.mjs";
 
 export const MAX_CARD_BYTES = 600 * 1024;
 export const OG_PENDING_REL_PATH = ".grok/og-pending";
 export const OG_PENDING_MAX_AGE_MS = 10 * 60 * 1000;
-export const OG_SITE_REL_PATH = "src/lib/og/site.json";
 
 export function siteDeclaresOgTypeGame(site) {
   return String(site?.type ?? "").toLowerCase() === "x:game";
@@ -22,34 +25,64 @@ export function ogPendingActive(workspaceRoot, now = Date.now()) {
   }
 }
 
-function readOgSite(workspaceRoot) {
-  try {
-    return JSON.parse(readFileSync(join(workspaceRoot, OG_SITE_REL_PATH), "utf8"));
-  } catch {
-    return {};
-  }
-}
-
-export function computeBrandWarnings({ hasCanvas, workspaceRoot = process.cwd(), now = Date.now() }) {
-  if (ogPendingActive(workspaceRoot, now)) return [];
+function brandWarningsOnDisk({ hasCanvas, workspaceRoot, cardRequired = false }) {
   const warnings = [];
-  const card = join(workspaceRoot, "public/og.jpg");
-  if (!existsSync(card) && hasCanvas) {
-    warnings.push("missing public/og.jpg");
-  } else if (existsSync(card)) {
-    const { size } = statSync(card);
-    if (size > MAX_CARD_BYTES) warnings.push(`public/og.jpg is ${size} bytes (max ${MAX_CARD_BYTES})`);
+  const site = readOgSite(workspaceRoot);
+  const cardPath = join(workspaceRoot, "public/og.jpg");
+  const hasCard = existsSync(cardPath);
+
+  if (hasCard) {
+    const { size } = statSync(cardPath);
+    if (size > MAX_CARD_BYTES) {
+      warnings.push(`public/og.jpg is ${size} bytes (max ${MAX_CARD_BYTES})`);
+    }
   }
+
+  if (hasCanvas || cardRequired) {
+    if (!hasCard) warnings.push("missing public/og.jpg");
+    if (!siteHasCustomCard(site)) {
+      warnings.push('src/lib/og/site.json should set "card": "custom"');
+    }
+  }
+
+  if (siteDeclaresOgTypeGame(site) && !existsSync(join(workspaceRoot, "public/x-banner.jpg"))) {
+    warnings.push("missing public/x-banner.jpg for x:game");
+  }
+
   return warnings;
 }
 
-export function parseBrandCheckArgs(argv) {
-  return { workspaceRoot: argv[0] || process.cwd() };
+export function computeBrandWarnings({
+  hasCanvas,
+  workspaceRoot = process.cwd(),
+  now = Date.now(),
+}) {
+  if (ogPendingActive(workspaceRoot, now)) return [];
+  return brandWarningsOnDisk({ hasCanvas, workspaceRoot });
 }
 
-const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-if (process.argv[1]?.endsWith("brand-check.mjs")) {
-  const warnings = computeBrandWarnings({ hasCanvas: true, workspaceRoot: root });
+export function parseBrandCheckArgs(argv) {
+  let root = process.cwd();
+  let game = false;
+  let placeholderOk = false;
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === "--root") root = argv[++i] || root;
+    else if (a.startsWith("--root=")) root = a.slice("--root=".length);
+    else if (a === "--game") game = true;
+    else if (a === "--placeholder-ok") placeholderOk = true;
+  }
+  return { workspaceRoot: root, game, placeholderOk };
+}
+
+const isMain = process.argv[1]?.endsWith("brand-check.mjs");
+if (isMain) {
+  const args = parseBrandCheckArgs(process.argv.slice(2));
+  const warnings = brandWarningsOnDisk({
+    hasCanvas: args.game,
+    workspaceRoot: args.workspaceRoot,
+    cardRequired: !args.placeholderOk,
+  });
   console.log(JSON.stringify({ ok: warnings.length === 0, warnings }));
   process.exit(warnings.length === 0 ? 0 : 1);
 }

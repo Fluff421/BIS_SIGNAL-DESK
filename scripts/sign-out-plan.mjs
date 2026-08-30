@@ -1,5 +1,8 @@
 // @ts-check
-/** Sign-out sequence used by src/lib/auth/client.ts */
+/**
+ * The sign-out sequence used by src/lib/auth/client.ts, kept here as a pure
+ * module so its effects can be unit-tested.
+ */
 
 export const PREVIEW_SIGN_OUT_TIMEOUT_MS = 1500;
 export const DEPLOYED_SIGN_OUT_TIMEOUT_MS = 10_000;
