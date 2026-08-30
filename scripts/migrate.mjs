@@ -1,13 +1,20 @@
 #!/usr/bin/env node
-/** Deploy-time database migrator (node-postgres). */
-import { readdir } from "node:fs/promises";
-import { dirname, join } from "node:path";
+/**
+ * Deploy-time database migrator (node-postgres, `pg`).
+ * Runs during `npm run build` — on every Vercel deploy — applying pending files
+ * in ../migrations to DATABASE_URL.
+ */
+import { readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+import pg from "pg";
 import { pendingMigrations } from "./migration-plan.mjs";
 
-const databaseUrl = process.env.DATABASE_URL?.trim();
+const databaseUrl = process.env.DATABASE_URL;
 if (!databaseUrl) {
-  console.log("[migrate] no DATABASE_URL — skipping.");
+  console.log(
+    "[migrate] DATABASE_URL not set — skipping (the PGLite fallback migrates itself).",
+  );
   process.exit(0);
 }
 
@@ -25,11 +32,48 @@ async function main() {
     console.log("[migrate] no migrations — nothing to do.");
     return;
   }
-  // Full pg migration loop is in the original workspace zip.
-  console.log("[migrate] pending migrations detected; apply with full migrate.mjs from workspace.");
+
+  const pool = new pg.Pool({ connectionString: databaseUrl, max: 1 });
+  const client = await pool.connect();
+  try {
+    await client.query(
+      "CREATE TABLE IF NOT EXISTS _migrations (name TEXT PRIMARY KEY, applied_at TIMESTAMPTZ NOT NULL DEFAULT now())",
+    );
+    const applied = (await client.query("SELECT name FROM _migrations")).rows.map(
+      (r) => r.name,
+    );
+
+    let count = 0;
+    for (const { name } of pendingMigrations(entries, applied)) {
+      const text = await readFile(join(migrationsDir, name), "utf8");
+      try {
+        await client.query("BEGIN");
+        await client.query(text);
+        await client.query("INSERT INTO _migrations (name) VALUES ($1)", [name]);
+        await client.query("COMMIT");
+      } catch (err) {
+        console.error(`[migrate] error applying ${name}`);
+        try {
+          await client.query("ROLLBACK");
+        } catch {
+          // ROLLBACK fails when the connection died — keep the original error.
+        }
+        throw err;
+      }
+      console.log(`[migrate] applied ${name}`);
+      count += 1;
+    }
+    console.log(count ? `[migrate] done — ${count} migration(s) applied.` : "[migrate] up to date.");
+  } finally {
+    client.release();
+    await pool.end();
+  }
 }
 
 main().catch((err) => {
-  console.error("[migrate] failed:", err);
+  console.error("[migrate] failed:", err?.message || err);
+  for (const key of ["code", "detail", "hint", "position", "where"]) {
+    if (err?.[key] != null) console.error(`[migrate]   ${key}: ${err[key]}`);
+  }
   process.exit(1);
 });
