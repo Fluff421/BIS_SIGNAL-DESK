@@ -76,24 +76,102 @@ export function gateKeyResolver(
         key = findKey(jwks);
       }
     }
-    if (!key) throw new Error("gate identity key not found");
+    if (!key) {
+      throw new Error("no gate identity key matches the token kid");
+    }
     return importJWK(key, "EdDSA");
   };
 }
 
-export async function gateIdentityFromHeaders(
-  headers: Headers,
+export type VerifyGateIdentityTokenOptions = {
+  issuer: string;
+  audience: string;
+  getKey: JWTVerifyGetKey;
+};
+
+export async function verifyGateIdentityToken(
+  token: string,
+  options: VerifyGateIdentityTokenOptions,
 ): Promise<GateIdentity | null> {
-  if (!gateIdentityEnabled()) return null;
-  const token = headers.get(GATE_IDENTITY_HEADER);
-  if (!token) return null;
-  // Full JWT verify path is in the original workspace zip.
-  return null;
+  try {
+    const { payload } = await jwtVerify(token, options.getKey, {
+      algorithms: ["EdDSA"],
+      issuer: options.issuer,
+      audience: options.audience,
+      requiredClaims: ["sub", "iat", "exp"],
+      maxTokenAge: "10 minutes",
+    });
+    const sub = typeof payload.sub === "string" ? payload.sub.trim() : "";
+    if (!sub) return null;
+    return {
+      sub,
+      email: typeof payload.email === "string" ? payload.email : null,
+      name: typeof payload.name === "string" ? payload.name : null,
+      teamId: typeof payload.team_id === "string" ? payload.team_id : null,
+    };
+  } catch {
+    return null;
+  }
 }
 
+type GateEndpoints = { issuer: string; jwksUrl: string };
+
+export function resolveGateEndpoints(headers: Headers): GateEndpoints | null {
+  const explicit = env("GROK_GATE_ORIGIN");
+  if (explicit) {
+    const origin = explicit.replace(/\/+$/, "");
+    return { issuer: origin, jwksUrl: `${origin}${GATE_JWKS_PATH}` };
+  }
+
+  const xf = headers.get("x-forwarded-host")?.split(",")[0]?.trim();
+  const host = (xf || headers.get("host") || "")
+    .split(":")[0]
+    ?.trim()
+    .toLowerCase();
+  if (!host) return null;
+
+  let issuer: string | null = null;
+  if (
+    host === "app-builder-testing.com" ||
+    host.endsWith(".app-builder-testing.com")
+  ) {
+    issuer = "https://gate.app-builder-testing.com";
+  } else if (host === "grok.me" || host.endsWith(".grok.me")) {
+    issuer = "https://gate.grok.me";
+  }
+  if (!issuer) return null;
+
+  return { issuer, jwksUrl: `${issuer}${GATE_JWKS_PATH}` };
+}
+
+export type GateLinkedAccount = { providerId: string; accountId: string };
+
 export function sessionBoundToGateIdentity(
-  _session: unknown,
-  _identity: GateIdentity,
+  accounts: readonly GateLinkedAccount[],
+  identitySub: string,
+  gateProviderId: string,
 ): boolean {
-  return true;
+  return accounts.some(
+    (account) =>
+      account.providerId === gateProviderId &&
+      account.accountId === identitySub,
+  );
+}
+
+export async function gateIdentityFromHeaders(
+  headers: Headers,
+  jwksFetch?: JwksFetch,
+): Promise<GateIdentity | null> {
+  if (!gateIdentityEnabled()) return null;
+  const token = headers.get(GATE_IDENTITY_HEADER)?.trim();
+  if (!token) return null;
+  const projectId = env("GROK_PROJECT_ID");
+  if (!projectId) return null;
+  const endpoints = resolveGateEndpoints(headers);
+  if (!endpoints) return null;
+  return verifyGateIdentityToken(token, {
+    issuer: endpoints.issuer,
+    audience: `app:${projectId}`,
+    getKey: gateKeyResolver(endpoints.jwksUrl, jwksFetch),
+  });
 }
