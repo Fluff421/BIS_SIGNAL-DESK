@@ -173,16 +173,73 @@ test("prefix check is skipped when either side lacks a prefix", () => {
     [{}, { bodyTextPrefix: undefined }],
     [{ bodyTextPrefix: undefined }, {}],
   ];
-  for (const [current, baseline] of cases) {
+  for (const [curOverrides, baseOverrides] of cases) {
     const { divergesFromBaseline } = compareToBaseline(
-      verdict({ bodyTextLen: 510, bodyTextHash: "bbb", ...current }),
-      verdict({ ...baseline }),
+      verdict({ bodyTextLen: 510, bodyTextHash: "bbb", ...curOverrides }),
+      verdict(baseOverrides),
     );
     assert.equal(divergesFromBaseline, false);
   }
 });
 
-test("mobile and desktop reasons are reported independently", () => {
+test("length-delta tolerance boundary: 50 tolerated, 51 diverges (500-char baseline)", () => {
+  const at = compareToBaseline(verdict({ bodyTextLen: 550, bodyTextHash: "bbb" }), verdict());
+  assert.equal(at.divergesFromBaseline, false);
+
+  const over = compareToBaseline(verdict({ bodyTextLen: 551, bodyTextHash: "bbb" }), verdict());
+  assert.equal(over.divergesFromBaseline, true);
+  assert.match(over.reasons.join(";"), /desktop: body text changed/);
+});
+
+test("length-delta floor dominates small baselines: 20 tolerated, 21 diverges (100-char baseline)", () => {
+  const base = verdict({ bodyTextLen: 100 }, { bodyTextLen: 100 });
+  const at = compareToBaseline(
+    verdict({ bodyTextLen: 120, bodyTextHash: "bbb" }, { bodyTextLen: 100 }),
+    base,
+  );
+  assert.equal(at.divergesFromBaseline, false);
+
+  const over = compareToBaseline(
+    verdict({ bodyTextLen: 121, bodyTextHash: "bbb" }, { bodyTextLen: 100 }),
+    base,
+  );
+  assert.equal(over.divergesFromBaseline, true);
+});
+
+test("collapse boundary: exactly half is 'changed', one below is 'collapsed'", () => {
+  const half = compareToBaseline(verdict({ bodyTextLen: 250, bodyTextHash: "bbb" }), verdict());
+  assert.match(half.reasons.join(";"), /desktop: body text changed \(500 -> 250 chars/);
+
+  const below = compareToBaseline(verdict({ bodyTextLen: 249, bodyTextHash: "bbb" }), verdict());
+  assert.match(below.reasons.join(";"), /desktop: body text collapsed \(500 -> 249 chars\)/);
+});
+
+test("missing baseline viewport diverges", () => {
+  const { divergesFromBaseline, reasons } = compareToBaseline(verdict(), {
+    viewports: { desktop: viewport() },
+  });
+  assert.equal(divergesFromBaseline, true);
+  assert.match(reasons.join(";"), /mobile: no baseline data/);
+});
+
+test("empty or null baseline diverges for every viewport", () => {
+  for (const baseline of [{}, null]) {
+    const { divergesFromBaseline, reasons } = compareToBaseline(verdict(), baseline);
+    assert.equal(divergesFromBaseline, true);
+    assert.match(reasons.join(";"), /desktop: no baseline data/);
+    assert.match(reasons.join(";"), /mobile: no baseline data/);
+  }
+});
+
+test("degenerate current verdict fails closed", () => {
+  for (const current of [null, undefined, {}, { viewports: {} }]) {
+    const { divergesFromBaseline, reasons } = compareToBaseline(current, verdict());
+    assert.equal(divergesFromBaseline, true);
+    assert.deepEqual(reasons, ["current verdict has no viewport data"]);
+  }
+});
+
+test("multiple signals across viewports all accumulate", () => {
   const { reasons } = compareToBaseline(
     verdict({ status: 500 }, { consoleErrors: ["boom"] }),
     verdict(),
