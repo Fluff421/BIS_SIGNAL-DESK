@@ -30,6 +30,7 @@ test("parsePid reads a pidfile and rejects junk", () => {
   assert.equal(parsePid(""), null);
   assert.equal(parsePid("not-a-pid"), null);
   assert.equal(parsePid("-7"), null);
+  // pid 1 is the sandbox init, never a preview server.
   assert.equal(parsePid("1"), null);
 });
 
@@ -42,6 +43,7 @@ test("parsePgid reads the pgrp field past a comm containing spaces", () => {
   assert.equal(parsePgid(undefined), null);
 });
 
+// One /proc/net/tcp row; the socket inode is column 10.
 const tcpRow = (sl, local, state, inode) =>
   [
     `  ${sl}:`,
@@ -59,64 +61,197 @@ const tcpRow = (sl, local, state, inode) =>
     "100",
   ].join(" ");
 
+const PROC_NET_TCP = [
+  "  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt uid timeout inode",
+  tcpRow(0, "0100007F:1F91", "0A", 5551),
+  tcpRow(1, "0100007F:1F90", "0A", 5552),
+  tcpRow(2, "0100007F:1F91", "01", 5553),
+  "",
+].join("\n");
+
 test("parseListenerInodes picks LISTEN sockets on the wanted port only", () => {
-  const port = 8081;
-  const hex = port.toString(16).toUpperCase().padStart(4, "0");
-  const dump = [
-    "  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode",
-    tcpRow(0, `0100007F:${hex}`, "0A", "12345"),
-    tcpRow(1, `0100007F:${hex}`, "01", "99999"),
-    tcpRow(2, `0100007F:1F90", "0A", "11111"),
-  ].join("\n");
-  assert.deepEqual(parseListenerInodes(dump, port), ["12345"]);
+  // 0x1F91 = 8081 (LISTEN), 0x1F90 = 8080, and the third row is ESTABLISHED.
+  assert.deepEqual(parseListenerInodes(PROC_NET_TCP, 8081), ["5551"]);
+  assert.deepEqual(parseListenerInodes(PROC_NET_TCP, 8080), ["5552"]);
+  assert.deepEqual(parseListenerInodes(PROC_NET_TCP, 9999), []);
+  assert.deepEqual(parseListenerInodes("", 8081), []);
+  assert.deepEqual(parseListenerInodes(undefined, 8081), []);
 });
 
+test("parseListenerInodes reads the tcp6 dump the same way", () => {
+  const v6 = "00000000000000000000000000000000:1F91";
+  assert.deepEqual(parseListenerInodes(tcpRow(0, v6, "0A", 7777), 8081), ["7777"]);
+});
+
+// /proc/<pid>/cmdline is NUL-separated.
+const cmdline = (...argv) => argv.join("\u0000");
+
 test("looksLikePreviewProcess matches the npm wrapper and its vite child", () => {
-  assert.equal(looksLikePreviewProcess("node\0/usr/bin/npm\0run\0preview\0"), true);
-  assert.equal(looksLikePreviewProcess("node\0./node_modules/.bin/vite\0preview\0"), true);
-  assert.equal(looksLikePreviewProcess("node\0scripts/preview.mjs\0stop\0"), false);
-  assert.equal(looksLikePreviewProcess("node\0scripts/preview-thumbnail.mjs\0"), false);
+  const npmRun = cmdline("node", "/usr/lib/node_modules/npm/bin/npm-cli.js", "run", "preview");
+  assert.equal(looksLikePreviewProcess(npmRun), true);
+  assert.equal(looksLikePreviewProcess(cmdline("npm", "run", "preview")), true);
+  assert.equal(
+    looksLikePreviewProcess(cmdline("node", "/ws/node_modules/.bin/vite", "preview")),
+    true,
+  );
+  // `ps -o command=` output is space-separated.
+  assert.equal(looksLikePreviewProcess("node /ws/node_modules/.bin/vite preview"), true);
+});
+
+test("looksLikePreviewProcess spares the sibling scripts and re-used pids", () => {
+  // The sandbox service runs this one in the same box (CapturePreviewThumbnail).
+  const thumbnail = cmdline(
+    "node",
+    "/opt/app-template/scripts/preview-thumbnail.mjs",
+    "http://127.0.0.1:8080/",
+    "/tmp/preview-thumbnail.png",
+  );
+  assert.equal(looksLikePreviewProcess(thumbnail), false);
+  assert.equal(looksLikePreviewProcess(cmdline("node", "scripts/preview.mjs", "stop")), false);
+  // This tooling's own npm wrappers, which carry no `.mjs` in their cmdline.
+  const npmCli = "/usr/lib/node_modules/npm/bin/npm-cli.js";
+  assert.equal(looksLikePreviewProcess(cmdline("node", npmCli, "run", "preview:stop")), false);
+  assert.equal(looksLikePreviewProcess(cmdline("node", npmCli, "run", "preview:restart")), false);
+  assert.equal(looksLikePreviewProcess(cmdline("npm", "run", "preview:stop")), false);
+  const viteBuild = cmdline("vite", "build", "--outDir", "preview-dist");
+  assert.equal(looksLikePreviewProcess(viteBuild), false);
+  assert.equal(looksLikePreviewProcess(cmdline("/usr/bin/preview-tool", "--x")), false);
+  assert.equal(looksLikePreviewProcess(cmdline("sleep", "300")), false);
+  assert.equal(looksLikePreviewProcess(cmdline("node", "server.mjs")), false);
+  assert.equal(looksLikePreviewProcess(""), false);
 });
 
 test("previewOwners trusts port owners and dedupes the pidfile pid", () => {
   const owners = previewOwners({
-    portPids: [100, 200],
-    pidFilePid: 100,
-    cmdlineOf: () => "node\0npm\0run\0preview\0",
+    portPids: [50, 51],
+    pidFilePid: 50,
+    cmdlineOf: () => assert.fail("a port owner needs no corroboration"),
   });
-  assert.deepEqual([...owners].sort(), [100, 200]);
+  assert.deepEqual(owners, [50, 51]);
+});
+
+test("previewOwners adds a pidfile pid whose command line is still the preview", () => {
+  const owners = previewOwners({
+    portPids: [51],
+    pidFilePid: 50,
+    cmdlineOf: (pid) => (pid === 50 ? cmdline("node", "npm-cli.js", "run", "preview") : ""),
+  });
+  assert.deepEqual(owners, [51, 50]);
 });
 
 test("previewOwners drops a stale pidfile pid re-used by another process", () => {
   const owners = previewOwners({
     portPids: [],
     pidFilePid: 50,
-    cmdlineOf: () => "node\0some-other-server\0",
+    cmdlineOf: () => cmdline("sleep", "300"),
   });
   assert.deepEqual(owners, []);
 });
 
+test("previewOwners drops a pidfile pid that no longer exists", () => {
+  const owners = previewOwners({ portPids: [], pidFilePid: 50, cmdlineOf: () => "" });
+  assert.deepEqual(owners, []);
+});
+
+test("previewOwners on a free port with no pidfile signals nothing", () => {
+  const owners = previewOwners({ portPids: [], pidFilePid: null, cmdlineOf: () => "" });
+  assert.deepEqual(owners, []);
+});
+
 test("stopOutcome fails when a pid survives or the port is still held", () => {
-  assert.equal(stopOutcome({ signalled: [1], stubborn: [1], after: [] }).ok, false);
-  assert.equal(stopOutcome({ signalled: [1], stubborn: [], after: [9] }).ok, false);
+  const stubbornOnly = stopOutcome({
+    signalled: [50],
+    stubborn: [50],
+    after: { pids: [] },
+  });
+  assert.equal(stubbornOnly.ok, false);
+  assert.match(stubbornOnly.error, /still held by pid\(s\) 50/);
+
+  const newOwner = stopOutcome({
+    signalled: [50],
+    stubborn: [],
+    after: { pids: [77] },
+  });
+  assert.equal(newOwner.ok, false);
+  assert.match(newOwner.error, /still held by pid\(s\) 77/);
 });
 
 test("stopOutcome reports a verified free port", () => {
-  assert.equal(stopOutcome({ signalled: [1], stubborn: [], after: [] }).ok, true);
+  const stopped = stopOutcome({
+    signalled: [50],
+    stubborn: [],
+    after: { pids: [] },
+  });
+  assert.equal(stopped.ok, true);
+  assert.match(stopped.message, /stopped pid\(s\) 50 — port 8081 is free/);
+
+  const idle = stopOutcome({ signalled: [], stubborn: [], after: { pids: [] } });
+  assert.equal(idle.ok, true);
+  assert.match(idle.message, /nothing was listening on 8081/);
 });
 
-test("terminatePids SIGTERMs live pids and skips dead ones", async () => {
-  const killed = [];
-  const alive = new Set([10, 20]);
-  const result = await terminatePids([10, 20, 30], {
-    kill: (pid, sig) => killed.push([pid, sig]),
-    isAlive: (pid) => alive.has(pid),
-    sleep: async () => {
-      alive.clear();
-    },
-    graceMs: 10,
-    pollMs: 5,
+test("stopOutcome fails on a listener whose owner cannot be attributed", () => {
+  const outcome = stopOutcome({
+    signalled: [],
+    stubborn: [],
+    after: { pids: [], unattributed: true },
   });
-  assert.deepEqual(result.signalled, [10, 20]);
-  assert.deepEqual(result.stubborn, []);
+  assert.equal(outcome.ok, false);
+  assert.match(outcome.error, /port 8081 is held by a process this script cannot see/);
+});
+
+function fakeProcesses({ pids, ignoresTerm = [] }) {
+  const alive = new Set(pids);
+  const signals = [];
+  return {
+    signals,
+    isAlive: (pid) => alive.has(pid),
+    kill: (pid, signal) => {
+      signals.push([pid, signal]);
+      if (signal === "SIGKILL" || !ignoresTerm.includes(pid)) alive.delete(pid);
+    },
+    sleep: async () => {},
+  };
+}
+
+test("terminatePids SIGTERMs live pids and skips dead ones", async () => {
+  const fake = fakeProcesses({ pids: [11, 12] });
+  const result = await terminatePids([11, 12, 13], fake);
+  assert.deepEqual(result, { signalled: [11, 12], killed: [], stubborn: [] });
+  assert.deepEqual(fake.signals, [
+    [11, "SIGTERM"],
+    [12, "SIGTERM"],
+  ]);
+});
+
+test("terminatePids escalates to SIGKILL when SIGTERM is ignored", async () => {
+  const fake = fakeProcesses({ pids: [11, 12], ignoresTerm: [12] });
+  const result = await terminatePids([11, 12], fake);
+  assert.deepEqual(result, { signalled: [11, 12], killed: [12], stubborn: [] });
+  assert.deepEqual(fake.signals, [
+    [11, "SIGTERM"],
+    [12, "SIGTERM"],
+    [12, "SIGKILL"],
+  ]);
+});
+
+test("terminatePids reports a pid that survives SIGKILL as stubborn", async () => {
+  const signals = [];
+  const result = await terminatePids([11], {
+    isAlive: () => true,
+    kill: (pid, signal) => signals.push([pid, signal]),
+    sleep: async () => {},
+  });
+  assert.deepEqual(result, { signalled: [11], killed: [11], stubborn: [11] });
+  assert.deepEqual(signals, [
+    [11, "SIGTERM"],
+    [11, "SIGKILL"],
+  ]);
+});
+
+test("terminatePids on a free port signals nothing", async () => {
+  const fake = fakeProcesses({ pids: [] });
+  const result = await terminatePids([], fake);
+  assert.deepEqual(result, { signalled: [], killed: [], stubborn: [] });
+  assert.deepEqual(fake.signals, []);
 });
