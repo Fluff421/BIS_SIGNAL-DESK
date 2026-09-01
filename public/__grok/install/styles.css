@@ -1,0 +1,70 @@
+/* Install tutorial page styles — exact from grok-workspace.zip */
+:root {
+  color-scheme: dark;
+  --bg: #0a0a0b;
+  --fg: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: color-mix(in oklab, #f4f4f5 12%, transparent);
+  --surface: #121214;
+  --primary: #c8ccd4;
+  --radius: 16px;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(420px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+h1 {
+  font-size: 1.35rem;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #0a0a0b;
+  text-decoration: none;
+  font-weight: 600;
+}
