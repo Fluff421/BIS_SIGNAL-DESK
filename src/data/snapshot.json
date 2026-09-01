@@ -49,6 +49,8 @@
     { "rank": 45, "team": "Colorado", "fpi": 4.5 },
     { "rank": 48, "team": "Georgia Tech", "fpi": 4.2 },
     { "rank": 51, "team": "NC State", "fpi": 3.7 },
+    { "rank": 53, "team": "Wake Forest", "fpi": 3.4 },
+    { "rank": 57, "team": "UCF", "fpi": 2.1 },
     { "rank": 58, "team": "UNLV", "fpi": 1.8 },
     { "rank": 66, "team": "Rutgers", "fpi": 0.2 },
     { "rank": 73, "team": "Memphis", "fpi": -0.9 },
