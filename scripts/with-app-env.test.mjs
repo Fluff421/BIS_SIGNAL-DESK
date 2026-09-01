@@ -64,6 +64,10 @@ test("the template ships auth off", () => {
 });
 
 test("vite loadEnv resolves the wrapped value", () => {
+  // What `import.meta.env.VITE_AUTH_ENABLED` becomes: loadEnv prefix-matches
+  // process.env, so the wrapper's merge has to land before Vite starts.
+  // Do not `import { loadEnv } from "vite"` here — Vite 8 loads rolldown
+  // native bindings that SIGSEGV the test worker under qemu-user.
   const root = makeWorkspace('{"VITE_AUTH_ENABLED":"false"}');
   const merged = mergeAppEnv(readAppEnv(root), { PATH: "/usr/bin" });
   assert.equal(merged.VITE_AUTH_ENABLED, "false");
@@ -96,6 +100,8 @@ test("the wrapper propagates the command's exit code", async () => {
 });
 
 test("a signal-killed command is never reported as success", async () => {
+  // The wrapper's own SIGTERM handler must not swallow the re-raised signal:
+  // a cancelled build reporting exit 0 is a silently passing gate.
   await assert.rejects(
     execFileAsync(process.execPath, [
       WRAPPER,
@@ -108,6 +114,8 @@ test("a signal-killed command is never reported as success", async () => {
 });
 
 test("the CLI still runs when invoked through a symlinked path", async () => {
+  // node realpaths import.meta.url but not process.argv[1], so a raw comparison
+  // turns the wrapper into a no-op that exits 0 without starting anything.
   const link = join(mkdtempSync(join(tmpdir(), "app-env-link-")), "scripts");
   symlinkSync(join(projectRoot(), "scripts"), link);
   const { stdout } = await execFileAsync(process.execPath, [
