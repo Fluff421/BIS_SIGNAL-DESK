@@ -1,4 +1,6 @@
 {
-  "name": "Signal Desk",
-  "description": "2026 NFL and NCAAF betting intelligence"
+  "title": "Signal Desk",
+  "type": "website",
+  "card": "custom",
+  "color": "C8CCD4"
 }
