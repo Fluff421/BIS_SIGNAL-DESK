@@ -1,7 +1,7 @@
 {
   "week": 1,
   "season": 2026,
-  "generatedAt": "2026-09-02T17:50:27.011Z",
+  "generatedAt": "2026-09-02T18:39:45.865Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,69 +11,70 @@
     "rate": null
   },
   "helpers": [
-    "5 rows in primary watch band (confidence WATCH or unset)."
+    "25 rows in primary watch band (confidence WATCH or unset)."
   ],
   "hurters": [
     "No graded sides yet — 75% ATS is not measurable (need n≥30).",
-    "Ensemble remains unfitted (fittedOn2026=false)."
+    "Ensemble remains unfitted (fittedOn2026=false).",
+    "26 STALE_FPI rows — suppress from play consideration."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
     {
+      "league": "NFL",
+      "kick": "2026-09-13",
+      "matchup": "Arizona Cardinals @ Los Angeles Chargers",
+      "edge": 19.9,
+      "edgeTo": "Los Angeles Chargers",
+      "confidence": "HIGH_NOISE",
+      "marketHome": -10.06,
+      "modelHome": 9.8
+    },
+    {
       "league": "NCAAF",
       "kick": "2026-09-05",
-      "matchup": "Miami Hurricanes @ Stanford Cardinal",
-      "edge": 46.8,
-      "edgeTo": "Miami Hurricanes",
-      "confidence": "WATCH",
-      "marketHome": 24.5,
-      "modelHome": -22.3
+      "matchup": "Clemson Tigers @ LSU Tigers",
+      "edge": 19.2,
+      "edgeTo": "LSU Tigers",
+      "confidence": "HIGH_NOISE",
+      "marketHome": -10.06,
+      "modelHome": 9.1
     },
     {
-      "league": "NCAAF",
-      "kick": "2026-09-04",
-      "matchup": "UAB Blazers @ Illinois Fighting Illini",
-      "edge": 43,
-      "edgeTo": "Illinois Fighting Illini",
-      "confidence": "WATCH",
-      "marketHome": -27.5,
-      "modelHome": 15.5
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-03",
-      "matchup": "Akron Zips @ Wake Forest Demon Deacons",
-      "edge": 34.3,
-      "edgeTo": "Wake Forest Demon Deacons",
-      "confidence": "WATCH",
-      "marketHome": -23.5,
-      "modelHome": 10.8
+      "league": "NFL",
+      "kick": "2026-09-22",
+      "matchup": "New York Giants @ Los Angeles Rams",
+      "edge": 17.8,
+      "edgeTo": "Los Angeles Rams",
+      "confidence": "HIGH_NOISE",
+      "marketHome": -9,
+      "modelHome": 8.8
     },
     {
       "league": "NFL",
       "kick": "2026-09-20",
-      "matchup": "Miami Dolphins @ San Francisco 49ers",
-      "edge": 21.6,
-      "edgeTo": "San Francisco 49ers",
-      "confidence": "WATCH",
-      "marketHome": -10.5,
-      "modelHome": 11.1
+      "matchup": "Las Vegas Raiders @ Los Angeles Chargers",
+      "edge": 17.7,
+      "edgeTo": "Los Angeles Chargers",
+      "confidence": "HIGH_NOISE",
+      "marketHome": -8.5,
+      "modelHome": 9.2
     },
     {
-      "league": "NFL",
-      "kick": "2026-09-13",
-      "matchup": "Arizona Cardinals @ Los Angeles Chargers",
-      "edge": 20.3,
-      "edgeTo": "Los Angeles Chargers",
-      "confidence": "WATCH",
-      "marketHome": -10.5,
-      "modelHome": 9.8
+      "league": "NCAAF",
+      "kick": "2026-09-05",
+      "matchup": "Boston College Eagles @ Cincinnati Bearcats",
+      "edge": 17.1,
+      "edgeTo": "Cincinnati Bearcats",
+      "confidence": "HIGH_NOISE",
+      "marketHome": -7.5,
+      "modelHome": 9.6
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
   "aiNarrative": null,
-  "summary": "BIS desk week snapshot: ATS 0-0-0 (n=0, rate=n/a). Confidence INSUFFICIENT. Helpers: 5 rows in primary watch band (confidence WATCH or unset).. Hurters: No graded sides yet — 75% ATS is not measurable (need n≥30).; Ensemble remains unfitted (fittedOn2026=false).."
+  "summary": "BIS desk week snapshot: ATS 0-0-0 (n=0, rate=n/a). Confidence INSUFFICIENT. Helpers: 25 rows in primary watch band (confidence WATCH or unset).. Hurters: No graded sides yet — 75% ATS is not measurable (need n≥30).; Ensemble remains unfitted (fittedOn2026=false).; 26 STALE_FPI rows — suppress from play consideration.."
 }
