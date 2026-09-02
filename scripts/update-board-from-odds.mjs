@@ -1,19 +1,15 @@
 #!/usr/bin/env node
 /**
- * Pull live/upcoming odds from The Odds API and map into desk board.json shape.
- * Model edges still need FPI priors from snapshot/model — this script fills market lines.
- *
- * Usage:
- *   ODDS_API_KEY=... node scripts/update-board-from-odds.mjs
- *   ODDS_API_KEY=... node scripts/update-board-from-odds.mjs --sport ncaaf
- *   ODDS_API_KEY=... node scripts/update-board-from-odds.mjs --dry-run
+ * Live odds → board.json with FPI+HFA edges, confidence flags, consensus books,
+ * line movement vs previous board.
+ * ODDS_API_KEY=... node scripts/update-board-from-odds.mjs [--sport ncaaf|nfl|both] [--dry-run]
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { randomBytes } from "node:crypto";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, "..");
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const KEY = process.env.ODDS_API_KEY || "";
 const DRY = process.argv.includes("--dry-run");
 const sportArg = (() => {
@@ -21,64 +17,85 @@ const sportArg = (() => {
   return i >= 0 ? process.argv[i + 1] : "both";
 })();
 
-const SPORT_KEYS = {
-  ncaaf: "americanfootball_ncaaf",
-  nfl: "americanfootball_nfl",
-};
+const SPORT_KEYS = { ncaaf: "americanfootball_ncaaf", nfl: "americanfootball_nfl" };
 
+function atomicWrite(path, text) {
+  mkdirSync(dirname(path), { recursive: true });
+  const staged = join(dirname(path), `.${randomBytes(6).toString("hex")}.tmp`);
+  writeFileSync(staged, text);
+  renameSync(staged, path);
+}
 function loadJson(rel) {
   const p = join(ROOT, rel);
   if (!existsSync(p)) return null;
   return JSON.parse(readFileSync(p, "utf8"));
 }
-
-function fpiMap(snapshot) {
+function norm(name) {
+  return String(name || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+function fpiMap(rows) {
   const map = new Map();
-  for (const row of snapshot?.ncaafFpi ?? []) {
-    map.set(norm(row.team), Number(row.fpi));
-  }
-  for (const row of snapshot?.nflFpi ?? []) {
-    map.set(norm(row.team), Number(row.fpi));
-  }
+  for (const row of rows ?? []) map.set(norm(row.team), Number(row.fpi));
   return map;
 }
-
-function norm(name) {
-  return String(name || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
+function fpiLookup(map, teamName) {
+  const n = norm(teamName);
+  if (!n) return undefined;
+  if (map.has(n)) return map.get(n);
+  let bestKey = "", bestVal;
+  for (const [k, v] of map.entries()) {
+    if (!k || k.length < 3) continue;
+    const hit = n === k || n.includes(` ${k} `) || n.startsWith(`${k} `) || n.endsWith(` ${k}`) || n.includes(k);
+    if (hit && k.length >= bestKey.length) { bestKey = k; bestVal = v; }
+  }
+  if (bestKey) return bestVal;
+  const last = n.split(/\s+/).pop();
+  if (map.has(last)) return map.get(last);
+  if (n.includes("49ers") && map.has("49ers")) return map.get("49ers");
+  return undefined;
 }
-
-function pickSpread(bookmakers, home, away) {
-  // Prefer consensus-ish: first US book with spreads
+function consensusSpread(bookmakers, home, away) {
+  const points = []; let totalSum = 0, totalN = 0; const books = [];
   for (const bm of bookmakers || []) {
     const m = (bm.markets || []).find((x) => x.key === "spreads");
     if (!m) continue;
     const homeOut = m.outcomes?.find((o) => o.name === home);
     const awayOut = m.outcomes?.find((o) => o.name === away);
-    if (homeOut && typeof homeOut.point === "number") {
-      return {
-        marketHome: homeOut.point,
-        book: bm.title || bm.key,
-        total: (() => {
-          const t = (bm.markets || []).find((x) => x.key === "totals");
-          const over = t?.outcomes?.find((o) => o.name === "Over");
-          return typeof over?.point === "number" ? over.point : null;
-        })(),
-      };
-    }
-    if (awayOut && typeof awayOut.point === "number") {
-      return {
-        marketHome: -awayOut.point,
-        book: bm.title || bm.key,
-        total: null,
-      };
-    }
+    let pt = null;
+    if (homeOut && typeof homeOut.point === "number") pt = homeOut.point;
+    else if (awayOut && typeof awayOut.point === "number") pt = -awayOut.point;
+    if (pt == null) continue;
+    points.push(pt); books.push(bm.title || bm.key);
+    const t = (bm.markets || []).find((x) => x.key === "totals");
+    const over = t?.outcomes?.find((o) => o.name === "Over");
+    if (typeof over?.point === "number") { totalSum += over.point; totalN++; }
   }
-  return null;
+  if (!points.length) return null;
+  const mean = points.reduce((a, b) => a + b, 0) / points.length;
+  const variance = points.reduce((a, b) => a + (b - mean) ** 2, 0) / points.length;
+  return {
+    marketHome: Number(mean.toFixed(2)),
+    stddev: Number(Math.sqrt(variance).toFixed(2)),
+    nBooks: points.length,
+    book: books.slice(0, 3).join("|"),
+    total: totalN ? Number((totalSum / totalN).toFixed(1)) : null,
+  };
 }
-
+function modelHomeMargin(homeFpi, awayFpi, hfa) {
+  if (homeFpi == null || awayFpi == null) return null;
+  return homeFpi - awayFpi + hfa;
+}
+function confidenceFor(edge) {
+  if (edge > 20) return "STALE_FPI";
+  if (edge > 10) return "HIGH_NOISE";
+  if (edge > 3) return "WATCH";
+  return "ALIGNED";
+}
+function prevMarketMap(prevBoard) {
+  const map = new Map();
+  for (const w of prevBoard?.watch || []) map.set(`${w.league}|${norm(w.home)}|${norm(w.away)}`, w.marketHome);
+  return map;
+}
 async function fetchOdds(sportKey) {
   if (!KEY) throw new Error("Set ODDS_API_KEY");
   const url = new URL(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`);
@@ -87,100 +104,80 @@ async function fetchOdds(sportKey) {
   url.searchParams.set("markets", "spreads,totals");
   url.searchParams.set("oddsFormat", "american");
   const res = await fetch(url);
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`${sportKey} HTTP ${res.status}: ${text.slice(0, 200)}`);
-  }
-  console.error(
-    `[odds] ${sportKey} remaining=${res.headers.get("x-requests-remaining")} used=${res.headers.get("x-requests-used")}`,
-  );
+  if (!res.ok) throw new Error(`${sportKey} HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  console.error(`[odds] ${sportKey} remaining=${res.headers.get("x-requests-remaining")} used=${res.headers.get("x-requests-used")}`);
   return res.json();
 }
-
-function modelHomeMargin(homeFpi, awayFpi, hfa) {
-  if (homeFpi == null || awayFpi == null) return null;
-  return homeFpi - awayFpi + hfa;
-}
-
-function buildWatch(events, league, fpi, hfa, watchThreshold) {
-  const rows = [];
+function buildWatch(events, league, fpi, hfa, watchThreshold, prevMap) {
+  const rows = []; const fpiMismatch = [];
+  const now = Date.now(); const horizonMs = 21 * 24 * 60 * 60 * 1000;
   for (const ev of events) {
-    const home = ev.home_team;
-    const away = ev.away_team;
-    const spread = pickSpread(ev.bookmakers, home, away);
+    const kickMs = Date.parse(ev.commence_time || "");
+    if (Number.isFinite(kickMs) && (kickMs < now - 12 * 3600 * 1000 || kickMs > now + horizonMs)) continue;
+    const home = ev.home_team, away = ev.away_team;
+    const spread = consensusSpread(ev.bookmakers, home, away);
     if (!spread) continue;
-    const hf = fpi.get(norm(home));
-    const af = fpi.get(norm(away));
+    const hf = fpiLookup(fpi, home), af = fpiLookup(fpi, away);
     const modelHome = modelHomeMargin(hf, af, hfa);
+    if (modelHome == null) { fpiMismatch.push({ league, home, away, marketHome: spread.marketHome }); continue; }
     const marketHome = spread.marketHome;
-    let edgeTo = "";
-    let edge = 0;
-    if (modelHome != null) {
-      // Positive edge to home if model is more bullish on home than market
-      const raw = modelHome - marketHome;
-      edge = Math.abs(raw);
-      edgeTo = raw > 0 ? home : away;
-    }
-    if (modelHome != null && edge < watchThreshold) continue;
+    if (Math.abs(marketHome) > 28) continue;
+    const raw = modelHome - marketHome;
+    const edge = Math.abs(raw);
+    if (edge < watchThreshold) continue;
+    const edgeTo = raw > 0 ? home : away;
+    const confidence = confidenceFor(edge);
+    const key = `${league}|${norm(home)}|${norm(away)}`;
+    const prev = prevMap.get(key);
+    const lineMovement = prev == null ? null : Number((marketHome - prev).toFixed(2));
+    const movingAgainstModel = lineMovement == null ? null : (raw > 0 && lineMovement < 0) || (raw < 0 && lineMovement > 0);
     rows.push({
-      league,
-      kick: (ev.commence_time || "").slice(0, 10),
-      away,
-      home,
-      neutral: false,
-      marketHome,
-      modelHome: modelHome == null ? null : Number(modelHome.toFixed(1)),
-      edgeTo: modelHome == null ? "" : edgeTo,
-      edge: modelHome == null ? 0 : Number(edge.toFixed(1)),
-      total: spread.total ?? 0,
-      note:
-        modelHome == null
-          ? `Market only (${spread.book}). No FPI match for edge.`
-          : `Live odds via The Odds API (${spread.book}). FPI+HFA edge.`,
+      league, kick: (ev.commence_time || "").slice(0, 10), away, home, neutral: false,
+      marketHome, modelHome: Number(modelHome.toFixed(1)), edgeTo, edge: Number(edge.toFixed(1)),
+      total: spread.total ?? 0, confidence, nBooks: spread.nBooks, spreadStddev: spread.stddev,
+      lineMovement, movingAgainstModel,
+      note: `Consensus ${spread.nBooks} books (${spread.book}). FPI+HFA. conf=${confidence}`,
     });
   }
   rows.sort((a, b) => b.edge - a.edge);
-  return rows;
+  return { rows, fpiMismatch };
 }
-
 async function main() {
   const snapshot = loadJson("src/data/snapshot.json") || loadJson("public/data/snapshot.json") || {};
-  const model = loadJson("src/data/model.json") || loadJson("public/data/model.json") || {};
-  const fpi = fpiMap(snapshot);
+  const model = loadJson("src/data/model.json") || {};
+  const prevBoard = loadJson("src/data/board.json") || {};
+  const prevMap = prevMarketMap(prevBoard);
+  const fpiNcaaf = fpiMap(snapshot.ncaafFpi);
+  const fpiNfl = fpiMap(snapshot.nflFpi);
   const watchThreshold = Number(model.watchThreshold ?? 3);
   const hfaNcaaf = Number(model.hfa?.ncaaf ?? 2.5);
   const hfaNfl = Number(model.hfa?.nfl ?? 2.0);
-
   const sports = [];
-  if (sportArg === "both" || sportArg === "ncaaf") sports.push(["NCAAF", SPORT_KEYS.ncaaf, hfaNcaaf]);
-  if (sportArg === "both" || sportArg === "nfl") sports.push(["NFL", SPORT_KEYS.nfl, hfaNfl]);
-
-  let watch = [];
-  for (const [league, key, hfa] of sports) {
+  if (sportArg === "both" || sportArg === "ncaaf") sports.push(["NCAAF", SPORT_KEYS.ncaaf, hfaNcaaf, fpiNcaaf]);
+  if (sportArg === "both" || sportArg === "nfl") sports.push(["NFL", SPORT_KEYS.nfl, hfaNfl, fpiNfl]);
+  let watch = [], mismatches = [];
+  for (const [league, key, hfa, fpi] of sports) {
     const events = await fetchOdds(key);
-    watch = watch.concat(buildWatch(events, league, fpi, hfa, watchThreshold));
+    const { rows, fpiMismatch } = buildWatch(events, league, fpi, hfa, watchThreshold, prevMap);
+    watch = watch.concat(rows); mismatches = mismatches.concat(fpiMismatch);
   }
-
+  const primary = watch.filter((w) => w.confidence !== "STALE_FPI");
+  const stale = watch.filter((w) => w.confidence === "STALE_FPI");
   const board = {
-    issuedPlays: [],
-    watch,
-    aligned: [],
-    updated: new Date().toISOString(),
-    source: "the-odds-api",
+    issuedPlays: prevBoard.issuedPlays || [], watch: primary, staleFpi: stale,
+    fpiMismatchSample: mismatches.slice(0, 25), aligned: [],
+    updated: new Date().toISOString(), source: "the-odds-api+consensus",
   };
-
   const out = JSON.stringify(board, null, 2) + "\n";
-  console.log(`watch rows: ${watch.length}`);
-  if (DRY) {
-    console.log(out.slice(0, 1500));
-    return;
+  console.log(`watch=${primary.length} stale=${stale.length} mismatch=${mismatches.length}`);
+  if (DRY) { console.log(out.slice(0, 1200)); return; }
+  atomicWrite(join(ROOT, "src/data/board.json"), out);
+  atomicWrite(join(ROOT, "public/data/board.json"), out);
+  mkdirSync(join(ROOT, "src/data/board-history"), { recursive: true });
+  if (prevBoard.updated) {
+    const day = String(prevBoard.updated).slice(0, 10);
+    atomicWrite(join(ROOT, "src/data/board-history", `board-${day}.json`), JSON.stringify(prevBoard, null, 2) + "\n");
   }
-  writeFileSync(join(ROOT, "src/data/board.json"), out);
-  writeFileSync(join(ROOT, "public/data/board.json"), out);
-  console.log("wrote src/data/board.json and public/data/board.json");
+  console.log("wrote board.json (src + public)");
 }
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main().catch((err) => { console.error(err); process.exit(1); });
