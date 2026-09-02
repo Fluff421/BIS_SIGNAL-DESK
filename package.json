@@ -22,7 +22,11 @@
     "odds:discover": "node scripts/discover-odds-apis.mjs",
     "odds:probe": "node scripts/discover-odds-apis.mjs --probe",
     "odds:update": "node scripts/update-board-from-odds.mjs",
-    "odds:backfill": "node scripts/backfill-historical.mjs"
+    "odds:backfill": "node scripts/backfill-historical.mjs",
+    "fpi:update": "node scripts/update-fpi.mjs",
+    "grade": "node scripts/grade-results.mjs",
+    "digest": "node scripts/generate-digest.mjs",
+    "ensemble:refit": "node scripts/refit-ensemble.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",
