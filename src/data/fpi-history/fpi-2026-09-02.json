@@ -1,18 +1,6 @@
 {
   "asOf": "2026-09-02T18:37:01.588Z",
-  "timezone": "America/Chicago",
-  "calendar": {
-    "ncaaf": "Week 0 / Week 1 openers. FBS slate starts Aug 29. Week 3 is Sept 17–19.",
-    "nfl": "Preseason Week 3 (Aug 27–29). Regular season opens Sept 9. Week 2 is Sept 17–21."
-  },
-  "sources": [
-    "https://www.espn.com/college-football/fpi",
-    "https://www.espn.com/nfl/fpi",
-    "https://www.scoresandodds.com/ncaaf",
-    "https://www.scoresandodds.com/nfl"
-  ],
-  "honesty": "No regular-season 2026 games are final. Ledger n=0. Prior automation titles that referenced 2025 Week 3 / NFL Week 2 were not imported.",
-  "ncaafFpi": [
+  "ncaaf": [
     {
       "team": "Ohio State",
       "fpi": 28.7,
@@ -704,7 +692,7 @@
       "rank": 138
     }
   ],
-  "nflFpi": [
+  "nfl": [
     {
       "rank": 1,
       "team": "Rams",
@@ -865,6 +853,5 @@
       "team": "Dolphins",
       "fpi": -5.8
     }
-  ],
-  "fpiSource": "cfbd"
+  ]
 }

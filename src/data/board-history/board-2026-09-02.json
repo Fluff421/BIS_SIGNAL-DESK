@@ -1,0 +1,74 @@
+{
+  "issuedPlays": [],
+  "watch": [
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-05",
+      "away": "Miami Hurricanes",
+      "home": "Stanford Cardinal",
+      "neutral": false,
+      "marketHome": 24.5,
+      "modelHome": -22.3,
+      "edgeTo": "Miami Hurricanes",
+      "edge": 46.8,
+      "total": 48.5,
+      "note": "Live odds via The Odds API (DraftKings). FPI+HFA edge."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-04",
+      "away": "UAB Blazers",
+      "home": "Illinois Fighting Illini",
+      "neutral": false,
+      "marketHome": -27.5,
+      "modelHome": 15.5,
+      "edgeTo": "Illinois Fighting Illini",
+      "edge": 43,
+      "total": 54.5,
+      "note": "Live odds via The Odds API (DraftKings). FPI+HFA edge."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-03",
+      "away": "Akron Zips",
+      "home": "Wake Forest Demon Deacons",
+      "neutral": false,
+      "marketHome": -23.5,
+      "modelHome": 10.8,
+      "edgeTo": "Wake Forest Demon Deacons",
+      "edge": 34.3,
+      "total": 48.5,
+      "note": "Live odds via The Odds API (DraftKings). FPI+HFA edge."
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-20",
+      "away": "Miami Dolphins",
+      "home": "San Francisco 49ers",
+      "neutral": false,
+      "marketHome": -10.5,
+      "modelHome": 11.1,
+      "edgeTo": "San Francisco 49ers",
+      "edge": 21.6,
+      "total": 45.5,
+      "note": "Live odds via The Odds API (DraftKings). FPI+HFA edge."
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-13",
+      "away": "Arizona Cardinals",
+      "home": "Los Angeles Chargers",
+      "neutral": false,
+      "marketHome": -10.5,
+      "modelHome": 9.8,
+      "edgeTo": "Los Angeles Chargers",
+      "edge": 20.3,
+      "total": 44.5,
+      "note": "Live odds via The Odds API (DraftKings). FPI+HFA edge."
+    }
+  ],
+  "aligned": [],
+  "updated": "2026-09-02T03:06:14.957Z",
+  "source": "the-odds-api",
+  "note": "Partial push sample — re-run npm run odds:update locally for full 43-row board"
+}
