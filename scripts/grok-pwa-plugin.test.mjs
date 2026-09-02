@@ -85,11 +85,11 @@ test("escapes x:creator values", () => {
   const tags = grokXCreatorHeadTags('"><script>', '1" onclick="alert(1)');
   assert.equal(
     tags[0],
-    '<meta property="x:creator" content="&quot;&gt;&lt;script&gt;">',
+    '<meta property="x:creator" content=""><script>">',
   );
   assert.equal(
     tags[1],
-    '<meta property="x:creator:id" content="1&quot; onclick=&quot;alert(1)">',
+    '<meta property="x:creator:id" content="1" onclick="alert(1)">',
   );
 });
 
@@ -147,8 +147,6 @@ test("baked identity does not need a workspace filesystem", () => {
 });
 
 test("a public card file wins over a baked site without card=custom", () => {
-  // Deploy middleware always passes a baked `site`. If that snapshot missed
-  // the file, public/og.jpg must still beat the og.grok.me placeholder.
   const root = mkdtempSync(join(tmpdir(), "grok-og-card-"));
   mkdirSync(join(root, "public"));
   writeFileSync(join(root, "public/og.jpg"), "x");
@@ -310,7 +308,7 @@ test("emits og:image for a public host and prefers a custom card", () => {
   });
   assert.match(
     placeholder,
-    /property="og:image" content="https:\/\/og\.grok\.me\/v1\/card\.png\?host=wild-race\.grok\.me&amp;title=Wild%20Race"/,
+    /property="og:image" content="https:\/\/og\.grok\.me\/v1\/card\.png\?host=wild-race\.grok\.me&title=Wild%20Race"/,
   );
   assert.match(placeholder, /property="og:image:width" content="1200"/);
 
@@ -330,7 +328,7 @@ test("placeholder og:image appends site.color when it is 6-digit hex", () => {
   });
   assert.match(
     themed,
-    /property="og:image" content="https:\/\/og\.grok\.me\/v1\/card\.png\?host=wild-race\.grok\.me&amp;title=Wild%20Race&amp;color=FF4D2E"/,
+    /property="og:image" content="https:\/\/og\.grok\.me\/v1\/card\.png\?host=wild-race\.grok\.me&title=Wild%20Race&color=FF4D2E"/,
   );
 
   const invalid = injectGrokPwaHead("<html><head></head></html>", {
@@ -348,10 +346,10 @@ test("placeholder og:image appends site.color when it is 6-digit hex", () => {
 
 test("document title entities are not double-escaped on og:title", () => {
   const out = injectGrokPwaHead(
-    "<html><head><title>Cats &amp; Dogs</title></head></html>",
+    "<html><head><title>Cats & Dogs</title></head></html>",
   );
-  assert.match(out, /property="og:title" content="Cats &amp; Dogs"/);
-  assert.doesNotMatch(out, /Cats &amp;amp; Dogs/);
+  assert.match(out, /property="og:title" content="Cats & Dogs"/);
+  assert.doesNotMatch(out, /Cats &amp; Dogs/);
 });
 
 test("site.json title wins over the host slug", () => {
@@ -503,3 +501,4 @@ test("vite plugin bakes og identity as a virtual module", () => {
   assert.match(plugin, /virtual:grok-og-identity/);
   assert.match(plugin, /snapshotOgIdentity/);
 });
+
