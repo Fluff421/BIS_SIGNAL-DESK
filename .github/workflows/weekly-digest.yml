@@ -16,19 +16,30 @@ jobs:
           node-version: "20"
           cache: npm
       - run: npm ci
+
       - name: Grade any remaining results
         run: node scripts/grade-results.mjs
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         continue-on-error: true
+
       - name: Refit ensemble if n>=30
         run: node scripts/refit-ensemble.mjs
-      - name: Generate weekly digest
+
+      - name: Generate weekly digest (incl. Grok narrative)
         run: node scripts/generate-digest.mjs
         env:
           GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
-      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      - name: Commit digest
+        uses: EndBug/add-and-commit@v9
         with:
-          commit_message: "chore(digest): weekly intelligence brief [skip ci]"
-          file_pattern: src/data/digest.json src/data/model.json src/data/ledger.json public/data/*
+          message: "chore(digest): weekly intelligence brief [skip ci]"
+          add: |
+            src/data/digest.json
+            src/data/model.json
+            src/data/ledger.json
+            public/data/
+          default_author: github_actions
+          push: true
