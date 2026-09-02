@@ -1,0 +1,42 @@
+name: Refresh Board
+on:
+  schedule:
+    - cron: "0 11,17,23,5 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+
+      - name: Refresh FPI snapshot
+        run: node scripts/update-fpi.mjs
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        continue-on-error: true
+
+      - name: Refresh board from live odds
+        run: npm run odds:update
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+
+      - name: Auto-grade completed NCAAF edges
+        run: node scripts/grade-results.mjs
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        continue-on-error: true
+
+      - name: Commit data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): auto-refresh board, FPI, ledger [skip ci]"
+          file_pattern: src/data/*.json public/data/*.json src/data/fpi-history/*.json src/data/board-history/*.json

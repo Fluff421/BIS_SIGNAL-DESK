@@ -1,0 +1,34 @@
+name: Weekly Intelligence Digest
+on:
+  schedule:
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Grade any remaining results
+        run: node scripts/grade-results.mjs
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        continue-on-error: true
+      - name: Refit ensemble if n>=30
+        run: node scripts/refit-ensemble.mjs
+      - name: Generate weekly digest
+        run: node scripts/generate-digest.mjs
+        env:
+          GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(digest): weekly intelligence brief [skip ci]"
+          file_pattern: src/data/digest.json src/data/model.json src/data/ledger.json public/data/*
