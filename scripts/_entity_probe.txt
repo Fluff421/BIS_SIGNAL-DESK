@@ -1,0 +1,2 @@
+line1 &amp;amp; &amp;lt; &amp;gt; &amp;quot; &amp;#39;
+line2 exact entities test
