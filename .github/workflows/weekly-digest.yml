@@ -11,12 +11,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: npm
-      - run: npm ci
+          node-version: "22"
 
+      # Pure Node scripts — no npm ci (lockfile sync is a separate CI concern)
       - name: Grade any remaining results
         run: node scripts/grade-results.mjs
         env:

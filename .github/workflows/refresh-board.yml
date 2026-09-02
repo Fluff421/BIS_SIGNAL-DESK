@@ -11,12 +11,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: npm
-      - run: npm ci
+          node-version: "22"
 
+      # These scripts are pure Node (fetch + fs). No npm install required.
       - name: Refresh FPI snapshot
         run: node scripts/update-fpi.mjs
         env:
@@ -24,7 +24,7 @@ jobs:
         continue-on-error: true
 
       - name: Refresh board from live odds
-        run: npm run odds:update
+        run: node scripts/update-board-from-odds.mjs
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
