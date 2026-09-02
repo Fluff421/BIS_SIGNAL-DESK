@@ -1,11 +1,17 @@
 {
   "week": 1,
   "season": 2026,
-  "generatedAt": "2026-09-02T03:44:00.000Z",
+  "generatedAt": "2026-09-02T04:18:18.487Z",
   "confidenceTier": "INSUFFICIENT",
-  "atsRecord": { "hits": 0, "misses": 0, "pushes": 0, "n": 0, "rate": null },
+  "atsRecord": {
+    "hits": 0,
+    "misses": 0,
+    "pushes": 0,
+    "n": 0,
+    "rate": null
+  },
   "helpers": [
-    "Process discipline: empty issuedPlays until sample supports plays."
+    "5 rows in primary watch band (confidence WATCH or unset)."
   ],
   "hurters": [
     "No graded sides yet — 75% ATS is not measurable (need n≥30).",
@@ -14,8 +20,60 @@
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 and selective hit rate supports it"
   ],
-  "topGamesNextWeek": [],
+  "topGamesNextWeek": [
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-05",
+      "matchup": "Miami Hurricanes @ Stanford Cardinal",
+      "edge": 46.8,
+      "edgeTo": "Miami Hurricanes",
+      "confidence": "WATCH",
+      "marketHome": 24.5,
+      "modelHome": -22.3
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-04",
+      "matchup": "UAB Blazers @ Illinois Fighting Illini",
+      "edge": 43,
+      "edgeTo": "Illinois Fighting Illini",
+      "confidence": "WATCH",
+      "marketHome": -27.5,
+      "modelHome": 15.5
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-03",
+      "matchup": "Akron Zips @ Wake Forest Demon Deacons",
+      "edge": 34.3,
+      "edgeTo": "Wake Forest Demon Deacons",
+      "confidence": "WATCH",
+      "marketHome": -23.5,
+      "modelHome": 10.8
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-20",
+      "matchup": "Miami Dolphins @ San Francisco 49ers",
+      "edge": 21.6,
+      "edgeTo": "San Francisco 49ers",
+      "confidence": "WATCH",
+      "marketHome": -10.5,
+      "modelHome": 11.1
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-13",
+      "matchup": "Arizona Cardinals @ Los Angeles Chargers",
+      "edge": 20.3,
+      "edgeTo": "Los Angeles Chargers",
+      "confidence": "WATCH",
+      "marketHome": -10.5,
+      "modelHome": 9.8
+    }
+  ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "summary": "BIS desk week snapshot: ATS 0-0-0 (n=0). Confidence INSUFFICIENT. Grade games after kickoff; helpers/hurters will update weekly."
+  "aiNarrative": null,
+  "summary": "BIS desk week snapshot: ATS 0-0-0 (n=0, rate=n/a). Confidence INSUFFICIENT. Helpers: 5 rows in primary watch band (confidence WATCH or unset).. Hurters: No graded sides yet — 75% ATS is not measurable (need n≥30).; Ensemble remains unfitted (fittedOn2026=false).."
 }
