@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Weekly intelligence brief from ledger + board + model.
- * Optional GROK_API_KEY → aiNarrative via api.x.ai
+ * Optional GROK_API_KEY → aiNarrative via api.x.ai (model grok-4.6)
  * Usage: node scripts/generate-digest.mjs
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from "node:fs";
@@ -11,6 +11,7 @@ import { randomBytes } from "node:crypto";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const GROK_KEY = process.env.GROK_API_KEY || process.env.XAI_API_KEY || "";
+const GROK_MODEL = process.env.GROK_MODEL || "grok-4.6";
 
 function atomicWrite(path, text) {
   mkdirSync(dirname(path), { recursive: true });
@@ -110,7 +111,7 @@ async function callGrokNarrative(base) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "grok-3",
+        model: GROK_MODEL,
         messages: [{ role: "user", content: prompt }],
         max_tokens: 500,
         temperature: 0.4,
@@ -118,12 +119,12 @@ async function callGrokNarrative(base) {
     });
     if (!res.ok) {
       const err = await res.text();
-      console.error(`[digest] Grok API error ${res.status}: ${err.slice(0, 200)}`);
+      console.error(`[digest] Grok API error ${res.status} model=${GROK_MODEL}: ${err.slice(0, 200)}`);
       return null;
     }
     const data = await res.json();
     const narrative = data.choices?.[0]?.message?.content ?? null;
-    console.error(`[digest] Grok narrative: ${narrative?.length ?? 0} chars`);
+    console.error(`[digest] Grok narrative model=${GROK_MODEL} chars=${narrative?.length ?? 0}`);
     return narrative;
   } catch (e) {
     console.error(`[digest] Grok API fetch failed: ${e.message}`);
@@ -181,7 +182,7 @@ async function main() {
   if (existsSync(join(ROOT, "public/data"))) {
     atomicWrite(join(ROOT, "public/data/digest.md"), md);
   }
-  console.log(`digest written confidence=${base.confidenceTier} n=${ats.n} ai=${base.aiNarrative ? "yes" : "no"}`);
+  console.log(`digest written confidence=${base.confidenceTier} n=${ats.n} ai=${base.aiNarrative ? "yes" : "no"} model=${GROK_MODEL}`);
 }
 
 main().catch((e) => {
