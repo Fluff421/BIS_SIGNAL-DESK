@@ -30,3 +30,20 @@ npm run preview      # http://127.0.0.1:8081
 - `npm run check:auth`
 
 Auth is disabled by default (see `.grok/app-env.json`).
+
+## Live odds & historical data
+
+```bash
+cp .env.example .env   # add ODDS_API_KEY and CFBD_API_KEY
+export $(grep -v '^#' .env | xargs)
+
+npm run odds:probe     # verify keys
+npm run odds:update    # refresh src/data/board.json from The Odds API
+npm run odds:backfill  # CFBD historical (optional; uses quota)
+
+npm run dev
+```
+
+**Never commit API keys.** Free tiers are limited (Odds API credits; CFBD ~1k calls/mo).
+
+Target remains **75% ATS** after **n ≥ 30** graded regular-season sides. Live edges are research until the ledger has sample.
