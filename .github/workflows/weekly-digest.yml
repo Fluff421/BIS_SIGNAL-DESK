@@ -1,8 +1,16 @@
 name: Weekly Intelligence Digest
+
 on:
   schedule:
     - cron: "0 14 * * 1"
   workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: bis-weekly-digest
+  cancel-in-progress: false
 
 jobs:
   digest:
@@ -10,13 +18,13 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: "22"
 
-      # Pure Node scripts — no npm ci (lockfile sync is a separate CI concern)
+      # Pure Node scripts — no npm ci; lockfile verification belongs in CI.
       - name: Grade any remaining results
         run: node scripts/grade-results.mjs
         env:
