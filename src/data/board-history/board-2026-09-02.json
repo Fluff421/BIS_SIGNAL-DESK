@@ -15,8 +15,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.16,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (FanDuel|Bovada|DraftKings). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -33,27 +33,9 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 8,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 8 books (LowVig.ag|BetOnline.ag|BetUS). FPI+HFA. conf=HIGH_NOISE"
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-06",
-      "away": "Louisville Cardinals",
-      "home": "Ole Miss Rebels",
-      "neutral": false,
-      "marketHome": -6.94,
-      "modelHome": 9,
-      "edgeTo": "Ole Miss Rebels",
-      "edge": 15.9,
-      "total": 55.4,
-      "confidence": "HIGH_NOISE",
-      "nBooks": 8,
-      "spreadStddev": 0.17,
-      "lineMovement": null,
-      "movingAgainstModel": null,
-      "note": "Consensus 8 books (DraftKings|BetRivers|MyBookie.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
       "league": "NCAAF",
@@ -65,13 +47,31 @@
       "modelHome": 5.8,
       "edgeTo": "Michigan State Spartans",
       "edge": 15.8,
-      "total": 46.7,
+      "total": 46.8,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.24,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=HIGH_NOISE"
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-06",
+      "away": "Louisville Cardinals",
+      "home": "Ole Miss Rebels",
+      "neutral": false,
+      "marketHome": -6.75,
+      "modelHome": 9,
+      "edgeTo": "Ole Miss Rebels",
+      "edge": 15.8,
+      "total": 55.4,
+      "confidence": "HIGH_NOISE",
+      "nBooks": 8,
+      "spreadStddev": 0.25,
+      "lineMovement": 0.19,
+      "movingAgainstModel": false,
+      "note": "Consensus 8 books (DraftKings|BetRivers|MyBookie.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
       "league": "NCAAF",
@@ -87,8 +87,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.16,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (FanDuel|Bovada|DraftKings). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -105,8 +105,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 3,
       "spreadStddev": 0.94,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 3 books (DraftKings|FanDuel|BetRivers). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -115,16 +115,16 @@
       "away": "Liberty Flames",
       "home": "James Madison Dukes",
       "neutral": false,
-      "marketHome": -6.17,
+      "marketHome": -6.11,
       "modelHome": 8.2,
       "edgeTo": "James Madison Dukes",
-      "edge": 14.4,
+      "edge": 14.3,
       "total": 50.4,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
-      "spreadStddev": 0.24,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "spreadStddev": 0.21,
+      "lineMovement": 0.06,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -141,8 +141,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 3,
       "spreadStddev": 0.24,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 3 books (FanDuel|DraftKings|BetRivers). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -159,8 +159,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 5,
       "spreadStddev": 0.49,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 5 books (FanDuel|DraftKings|BetRivers). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -177,8 +177,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -195,8 +195,8 @@
       "confidence": "WATCH",
       "nBooks": 6,
       "spreadStddev": 0.62,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 6 books (FanDuel|DraftKings|BetRivers). FPI+HFA. conf=WATCH"
     },
     {
@@ -213,8 +213,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -231,8 +231,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.24,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -241,16 +241,16 @@
       "away": "Western Kentucky Hilltoppers",
       "home": "Nevada Wolf Pack",
       "neutral": false,
-      "marketHome": 1.28,
+      "marketHome": 1.11,
       "modelHome": -4.5,
       "edgeTo": "Western Kentucky Hilltoppers",
-      "edge": 5.8,
+      "edge": 5.6,
       "total": 52.4,
       "confidence": "WATCH",
       "nBooks": 9,
-      "spreadStddev": 0.42,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "spreadStddev": 0.31,
+      "lineMovement": -0.17,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -267,8 +267,8 @@
       "confidence": "WATCH",
       "nBooks": 5,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 5 books (FanDuel|DraftKings|BetRivers). FPI+HFA. conf=WATCH"
     },
     {
@@ -285,8 +285,8 @@
       "confidence": "WATCH",
       "nBooks": 4,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 4 books (FanDuel|DraftKings|BetRivers). FPI+HFA. conf=WATCH"
     },
     {
@@ -303,8 +303,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.21,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetMGM|Bovada). FPI+HFA. conf=WATCH"
     },
     {
@@ -321,7 +321,7 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.28,
-      "lineMovement": 0.44,
+      "lineMovement": 0,
       "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=HIGH_NOISE"
     },
@@ -339,8 +339,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 0.5,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -357,8 +357,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 1,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 1 books (DraftKings). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -375,8 +375,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -393,8 +393,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.47,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -411,8 +411,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -429,8 +429,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.16,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -447,8 +447,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 0.5,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -465,8 +465,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 1,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 1 books (DraftKings). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -483,8 +483,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 0.5,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -501,8 +501,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.25,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -519,8 +519,8 @@
       "confidence": "WATCH",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=WATCH"
     },
     {
@@ -537,8 +537,8 @@
       "confidence": "WATCH",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=WATCH"
     },
     {
@@ -555,8 +555,8 @@
       "confidence": "WATCH",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=WATCH"
     },
     {
@@ -573,8 +573,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.25,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetMGM|FanDuel). FPI+HFA. conf=WATCH"
     },
     {
@@ -591,8 +591,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetUS|FanDuel). FPI+HFA. conf=WATCH"
     },
     {
@@ -609,8 +609,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.25,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -627,8 +627,8 @@
       "confidence": "WATCH",
       "nBooks": 1,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 1 books (DraftKings). FPI+HFA. conf=WATCH"
     },
     {
@@ -641,12 +641,12 @@
       "modelHome": 3.2,
       "edgeTo": "Las Vegas Raiders",
       "edge": 6.7,
-      "total": 40.3,
+      "total": 40.5,
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetUS|BetRivers). FPI+HFA. conf=WATCH"
     },
     {
@@ -663,8 +663,8 @@
       "confidence": "WATCH",
       "nBooks": 4,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 4 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -681,8 +681,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetUS|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -699,8 +699,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetRivers|BetOnline.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -717,8 +717,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.24,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -735,8 +735,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.41,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -753,8 +753,8 @@
       "confidence": "WATCH",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=WATCH"
     },
     {
@@ -771,8 +771,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.25,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -789,8 +789,8 @@
       "confidence": "WATCH",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=WATCH"
     },
     {
@@ -807,8 +807,8 @@
       "confidence": "WATCH",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=WATCH"
     },
     {
@@ -825,8 +825,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.24,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|BetOnline.ag). FPI+HFA. conf=WATCH"
     }
   ],
@@ -863,8 +863,8 @@
       "confidence": "STALE_FPI",
       "nBooks": 9,
       "spreadStddev": 0.16,
-      "lineMovement": -0.06,
-      "movingAgainstModel": true,
+      "lineMovement": null,
+      "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|BetUS|BetOnline.ag). FPI+HFA. conf=STALE_FPI"
     },
     {
@@ -945,16 +945,16 @@
       "away": "Akron Zips",
       "home": "Wake Forest Demon Deacons",
       "neutral": false,
-      "marketHome": -24.33,
+      "marketHome": -24.44,
       "modelHome": 22.8,
       "edgeTo": "Wake Forest Demon Deacons",
-      "edge": 47.1,
+      "edge": 47.2,
       "total": 48.4,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.24,
-      "lineMovement": -0.83,
-      "movingAgainstModel": true,
+      "spreadStddev": 0.28,
+      "lineMovement": null,
+      "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=STALE_FPI"
     },
     {
@@ -971,8 +971,8 @@
       "confidence": "STALE_FPI",
       "nBooks": 9,
       "spreadStddev": 0.16,
-      "lineMovement": -0.06,
-      "movingAgainstModel": false,
+      "lineMovement": null,
+      "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=STALE_FPI"
     },
     {
@@ -1017,14 +1017,14 @@
       "away": "Fresno State Bulldogs",
       "home": "USC Trojans",
       "neutral": false,
-      "marketHome": -21.72,
+      "marketHome": -21.83,
       "modelHome": 18.6,
       "edgeTo": "USC Trojans",
-      "edge": 40.3,
+      "edge": 40.4,
       "total": 51.7,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.48,
+      "spreadStddev": 0.53,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=STALE_FPI"
@@ -1089,14 +1089,14 @@
       "away": "Coastal Carolina Chanticleers",
       "home": "West Virginia Mountaineers",
       "neutral": false,
-      "marketHome": -21.17,
+      "marketHome": -21.11,
       "modelHome": 14.8,
       "edgeTo": "West Virginia Mountaineers",
-      "edge": 36,
+      "edge": 35.9,
       "total": 56.1,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.24,
+      "spreadStddev": 0.21,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=STALE_FPI"
@@ -1295,8 +1295,8 @@
       "confidence": "STALE_FPI",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": 0,
-      "movingAgainstModel": false,
+      "lineMovement": null,
+      "movingAgainstModel": null,
       "note": "Consensus 2 books (DraftKings|BetUS). FPI+HFA. conf=STALE_FPI"
     }
   ],
@@ -1377,7 +1377,7 @@
       "league": "NCAAF",
       "home": "Appalachian State Mountaineers",
       "away": "Maine Black Bears",
-      "marketHome": -19.1
+      "marketHome": -19.3
     },
     {
       "league": "NCAAF",
@@ -1389,13 +1389,13 @@
       "league": "NCAAF",
       "home": "North Dakota State Bison",
       "away": "Fordham Rams",
-      "marketHome": -40.9
+      "marketHome": -40.8
     },
     {
       "league": "NCAAF",
       "home": "Tennessee Volunteers",
       "away": "Furman Paladins",
-      "marketHome": -47.3
+      "marketHome": -47.2
     },
     {
       "league": "NCAAF",
@@ -1443,7 +1443,7 @@
       "league": "NCAAF",
       "home": "Utah State Aggies",
       "away": "Idaho State Bengals",
-      "marketHome": -13.6
+      "marketHome": -13.7
     },
     {
       "league": "NCAAF",
@@ -1453,6 +1453,6 @@
     }
   ],
   "aligned": [],
-  "updated": "2026-09-02T18:37:02.006Z",
+  "updated": "2026-09-02T19:37:44.815Z",
   "source": "the-odds-api+consensus"
 }
