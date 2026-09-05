@@ -11,7 +11,7 @@
       "modelHome": 9.1,
       "edgeTo": "LSU Tigers",
       "edge": 19.1,
-      "total": 50.5,
+      "total": 50.4,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.24,
@@ -43,15 +43,15 @@
       "away": "Boston College Eagles",
       "home": "Cincinnati Bearcats",
       "neutral": false,
-      "marketHome": -7.5,
+      "marketHome": -7.17,
       "modelHome": 9.6,
       "edgeTo": "Cincinnati Bearcats",
-      "edge": 17.1,
-      "total": 49.9,
+      "edge": 16.8,
+      "total": 50,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
-      "spreadStddev": 0,
-      "lineMovement": 0,
+      "spreadStddev": 0.24,
+      "lineMovement": 0.33,
       "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=HIGH_NOISE"
     },
@@ -69,8 +69,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 1.25,
-      "lineMovement": -1.25,
-      "movingAgainstModel": true,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (DraftKings|FanDuel). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -119,7 +119,7 @@
       "modelHome": 8,
       "edgeTo": "Auburn Tigers",
       "edge": 15.4,
-      "total": 59,
+      "total": 59.1,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.16,
@@ -173,12 +173,12 @@
       "modelHome": 8.2,
       "edgeTo": "James Madison Dukes",
       "edge": 14.4,
-      "total": 50.4,
+      "total": 50.5,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
       "spreadStddev": 0.25,
-      "lineMovement": -0.05,
-      "movingAgainstModel": true,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -213,8 +213,8 @@
       "confidence": "HIGH_NOISE",
       "nBooks": 2,
       "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 2 books (FanDuel|BetRivers). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -245,12 +245,12 @@
       "modelHome": 0.3,
       "edgeTo": "South Alabama Jaguars",
       "edge": 13,
-      "total": 52.5,
+      "total": 52.6,
       "confidence": "HIGH_NOISE",
       "nBooks": 7,
       "spreadStddev": 0.36,
-      "lineMovement": -0.04,
-      "movingAgainstModel": true,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 7 books (FanDuel|MyBookie.ag|DraftKings). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -277,16 +277,16 @@
       "away": "Tulane Green Wave",
       "home": "Duke Blue Devils",
       "neutral": false,
-      "marketHome": -7.5,
+      "marketHome": -7.56,
       "modelHome": 3.7,
       "edgeTo": "Duke Blue Devils",
-      "edge": 11.2,
+      "edge": 11.3,
       "total": 51.1,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
-      "spreadStddev": 0,
-      "lineMovement": 0.06,
-      "movingAgainstModel": false,
+      "spreadStddev": 0.16,
+      "lineMovement": -0.06,
+      "movingAgainstModel": true,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -345,6 +345,24 @@
     },
     {
       "league": "NCAAF",
+      "kick": "2026-09-12",
+      "away": "Wake Forest Demon Deacons",
+      "home": "Purdue Boilermakers",
+      "neutral": false,
+      "marketHome": 5.5,
+      "modelHome": -1.8,
+      "edgeTo": "Wake Forest Demon Deacons",
+      "edge": 7.3,
+      "total": 50.5,
+      "confidence": "WATCH",
+      "nBooks": 1,
+      "spreadStddev": 0,
+      "lineMovement": 1,
+      "movingAgainstModel": true,
+      "note": "Consensus 1 books (FanDuel). FPI+HFA. conf=WATCH"
+    },
+    {
+      "league": "NCAAF",
       "kick": "2026-09-11",
       "away": "Rutgers Scarlet Knights",
       "home": "Boston College Eagles",
@@ -381,37 +399,19 @@
     },
     {
       "league": "NCAAF",
-      "kick": "2026-09-12",
-      "away": "Wake Forest Demon Deacons",
-      "home": "Purdue Boilermakers",
-      "neutral": false,
-      "marketHome": 4.5,
-      "modelHome": -1.8,
-      "edgeTo": "Wake Forest Demon Deacons",
-      "edge": 6.3,
-      "total": 50.5,
-      "confidence": "WATCH",
-      "nBooks": 1,
-      "spreadStddev": 0,
-      "lineMovement": null,
-      "movingAgainstModel": null,
-      "note": "Consensus 1 books (FanDuel). FPI+HFA. conf=WATCH"
-    },
-    {
-      "league": "NCAAF",
       "kick": "2026-09-06",
       "away": "Western Kentucky Hilltoppers",
       "home": "Nevada Wolf Pack",
       "neutral": false,
-      "marketHome": 0.56,
+      "marketHome": 0.39,
       "modelHome": -4.5,
       "edgeTo": "Western Kentucky Hilltoppers",
-      "edge": 5.1,
+      "edge": 4.9,
       "total": 51.4,
       "confidence": "WATCH",
       "nBooks": 9,
-      "spreadStddev": 0.8,
-      "lineMovement": 0,
+      "spreadStddev": 0.84,
+      "lineMovement": -0.17,
       "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=WATCH"
     },
@@ -421,16 +421,16 @@
       "away": "Houston Baptist Huskies",
       "home": "Rice Owls",
       "neutral": false,
-      "marketHome": -22.5,
+      "marketHome": -22.58,
       "modelHome": -18,
       "edgeTo": "Rice Owls",
-      "edge": 4.5,
-      "total": 47.5,
+      "edge": 4.6,
+      "total": 47.6,
       "confidence": "WATCH",
       "nBooks": 6,
-      "spreadStddev": 0,
-      "lineMovement": 0,
-      "movingAgainstModel": false,
+      "spreadStddev": 0.19,
+      "lineMovement": -0.08,
+      "movingAgainstModel": true,
       "note": "Consensus 6 books (FanDuel|DraftKings|BetRivers). FPI+HFA. conf=WATCH"
     },
     {
@@ -439,16 +439,16 @@
       "away": "Eastern Kentucky Colonels",
       "home": "Jacksonville State Gamecocks",
       "neutral": false,
-      "marketHome": -20.67,
+      "marketHome": -20.83,
       "modelHome": -16.8,
       "edgeTo": "Jacksonville State Gamecocks",
-      "edge": 3.9,
-      "total": 54.1,
+      "edge": 4,
+      "total": 53.9,
       "confidence": "WATCH",
       "nBooks": 6,
-      "spreadStddev": 0.24,
-      "lineMovement": 0.03,
-      "movingAgainstModel": false,
+      "spreadStddev": 0.37,
+      "lineMovement": -0.16,
+      "movingAgainstModel": true,
       "note": "Consensus 6 books (FanDuel|MyBookie.ag|DraftKings). FPI+HFA. conf=WATCH"
     },
     {
@@ -565,16 +565,16 @@
       "away": "Cleveland Browns",
       "home": "Jacksonville Jaguars",
       "neutral": false,
-      "marketHome": -8.11,
+      "marketHome": -8.17,
       "modelHome": 8.5,
       "edgeTo": "Jacksonville Jaguars",
-      "edge": 16.6,
+      "edge": 16.7,
       "total": 40.5,
       "confidence": "HIGH_NOISE",
       "nBooks": 9,
-      "spreadStddev": 0.46,
-      "lineMovement": 0,
-      "movingAgainstModel": false,
+      "spreadStddev": 0.47,
+      "lineMovement": -0.06,
+      "movingAgainstModel": true,
       "note": "Consensus 9 books (DraftKings|FanDuel|BetUS). FPI+HFA. conf=HIGH_NOISE"
     },
     {
@@ -799,16 +799,16 @@
       "away": "Tampa Bay Buccaneers",
       "home": "Cincinnati Bengals",
       "neutral": false,
-      "marketHome": -3.83,
+      "marketHome": -3.89,
       "modelHome": 3.5,
       "edgeTo": "Cincinnati Bengals",
-      "edge": 7.3,
+      "edge": 7.4,
       "total": 50.6,
       "confidence": "WATCH",
       "nBooks": 9,
-      "spreadStddev": 0.24,
-      "lineMovement": 0,
-      "movingAgainstModel": false,
+      "spreadStddev": 0.31,
+      "lineMovement": -0.06,
+      "movingAgainstModel": true,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -893,7 +893,7 @@
       "modelHome": -2.3,
       "edgeTo": "Baltimore Ravens",
       "edge": 5.8,
-      "total": 47.9,
+      "total": 48,
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0,
@@ -933,8 +933,8 @@
       "confidence": "WATCH",
       "nBooks": 9,
       "spreadStddev": 0.25,
-      "lineMovement": 0.06,
-      "movingAgainstModel": true,
+      "lineMovement": 0,
+      "movingAgainstModel": false,
       "note": "Consensus 9 books (DraftKings|FanDuel|LowVig.ag). FPI+HFA. conf=WATCH"
     },
     {
@@ -1067,24 +1067,6 @@
     },
     {
       "league": "NCAAF",
-      "kick": "2026-09-05",
-      "away": "East Carolina Pirates",
-      "home": "Alabama Crimson Tide",
-      "neutral": false,
-      "marketHome": -27.94,
-      "modelHome": 23.2,
-      "edgeTo": "Alabama Crimson Tide",
-      "edge": 51.1,
-      "total": 52.5,
-      "confidence": "STALE_FPI",
-      "nBooks": 9,
-      "spreadStddev": 0.28,
-      "lineMovement": null,
-      "movingAgainstModel": null,
-      "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=STALE_FPI"
-    },
-    {
-      "league": "NCAAF",
       "kick": "2026-09-12",
       "away": "Georgia Southern Eagles",
       "home": "Clemson Tigers",
@@ -1143,14 +1125,14 @@
       "away": "Boise State Broncos",
       "home": "Oregon Ducks",
       "neutral": false,
-      "marketHome": -24.56,
+      "marketHome": -24.61,
       "modelHome": 23.8,
       "edgeTo": "Oregon Ducks",
       "edge": 48.4,
       "total": 51.6,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.16,
+      "spreadStddev": 0.21,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=STALE_FPI"
@@ -1161,14 +1143,14 @@
       "away": "Marshall Thundering Herd",
       "home": "Penn State Nittany Lions",
       "neutral": false,
-      "marketHome": -23.44,
+      "marketHome": -23.39,
       "modelHome": 25,
       "edgeTo": "Penn State Nittany Lions",
       "edge": 48.4,
-      "total": 52.1,
+      "total": 52.2,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.16,
+      "spreadStddev": 0.21,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|BetOnline.ag|LowVig.ag). FPI+HFA. conf=STALE_FPI"
@@ -1219,7 +1201,7 @@
       "modelHome": 19.3,
       "edgeTo": "Nebraska Cornhuskers",
       "edge": 43.1,
-      "total": 46.6,
+      "total": 46.7,
       "confidence": "STALE_FPI",
       "nBooks": 9,
       "spreadStddev": 0.25,
@@ -1323,11 +1305,11 @@
       "away": "Coastal Carolina Chanticleers",
       "home": "West Virginia Mountaineers",
       "neutral": false,
-      "marketHome": -21.17,
+      "marketHome": -21,
       "modelHome": 14.8,
       "edgeTo": "West Virginia Mountaineers",
-      "edge": 36,
-      "total": 54.4,
+      "edge": 35.8,
+      "total": 54.6,
       "confidence": "STALE_FPI",
       "nBooks": 9,
       "spreadStddev": 0.24,
@@ -1341,17 +1323,17 @@
       "away": "Eastern Michigan Eagles",
       "home": "Michigan State Spartans",
       "neutral": false,
-      "marketHome": -17.5,
+      "marketHome": -17,
       "modelHome": 17.9,
       "edgeTo": "Michigan State Spartans",
-      "edge": 35.4,
-      "total": 50.5,
+      "edge": 34.9,
+      "total": 51,
       "confidence": "STALE_FPI",
-      "nBooks": 1,
-      "spreadStddev": 0,
+      "nBooks": 2,
+      "spreadStddev": 0.5,
       "lineMovement": null,
       "movingAgainstModel": null,
-      "note": "Consensus 1 books (FanDuel). FPI+HFA. conf=STALE_FPI"
+      "note": "Consensus 2 books (FanDuel|DraftKings). FPI+HFA. conf=STALE_FPI"
     },
     {
       "league": "NCAAF",
@@ -1399,7 +1381,7 @@
       "modelHome": 16.1,
       "edgeTo": "Pittsburgh Panthers",
       "edge": 32.4,
-      "total": 47.4,
+      "total": 47.1,
       "confidence": "STALE_FPI",
       "nBooks": 9,
       "spreadStddev": 0.33,
@@ -1431,14 +1413,14 @@
       "away": "Sam Houston State Bearkats",
       "home": "Troy Trojans",
       "neutral": false,
-      "marketHome": -16.44,
+      "marketHome": -16.5,
       "modelHome": 13.5,
       "edgeTo": "Troy Trojans",
-      "edge": 29.9,
-      "total": 54.1,
+      "edge": 30,
+      "total": 53.9,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.16,
+      "spreadStddev": 0.24,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=STALE_FPI"
@@ -1575,14 +1557,14 @@
       "away": "Arkansas State Red Wolves",
       "home": "Memphis Tigers",
       "neutral": false,
-      "marketHome": -11.06,
+      "marketHome": -11,
       "modelHome": 11.7,
       "edgeTo": "Memphis Tigers",
-      "edge": 22.8,
-      "total": 53.3,
+      "edge": 22.7,
+      "total": 53.2,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.28,
+      "spreadStddev": 0.24,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=STALE_FPI"
@@ -1629,14 +1611,14 @@
       "away": "Central Michigan Chippewas",
       "home": "New Mexico Lobos",
       "neutral": false,
-      "marketHome": -10.56,
+      "marketHome": -10.5,
       "modelHome": 11.8,
       "edgeTo": "New Mexico Lobos",
-      "edge": 22.4,
+      "edge": 22.3,
       "total": 46.8,
       "confidence": "STALE_FPI",
       "nBooks": 9,
-      "spreadStddev": 0.16,
+      "spreadStddev": 0.24,
       "lineMovement": null,
       "movingAgainstModel": null,
       "note": "Consensus 9 books (DraftKings|LowVig.ag|BetOnline.ag). FPI+HFA. conf=STALE_FPI"
@@ -1689,25 +1671,25 @@
       "league": "NCAAF",
       "home": "Bowling Green Falcons",
       "away": "Tarleton State Texans",
-      "marketHome": -2.07
+      "marketHome": -1.86
     },
     {
       "league": "NCAAF",
       "home": "UConn Huskies",
       "away": "Lafayette Leopards",
-      "marketHome": -19.57
+      "marketHome": -21.19
     },
     {
       "league": "NCAAF",
       "home": "Syracuse Orange",
       "away": "New Hampshire Wildcats",
-      "marketHome": -34.5
+      "marketHome": -35.5
     },
     {
       "league": "NCAAF",
       "home": "Kentucky Wildcats",
       "away": "Youngstown St Penguins",
-      "marketHome": -22.83
+      "marketHome": -22.64
     },
     {
       "league": "NCAAF",
@@ -1719,7 +1701,7 @@
       "league": "NCAAF",
       "home": "Appalachian State Mountaineers",
       "away": "Maine Black Bears",
-      "marketHome": -19.14
+      "marketHome": -19.36
     },
     {
       "league": "NCAAF",
@@ -1737,13 +1719,13 @@
       "league": "NCAAF",
       "home": "Tennessee Volunteers",
       "away": "Furman Paladins",
-      "marketHome": -48.14
+      "marketHome": -48.5
     },
     {
       "league": "NCAAF",
       "home": "Navy Midshipmen",
       "away": "Towson Tigers",
-      "marketHome": -30.64
+      "marketHome": -31.07
     },
     {
       "league": "NCAAF",
@@ -1755,37 +1737,37 @@
       "league": "NCAAF",
       "home": "Southern Mississippi Golden Eagles",
       "away": "Alcorn State Braves",
-      "marketHome": -19.58
+      "marketHome": -17.33
     },
     {
       "league": "NCAAF",
       "home": "Old Dominion Monarchs",
       "away": "Norfolk State Spartans",
-      "marketHome": -40.71
+      "marketHome": -40.79
     },
     {
       "league": "NCAAF",
       "home": "Texas Tech Red Raiders",
       "away": "Abilene Christian Wildcats",
-      "marketHome": -42.36
+      "marketHome": -42.64
     },
     {
       "league": "NCAAF",
       "home": "Vanderbilt Commodores",
       "away": "Austin Peay Governors",
-      "marketHome": -29
+      "marketHome": -28.79
     },
     {
       "league": "NCAAF",
       "home": "Georgia Southern Eagles",
       "away": "Charleston Southern Buccaneers",
-      "marketHome": -25.86
+      "marketHome": -26.07
     },
     {
       "league": "NCAAF",
       "home": "Utah State Aggies",
       "away": "Idaho State Bengals",
-      "marketHome": -13.86
+      "marketHome": -13.79
     },
     {
       "league": "NCAAF",
@@ -1797,13 +1779,13 @@
       "league": "NCAAF",
       "home": "Middle Tennessee Blue Raiders",
       "away": "Murray State Racers",
-      "marketHome": -20.86
+      "marketHome": -21.43
     },
     {
       "league": "NCAAF",
       "home": "Virginia Tech Hokies",
       "away": "VMI Keydets",
-      "marketHome": -55.5
+      "marketHome": -55.43
     },
     {
       "league": "NCAAF",
@@ -1815,22 +1797,22 @@
       "league": "NCAAF",
       "home": "Louisiana Ragin Cajuns",
       "away": "Lamar Cardinals",
-      "marketHome": -19.5
+      "marketHome": -20.17
     },
     {
       "league": "NCAAF",
       "home": "Northwestern Wildcats",
       "away": "South Dakota State Jackrabbits",
-      "marketHome": -12.57
+      "marketHome": -12.43
     },
     {
       "league": "NCAAF",
       "home": "New Mexico State Aggies",
       "away": "Mercyhurst Lakers",
-      "marketHome": -28.36
+      "marketHome": -28.5
     }
   ],
   "aligned": [],
-  "updated": "2026-09-05T08:48:16.487Z",
+  "updated": "2026-09-05T13:39:43.044Z",
   "source": "the-odds-api+consensus"
 }
