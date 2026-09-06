@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-08-28",
+  "updated": "2026-09-06",
   "email": "wmcdaniel@gmail.com",
   "githubAttempt": "Fluff421/custom-claude-skills/signal-desk — write blocked (403). Reconnect GitHub with repo contents write.",
   "priorLogs": [
@@ -18,14 +18,33 @@
     }
   ],
   "regular": {
-    "ats": { "hits": 0, "misses": 0, "pushes": 0, "n": 0, "rate": null },
-    "ml": { "hits": 0, "misses": 0, "pushes": 0, "n": 0, "rate": null },
-    "totals": { "hits": 0, "misses": 0, "pushes": 0, "n": 0, "rate": null }
+    "ats": {
+      "hits": 0,
+      "misses": 0,
+      "pushes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "ml": {
+      "hits": 0,
+      "misses": 0,
+      "pushes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "totals": {
+      "hits": 0,
+      "misses": 0,
+      "pushes": 0,
+      "n": 0,
+      "rate": null
+    }
   },
   "target": {
     "ats": 0.75,
     "minN": 30,
-    "status": "Not measurable. n=0."
+    "status": "Not measurable. n=0 (need 30). rate=n/a"
   },
-  "graded": []
+  "graded": [],
+  "edgeBuckets": {}
 }
