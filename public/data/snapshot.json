@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-13T09:59:26.034Z",
+  "asOf": "2026-09-13T14:47:44.291Z",
   "timezone": "America/Chicago",
   "calendar": {
     "ncaaf": "Week 0 / Week 1 openers. FBS slate starts Aug 29. Week 3 is Sept 17–19.",
@@ -14,283 +14,283 @@
   "honesty": "No regular-season 2026 games are final. Ledger n=0. Prior automation titles that referenced 2025 Week 3 / NFL Week 2 were not imported.",
   "ncaafFpi": [
     {
-      "team": "Texas",
-      "fpi": 30.3,
+      "team": "Ohio State",
+      "fpi": 30.4,
       "rank": 1
     },
     {
-      "team": "Ohio State",
-      "fpi": 30,
+      "team": "Texas",
+      "fpi": 30.1,
       "rank": 2
     },
     {
       "team": "Notre Dame",
-      "fpi": 27,
+      "fpi": 27.9,
       "rank": 3
     },
     {
-      "team": "Miami",
-      "fpi": 25.4,
+      "team": "Georgia",
+      "fpi": 26.6,
       "rank": 4
     },
     {
-      "team": "Georgia",
-      "fpi": 24.9,
+      "team": "Miami",
+      "fpi": 25.7,
       "rank": 5
     },
     {
       "team": "Indiana",
-      "fpi": 24.3,
+      "fpi": 25.3,
       "rank": 6
     },
     {
-      "team": "LSU",
-      "fpi": 24.1,
+      "team": "Alabama",
+      "fpi": 23.2,
       "rank": 7
     },
     {
-      "team": "Oregon",
-      "fpi": 22.7,
+      "team": "Texas A&M",
+      "fpi": 23.1,
       "rank": 8
     },
     {
-      "team": "Alabama",
-      "fpi": 22.5,
+      "team": "LSU",
+      "fpi": 22.6,
       "rank": 9
     },
     {
-      "team": "Texas A&M",
-      "fpi": 21.2,
+      "team": "USC",
+      "fpi": 18.5,
       "rank": 10
     },
     {
-      "team": "Oklahoma",
-      "fpi": 19.2,
+      "team": "Tennessee",
+      "fpi": 17.9,
       "rank": 11
     },
     {
-      "team": "Texas Tech",
-      "fpi": 18.4,
+      "team": "Oklahoma",
+      "fpi": 17.8,
       "rank": 12
     },
     {
-      "team": "USC",
-      "fpi": 17.5,
+      "team": "Oregon",
+      "fpi": 17.1,
       "rank": 13
     },
     {
       "team": "Penn State",
-      "fpi": 17.2,
+      "fpi": 16.4,
       "rank": 14
     },
     {
-      "team": "South Carolina",
-      "fpi": 15.8,
+      "team": "Florida",
+      "fpi": 16.2,
       "rank": 15
+    },
+    {
+      "team": "Texas Tech",
+      "fpi": 16.1,
+      "rank": 16
     },
     {
       "team": "Ole Miss",
       "fpi": 15.5,
-      "rank": 16
-    },
-    {
-      "team": "Florida",
-      "fpi": 15.5,
       "rank": 17
     },
     {
-      "team": "Tennessee",
-      "fpi": 15.3,
+      "team": "BYU",
+      "fpi": 15.4,
       "rank": 18
     },
     {
-      "team": "BYU",
-      "fpi": 14.1,
+      "team": "Utah",
+      "fpi": 15.1,
       "rank": 19
     },
     {
-      "team": "SMU",
-      "fpi": 12.1,
+      "team": "Nebraska",
+      "fpi": 14.8,
       "rank": 20
     },
     {
-      "team": "Michigan",
-      "fpi": 11.8,
+      "team": "South Carolina",
+      "fpi": 14.7,
       "rank": 21
     },
     {
-      "team": "Pittsburgh",
-      "fpi": 11.5,
+      "team": "Michigan",
+      "fpi": 14.4,
       "rank": 22
     },
     {
-      "team": "Nebraska",
-      "fpi": 11.3,
+      "team": "Auburn",
+      "fpi": 14.2,
       "rank": 23
     },
     {
-      "team": "Utah",
-      "fpi": 11.2,
+      "team": "SMU",
+      "fpi": 13.8,
       "rank": 24
     },
     {
       "team": "Virginia",
-      "fpi": 11.1,
+      "fpi": 12.6,
       "rank": 25
     },
     {
-      "team": "Iowa",
-      "fpi": 11,
+      "team": "Missouri",
+      "fpi": 12.3,
       "rank": 26
     },
     {
-      "team": "Louisville",
-      "fpi": 10.8,
+      "team": "Mississippi State",
+      "fpi": 12.2,
       "rank": 27
     },
     {
-      "team": "Auburn",
-      "fpi": 10.8,
+      "team": "Louisville",
+      "fpi": 11.9,
       "rank": 28
     },
     {
-      "team": "Missouri",
-      "fpi": 10.2,
+      "team": "Pittsburgh",
+      "fpi": 11.6,
       "rank": 29
     },
     {
-      "team": "Washington",
-      "fpi": 9.5,
+      "team": "Kansas State",
+      "fpi": 10.9,
       "rank": 30
     },
     {
       "team": "Virginia Tech",
-      "fpi": 9.3,
+      "fpi": 10.3,
       "rank": 31
     },
     {
-      "team": "Kansas State",
-      "fpi": 8.8,
+      "team": "Iowa",
+      "fpi": 9.9,
       "rank": 32
     },
     {
-      "team": "Mississippi State",
-      "fpi": 8.6,
+      "team": "Houston",
+      "fpi": 9.2,
       "rank": 33
     },
     {
-      "team": "Boise State",
-      "fpi": 7.8,
+      "team": "Cincinnati",
+      "fpi": 8.6,
       "rank": 34
     },
     {
-      "team": "Vanderbilt",
-      "fpi": 7.8,
+      "team": "Boise State",
+      "fpi": 8.2,
       "rank": 35
     },
     {
-      "team": "Arizona State",
-      "fpi": 7.5,
+      "team": "Baylor",
+      "fpi": 8.2,
       "rank": 36
     },
     {
       "team": "Florida State",
-      "fpi": 7.3,
+      "fpi": 7.7,
       "rank": 37
     },
     {
-      "team": "Baylor",
-      "fpi": 7.1,
+      "team": "UCLA",
+      "fpi": 7,
       "rank": 38
     },
     {
-      "team": "Arizona",
-      "fpi": 6.9,
+      "team": "Vanderbilt",
+      "fpi": 6.8,
       "rank": 39
     },
     {
-      "team": "Houston",
-      "fpi": 6.5,
+      "team": "Duke",
+      "fpi": 6.6,
       "rank": 40
     },
     {
-      "team": "Kentucky",
-      "fpi": 6.5,
-      "rank": 41
-    },
-    {
-      "team": "Clemson",
-      "fpi": 6.4,
-      "rank": 42
-    },
-    {
-      "team": "Cincinnati",
+      "team": "TCU",
       "fpi": 6.3,
-      "rank": 43
+      "rank": 41
     },
     {
       "team": "North Carolina",
       "fpi": 6.3,
+      "rank": 42
+    },
+    {
+      "team": "Arizona",
+      "fpi": 6,
+      "rank": 43
+    },
+    {
+      "team": "Washington",
+      "fpi": 5.9,
       "rank": 44
     },
     {
-      "team": "Illinois",
-      "fpi": 5.7,
+      "team": "Maryland",
+      "fpi": 5.5,
       "rank": 45
     },
     {
-      "team": "UCLA",
-      "fpi": 5.1,
+      "team": "Clemson",
+      "fpi": 5.3,
       "rank": 46
     },
     {
-      "team": "Colorado",
+      "team": "Arizona State",
       "fpi": 4.9,
       "rank": 47
     },
     {
       "team": "UCF",
-      "fpi": 4.8,
+      "fpi": 4.7,
       "rank": 48
     },
     {
-      "team": "TCU",
-      "fpi": 4.8,
+      "team": "Colorado",
+      "fpi": 4.5,
       "rank": 49
     },
     {
-      "team": "Duke",
-      "fpi": 4.7,
+      "team": "Illinois",
+      "fpi": 4.5,
       "rank": 50
     },
     {
-      "team": "Kansas",
-      "fpi": 4,
+      "team": "Kentucky",
+      "fpi": 4.2,
       "rank": 51
     },
     {
       "team": "Wake Forest",
-      "fpi": 3.8,
+      "fpi": 4.1,
       "rank": 52
     },
     {
-      "team": "Wisconsin",
-      "fpi": 3.8,
+      "team": "Michigan State",
+      "fpi": 3.4,
       "rank": 53
     },
     {
-      "team": "Georgia Tech",
-      "fpi": 3.5,
+      "team": "Oklahoma State",
+      "fpi": 3,
       "rank": 54
     },
     {
-      "team": "Syracuse",
-      "fpi": 3.5,
+      "team": "New Mexico",
+      "fpi": 2.7,
       "rank": 55
     },
     {
-      "team": "Maryland",
-      "fpi": 2.9,
+      "team": "Wisconsin",
+      "fpi": 2.6,
       "rank": 56
     },
     {
@@ -299,408 +299,408 @@
       "rank": 57
     },
     {
-      "team": "Arkansas",
-      "fpi": 2.3,
+      "team": "NC State",
+      "fpi": 2.4,
       "rank": 58
     },
     {
-      "team": "UNLV",
-      "fpi": 2.3,
+      "team": "Georgia Tech",
+      "fpi": 1.7,
       "rank": 59
     },
     {
-      "team": "Minnesota",
-      "fpi": 2.3,
+      "team": "Syracuse",
+      "fpi": 1.2,
       "rank": 60
     },
     {
-      "team": "Memphis",
-      "fpi": 2.1,
+      "team": "West Virginia",
+      "fpi": 1.1,
       "rank": 61
     },
     {
-      "team": "Michigan State",
-      "fpi": 1.3,
+      "team": "Kansas",
+      "fpi": 0.9,
       "rank": 62
     },
     {
-      "team": "San Diego State",
-      "fpi": 1.2,
+      "team": "Iowa State",
+      "fpi": 0.8,
       "rank": 63
     },
     {
-      "team": "New Mexico",
-      "fpi": 0.9,
+      "team": "North Texas",
+      "fpi": 0.8,
       "rank": 64
     },
     {
-      "team": "North Dakota State",
-      "fpi": 0.2,
+      "team": "Western Michigan",
+      "fpi": 0.7,
       "rank": 65
     },
     {
-      "team": "Tulane",
-      "fpi": -0.5,
+      "team": "North Dakota State",
+      "fpi": 0.7,
       "rank": 66
     },
     {
-      "team": "Navy",
-      "fpi": -0.6,
+      "team": "South Florida",
+      "fpi": 0.3,
       "rank": 67
     },
     {
-      "team": "Iowa State",
-      "fpi": -0.8,
+      "team": "James Madison",
+      "fpi": 0.1,
       "rank": 68
     },
     {
-      "team": "West Virginia",
-      "fpi": -0.8,
+      "team": "Memphis",
+      "fpi": -0.2,
       "rank": 69
     },
     {
-      "team": "Western Michigan",
-      "fpi": -0.9,
+      "team": "Purdue",
+      "fpi": -0.4,
       "rank": 70
     },
     {
-      "team": "NC State",
-      "fpi": -1.1,
+      "team": "Tulane",
+      "fpi": -0.8,
       "rank": 71
     },
     {
-      "team": "Oklahoma State",
-      "fpi": -1.6,
+      "team": "Fresno State",
+      "fpi": -0.9,
       "rank": 72
     },
     {
-      "team": "Purdue",
-      "fpi": -1.6,
+      "team": "San Diego State",
+      "fpi": -1.1,
       "rank": 73
     },
     {
-      "team": "Army",
-      "fpi": -1.9,
+      "team": "Minnesota",
+      "fpi": -1.3,
       "rank": 74
     },
     {
-      "team": "South Florida",
-      "fpi": -2.3,
+      "team": "California",
+      "fpi": -1.5,
       "rank": 75
     },
     {
-      "team": "James Madison",
-      "fpi": -2.5,
+      "team": "Toledo",
+      "fpi": -1.6,
       "rank": 76
     },
     {
-      "team": "California",
-      "fpi": -3,
+      "team": "Arkansas",
+      "fpi": -1.7,
       "rank": 77
     },
     {
-      "team": "Southern Miss",
-      "fpi": -3,
+      "team": "Army",
+      "fpi": -2.8,
       "rank": 78
-    },
-    {
-      "team": "Nevada",
-      "fpi": -3.1,
-      "rank": 79
-    },
-    {
-      "team": "East Carolina",
-      "fpi": -3.2,
-      "rank": 80
     },
     {
       "team": "Tulsa",
       "fpi": -3.4,
-      "rank": 81
+      "rank": 79
     },
     {
       "team": "UTSA",
-      "fpi": -3.8,
-      "rank": 82
-    },
-    {
-      "team": "Toledo",
-      "fpi": -4,
-      "rank": 83
-    },
-    {
-      "team": "Washington State",
-      "fpi": -4.3,
-      "rank": 84
+      "fpi": -3.7,
+      "rank": 80
     },
     {
       "team": "Delaware",
-      "fpi": -4.6,
-      "rank": 85
-    },
-    {
-      "team": "Boston College",
-      "fpi": -4.6,
-      "rank": 86
-    },
-    {
-      "team": "Stanford",
-      "fpi": -4.7,
-      "rank": 87
+      "fpi": -3.8,
+      "rank": 81
     },
     {
       "team": "App State",
-      "fpi": -5.2,
+      "fpi": -3.9,
+      "rank": 82
+    },
+    {
+      "team": "Boston College",
+      "fpi": -3.9,
+      "rank": 83
+    },
+    {
+      "team": "East Carolina",
+      "fpi": -4.2,
+      "rank": 84
+    },
+    {
+      "team": "Oregon State",
+      "fpi": -4.5,
+      "rank": 85
+    },
+    {
+      "team": "Stanford",
+      "fpi": -4.9,
+      "rank": 86
+    },
+    {
+      "team": "UNLV",
+      "fpi": -5.1,
+      "rank": 87
+    },
+    {
+      "team": "Nevada",
+      "fpi": -5.1,
       "rank": 88
     },
     {
-      "team": "Kennesaw State",
-      "fpi": -5.5,
+      "team": "Navy",
+      "fpi": -5.3,
       "rank": 89
+    },
+    {
+      "team": "Colorado State",
+      "fpi": -5.4,
+      "rank": 90
     },
     {
       "team": "Air Force",
       "fpi": -5.8,
-      "rank": 90
-    },
-    {
-      "team": "Louisiana Tech",
-      "fpi": -6,
       "rank": 91
     },
     {
-      "team": "Old Dominion",
-      "fpi": -6.1,
+      "team": "Temple",
+      "fpi": -6,
       "rank": 92
     },
     {
       "team": "Louisiana",
-      "fpi": -6.7,
+      "fpi": -6.5,
       "rank": 93
     },
     {
-      "team": "North Texas",
-      "fpi": -6.7,
+      "team": "Louisiana Tech",
+      "fpi": -6.6,
       "rank": 94
     },
     {
-      "team": "Rutgers",
-      "fpi": -6.9,
+      "team": "Utah State",
+      "fpi": -6.8,
       "rank": 95
     },
     {
-      "team": "Hawai'i",
-      "fpi": -6.9,
+      "team": "Old Dominion",
+      "fpi": -7,
       "rank": 96
     },
     {
-      "team": "Fresno State",
-      "fpi": -7,
+      "team": "Southern Miss",
+      "fpi": -7.1,
       "rank": 97
     },
     {
-      "team": "Oregon State",
-      "fpi": -7.2,
+      "team": "Rutgers",
+      "fpi": -7.3,
       "rank": 98
     },
     {
-      "team": "Temple",
-      "fpi": -7.3,
+      "team": "Washington State",
+      "fpi": -7.7,
       "rank": 99
     },
     {
-      "team": "UConn",
-      "fpi": -7.5,
+      "team": "Georgia Southern",
+      "fpi": -7.8,
       "rank": 100
     },
     {
-      "team": "Liberty",
-      "fpi": -7.6,
+      "team": "South Alabama",
+      "fpi": -8.1,
       "rank": 101
     },
     {
       "team": "Texas State",
-      "fpi": -7.9,
+      "fpi": -8.2,
       "rank": 102
     },
     {
-      "team": "Colorado State",
-      "fpi": -7.9,
+      "team": "Hawai'i",
+      "fpi": -8.3,
       "rank": 103
     },
     {
-      "team": "Georgia Southern",
-      "fpi": -8,
+      "team": "Troy",
+      "fpi": -8.8,
       "rank": 104
     },
     {
-      "team": "Troy",
-      "fpi": -9,
+      "team": "Arkansas State",
+      "fpi": -8.9,
       "rank": 105
     },
     {
-      "team": "South Alabama",
-      "fpi": -9.6,
+      "team": "Jacksonville State",
+      "fpi": -9,
       "rank": 106
     },
     {
-      "team": "Ohio",
-      "fpi": -9.9,
+      "team": "Georgia State",
+      "fpi": -9.1,
       "rank": 107
     },
     {
-      "team": "Jacksonville State",
-      "fpi": -10,
+      "team": "Liberty",
+      "fpi": -9.2,
       "rank": 108
     },
     {
-      "team": "San José State",
-      "fpi": -10.1,
+      "team": "Florida International",
+      "fpi": -9.3,
       "rank": 109
     },
     {
-      "team": "Utah State",
-      "fpi": -10.4,
+      "team": "Coastal Carolina",
+      "fpi": -9.7,
       "rank": 110
     },
     {
-      "team": "Arkansas State",
-      "fpi": -10.7,
+      "team": "Ohio",
+      "fpi": -9.7,
       "rank": 111
     },
     {
-      "team": "Massachusetts",
-      "fpi": -11,
+      "team": "Miami (OH)",
+      "fpi": -10.7,
       "rank": 112
     },
     {
-      "team": "Coastal Carolina",
-      "fpi": -11.1,
+      "team": "Kennesaw State",
+      "fpi": -10.7,
       "rank": 113
     },
     {
-      "team": "Western Kentucky",
-      "fpi": -11.6,
+      "team": "UConn",
+      "fpi": -10.7,
       "rank": 114
     },
     {
-      "team": "Rice",
-      "fpi": -12.1,
+      "team": "Florida Atlantic",
+      "fpi": -10.8,
       "rank": 115
     },
     {
-      "team": "Florida International",
-      "fpi": -12.1,
+      "team": "San José State",
+      "fpi": -11,
       "rank": 116
     },
     {
-      "team": "Miami (OH)",
-      "fpi": -12.2,
+      "team": "Massachusetts",
+      "fpi": -11.2,
       "rank": 117
     },
     {
-      "team": "Buffalo",
-      "fpi": -12.6,
+      "team": "Missouri State",
+      "fpi": -11.9,
       "rank": 118
-    },
-    {
-      "team": "Georgia State",
-      "fpi": -12.6,
-      "rank": 119
     },
     {
       "team": "New Mexico State",
       "fpi": -13,
-      "rank": 120
+      "rank": 119
     },
     {
       "team": "Marshall",
-      "fpi": -13.5,
+      "fpi": -13.9,
+      "rank": 120
+    },
+    {
+      "team": "Western Kentucky",
+      "fpi": -13.9,
       "rank": 121
     },
     {
-      "team": "UAB",
+      "team": "Buffalo",
       "fpi": -14.5,
       "rank": 122
     },
     {
-      "team": "Bowling Green",
-      "fpi": -14.8,
+      "team": "Sam Houston",
+      "fpi": -14.6,
       "rank": 123
     },
     {
-      "team": "Florida Atlantic",
-      "fpi": -15.3,
+      "team": "Rice",
+      "fpi": -14.7,
       "rank": 124
     },
     {
-      "team": "Middle Tennessee",
+      "team": "UAB",
       "fpi": -15.4,
       "rank": 125
     },
     {
-      "team": "Eastern Michigan",
-      "fpi": -15.5,
+      "team": "Middle Tennessee",
+      "fpi": -15.4,
       "rank": 126
     },
     {
-      "team": "Missouri State",
-      "fpi": -15.9,
+      "team": "Akron",
+      "fpi": -15.8,
       "rank": 127
     },
     {
-      "team": "Sam Houston",
-      "fpi": -16.6,
+      "team": "Charlotte",
+      "fpi": -16.5,
       "rank": 128
     },
     {
-      "team": "Akron",
-      "fpi": -16.8,
+      "team": "UTEP",
+      "fpi": -17.2,
       "rank": 129
     },
     {
-      "team": "Central Michigan",
-      "fpi": -17.1,
+      "team": "Wyoming",
+      "fpi": -17.3,
       "rank": 130
     },
     {
-      "team": "Charlotte",
-      "fpi": -17.2,
+      "team": "Ball State",
+      "fpi": -17.7,
       "rank": 131
     },
     {
-      "team": "Wyoming",
-      "fpi": -17.6,
+      "team": "Northern Illinois",
+      "fpi": -17.9,
       "rank": 132
     },
     {
-      "team": "Northern Illinois",
-      "fpi": -17.7,
+      "team": "Eastern Michigan",
+      "fpi": -17.9,
       "rank": 133
     },
     {
-      "team": "Sacramento State",
-      "fpi": -18.4,
+      "team": "Central Michigan",
+      "fpi": -18.6,
       "rank": 134
     },
     {
-      "team": "Ball State",
-      "fpi": -19,
+      "team": "Bowling Green",
+      "fpi": -19.2,
       "rank": 135
     },
     {
-      "team": "UTEP",
-      "fpi": -19.1,
+      "team": "Kent State",
+      "fpi": -21.2,
       "rank": 136
     },
     {
-      "team": "Kent State",
-      "fpi": -23.6,
+      "team": "UL Monroe",
+      "fpi": -22.8,
       "rank": 137
     },
     {
-      "team": "UL Monroe",
-      "fpi": -24.3,
+      "team": "Sacramento State",
+      "fpi": -25,
       "rank": 138
     }
   ],
