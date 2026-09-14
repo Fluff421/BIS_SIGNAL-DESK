@@ -1,7 +1,7 @@
 {
   "week": 1,
   "season": 2026,
-  "generatedAt": "2026-09-07T18:27:25.465Z",
+  "generatedAt": "2026-09-14T18:55:53.214Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,70 +11,70 @@
     "rate": null
   },
   "helpers": [
-    "35 rows in primary watch band (confidence WATCH or unset)."
+    "17 rows in primary watch band (confidence WATCH or unset)."
   ],
   "hurters": [
     "No graded sides yet — 75% ATS is not measurable (need n≥30).",
     "Ensemble remains unfitted (fittedOn2026=false).",
-    "21 STALE_FPI rows — suppress from play consideration."
+    "22 STALE_FPI rows — suppress from play consideration."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
     {
-      "league": "NFL",
-      "kick": "2026-09-13",
-      "matchup": "Arizona Cardinals @ Los Angeles Chargers",
-      "edge": 19.6,
-      "edgeTo": "Los Angeles Chargers",
+      "league": "NCAAF",
+      "kick": "2026-09-20",
+      "matchup": "UAB Blazers @ Louisiana Ragin Cajuns",
+      "edge": 19.2,
+      "edgeTo": "Louisiana Ragin Cajuns",
       "confidence": "HIGH_NOISE",
-      "marketHome": -9.78,
-      "modelHome": 9.8
-    },
-    {
-      "league": "NFL",
-      "kick": "2026-09-27",
-      "matchup": "New York Jets @ Detroit Lions",
-      "edge": 19.5,
-      "edgeTo": "Detroit Lions",
-      "confidence": "HIGH_NOISE",
-      "marketHome": -9.5,
-      "modelHome": 10
+      "marketHome": -7.78,
+      "modelHome": 11.4
     },
     {
       "league": "NCAAF",
-      "kick": "2026-09-12",
-      "matchup": "Georgia State Panthers @ Kennesaw State Owls",
-      "edge": 19.1,
-      "edgeTo": "Kennesaw State Owls",
+      "kick": "2026-09-19",
+      "matchup": "Virginia Cavaliers @ West Virginia Mountaineers",
+      "edge": 18.9,
+      "edgeTo": "Virginia Cavaliers",
       "confidence": "HIGH_NOISE",
-      "marketHome": -9.38,
-      "modelHome": 9.7
+      "marketHome": 9.94,
+      "modelHome": -9
     },
     {
       "league": "NCAAF",
-      "kick": "2026-09-12",
-      "matchup": "UL Monroe Warhawks @ UAB Blazers",
-      "edge": 18,
-      "edgeTo": "UAB Blazers",
+      "kick": "2026-09-19",
+      "matchup": "Houston Cougars @ Texas Tech Red Raiders",
+      "edge": 17,
+      "edgeTo": "Texas Tech Red Raiders",
       "confidence": "HIGH_NOISE",
-      "marketHome": -10.67,
-      "modelHome": 7.3
+      "marketHome": -7.61,
+      "modelHome": 9.4
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-20",
+      "matchup": "New Orleans Saints @ Baltimore Ravens",
+      "edge": 17,
+      "edgeTo": "Baltimore Ravens",
+      "confidence": "HIGH_NOISE",
+      "marketHome": -8.56,
+      "modelHome": 8.4
     },
     {
       "league": "NFL",
       "kick": "2026-09-20",
       "matchup": "Las Vegas Raiders @ Los Angeles Chargers",
-      "edge": 17.7,
+      "edge": 16.1,
       "edgeTo": "Los Angeles Chargers",
       "confidence": "HIGH_NOISE",
-      "marketHome": -8.5,
+      "marketHome": -6.94,
       "modelHome": 9.2
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
   "aiNarrative": null,
-  "summary": "BIS desk week snapshot: ATS 0-0-0 (n=0, rate=n/a). Confidence INSUFFICIENT. Helpers: 35 rows in primary watch band (confidence WATCH or unset).. Hurters: No graded sides yet — 75% ATS is not measurable (need n≥30).; Ensemble remains unfitted (fittedOn2026=false).; 21 STALE_FPI rows — suppress from play consideration.."
+  "summary": "BIS desk week snapshot: ATS 0-0-0 (n=0, rate=n/a). Confidence INSUFFICIENT. Helpers: 17 rows in primary watch band (confidence WATCH or unset).. Hurters: No graded sides yet — 75% ATS is not measurable (need n≥30).; Ensemble remains unfitted (fittedOn2026=false).; 22 STALE_FPI rows — suppress from play consideration.."
 }
