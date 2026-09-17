@@ -1,0 +1,50 @@
+name: Refresh Universe
+
+on:
+  schedule:
+    - cron: "20 11,17,23,5 * * *"
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: bis-refresh-universe
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Expand NFL + NCAAF library and public-lean overlay
+        run: node scripts/refresh-universe.mjs
+        continue-on-error: false
+
+      - name: Commit library
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore(data): expand research universe and public lean [skip ci]"
+          add: |
+            src/data/board.json
+            src/data/snapshot.json
+            src/data/digest.json
+            src/data/research-ledger.json
+            src/data/public-betting.json
+            src/data/public-betting-tape.json
+            src/data/team-intel.json
+            src/data/context-layer.json
+            src/data/api-health.json
+            public/data/board.json
+            public/data/snapshot.json
+            public/data/digest.json
+            public/data/api-health.json
+          default_author: github_actions
+          push: true

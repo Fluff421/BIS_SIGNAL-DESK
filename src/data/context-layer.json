@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-09-17T12:56:15.209Z",
+  "policy": "A weak input lowers confidence. It never fabricates an adjustment. Rumor and undated social posts are not verified.",
+  "features": [
+    {
+      "id": "qb_status",
+      "label": "Quarterback availability",
+      "quality": "provisional",
+      "source": "espn-site-injuries",
+      "observedAt": "2026-09-10T13:58:38.971Z",
+      "note": "ESPN public injury API: 32 NFL teams with a QB listed (Out/Doubtful/Questionable/Active). NCAAF feed is sparse (3 teams). Not a depth chart. Unresolved QB still blocks issuance."
+    },
+    {
+      "id": "injury_report",
+      "label": "Official injury report",
+      "quality": "provisional",
+      "source": "espn-site-injuries",
+      "observedAt": "2026-09-10T13:58:38.971Z",
+      "note": "NFL 32/32 team reports. NCAAF 3 teams. Timestamped ESPN statuses, not the league PDF. Missing NCAAF report still fails that league's context gate."
+    },
+    {
+      "id": "weather",
+      "label": "Kickoff weather",
+      "quality": "provisional",
+      "source": "api.weather.gov + espn-scoreboard",
+      "observedAt": "2026-09-10T13:58:38.971Z",
+      "note": "NWS hourly at canonical stadium coordinates for WATCH homes; ESPN scoreboard weather as a second stamp. Not a model adjustment until both agree."
+    },
+    {
+      "id": "neutral_site",
+      "label": "Neutral-site / venue",
+      "quality": "provisional",
+      "source": "espn-scoreboard venue + venues.json",
+      "observedAt": "2026-09-10T13:58:38.971Z",
+      "note": "ESPN game venue name cross-checked against the canonical stadium table. Neutral flag remains a board boolean."
+    },
+    {
+      "id": "rest_travel",
+      "label": "Rest, travel, time-zone",
+      "quality": "provisional",
+      "source": "venues.json haversine + IANA tz",
+      "observedAt": "2026-09-10T13:58:38.971Z",
+      "note": "Away-home stadium miles and tz delta for WATCH rows. Week-1 rest is opener (no prior NFL week). Not chained bye-week rest yet."
+    },
+    {
+      "id": "public_betting",
+      "label": "Public betting share",
+      "quality": "provisional",
+      "source": "sportsbettingdime.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com + actionnetwork.com + sportsbookreview.com + covers.com contests",
+      "observedAt": "2026-09-17T12:56:15.209Z",
+      "note": "Bet/pick % on 260/1143 library games. Money/handle % on 107 (SportsBettingDime live 112, matched 97; ScoresAndOdds live 89; WagerTalk live 2; prior snapshots persisted). Ticket volume on 370. SBR 111, Covers 121. 43 games show a 10-pt+ money−ticket divergence."
+    }
+  ]
+}
