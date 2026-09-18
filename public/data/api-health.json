@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T09:50:12.899Z",
+  "generatedAt": "2026-09-18T15:01:18.933Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -41,32 +41,32 @@
   },
   "actionnetwork": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-18T09:50:12.899Z",
+    "lastSuccessAt": "2026-09-18T15:01:18.933Z",
     "httpStatus": 200,
     "nflEvents": 272,
     "ncaafEvents": 887,
     "ncaafWeek1Finals": 99,
-    "ticketPct": 162,
+    "ticketPct": 163,
     "moneyPct": 108,
-    "reason": "Scoreboard NFL 272 (weeks current,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18), NCAAF 887 (weeks current,0,1,2,3,4,5,6,7,8,9,10,11,12,13). Ticket/pick % 162, money % 108."
+    "reason": "Scoreboard NFL 272 (weeks current,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18), NCAAF 887 (weeks current,0,1,2,3,4,5,6,7,8,9,10,11,12,13). Ticket/pick % 163, money % 108."
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-18T09:50:12.899Z",
+    "lastSuccessAt": "2026-09-18T15:01:18.933Z",
     "httpStatus": 200,
-    "rows": 143,
-    "reason": "Contest pick % on 143 matchups (not licensed handle)."
+    "rows": 144,
+    "reason": "Contest pick % on 144 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-18T09:50:12.899Z",
+    "lastSuccessAt": "2026-09-18T15:01:18.933Z",
     "httpStatus": 200,
     "rows": 142,
     "reason": "Consensus spread pick % on 95 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-18T09:50:12.899Z",
+    "lastSuccessAt": "2026-09-18T15:01:18.933Z",
     "httpStatus": 200,
     "rows": 3,
     "nfl": 0,
@@ -76,7 +76,7 @@
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-18T09:50:12.899Z",
+    "lastSuccessAt": "2026-09-18T15:01:18.933Z",
     "httpStatus": 200,
     "rows": 89,
     "nfl": 16,
@@ -87,7 +87,7 @@
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-18T09:50:12.899Z",
+    "lastSuccessAt": "2026-09-18T15:01:18.933Z",
     "httpStatus": 200,
     "rows": 119,
     "nfl": 16,

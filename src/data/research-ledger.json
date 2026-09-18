@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T09:50:12.899Z",
+  "generatedAt": "2026-09-18T15:01:18.933Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 203,
@@ -569,8 +569,8 @@
       "dataClass": "ALIGNED",
       "publicBetsAway": 58,
       "publicBetsHome": 42,
-      "publicMoneyAway": 68,
-      "publicMoneyHome": 32,
+      "publicMoneyAway": 66,
+      "publicMoneyHome": 34,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -1344,10 +1344,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 38,
-      "publicBetsHome": 63,
-      "publicMoneyAway": 17,
-      "publicMoneyHome": 83,
+      "publicBetsAway": 28,
+      "publicBetsHome": 72,
+      "publicMoneyAway": 14,
+      "publicMoneyHome": 86,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -1366,7 +1366,7 @@
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
       "publicBetsAway": 2,
-      "publicBetsHome": 99,
+      "publicBetsHome": 98,
       "publicMoneyAway": 2,
       "publicMoneyHome": 98,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -3717,10 +3717,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 73,
-      "publicBetsHome": 27,
-      "publicMoneyAway": 87,
-      "publicMoneyHome": 13,
+      "publicBetsAway": 74,
+      "publicBetsHome": 26,
+      "publicMoneyAway": 88,
+      "publicMoneyHome": 12,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -3759,8 +3759,8 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 15,
-      "publicBetsHome": 85,
+      "publicBetsAway": 16,
+      "publicBetsHome": 84,
       "publicMoneyAway": 15,
       "publicMoneyHome": 85,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
