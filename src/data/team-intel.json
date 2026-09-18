@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T01:18:44.423Z",
+  "generatedAt": "2026-09-18T09:50:18.239Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 147,
@@ -13,6 +13,19 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T02:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.667
+    },
+    {
+      "team": "Pittsburgh Panthers",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-17T23:30:00.000Z",
       "games": 12,
       "upcoming": 9,
       "rate": 0.667
@@ -68,6 +81,19 @@
       "games": 12,
       "upcoming": 10,
       "rate": 0.5
+    },
+    {
+      "team": "Buffalo Bills",
+      "league": "NFL",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-18T00:15:00.000Z",
+      "games": 17,
+      "upcoming": 15,
+      "rate": 1
     },
     {
       "team": "BYU Cougars",
@@ -434,19 +460,6 @@
       "rate": 0.5
     },
     {
-      "team": "Pittsburgh Panthers",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-12T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 0.5
-    },
-    {
       "team": "South Alabama Jaguars",
       "league": "NCAAF",
       "n": 2,
@@ -495,7 +508,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-12T19:30:00.000Z",
       "games": 12,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": 0.5
     },
     {
@@ -863,19 +876,6 @@
       "rate": 0
     },
     {
-      "team": "Buffalo Bills",
-      "league": "NFL",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
-      "rate": 1
-    },
-    {
       "team": "Buffalo Bulls",
       "league": "NCAAF",
       "n": 1,
@@ -1015,7 +1015,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-13T17:00:00.000Z",
       "games": 17,
-      "upcoming": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
