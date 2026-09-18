@@ -1,10 +1,10 @@
 {
   "week": 2,
   "season": 2026,
-  "generatedAt": "2026-09-17T20:22:20.819Z",
+  "generatedAt": "2026-09-18T01:18:40.999Z",
   "confidenceTier": "INSUFFICIENT",
   "engine": "FPI + HFA",
-  "summary": "Library 1159 games / 270 clubs. Research 119–81–1 (n=201). Issued 0. Public lean on 153 games. Money % on 99 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted).",
+  "summary": "Library 1159 games / 270 clubs. Research 119–81–1 (n=201). Issued 0. Public lean on 156 games. Money % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted).",
   "atsRecord": {
     "hits": 0,
     "misses": 0,
@@ -15,11 +15,11 @@
   "helpers": [
     "397 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 106 inside the 3–7 pt issuance band.",
     "Library covers 270 clubs across 1159 games. Research grades 119–81–1 (n=201).",
-    "Public lean: bet/pick % on 153 games. Money/handle % on 99 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). 35 games with a 10-pt+ divergence."
+    "Public lean: bet/pick % on 156 games. Money/handle % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). 33 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "1060 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "1056 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
     "106 STALE_FPI and 113 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
@@ -30,11 +30,11 @@
       "league": "NCAAF",
       "kick": "2026-09-19T16:00:00.000Z",
       "matchup": "North Texas Mean Green @ Texas State Bobcats",
-      "edge": 5,
+      "edge": 5.5,
       "edgeTo": "Texas State Bobcats",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -2.5,
+      "marketHome": -3,
       "modelHome": 2.5,
       "nBooks": 8
     },
@@ -42,11 +42,11 @@
       "league": "NCAAF",
       "kick": "2026-09-19T16:00:00.000Z",
       "matchup": "North Carolina Tar Heels @ Clemson Tigers",
-      "edge": 4.5,
+      "edge": 5,
       "edgeTo": "Clemson Tigers",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -3,
+      "marketHome": -3.5,
       "modelHome": 1.5,
       "nBooks": 8
     },
@@ -54,11 +54,11 @@
       "league": "NCAAF",
       "kick": "2026-09-19T16:45:00.000Z",
       "matchup": "North Carolina State Wolfpack @ Vanderbilt Commodores",
-      "edge": 6.5,
+      "edge": 6,
       "edgeTo": "Vanderbilt Commodores",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -3.5,
+      "marketHome": -3,
       "modelHome": 3,
       "nBooks": 8
     },
@@ -72,7 +72,7 @@
       "dataClass": "WATCH",
       "marketHome": 3,
       "modelHome": 6.1,
-      "nBooks": 6
+      "nBooks": 2
     },
     {
       "league": "NCAAF",
@@ -96,7 +96,7 @@
       "dataClass": "WATCH",
       "marketHome": -1.5,
       "modelHome": -5.2,
-      "nBooks": 6
+      "nBooks": 2
     },
     {
       "league": "NFL",
@@ -124,6 +124,6 @@
     }
   ],
   "narrativeStatus": "generated",
-  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 106 rows sit in the research (WATCH) band. 106 STALE_FPI and 113 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 119-81-1 (n=201) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 153 games, money/handle % on 99 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). 35 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 106 rows sit in the research (WATCH) band. 106 STALE_FPI and 113 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 119-81-1 (n=201) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 156 games, money/handle % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). 33 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   "narrativeModel": "grok-4.6-desk"
 }

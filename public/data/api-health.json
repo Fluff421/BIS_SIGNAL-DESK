@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T20:22:20.819Z",
+  "generatedAt": "2026-09-18T01:18:40.999Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -41,32 +41,32 @@
   },
   "actionnetwork": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-17T20:22:20.819Z",
+    "lastSuccessAt": "2026-09-18T01:18:40.999Z",
     "httpStatus": 200,
     "nflEvents": 272,
     "ncaafEvents": 887,
     "ncaafWeek1Finals": 99,
-    "ticketPct": 153,
-    "moneyPct": 99,
-    "reason": "Scoreboard NFL 272 (weeks current,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18), NCAAF 887 (weeks current,0,1,2,3,4,5,6,7,8,9,10,11,12,13). Ticket/pick % 153, money % 99."
+    "ticketPct": 156,
+    "moneyPct": 103,
+    "reason": "Scoreboard NFL 272 (weeks current,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18), NCAAF 887 (weeks current,0,1,2,3,4,5,6,7,8,9,10,11,12,13). Ticket/pick % 156, money % 103."
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-17T20:22:20.819Z",
+    "lastSuccessAt": "2026-09-18T01:18:40.999Z",
     "httpStatus": 200,
-    "rows": 141,
-    "reason": "Contest pick % on 141 matchups (not licensed handle)."
+    "rows": 140,
+    "reason": "Contest pick % on 140 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-17T20:22:20.819Z",
+    "lastSuccessAt": "2026-09-18T01:18:40.999Z",
     "httpStatus": 200,
     "rows": 142,
     "reason": "Consensus spread pick % on 95 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-17T20:22:20.819Z",
+    "lastSuccessAt": "2026-09-18T01:18:40.999Z",
     "httpStatus": 200,
     "rows": 2,
     "nfl": 1,
@@ -76,7 +76,7 @@
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-17T20:22:20.819Z",
+    "lastSuccessAt": "2026-09-18T01:18:40.999Z",
     "httpStatus": 200,
     "rows": 89,
     "nfl": 16,
@@ -87,13 +87,13 @@
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-17T20:22:20.819Z",
+    "lastSuccessAt": "2026-09-18T01:18:40.999Z",
     "httpStatus": 200,
-    "rows": 93,
+    "rows": 116,
     "nfl": 17,
-    "ncaaf": 76,
-    "matched": 84,
-    "money": 84,
-    "reason": "Live ticket % and money/handle % on 93 games (NFL 17, NCAAF 76). Matched onto 84 library games."
+    "ncaaf": 99,
+    "matched": 98,
+    "money": 98,
+    "reason": "Live ticket % and money/handle % on 116 games (NFL 17, NCAAF 99). Matched onto 98 library games."
   }
 }
