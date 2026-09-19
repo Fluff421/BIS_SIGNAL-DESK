@@ -1,9 +1,22 @@
 {
-  "generatedAt": "2026-09-19T14:28:41.173Z",
+  "generatedAt": "2026-09-19T19:21:34.606Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 147,
   "teams": [
+    {
+      "team": "Kansas State Wildcats",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-19T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.667
+    },
     {
       "team": "Miami (FL) Hurricanes",
       "league": "NCAAF",
@@ -42,6 +55,19 @@
       "games": 12,
       "upcoming": 9,
       "rate": 0.333
+    },
+    {
+      "team": "Penn State Nittany Lions",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.667
     },
     {
       "team": "Pittsburgh Panthers",
@@ -174,6 +200,19 @@
       "rate": 1
     },
     {
+      "team": "Delaware Fightin Blue Hens",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T15:30:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 1
+    },
+    {
       "team": "Eastern Michigan Eagles",
       "league": "NCAAF",
       "n": 2,
@@ -224,6 +263,19 @@
       "games": 12,
       "upcoming": 10,
       "rate": 1
+    },
+    {
+      "team": "Georgia Tech Yellow Jackets",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 0,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-19T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0
     },
     {
       "team": "Houston Cougars",
@@ -279,19 +331,6 @@
     },
     {
       "team": "James Madison Dukes",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 2,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-12T16:00:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 1
-    },
-    {
-      "team": "Kansas State Wildcats",
       "league": "NCAAF",
       "n": 2,
       "hits": 2,
@@ -458,19 +497,6 @@
       "games": 12,
       "upcoming": 10,
       "rate": 0
-    },
-    {
-      "team": "Penn State Nittany Lions",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-12T16:00:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 0.5
     },
     {
       "team": "South Alabama Jaguars",
@@ -885,7 +911,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-03T23:00:00.000Z",
       "games": 12,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": 0
     },
     {
@@ -963,7 +989,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:30:00.000Z",
       "games": 12,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": 1
     },
     {
@@ -991,19 +1017,6 @@
       "games": 17,
       "upcoming": 16,
       "rate": 0
-    },
-    {
-      "team": "Delaware Fightin Blue Hens",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-03T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 1
     },
     {
       "team": "Detroit Lions",
@@ -1095,19 +1108,6 @@
       "games": 12,
       "upcoming": 10,
       "rate": 1
-    },
-    {
-      "team": "Georgia Tech Yellow Jackets",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 0,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-04T00:00:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 0
     },
     {
       "team": "Iowa State Cyclones",
@@ -2627,7 +2627,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 1,
-      "upcoming": 1,
+      "upcoming": 0,
       "rate": null
     },
     {
@@ -3303,7 +3303,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 12,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": null
     },
     {
