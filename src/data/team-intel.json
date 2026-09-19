@@ -1,9 +1,22 @@
 {
-  "generatedAt": "2026-09-19T01:14:16.990Z",
+  "generatedAt": "2026-09-19T09:34:53.843Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 147,
   "teams": [
+    {
+      "team": "Miami (FL) Hurricanes",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-18T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.667
+    },
     {
       "team": "North Dakota State Bison",
       "league": "NCAAF",
@@ -18,6 +31,19 @@
       "rate": 0.667
     },
     {
+      "team": "Oregon Ducks",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 1,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T02:30:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.333
+    },
+    {
       "team": "Pittsburgh Panthers",
       "league": "NCAAF",
       "n": 3,
@@ -29,6 +55,19 @@
       "games": 12,
       "upcoming": 9,
       "rate": 0.667
+    },
+    {
+      "team": "Texas Tech Red Raiders",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 0,
+      "misses": 3,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-19T00:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0
     },
     {
       "team": "UNLV Rebels",
@@ -196,7 +235,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:00:00.000Z",
       "games": 12,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": 0.5
     },
     {
@@ -286,19 +325,6 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-12T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 1
-    },
-    {
-      "team": "Miami (FL) Hurricanes",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 2,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-11T00:00:00.000Z",
       "games": 12,
       "upcoming": 10,
       "rate": 1
@@ -434,19 +460,6 @@
       "rate": 0
     },
     {
-      "team": "Oregon Ducks",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 0,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-12T16:00:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 0
-    },
-    {
       "team": "Penn State Nittany Lions",
       "league": "NCAAF",
       "n": 2,
@@ -564,19 +577,6 @@
       "rate": 0.5
     },
     {
-      "team": "Texas Tech Red Raiders",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 0,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-12T23:43:00.000Z",
-      "games": 12,
-      "upcoming": 10,
-      "rate": 0
-    },
-    {
       "team": "UCLA Bruins",
       "league": "NCAAF",
       "n": 2,
@@ -651,7 +651,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-12T16:00:00.000Z",
       "games": 12,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": 0
     },
     {
@@ -2978,7 +2978,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 2,
-      "upcoming": 1,
+      "upcoming": 0,
       "rate": null
     },
     {
