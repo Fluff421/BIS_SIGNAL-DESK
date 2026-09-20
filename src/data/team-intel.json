@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T09:51:12.387Z",
+  "generatedAt": "2026-09-20T14:42:53.719Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 154,
@@ -993,19 +993,6 @@
       "rate": 1
     },
     {
-      "team": "Southern Miss Golden Eagles",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-19T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 0.5
-    },
-    {
       "team": "Syracuse Orange",
       "league": "NCAAF",
       "n": 2,
@@ -1043,6 +1030,19 @@
       "games": 12,
       "upcoming": 9,
       "rate": 0.5
+    },
+    {
+      "team": "UConn Huskies",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 1
     },
     {
       "team": "UMass Minutemen",
@@ -1812,6 +1812,19 @@
       "rate": 1
     },
     {
+      "team": "Southern Miss Golden Eagles",
+      "league": "NCAAF",
+      "n": 1,
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-05T21:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 1
+    },
+    {
       "team": "Stanford Cardinal",
       "league": "NCAAF",
       "n": 1,
@@ -1898,19 +1911,6 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-03T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 1
-    },
-    {
-      "team": "UConn Huskies",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-05T16:00:00.000Z",
       "games": 12,
       "upcoming": 9,
       "rate": 1
