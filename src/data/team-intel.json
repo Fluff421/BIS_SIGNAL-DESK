@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T14:42:53.719Z",
+  "generatedAt": "2026-09-20T19:30:10.068Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 154,
@@ -559,8 +559,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-18T00:15:00.000Z",
-      "games": 17,
-      "upcoming": 15,
+      "games": 16,
+      "upcoming": 14,
       "rate": 1
     },
     {
@@ -1222,8 +1222,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1300,8 +1300,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1313,8 +1313,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1352,8 +1352,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-14T00:20:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
@@ -1365,8 +1365,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 15,
+      "games": 16,
+      "upcoming": 14,
       "rate": 0
     },
     {
@@ -1430,8 +1430,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1443,8 +1443,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-15T00:15:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1508,8 +1508,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1521,8 +1521,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-13T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
@@ -1534,8 +1534,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-11T00:35:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
@@ -1573,8 +1573,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1690,8 +1690,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-13T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
@@ -1703,8 +1703,8 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 1
     },
     {
@@ -1794,8 +1794,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-10T00:20:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
@@ -1859,8 +1859,8 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-09-13T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": 0
     },
     {
@@ -2054,8 +2054,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2080,8 +2080,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2171,8 +2171,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2236,8 +2236,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2275,8 +2275,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2444,8 +2444,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2509,8 +2509,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2600,8 +2600,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2730,8 +2730,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2808,8 +2808,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2834,8 +2834,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2847,8 +2847,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -2860,8 +2860,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -3107,8 +3107,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -3237,8 +3237,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {
@@ -3432,8 +3432,8 @@
       "pushes": 0,
       "lastResult": null,
       "lastKick": null,
-      "games": 17,
-      "upcoming": 16,
+      "games": 16,
+      "upcoming": 15,
       "rate": null
     },
     {

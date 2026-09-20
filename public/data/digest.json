@@ -1,10 +1,10 @@
 {
   "week": 2,
   "season": 2026,
-  "generatedAt": "2026-09-20T14:42:50.582Z",
+  "generatedAt": "2026-09-20T19:30:04.539Z",
   "confidenceTier": "INSUFFICIENT",
   "engine": "FPI + HFA",
-  "summary": "Library 1159 games / 270 clubs. Research 160–115–2 (n=277). Issued 0. Public lean on 178 games. Money % on 109 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted).",
+  "summary": "Library 1143 games / 270 clubs. Research 160–115–2 (n=277). Issued 0. Public lean on 199 games. Money % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted).",
   "atsRecord": {
     "hits": 0,
     "misses": 0,
@@ -13,14 +13,14 @@
     "rate": null
   },
   "helpers": [
-    "364 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 100 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 160–115–2 (n=277).",
-    "Public lean: bet/pick % on 178 games. Money/handle % on 109 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). 36 games with a 10-pt+ divergence."
+    "348 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 99 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1143 games. Research grades 160–115–2 (n=277).",
+    "Public lean: bet/pick % on 199 games. Money/handle % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). 34 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "1050 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "86 STALE_FPI and 111 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "1040 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "85 STALE_FPI and 106 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
@@ -30,13 +30,13 @@
       "league": "NFL",
       "kick": "2026-09-20T17:00:00.000Z",
       "matchup": "Cincinnati Bengals @ Houston Texans",
-      "edge": 4.3,
+      "edge": 4.8,
       "edgeTo": "Houston Texans",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -2.5,
+      "marketHome": -3,
       "modelHome": 1.8,
-      "nBooks": 9
+      "nBooks": 7
     },
     {
       "league": "NFL",
@@ -52,27 +52,51 @@
     },
     {
       "league": "NCAAF",
+      "kick": "2026-09-24T23:30:00.000Z",
+      "matchup": "Liberty Flames @ Coastal Carolina Chanticleers",
+      "edge": 3.4,
+      "edgeTo": "Liberty Flames",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 2,
+      "modelHome": -1.4,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
       "kick": "2026-09-26T02:30:00.000Z",
       "matchup": "Clemson Tigers @ California Golden Bears",
-      "edge": 6.6,
+      "edge": 3.6,
       "edgeTo": "Clemson Tigers",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": 1.5,
+      "marketHome": -1.5,
       "modelHome": -5.1,
-      "nBooks": 3
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-26T16:00:00.000Z",
+      "matchup": "San Diego State Aztecs @ Toledo Rockets",
+      "edge": 6,
+      "edgeTo": "Toledo Rockets",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -2,
+      "modelHome": 4,
+      "nBooks": 6
     },
     {
       "league": "NCAAF",
       "kick": "2026-09-26T16:00:00.000Z",
       "matchup": "Ball State Cardinals @ Kent State Golden Flashes",
-      "edge": 4.9,
+      "edge": 4.4,
       "edgeTo": "Kent State Golden Flashes",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -4,
+      "marketHome": -3.5,
       "modelHome": 0.9,
-      "nBooks": 3
+      "nBooks": 6
     },
     {
       "league": "NCAAF",
@@ -84,7 +108,7 @@
       "dataClass": "WATCH",
       "marketHome": -2.5,
       "modelHome": 1.2,
-      "nBooks": 4
+      "nBooks": 6
     },
     {
       "league": "NCAAF",
@@ -96,34 +120,10 @@
       "dataClass": "WATCH",
       "marketHome": 3.5,
       "modelHome": 0.2,
-      "nBooks": 3
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-26T23:00:00.000Z",
-      "matchup": "Oklahoma State Cowboys @ West Virginia Mountaineers",
-      "edge": 3.5,
-      "edgeTo": "Oklahoma State Cowboys",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -1.5,
-      "modelHome": -5,
-      "nBooks": 3
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-27T02:30:00.000Z",
-      "matchup": "Air Force Falcons @ Nevada Wolf Pack",
-      "edge": 4.6,
-      "edgeTo": "Air Force Falcons",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": 4.5,
-      "modelHome": -0.1,
-      "nBooks": 3
+      "nBooks": 6
     }
   ],
   "narrativeStatus": "generated",
-  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 100 rows sit in the research (WATCH) band. 86 STALE_FPI and 111 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 160-115-2 (n=277) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 178 games, money/handle % on 109 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). 36 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 99 rows sit in the research (WATCH) band. 85 STALE_FPI and 106 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1143 games / 270 clubs. Research 160-115-2 (n=277) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 199 games, money/handle % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). 34 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   "narrativeModel": "grok-4.6-desk"
 }
