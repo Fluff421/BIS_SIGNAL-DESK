@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-09-21T01:10:33.254Z",
+  "generatedAt": "2026-09-21T10:47:49.716Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 290,
+    "researchN": 291,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 100,
-    "observeOnBoard": 351,
+    "watchOnBoard": 99,
+    "observeOnBoard": 350,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=290 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 44–32–1 (n=77)."
+    "note": "Research sample n=291 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 44–33–1 (n=78)."
   },
   "ats": {
     "hits": 165,
-    "misses": 123,
+    "misses": 124,
     "pushes": 2,
-    "n": 290,
-    "rate": 0.572
+    "n": 291,
+    "rate": 0.57
   },
   "cleanBand": {
     "hits": 44,
-    "misses": 32,
+    "misses": 33,
     "pushes": 1,
-    "n": 77,
-    "rate": 0.578,
+    "n": 78,
+    "rate": 0.571,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -655,6 +655,27 @@
       "publicBetsHome": 37,
       "publicMoneyAway": 46,
       "publicMoneyHome": 54,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-21T00:20:00.000Z",
+      "away": "Indianapolis Colts",
+      "home": "Kansas City Chiefs",
+      "side": "Kansas City Chiefs",
+      "edgeTo": "Kansas City Chiefs",
+      "marketHome": -6,
+      "modelHome": 5,
+      "actualMargin": 3,
+      "homePoints": 33,
+      "awayPoints": 30,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "HIGH_NOISE",
+      "publicBetsAway": 19,
+      "publicBetsHome": 81,
+      "publicMoneyAway": 41,
+      "publicMoneyHome": 59,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -1596,10 +1617,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 44,
-      "publicBetsHome": 56,
-      "publicMoneyAway": null,
-      "publicMoneyHome": null,
+      "publicBetsAway": 51,
+      "publicBetsHome": 49,
+      "publicMoneyAway": 44,
+      "publicMoneyHome": 56,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -3486,8 +3507,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 50,
-      "publicBetsHome": 50,
+      "publicBetsAway": 51,
+      "publicBetsHome": 49,
       "publicMoneyAway": null,
       "publicMoneyHome": null,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -5985,10 +6006,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 43,
-      "publicBetsHome": 57,
-      "publicMoneyAway": 32,
-      "publicMoneyHome": 68,
+      "publicBetsAway": 69,
+      "publicBetsHome": 31,
+      "publicMoneyAway": 81,
+      "publicMoneyHome": 19,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
