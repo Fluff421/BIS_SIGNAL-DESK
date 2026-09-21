@@ -53,8 +53,9 @@ function QualityPage() {
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
           The desk watches the full posted NFL and NCAAF slates — college current plus weeks 0–13,
           NFL current plus weeks 1–18 — so every club accumulates a library. Public lean is ticket
-          % plus SportsBettingDime money/handle % (ScoresAndOdds and WagerTalk as backups; snapshots
-          persist after kick). Issued 75% still needs human approval.
+          % plus SportsBettingDime money/handle % (ScoresAndOdds and Sunday WagerTalk as backups;
+          snapshots persist after kick). ESPN finals overlay grades results the same day. Issued 75%
+          still needs human approval.
         </p>
       </div>
 
@@ -206,17 +207,18 @@ function QualityPage() {
       <section>
         <h3 className="mb-2 font-display text-xl">ESPN results tape</h3>
         <p className="mb-3 max-w-2xl text-sm text-muted">
-          {finals.length} NCAAF finals on the current CDN board. These are results, not issued grades.
-          NFL Week {deskEspn.nfl.week ?? "—"} is still scheduled ({deskEspn.nfl.rows.length} events).
+          NFL week {deskEspn.nfl.week ?? "—"}: {deskEspn.nfl.rows.filter((r) => r.completed).length}/
+          {deskEspn.nfl.rows.length} final. NCAAF: {finals.length} finals on the current CDN board.
+          These are results, not issued grades. Overlayed onto the research library at refresh.
         </p>
         <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
-          {finals.slice(0, 8).map((g) => (
+          {[...deskEspn.nfl.rows.filter((g) => g.completed), ...finals].slice(0, 10).map((g) => (
             <li key={g.id} className="flex flex-col gap-1 px-4 py-3 sm:flex-row sm:justify-between">
               <span className="text-sm">
                 {g.away} {g.awayPoints} @ {g.home} {g.homePoints}
               </span>
               <span className="font-mono text-xs text-subtle">
-                {g.kick.slice(0, 10)} · margin {g.actualMargin}
+                {g.league} · {g.kick.slice(0, 10)} · margin {g.actualMargin}
               </span>
             </li>
           ))}

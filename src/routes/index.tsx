@@ -63,6 +63,19 @@ function Home() {
         </p>
       </section>
 
+      <section className="rounded-xl border border-border bg-surface p-5 sm:p-6">
+        <p className="font-mono text-xs tracking-wide text-watch uppercase">Why the full slate</p>
+        <p className="mt-2 max-w-3xl text-base leading-relaxed text-fg">
+          Watching every posted NFL and NCAAF game is how the desk learns clubs, not how it mints
+          tickets. More games mean more research grades, per-team tapes, and public-lean snapshots
+          after kick — the library the 75% issued target will eventually draw from.
+        </p>
+        <p className="mt-3 text-sm text-muted">
+          Issued n stays 0 until a human approves a cohort. Research n = {deskResearch.ats.n} is
+          diagnostic. Ticket % on {cov.ticketPct ?? 0} games, money/handle % on {cov.moneyPct ?? 0}.
+        </p>
+      </section>
+
       <HealthStrip />
 
       <section>

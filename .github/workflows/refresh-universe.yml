@@ -34,6 +34,7 @@ jobs:
           message: "chore(data): expand research universe and public lean [skip ci]"
           add: |
             src/data/board.json
+            src/data/library.json
             src/data/snapshot.json
             src/data/digest.json
             src/data/research-ledger.json

@@ -4,10 +4,11 @@
  * public-lean signals from:
  *   - SportsBettingDime (ticket % AND money/handle % on the live slate — primary)
  *   - ScoresAndOdds consensus (ticket % AND money/handle %)
+ *   - WagerTalk (ticket % AND money/handle — Sunday tape)
  *   - Action Network (ticket volume + featured money %)
- *   - WagerTalk (ticket % AND money/handle % — live consensus sheet)
  *   - Sportsbook Review (spread pick %)
  *   - Covers contests (pick %)
+ * ESPN CDN scoreboard overlays finals so week-of results grade without waiting on AN.
  *
  * Grades completed games vs stored consensus as RESEARCH (not issued).
  * Merges prior library rows so the club database only grows.
@@ -50,15 +51,15 @@ function readJson(path, fallback) {
 }
 
 async function fetchJson(url, referer) {
-  const origin = referer ? new URL(referer).origin : "https://www.actionnetwork.com";
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": UA,
-      Accept: "application/json",
-      Referer: referer || "https://www.actionnetwork.com/",
-      Origin: origin,
-    },
-  });
+  const headers = {
+    "User-Agent": UA,
+    Accept: "application/json",
+    Referer: referer || "https://www.actionnetwork.com/",
+  };
+  if (referer && !/espn\.com/i.test(referer)) {
+    headers.Origin = new URL(referer).origin;
+  }
+  const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
   return res.json();
 }
@@ -458,6 +459,59 @@ async function loadAnLeague(path, league, weeks) {
     }
   }
   return rows;
+}
+
+async function loadEspn(path, league) {
+  const url = `https://cdn.espn.com/core/${path}/scoreboard?xhr=1`;
+  const data = await fetchJson(url, "https://www.espn.com/");
+  const sb = data?.content?.sbData || {};
+  const rows = [];
+  for (const ev of sb.events || []) {
+    const comp = ev.competitions?.[0];
+    if (!comp) continue;
+    const home = (comp.competitors || []).find((c) => c.homeAway === "home");
+    const away = (comp.competitors || []).find((c) => c.homeAway === "away");
+    if (!home || !away) continue;
+    const homePts = home.score === "" || home.score == null ? null : Number(home.score);
+    const awayPts = away.score === "" || away.score == null ? null : Number(away.score);
+    const completed = Boolean(ev.status?.type?.completed);
+    rows.push({
+      league,
+      home: home.team?.displayName ?? home.team?.name,
+      away: away.team?.displayName ?? away.team?.name,
+      completed,
+      homePoints: Number.isFinite(homePts) ? homePts : null,
+      awayPoints: Number.isFinite(awayPts) ? awayPts : null,
+      actualMargin:
+        completed && Number.isFinite(homePts) && Number.isFinite(awayPts) ? homePts - awayPts : null,
+    });
+  }
+  return rows;
+}
+
+function overlayEspn(games, espnRows) {
+  let n = 0;
+  for (const g of games) {
+    if (g.completed && g.actualMargin != null) continue;
+    const hit =
+      espnRows.find((e) => e.league === g.league && namesMatch(e.home, g.home) && namesMatch(e.away, g.away)) ||
+      espnRows.find(
+        (e) =>
+          e.league === g.league &&
+          lastToken(e.home) === lastToken(g.home) &&
+          lastToken(e.away) === lastToken(g.away) &&
+          lastToken(g.home).length > 2,
+      );
+    if (!hit?.completed || hit.actualMargin == null) continue;
+    g.completed = true;
+    g.status = "complete";
+    g.homePoints = hit.homePoints;
+    g.awayPoints = hit.awayPoints;
+    g.actualMargin = hit.actualMargin;
+    g.espnOverlay = true;
+    n += 1;
+  }
+  return n;
 }
 
 async function loadSbd(path, league) {
@@ -889,6 +943,7 @@ async function main() {
   const contextPrev = readJson(join(ROOT, "src/data/context-layer.json"), { features: [] });
   const digestPrev = readJson(join(ROOT, "src/data/digest.json"), {});
   const tapePrev = readJson(join(ROOT, "src/data/public-betting-tape.json"), { snapshots: [] });
+  const priorLibraryFile = readJson(join(ROOT, "src/data/library.json"), { rows: [] });
 
   const priorIndex = [];
   for (const key of ["watch", "highNoise", "staleFpi", "library", "observe"]) {
@@ -913,6 +968,8 @@ async function main() {
     saoNcaafHtml,
     sbdNfl,
     sbdNcaaf,
+    espnNfl,
+    espnNcaaf,
   ] = await Promise.all([
     loadAnLeague("https://api.actionnetwork.com/web/v1/scoreboard/nfl", "NFL", NFL_WEEKS),
     loadAnLeague("https://api.actionnetwork.com/web/v1/scoreboard/ncaaf", "NCAAF", NCAAF_WEEKS),
@@ -928,9 +985,13 @@ async function main() {
     safeText("https://www.scoresandodds.com/ncaaf/consensus-picks", "https://www.scoresandodds.com/"),
     safeJson(() => loadSbd("nfl", "NFL"), "sbd-nfl"),
     safeJson(() => loadSbd("ncaafb", "NCAAF"), "sbd-ncaaf"),
+    safeJson(() => loadEspn("nfl", "NFL"), "espn-nfl"),
+    safeJson(() => loadEspn("college-football", "NCAAF"), "espn-ncaaf"),
   ]);
 
   const all = [...nflGames, ...ncaafGames];
+  const espnRows = [...espnNfl, ...espnNcaaf];
+  const espnOverlayN = overlayEspn(all, espnRows);
   const coversRows = [
     ...parseCoversTable(coversNflHtml, "NFL"),
     ...parseCoversTable(coversNcaafHtml, "NCAAF"),
@@ -969,8 +1030,12 @@ async function main() {
     fresh.push(row);
   }
 
-  const library = mergeLibrary(fresh, boardPrev.library || []);
+  const library = mergeLibrary(fresh, [
+    ...(Array.isArray(priorLibraryFile.rows) ? priorLibraryFile.rows : []),
+    ...(boardPrev.library || []),
+  ]);
   const upcoming = library.filter((r) => !r.completed);
+  const completedRows = library.filter((r) => r.completed);
   const watch = upcoming.filter((r) => r.dataClass === "WATCH");
   const highNoise = upcoming.filter((r) => r.dataClass === "HIGH_NOISE");
   const staleFpi = upcoming.filter((r) => r.dataClass === "STALE_FPI");
@@ -1071,15 +1136,25 @@ async function main() {
       ncaafTicket: ncaafLib.filter((r) => r.publicBetting?.betsAway != null).length,
       ncaafMoney: ncaafLib.filter((r) => r.publicBetting?.moneyAway != null).length,
     },
-    rows: library.map((r) => ({
-      league: r.league,
-      away: r.away,
-      home: r.home,
-      kick: r.kick,
-      ...r.publicBetting,
-      marketHome: r.marketHome,
-    })),
+    rows: library
+      .filter((r) => {
+        const p = r.publicBetting || {};
+        return p.betsAway != null || p.moneyAway != null || p.tickets != null;
+      })
+      .map((r) => ({
+        league: r.league,
+        away: r.away,
+        home: r.home,
+        kick: r.kick,
+        ...r.publicBetting,
+        marketHome: r.marketHome,
+      })),
   };
+
+  const recentCompleted = [...completedRows]
+    .sort((a, b) => String(b.kick).localeCompare(String(a.kick)))
+    .slice(0, 160);
+  const libraryPreview = recentCompleted;
 
   const board = {
     issuedPlays: [],
@@ -1087,11 +1162,11 @@ async function main() {
     highNoise: highNoise.map(stripInternal),
     staleFpi: staleFpi.map(stripInternal),
     observe: observe.map(stripInternal),
-    library: library.map(stripInternal),
+    library: libraryPreview.map(stripInternal),
     aligned,
     updated: now,
     source:
-      "Action Network scoreboard (NFL current+weeks 1–18 + NCAAF current+weeks 0–13) + FPI+HFA + SportsBettingDime/ScoresAndOdds/WagerTalk/SBR/Covers/AN public overlay. Library merges across refreshes.",
+      "Action Network scoreboard (NFL current+weeks 1–18 + NCAAF current+weeks 0–13) + ESPN CDN finals overlay + FPI+HFA + SportsBettingDime/ScoresAndOdds/WagerTalk/SBR/Covers/AN public overlay. Full archive in library.json.",
     counts: {
       watch: watch.length,
       highNoise: highNoise.length,
@@ -1101,13 +1176,14 @@ async function main() {
       issued: 0,
       graded: 0,
       upcoming: upcoming.length,
-      completed: library.filter((r) => r.completed).length,
+      completed: completedRows.length,
       teamsCovered,
       nfl: nflLib.length,
       ncaaf: ncaafLib.length,
       moneyPct: moneyN,
       ticketPct: ticketN,
       divergenceFlags: divN,
+      espnOverlay: espnOverlayN,
     },
   };
 
@@ -1140,7 +1216,7 @@ async function main() {
     rows: researchRows,
   };
 
-  const saoNote = `Bet/pick % on ${ticketN}/${library.length} library games. Money/handle % on ${moneyN} (SportsBettingDime live ${sbdRows.length}, matched ${sbdMatchN}; ScoresAndOdds live ${saoRows.length}; WagerTalk live ${wtRows.length}; prior snapshots persisted). Ticket volume on ${volumeN}. SBR ${sbrN}, Covers ${coversN}. ${divN} games show a 10-pt+ money−ticket divergence.`;
+  const saoNote = `Bet/pick % on ${ticketN}/${library.length} library games. Money/handle % on ${moneyN} (SportsBettingDime live ${sbdRows.length}, matched ${sbdMatchN}; ScoresAndOdds live ${saoRows.length}; WagerTalk live ${wtRows.length}; ESPN finals overlay ${espnOverlayN}; prior snapshots persisted). Ticket volume on ${volumeN}. SBR ${sbrN}, Covers ${coversN}. ${divN} games show a 10-pt+ money−ticket divergence.`;
   const features = (contextPrev.features || []).map((f) => {
     if (f.id !== "public_betting") return f;
     return {
@@ -1229,6 +1305,20 @@ async function main() {
       ? `Live ticket % and money/handle % on ${sbdRows.length} games (NFL ${sbdNfl.length}, NCAAF ${sbdNcaaf.length}). Matched onto ${sbdMatchN} library games.`
       : "SportsBettingDime odds API returned no betting splits.",
   };
+  health.espn = {
+    ...(health.espn || {}),
+    status: espnRows.length ? "healthy" : health.espn?.status || "degraded",
+    lastSuccessAt: espnRows.length ? now : health.espn?.lastSuccessAt,
+    fallbackActive: false,
+    httpStatus: espnRows.length ? 200 : health.espn?.httpStatus ?? 0,
+    scoreboard: espnRows.length ? "healthy" : health.espn?.scoreboard,
+    nflEvents: espnNfl.length,
+    ncaafEvents: espnNcaaf.length,
+    nflFinals: espnNfl.filter((r) => r.completed).length,
+    ncaafFinals: espnNcaaf.filter((r) => r.completed).length,
+    overlayApplied: espnOverlayN,
+    reason: `CDN scoreboard NFL ${espnNfl.length} (${espnNfl.filter((r) => r.completed).length} final), NCAAF ${espnNcaaf.length} (${espnNcaaf.filter((r) => r.completed).length} final). Overlayed ${espnOverlayN} library scores.`,
+  };
 
   const nflFinals = nflLib.filter((r) => r.completed).length;
   const ncaafFinals = ncaafLib.filter((r) => r.completed).length;
@@ -1248,7 +1338,7 @@ async function main() {
     helpers: [
       `${observe.length} upcoming games in the research slate (entire posted NFL + NCAAF weeks), ${watch.length} inside the 3–7 pt issuance band.`,
       `Library covers ${teamsCovered} clubs across ${library.length} games. Research grades ${hits}–${misses}–${pushes} (n=${n}).`,
-      `Public lean: bet/pick % on ${ticketN} games. Money/handle % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ${divN} games with a 10-pt+ divergence.`,
+      `Public lean: bet/pick % on ${ticketN} games. Money/handle % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled ${espnOverlayN} finals. ${divN} games with a 10-pt+ divergence.`,
     ],
     hurters: [
       "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
@@ -1274,20 +1364,25 @@ async function main() {
     narrativeStatus: digestPrev.narrativeStatus ?? "generated",
     aiNarrative: null,
     engine: digestPrev.engine ?? "FPI + HFA",
-    summary: `Library ${library.length} games / ${teamsCovered} clubs. Research ${hits}–${misses}–${pushes} (n=${n}). Issued 0. Public lean on ${ticketN} games. Money % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted).`,
+    summary: `Library ${library.length} games / ${teamsCovered} clubs. Research ${hits}–${misses}–${pushes} (n=${n}). Issued 0. Public lean on ${ticketN} games. Money % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay ${espnOverlayN} finals.`,
   };
   digest.aiNarrative = [
     `BIS Signal Desk, ${digest.season} week ${digest.week}. Engine: ${digest.engine}.`,
     "Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate.",
     `${watch.length} rows sit in the research (WATCH) band. ${staleFpi.length} STALE_FPI and ${highNoise.length} HIGH_NOISE rows stay suppressed. Issued plays: 0.`,
     `Library ${library.length} games / ${teamsCovered} clubs. Research ${hits}-${misses}-${pushes} (n=${n}) vs stored consensus after finals — diagnostic, not issued.`,
-    `Public lean: ticket/pick % on ${ticketN} games, money/handle % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). ${divN} games show a 10-pt money-versus-tickets gap.`,
+    `Public lean: ticket/pick % on ${ticketN} games, money/handle % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled ${espnOverlayN} scores. ${divN} games show a 10-pt money-versus-tickets gap.`,
     "An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   ].join(" ");
   digest.narrativeStatus = "generated";
   digest.narrativeModel = "grok-4.6-desk";
 
   atomicWrite(join(ROOT, "src/data/board.json"), board);
+  atomicWrite(join(ROOT, "src/data/library.json"), {
+    generatedAt: now,
+    policy: "Full research archive. Merged across refreshes. Not issued plays.",
+    rows: library.map(stripInternal),
+  });
   atomicWrite(join(ROOT, "src/data/research-ledger.json"), research);
   atomicWrite(join(ROOT, "src/data/public-betting.json"), publicBetting);
   atomicWrite(join(ROOT, "src/data/public-betting-tape.json"), tape);
@@ -1311,8 +1406,11 @@ async function main() {
       highNoise: highNoise.length,
       staleFpi: staleFpi.length,
       aligned: aligned.length,
-      completed: library.filter((r) => r.completed).length,
+      completed: completedRows.length,
       teamsCovered,
+      espnOverlay: espnOverlayN,
+      espnNfl: espnNfl.length,
+      espnNcaaf: espnNcaaf.length,
       ticketPct: ticketN,
       moneyPct: moneyN,
       sportsbettingdimeLive: sbdRows.length,

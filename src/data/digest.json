@@ -1,10 +1,10 @@
 {
   "week": 2,
   "season": 2026,
-  "generatedAt": "2026-09-20T19:30:04.539Z",
+  "generatedAt": "2026-09-21T00:23:26.123Z",
   "confidenceTier": "INSUFFICIENT",
   "engine": "FPI + HFA",
-  "summary": "Library 1143 games / 270 clubs. Research 160–115–2 (n=277). Issued 0. Public lean on 199 games. Money % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted).",
+  "summary": "Library 1159 games / 270 clubs. Research 161–127–2 (n=290). Issued 0. Public lean on 331 games. Money % on 122 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 2 finals.",
   "atsRecord": {
     "hits": 0,
     "misses": 0,
@@ -13,117 +13,117 @@
     "rate": null
   },
   "helpers": [
-    "348 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 99 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1143 games. Research grades 160–115–2 (n=277).",
-    "Public lean: bet/pick % on 199 games. Money/handle % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). 34 games with a 10-pt+ divergence."
+    "351 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 95 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 161–127–2 (n=290).",
+    "Public lean: bet/pick % on 331 games. Money/handle % on 122 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 2 finals. 52 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "1040 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "85 STALE_FPI and 106 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "1037 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "56 STALE_FPI and 97 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
     {
-      "league": "NFL",
-      "kick": "2026-09-20T17:00:00.000Z",
-      "matchup": "Cincinnati Bengals @ Houston Texans",
-      "edge": 4.8,
-      "edgeTo": "Houston Texans",
+      "league": "NCAAF",
+      "kick": "2026-09-26T19:30:00.000Z",
+      "matchup": "TCU Horned Frogs @ UCF Knights",
+      "edge": 5.3,
+      "edgeTo": "TCU Horned Frogs",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -3,
-      "modelHome": 1.8,
-      "nBooks": 7
-    },
-    {
-      "league": "NFL",
-      "kick": "2026-09-20T20:05:00.000Z",
-      "matchup": "Jacksonville Jaguars @ Denver Broncos",
-      "edge": 4.8,
-      "edgeTo": "Denver Broncos",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -2.5,
-      "modelHome": 2.3,
+      "marketHome": 3.5,
+      "modelHome": -1.8,
       "nBooks": 9
     },
     {
       "league": "NCAAF",
-      "kick": "2026-09-24T23:30:00.000Z",
-      "matchup": "Liberty Flames @ Coastal Carolina Chanticleers",
-      "edge": 3.4,
-      "edgeTo": "Liberty Flames",
+      "kick": "2026-09-26T19:30:00.000Z",
+      "matchup": "Utah Utes @ Iowa State Cyclones",
+      "edge": 3.9,
+      "edgeTo": "Utah Utes",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": 2,
-      "modelHome": -1.4,
-      "nBooks": 7
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-26T02:30:00.000Z",
-      "matchup": "Clemson Tigers @ California Golden Bears",
-      "edge": 3.6,
-      "edgeTo": "Clemson Tigers",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -1.5,
-      "modelHome": -5.1,
-      "nBooks": 7
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-26T16:00:00.000Z",
-      "matchup": "San Diego State Aztecs @ Toledo Rockets",
-      "edge": 6,
-      "edgeTo": "Toledo Rockets",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -2,
-      "modelHome": 4,
-      "nBooks": 6
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-09-26T16:00:00.000Z",
-      "matchup": "Ball State Cardinals @ Kent State Golden Flashes",
-      "edge": 4.4,
-      "edgeTo": "Kent State Golden Flashes",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -3.5,
-      "modelHome": 0.9,
-      "nBooks": 6
+      "marketHome": 8.5,
+      "modelHome": 4.6,
+      "nBooks": 9
     },
     {
       "league": "NCAAF",
       "kick": "2026-09-26T19:30:00.000Z",
       "matchup": "Ole Miss Rebels @ Florida Gators",
-      "edge": 3.7,
+      "edge": 3.1,
       "edgeTo": "Florida Gators",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -2.5,
-      "modelHome": 1.2,
-      "nBooks": 6
+      "marketHome": -3,
+      "modelHome": 0.1,
+      "nBooks": 8
     },
     {
       "league": "NCAAF",
-      "kick": "2026-09-26T19:30:00.000Z",
-      "matchup": "TCU Horned Frogs @ UCF Knights",
-      "edge": 3.3,
-      "edgeTo": "TCU Horned Frogs",
+      "kick": "2026-09-26T23:00:00.000Z",
+      "matchup": "Oklahoma State Cowboys @ West Virginia Mountaineers",
+      "edge": 5.9,
+      "edgeTo": "Oklahoma State Cowboys",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -1.5,
+      "modelHome": -7.4,
+      "nBooks": 8
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-26T23:30:00.000Z",
+      "matchup": "Texas A&M Aggies @ LSU Tigers",
+      "edge": 5.1,
+      "edgeTo": "LSU Tigers",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -9.5,
+      "modelHome": -4.4,
+      "nBooks": 9
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-09-27T01:00:00.000Z",
+      "matchup": "UMass Minutemen @ Sacramento State Hornets",
+      "edge": 5.4,
+      "edgeTo": "UMass Minutemen",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 6,
+      "modelHome": 0.6,
+      "nBooks": 9
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-27T17:00:00.000Z",
+      "matchup": "New England Patriots @ Jacksonville Jaguars",
+      "edge": 4.1,
+      "edgeTo": "Jacksonville Jaguars",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -2.5,
+      "modelHome": 1.6,
+      "nBooks": 6
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-27T17:00:00.000Z",
+      "matchup": "Cincinnati Bengals @ Pittsburgh Steelers",
+      "edge": 4,
+      "edgeTo": "Cincinnati Bengals",
       "confidence": "WATCH",
       "dataClass": "WATCH",
       "marketHome": 3.5,
-      "modelHome": 0.2,
+      "modelHome": -0.5,
       "nBooks": 6
     }
   ],
   "narrativeStatus": "generated",
-  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 99 rows sit in the research (WATCH) band. 85 STALE_FPI and 106 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1143 games / 270 clubs. Research 160-115-2 (n=277) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 199 games, money/handle % on 103 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). 34 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 95 rows sit in the research (WATCH) band. 56 STALE_FPI and 97 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 161-127-2 (n=290) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 331 games, money/handle % on 122 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 2 scores. 52 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   "narrativeModel": "grok-4.6-desk"
 }
