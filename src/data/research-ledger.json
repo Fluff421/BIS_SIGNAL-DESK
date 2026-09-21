@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T00:23:26.123Z",
+  "generatedAt": "2026-09-21T00:25:44.340Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 290,
@@ -3486,8 +3486,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 32,
-      "publicBetsHome": 68,
+      "publicBetsAway": 0,
+      "publicBetsHome": 100,
       "publicMoneyAway": null,
       "publicMoneyHome": null,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -3591,8 +3591,8 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 60,
-      "publicBetsHome": 40,
+      "publicBetsAway": 55,
+      "publicBetsHome": 45,
       "publicMoneyAway": 52,
       "publicMoneyHome": 48,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -3969,8 +3969,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 95,
-      "publicBetsHome": 5,
+      "publicBetsAway": 76,
+      "publicBetsHome": 24,
       "publicMoneyAway": 83,
       "publicMoneyHome": 17,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -4011,10 +4011,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 45,
-      "publicBetsHome": 55,
-      "publicMoneyAway": 13,
-      "publicMoneyHome": 87,
+      "publicBetsAway": 22,
+      "publicBetsHome": 78,
+      "publicMoneyAway": 24,
+      "publicMoneyHome": 76,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -4305,8 +4305,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 92,
-      "publicBetsHome": 8,
+      "publicBetsAway": 36,
+      "publicBetsHome": 64,
       "publicMoneyAway": null,
       "publicMoneyHome": null,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T00:23:30.759Z",
+  "generatedAt": "2026-09-21T00:25:48.448Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 161,
@@ -183,7 +183,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T23:00:00.000Z",
       "games": 12,
-      "upcoming": 8,
+      "upcoming": 9,
       "rate": 0.333
     },
     {
@@ -495,7 +495,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:45:00.000Z",
       "games": 12,
-      "upcoming": 8,
+      "upcoming": 9,
       "rate": 0.5
     },
     {
@@ -1002,7 +1002,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-12T23:45:00.000Z",
       "games": 12,
-      "upcoming": 7,
+      "upcoming": 9,
       "rate": 0
     },
     {
