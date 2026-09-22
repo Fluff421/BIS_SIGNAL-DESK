@@ -1,7 +1,7 @@
 {
   "week": 2,
   "season": 2026,
-  "generatedAt": "2026-09-22T01:37:54.233Z",
+  "generatedAt": "2026-09-22T10:04:21.905Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,14 +11,14 @@
     "rate": null
   },
   "helpers": [
-    "350 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 98 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 165–124–2 (n=291).",
-    "Public lean: bet/pick % on 347 games. Money/handle % on 182 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 0 finals. 39 games with a 10-pt+ divergence."
+    "362 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 99 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 166–124–2 (n=292).",
+    "Public lean: bet/pick % on 347 games. Money/handle % on 188 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 0 finals. 37 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "977 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "82 STALE_FPI and 106 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "971 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "84 STALE_FPI and 105 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
@@ -64,11 +64,11 @@
       "league": "NCAAF",
       "kick": "2026-09-26T19:30:00.000Z",
       "matchup": "Ole Miss Rebels @ Florida Gators",
-      "edge": 4.7,
+      "edge": 4.2,
       "edgeTo": "Florida Gators",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -3.5,
+      "marketHome": -3,
       "modelHome": 1.2,
       "nBooks": 8
     },
@@ -123,8 +123,8 @@
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 98 rows sit in the research (WATCH) band. 82 STALE_FPI and 106 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 165-124-2 (n=291) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 347 games, money/handle % on 182 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 0 scores. 39 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 165–124–2 (n=291). Issued 0. Public lean on 347 games. Money % on 182 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 0 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 2. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 99 rows sit in the research (WATCH) band. 84 STALE_FPI and 105 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 166-124-2 (n=292) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 347 games, money/handle % on 188 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 0 scores. 37 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 166–124–2 (n=292). Issued 0. Public lean on 347 games. Money % on 188 (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 0 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
