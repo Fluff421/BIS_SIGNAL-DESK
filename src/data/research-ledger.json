@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T01:32:03.188Z",
+  "generatedAt": "2026-09-23T10:02:59.592Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 292,
@@ -1638,8 +1638,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 46,
-      "publicBetsHome": 54,
+      "publicBetsAway": 45,
+      "publicBetsHome": 55,
       "publicMoneyAway": 35,
       "publicMoneyHome": 65,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -3530,8 +3530,8 @@
       "dataClass": "STALE_FPI",
       "publicBetsAway": 49,
       "publicBetsHome": 51,
-      "publicMoneyAway": 37,
-      "publicMoneyHome": 63,
+      "publicMoneyAway": 38,
+      "publicMoneyHome": 62,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
