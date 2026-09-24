@@ -43,7 +43,6 @@ function QualityPage() {
   const espnStatus = live?.espn.status ?? deskHealth.espn.status;
   const grokStatus = live?.grok.status ?? deskHealth.grok.status;
   const finals = deskEspn.ncaaf.rows.filter((r) => r.completed);
-  const researchPct = Math.min(100, (deskResearch.ats.n / 30) * 100);
   const topClubs = deskTeamIntel.teams.filter((t) => t.n >= 1).slice(0, 24);
 
   return (
@@ -53,25 +52,25 @@ function QualityPage() {
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
           The desk watches the full posted NFL and NCAAF slates — college current plus weeks 0–13,
           NFL current plus weeks 1–18 — so every club accumulates a library. Public lean is ticket
-          % plus SportsBettingDime money/handle % (ScoresAndOdds and Sunday WagerTalk as backups;
-          snapshots persist after kick). ESPN finals overlay grades results the same day. Issued 75%
-          still needs human approval.
+          % plus money/handle % from SportsBettingDime and WiseGuyTeam (ScoresAndOdds and Sunday
+          WagerTalk as backups; snapshots persist after kick). ESPN week boards grade results the
+          same day. Issued 75% still needs human approval.
         </p>
       </div>
 
       <section className="rounded-xl border border-border bg-surface p-5">
-        <h3 className="font-display text-xl">Path to 30 graded sides</h3>
-        <p className="mt-2 font-display text-3xl tabular-nums">{deskResearch.ats.n} / 30 research</p>
+        <h3 className="font-display text-xl">Path to 30 issued sides</h3>
+        <p className="mt-2 font-display text-3xl tabular-nums">0 / 30 issued</p>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-elevated">
-          <div className="h-full bg-watch" style={{ width: `${researchPct}%` }} />
+          <div className="h-full bg-watch" style={{ width: "0%" }} />
         </div>
         <p className="mt-2 text-sm leading-relaxed text-muted">{deskResearch.pathTo30.note}</p>
         <p className="mt-3 font-mono text-xs text-subtle">
           Research {deskResearch.ats.hits}–{deskResearch.ats.misses}–{deskResearch.ats.pushes} (n=
           {deskResearch.ats.n}
-          {deskResearch.ats.rate != null ? ` · ${Math.round(deskResearch.ats.rate * 100)}%` : ""}) ·
-          issued 0–0–0 · slate {c.observe} · library {c.library} / {c.teamsCovered} clubs. Research is
-          not the 75% issued target.
+          {deskResearch.ats.rate != null ? ` · ${Math.round(deskResearch.ats.rate * 100)}%` : ""}) is
+          diagnostic and already past 30. Issued stays 0–0–0 until you approve a cohort. Library{" "}
+          {c.library} / {c.teamsCovered} clubs · slate {c.observe}.
         </p>
       </section>
 
@@ -99,8 +98,8 @@ function QualityPage() {
           <p className="font-mono text-xs text-muted uppercase">Money %</p>
           <p className="mt-2 font-display text-3xl tabular-nums">{cov.moneyPct}</p>
           <p className="mt-1 text-xs text-subtle">
-            SAO {cov.scoresandoddsMatched ?? 0} · SBD {cov.sportsbettingdimeMatched ?? 0} · WT{" "}
-            {cov.wagertalkMatched ?? 0} · gaps {cov.divergenceFlags ?? 0}
+            SBD {cov.sportsbettingdimeMatched ?? 0} · WGT {cov.wiseguyteamMatched ?? 0} · SAO{" "}
+            {cov.scoresandoddsMatched ?? 0} · gaps {cov.divergenceFlags ?? 0}
           </p>
         </div>
       </section>
@@ -154,6 +153,7 @@ function QualityPage() {
             ["Grok 4.6", { ...deskHealth.grok, status: grokStatus }],
             ["Action Network", deskHealth.actionnetwork ?? { status: "degraded" }],
             ["SportsBettingDime", deskHealth.sportsbettingdime ?? { status: "degraded" }],
+            ["WiseGuyTeam", deskHealth.wiseguyteam ?? { status: "degraded" }],
             ["ScoresAndOdds", deskHealth.scoresandodds ?? { status: "degraded" }],
             ["WagerTalk", deskHealth.wagertalk ?? { status: "degraded" }],
             ["SBR + Covers", deskHealth.sbr ?? { status: "degraded" }],
