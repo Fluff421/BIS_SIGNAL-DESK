@@ -3,12 +3,14 @@
  * Expand the research universe across NFL + NCAAF (posted weeks) and overlay
  * public-lean signals from:
  *   - SportsBettingDime (ticket % AND money/handle % on the live slate — primary)
+ *   - WiseGuyTeam sharp-report (ticket % AND money/handle % — second live sample)
  *   - ScoresAndOdds consensus (ticket % AND money/handle %)
  *   - WagerTalk (ticket % AND money/handle — Sunday tape)
  *   - Action Network (ticket volume + featured money %)
  *   - Sportsbook Review (spread pick %)
  *   - Covers contests (pick %)
- * ESPN CDN scoreboard overlays finals so week-of results grade without waiting on AN.
+ * ESPN CDN + site.web.api week scoreboards overlay finals so week-of results
+ * grade without waiting on Action Network.
  *
  * Grades completed games vs stored consensus as RESEARCH (not issued).
  * Merges prior library rows so the club database only grows.
@@ -25,6 +27,8 @@ const UA =
 const HFA = { NFL: 2.0, NCAAF: 2.5 };
 const NFL_WEEKS = [null, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 const NCAAF_WEEKS = [null, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const ESPN_NFL_WEEKS = [1, 2, 3, 4, 5, 6, 7];
+const ESPN_NCAAF_WEEKS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 const SBD_BOOKS = "sr:book:7612,sr:book:31520,sr:book:28901,sr:book:32784";
 const ABBR_ALIAS = {
   JAC: "JAX",
@@ -36,6 +40,8 @@ const ABBR_ALIAS = {
   GONZ: "GON",
   PITT: "PIT",
   PIT: "PIT",
+  CCAR: "CCU",
+  CCU: "CCU",
 };
 
 function atomicWrite(path, obj) {
@@ -392,8 +398,9 @@ function parseSao(html, league) {
 }
 
 function roundPct(n) {
-  if (!Number.isFinite(n)) return null;
-  return Math.max(0, Math.min(100, Math.round(n)));
+  const v = Number(n);
+  if (!Number.isFinite(v)) return null;
+  return Math.max(0, Math.min(100, Math.round(v)));
 }
 
 function sbdFullName(comp) {
@@ -461,12 +468,11 @@ async function loadAnLeague(path, league, weeks) {
   return rows;
 }
 
-async function loadEspn(path, league) {
-  const url = `https://cdn.espn.com/core/${path}/scoreboard?xhr=1`;
-  const data = await fetchJson(url, "https://www.espn.com/");
-  const sb = data?.content?.sbData || {};
+function parseEspnPayload(data, league) {
+  const sb = data?.content?.sbData || data || {};
+  const events = sb.events || data?.events || [];
   const rows = [];
-  for (const ev of sb.events || []) {
+  for (const ev of events) {
     const comp = ev.competitions?.[0];
     if (!comp) continue;
     const home = (comp.competitors || []).find((c) => c.homeAway === "home");
@@ -487,6 +493,96 @@ async function loadEspn(path, league) {
     });
   }
   return rows;
+}
+
+function mergeEspnRows(packs, league) {
+  const rows = [];
+  for (const pack of packs) {
+    if (pack.status !== "fulfilled") continue;
+    for (const r of parseEspnPayload(pack.value, league)) {
+      const key = `${norm(r.away)}@${norm(r.home)}`;
+      const prev = rows.find((x) => `${norm(x.away)}@${norm(x.home)}` === key);
+      if (!prev) rows.push(r);
+      else if (!prev.completed && r.completed) Object.assign(prev, r);
+    }
+  }
+  return rows;
+}
+
+async function loadEspnNflWeeks() {
+  const urls = [
+    "https://cdn.espn.com/core/nfl/scoreboard?xhr=1",
+    ...ESPN_NFL_WEEKS.map(
+      (w) => `https://cdn.espn.com/core/nfl/scoreboard?xhr=1&week=${w}&seasontype=2&year=2026`,
+    ),
+    ...ESPN_NFL_WEEKS.map(
+      (w) =>
+        `https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=${w}&seasontype=2&dates=2026`,
+    ),
+    ...recentEspnDates(18).map(
+      (d) => `https://site.web.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${d}`,
+    ),
+  ];
+  const packs = await Promise.allSettled(urls.map((u) => fetchJson(u, "https://www.espn.com/")));
+  return mergeEspnRows(packs, "NFL");
+}
+
+async function loadEspnNcaafWeeks() {
+  const urls = [
+    "https://cdn.espn.com/core/college-football/scoreboard?xhr=1",
+    ...ESPN_NCAAF_WEEKS.map(
+      (w) =>
+        `https://cdn.espn.com/core/college-football/scoreboard?xhr=1&week=${w}&seasontype=2&year=2026&groups=80`,
+    ),
+    ...ESPN_NCAAF_WEEKS.map(
+      (w) =>
+        `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?week=${w}&seasontype=2&dates=2026&limit=300&groups=80`,
+    ),
+    ...recentEspnDates(18).map(
+      (d) =>
+        `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${d}&limit=300&groups=80`,
+    ),
+  ];
+  const packs = await Promise.allSettled(urls.map((u) => fetchJson(u, "https://www.espn.com/")));
+  return mergeEspnRows(packs, "NCAAF");
+}
+
+function parseWgt(data, league) {
+  const rows = [];
+  for (const g of data?.games || []) {
+    const sp = g.sp || {};
+    const s1 = sp.side1 || {};
+    const s2 = sp.side2 || {};
+    const betsAway = roundPct(s1.bet);
+    const betsHome = roundPct(s2.bet);
+    const moneyAway = roundPct(s1.handle);
+    const moneyHome = roundPct(s2.handle);
+    if (betsAway == null && moneyAway == null) continue;
+    const tot = g.tot || {};
+    rows.push({
+      league,
+      away: g.away?.name,
+      home: g.home?.name,
+      awayAbbr: g.away?.init || null,
+      homeAbbr: g.home?.init || null,
+      kick: g.time ? new Date(g.time).toISOString() : null,
+      betsAway,
+      betsHome,
+      moneyAway,
+      moneyHome,
+      overBets: roundPct(tot.over?.bet),
+      overMoney: roundPct(tot.over?.handle),
+      source: "wiseguyteam",
+    });
+  }
+  return rows;
+}
+
+async function loadWgt(sport, league) {
+  const page = sport === "nfl" ? "nfl" : "cfb";
+  const url = `https://inngest-worker.memberservice.workers.dev/sharp-report?sport=${sport}`;
+  const data = await fetchJson(url, `https://wiseguyteam.com/${page}-betting-splits`);
+  return parseWgt(data, league);
 }
 
 function overlayEspn(games, espnRows) {
@@ -515,9 +611,23 @@ function overlayEspn(games, espnRows) {
 }
 
 async function loadSbd(path, league) {
-  const url = `https://www.sportsbettingdime.com/wp-json/adpt/v1/${path}-odds?books=${SBD_BOOKS}&format=us`;
-  const data = await fetchJson(url, "https://www.sportsbettingdime.com/");
-  return parseSbd(data, league);
+  const urls = [
+    `https://www.sportsbettingdime.com/wp-json/adpt/v1/${path}-odds?books=${SBD_BOOKS}&format=us`,
+    `https://www.sportsbettingdime.com/wp-json/adpt/v1/${path}-odds?format=us`,
+  ];
+  const packs = await Promise.allSettled(urls.map((u) => fetchJson(u, "https://www.sportsbettingdime.com/")));
+  const seen = new Set();
+  const rows = [];
+  for (const pack of packs) {
+    if (pack.status !== "fulfilled") continue;
+    for (const r of parseSbd(pack.value, league)) {
+      const key = `${norm(r.away)}@${norm(r.home)}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      rows.push(r);
+    }
+  }
+  return rows;
 }
 
 function matchWt(wtRows, row) {
@@ -565,6 +675,29 @@ function matchSao(saoRows, row) {
   );
 }
 
+function matchWgt(wgtRows, row) {
+  const a = canonAbbr(row.awayAbbr);
+  const h = canonAbbr(row.homeAbbr);
+  return (
+    wgtRows.find(
+      (r) =>
+        r.league === row.league &&
+        a &&
+        h &&
+        canonAbbr(r.awayAbbr) === a &&
+        canonAbbr(r.homeAbbr) === h,
+    ) ||
+    wgtRows.find((r) => namesMatch(r.away, row.away) && namesMatch(r.home, row.home)) ||
+    wgtRows.find(
+      (r) =>
+        lastToken(r.away) === lastToken(row.away) &&
+        lastToken(r.home) === lastToken(row.home) &&
+        lastToken(row.away).length > 2,
+    ) ||
+    null
+  );
+}
+
 function matchSbd(sbdRows, row) {
   const a = canonAbbr(row.awayAbbr);
   const h = canonAbbr(row.homeAbbr);
@@ -588,7 +721,7 @@ function matchSbd(sbdRows, row) {
   );
 }
 
-function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRows, abbrIndex, priorPub) {
+function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRows, wgtRows, abbrIndex, priorPub) {
   const seed = matchSeed(seedRows, row.away, row.home);
   const sbr =
     sbrRows.find((r) => namesMatch(r.away, row.away) && namesMatch(r.home, row.home)) ||
@@ -607,9 +740,11 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
   const wt = matchWt(wtRows, row);
   const sao = matchSao(saoRows, row);
   const sbd = matchSbd(sbdRows, row);
+  const wgt = matchWgt(wgtRows, row);
 
   const betsAway =
     sbd?.betsAway ??
+    wgt?.betsAway ??
     row.apiPublic?.betsAway ??
     seed?.betsAway ??
     sao?.betsAway ??
@@ -620,6 +755,7 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
     null;
   const betsHome =
     sbd?.betsHome ??
+    wgt?.betsHome ??
     row.apiPublic?.betsHome ??
     seed?.betsHome ??
     sao?.betsHome ??
@@ -630,6 +766,7 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
     null;
   const moneyAway =
     sbd?.moneyAway ??
+    wgt?.moneyAway ??
     sao?.moneyAway ??
     wt?.moneyAway ??
     row.apiPublic?.moneyAway ??
@@ -638,6 +775,7 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
     null;
   const moneyHome =
     sbd?.moneyHome ??
+    wgt?.moneyHome ??
     sao?.moneyHome ??
     wt?.moneyHome ??
     row.apiPublic?.moneyHome ??
@@ -651,6 +789,7 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
   const ticketFromAn = row.apiPublic?.betsAway != null || seed?.betsAway != null;
   const sources = [];
   if (sbd) sources.push("sportsbettingdime");
+  if (wgt) sources.push("wiseguyteam");
   if (ticketFromAn || tickets) sources.push("actionnetwork");
   if (sao) sources.push("scoresandodds");
   if (wt) sources.push("wagertalk");
@@ -660,15 +799,17 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
   const moneySource =
     sbd?.moneyAway != null
       ? "sportsbettingdime"
-      : sao?.moneyAway != null
-        ? "scoresandodds"
-        : wt?.moneyAway != null
-          ? "wagertalk"
-          : row.apiPublic?.moneyAway != null || seed?.moneyAway != null
-            ? "actionnetwork"
-            : priorPub?.moneyAway != null
-              ? priorPub.moneySource || "persisted"
-              : null;
+      : wgt?.moneyAway != null
+        ? "wiseguyteam"
+        : sao?.moneyAway != null
+          ? "scoresandodds"
+          : wt?.moneyAway != null
+            ? "wagertalk"
+            : row.apiPublic?.moneyAway != null || seed?.moneyAway != null
+              ? "actionnetwork"
+              : priorPub?.moneyAway != null
+                ? priorPub.moneySource || "persisted"
+                : null;
 
   return {
     betsAway,
@@ -693,11 +834,15 @@ function attachPublic(row, seedRows, coversRows, sbrRows, wtRows, saoRows, sbdRo
     sbdBetsHome: sbd?.betsHome ?? priorPub?.sbdBetsHome ?? null,
     sbdMoneyAway: sbd?.moneyAway ?? priorPub?.sbdMoneyAway ?? null,
     sbdMoneyHome: sbd?.moneyHome ?? priorPub?.sbdMoneyHome ?? null,
-    overBets: sbd?.overBets ?? priorPub?.overBets ?? null,
-    overMoney: sbd?.overMoney ?? priorPub?.overMoney ?? null,
+    wgtBetsAway: wgt?.betsAway ?? priorPub?.wgtBetsAway ?? null,
+    wgtBetsHome: wgt?.betsHome ?? priorPub?.wgtBetsHome ?? null,
+    wgtMoneyAway: wgt?.moneyAway ?? priorPub?.wgtMoneyAway ?? null,
+    wgtMoneyHome: wgt?.moneyHome ?? priorPub?.wgtMoneyHome ?? null,
+    overBets: sbd?.overBets ?? wgt?.overBets ?? priorPub?.overBets ?? null,
+    overMoney: sbd?.overMoney ?? wgt?.overMoney ?? priorPub?.overMoney ?? null,
     moneySource,
     moneyQuality: moneyAway != null ? "provisional" : "missing",
-    ticketQuality: sbd?.betsAway != null
+    ticketQuality: sbd?.betsAway != null || wgt?.betsAway != null
       ? "provisional"
       : ticketFromAn
         ? "provisional"
@@ -831,11 +976,14 @@ function mergeLibrary(fresh, prior) {
         p.saoMoneyHome = p.saoMoneyHome ?? o.saoMoneyHome ?? null;
         p.sbdMoneyAway = p.sbdMoneyAway ?? o.sbdMoneyAway ?? null;
         p.sbdMoneyHome = p.sbdMoneyHome ?? o.sbdMoneyHome ?? null;
+        p.wgtMoneyAway = p.wgtMoneyAway ?? o.wgtMoneyAway ?? null;
+        p.wgtMoneyHome = p.wgtMoneyHome ?? o.wgtMoneyHome ?? null;
         if (p.betsAway != null) p.divergence = p.moneyAway - p.betsAway;
         const extra = [];
         if ((o.source || "").includes("wagertalk") && !String(p.source || "").includes("wagertalk")) extra.push("persisted-wt");
         if ((o.source || "").includes("scoresandodds") && !String(p.source || "").includes("scoresandodds")) extra.push("persisted-sao");
         if ((o.source || "").includes("sportsbettingdime") && !String(p.source || "").includes("sportsbettingdime")) extra.push("persisted-sbd");
+        if ((o.source || "").includes("wiseguyteam") && !String(p.source || "").includes("wiseguyteam")) extra.push("persisted-wgt");
         if (extra.length) p.source = `${p.source}+${extra.join("+")}`.replace(/^none\+/, "");
       }
       if (p.betsAway == null && o.betsAway != null) {
@@ -929,6 +1077,21 @@ function weekLabel(weeks) {
   return weeks.map((w) => (w == null ? "current" : String(w))).join(",");
 }
 
+function recentEspnDates(n = 18) {
+  const out = [];
+  const now = Date.now();
+  for (let i = 0; i < n; i++) {
+    out.push(new Date(now - i * 86_400_000).toISOString().slice(0, 10).replace(/-/g, ""));
+  }
+  return out;
+}
+
+function currentNflWeek() {
+  const week1Thu = Date.parse("2026-09-10T00:00:00Z");
+  const w = Math.floor((Date.now() - week1Thu) / (7 * 86_400_000)) + 1;
+  return Math.max(1, Math.min(18, w));
+}
+
 async function main() {
   const now = new Date().toISOString();
   const snapshot = readJson(join(ROOT, "src/data/snapshot.json"), {});
@@ -949,6 +1112,7 @@ async function main() {
   for (const key of ["watch", "highNoise", "staleFpi", "library", "observe"]) {
     for (const r of boardPrev[key] || []) priorIndex.push(r);
   }
+  for (const r of priorLibraryFile.rows || []) priorIndex.push(r);
   function findPrior(home, away) {
     return priorIndex.find((r) => namesMatch(r.home, home) && namesMatch(r.away, away)) || null;
   }
@@ -968,6 +1132,8 @@ async function main() {
     saoNcaafHtml,
     sbdNfl,
     sbdNcaaf,
+    wgtNfl,
+    wgtNcaaf,
     espnNfl,
     espnNcaaf,
   ] = await Promise.all([
@@ -985,8 +1151,10 @@ async function main() {
     safeText("https://www.scoresandodds.com/ncaaf/consensus-picks", "https://www.scoresandodds.com/"),
     safeJson(() => loadSbd("nfl", "NFL"), "sbd-nfl"),
     safeJson(() => loadSbd("ncaafb", "NCAAF"), "sbd-ncaaf"),
-    safeJson(() => loadEspn("nfl", "NFL"), "espn-nfl"),
-    safeJson(() => loadEspn("college-football", "NCAAF"), "espn-ncaaf"),
+    safeJson(() => loadWgt("nfl", "NFL"), "wgt-nfl"),
+    safeJson(() => loadWgt("ncaaf", "NCAAF"), "wgt-ncaaf"),
+    safeJson(() => loadEspnNflWeeks(), "espn-nfl"),
+    safeJson(() => loadEspnNcaafWeeks(), "espn-ncaaf"),
   ]);
 
   const all = [...nflGames, ...ncaafGames];
@@ -1000,6 +1168,7 @@ async function main() {
   const wtRows = parseWagerTalk(wtHtml);
   const saoRows = [...parseSao(saoNflHtml, "NFL"), ...parseSao(saoNcaafHtml, "NCAAF")];
   const sbdRows = [...sbdNfl, ...sbdNcaaf];
+  const wgtRows = [...wgtNfl, ...wgtNcaaf];
 
   const abbrIndex = new Map();
   for (const g of all) {
@@ -1022,6 +1191,7 @@ async function main() {
       wtRows,
       saoRows,
       sbdRows,
+      wgtRows,
       abbrIndex,
       prior?.publicBetting,
     );
@@ -1080,6 +1250,8 @@ async function main() {
   const saoMatchN = library.filter((r) => r.publicBetting?.saoBetsAway != null || r.publicBetting?.saoMoneyAway != null).length;
   const sbdMatchN = library.filter((r) => r.publicBetting?.sbdBetsAway != null || r.publicBetting?.sbdMoneyAway != null).length;
   const sbdMoneyN = library.filter((r) => r.publicBetting?.sbdMoneyAway != null || r.publicBetting?.moneySource === "sportsbettingdime").length;
+  const wgtMatchN = library.filter((r) => r.publicBetting?.wgtBetsAway != null || r.publicBetting?.wgtMoneyAway != null).length;
+  const wgtMoneyN = library.filter((r) => r.publicBetting?.wgtMoneyAway != null || r.publicBetting?.moneySource === "wiseguyteam").length;
   const divN = library.filter((r) => r.publicBetting?.divergence != null && Math.abs(r.publicBetting.divergence) >= 10).length;
   const nflLib = library.filter((r) => r.league === "NFL");
   const ncaafLib = library.filter((r) => r.league === "NCAAF");
@@ -1088,13 +1260,14 @@ async function main() {
 
   const tape = {
     generatedAt: now,
-    source: "sportsbettingdime.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com/odds",
+    source: "sportsbettingdime.com + wiseguyteam.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com/odds",
     snapshots: [
       ...(tapePrev.snapshots || []).slice(-50),
       {
         at: now,
         nfl: sbdNfl.length,
         ncaaf: sbdNcaaf.length,
+        wiseguyteam: wgtRows.length,
         scoresandodds: saoRows.length,
         wagertalk: wtRows.length,
         rows: sbdRows.slice(0, 40).map((r) => ({
@@ -1111,9 +1284,9 @@ async function main() {
   const publicBetting = {
     generatedAt: now,
     source:
-      "SportsBettingDime (ticket % + money/handle % on the live NFL/NCAAF slate) + ScoresAndOdds consensus + Action Network scoreboard (ticket volume) + WagerTalk consensus + SBR spread pick % + Covers contest pick %",
+      "SportsBettingDime (ticket % + money/handle % on the live NFL/NCAAF slate) + WiseGuyTeam sharp-report (ticket % + money/handle %) + ScoresAndOdds consensus + Action Network scoreboard (ticket volume) + WagerTalk consensus + SBR spread pick % + Covers contest pick %",
     methodology:
-      "Ticket/bet % prefers SportsBettingDime spread betsPercentage, then Action Network public figures, then ScoresAndOdds, then WagerTalk, then SBR pick %, then Covers contest pick %. Money/handle % prefers SportsBettingDime stakePercentage, then ScoresAndOdds, then WagerTalk, then Action Network featured-game money %, then the last persisted snapshot so completed games keep their split. Covers/SBR are pick shares, not licensed sportsbook handle. Divergence = money% − ticket% on the away side when both exist. A 10-pt+ divergence is a research flag, not a ticket.",
+      "Ticket/bet % prefers SportsBettingDime spread betsPercentage, then WiseGuyTeam, then Action Network public figures, then ScoresAndOdds, then WagerTalk, then SBR pick %, then Covers contest pick %. Money/handle % prefers SportsBettingDime stakePercentage, then WiseGuyTeam handle share, then ScoresAndOdds, then WagerTalk, then Action Network featured-game money %, then the last persisted snapshot so completed games keep their split. Covers/SBR are pick shares, not licensed sportsbook handle. Divergence = money% − ticket% on the away side when both exist. A 10-pt+ divergence is a research flag, not a ticket.",
     quality: moneyN >= 20 ? "provisional" : ticketN >= 20 ? "provisional" : "missing",
     coverage: {
       library: library.length,
@@ -1130,6 +1303,9 @@ async function main() {
       sportsbettingdimeLive: sbdRows.length,
       sportsbettingdimeMatched: sbdMatchN,
       sportsbettingdimeMoney: sbdMoneyN,
+      wiseguyteamLive: wgtRows.length,
+      wiseguyteamMatched: wgtMatchN,
+      wiseguyteamMoney: wgtMoneyN,
       divergenceFlags: divN,
       nflTicket: nflLib.filter((r) => r.publicBetting?.betsAway != null).length,
       nflMoney: nflLib.filter((r) => r.publicBetting?.moneyAway != null).length,
@@ -1166,7 +1342,7 @@ async function main() {
     aligned,
     updated: now,
     source:
-      "Action Network scoreboard (NFL current+weeks 1–18 + NCAAF current+weeks 0–13) + ESPN CDN finals overlay + FPI+HFA + SportsBettingDime/ScoresAndOdds/WagerTalk/SBR/Covers/AN public overlay. Full archive in library.json.",
+      "Action Network scoreboard (NFL current+weeks 1–18 + NCAAF current+weeks 0–13) + ESPN week scoreboards (NFL 1–5, NCAAF FBS 1–6) + FPI+HFA + SportsBettingDime/WiseGuyTeam/ScoresAndOdds/WagerTalk/SBR/Covers/AN public overlay. Full archive in library.json.",
     counts: {
       watch: watch.length,
       highNoise: highNoise.length,
@@ -1216,7 +1392,7 @@ async function main() {
     rows: researchRows,
   };
 
-  const saoNote = `Bet/pick % on ${ticketN}/${library.length} library games. Money/handle % on ${moneyN} (SportsBettingDime live ${sbdRows.length}, matched ${sbdMatchN}; ScoresAndOdds live ${saoRows.length}; WagerTalk live ${wtRows.length}; ESPN finals overlay ${espnOverlayN}; prior snapshots persisted). Ticket volume on ${volumeN}. SBR ${sbrN}, Covers ${coversN}. ${divN} games show a 10-pt+ money−ticket divergence.`;
+  const saoNote = `Bet/pick % on ${ticketN}/${library.length} library games. Money/handle % on ${moneyN} (SportsBettingDime live ${sbdRows.length}, matched ${sbdMatchN}; WiseGuyTeam live ${wgtRows.length}, matched ${wgtMatchN}; ScoresAndOdds live ${saoRows.length}; WagerTalk live ${wtRows.length}; ESPN finals overlay ${espnOverlayN}; prior snapshots persisted). Ticket volume on ${volumeN}. SBR ${sbrN}, Covers ${coversN}. ${divN} games show a 10-pt+ money−ticket divergence.`;
   const features = (contextPrev.features || []).map((f) => {
     if (f.id !== "public_betting") return f;
     return {
@@ -1224,7 +1400,7 @@ async function main() {
       label: "Public betting share",
       quality: moneyN >= 1 ? "provisional" : ticketN >= 20 ? "provisional" : "missing",
       source:
-        "sportsbettingdime.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com + actionnetwork.com + sportsbookreview.com + covers.com contests",
+        "sportsbettingdime.com (ticket % + money/handle %) + wiseguyteam.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com + actionnetwork.com + sportsbookreview.com + covers.com contests",
       observedAt: now,
       note: saoNote,
     };
@@ -1234,7 +1410,7 @@ async function main() {
       id: "public_betting",
       label: "Public betting share",
       quality: moneyN >= 1 ? "provisional" : "missing",
-      source: "sportsbettingdime + scoresandodds + wagertalk + actionnetwork + sbr + covers",
+      source: "sportsbettingdime + wiseguyteam + scoresandodds + wagertalk + actionnetwork + sbr + covers",
       observedAt: now,
       note: saoNote,
     });
@@ -1305,6 +1481,19 @@ async function main() {
       ? `Live ticket % and money/handle % on ${sbdRows.length} games (NFL ${sbdNfl.length}, NCAAF ${sbdNcaaf.length}). Matched onto ${sbdMatchN} library games.`
       : "SportsBettingDime odds API returned no betting splits.",
   };
+  health.wiseguyteam = {
+    status: wgtRows.length ? "healthy" : "degraded",
+    lastSuccessAt: now,
+    httpStatus: wgtRows.length ? 200 : 0,
+    rows: wgtRows.length,
+    nfl: wgtNfl.length,
+    ncaaf: wgtNcaaf.length,
+    matched: wgtMatchN,
+    money: wgtMoneyN,
+    reason: wgtRows.length
+      ? `WiseGuyTeam sharp-report: ticket % and money/handle % on ${wgtRows.length} games (NFL ${wgtNfl.length}, NCAAF ${wgtNcaaf.length}). Matched onto ${wgtMatchN} library games.`
+      : "WiseGuyTeam sharp-report returned no football ticket/money splits.",
+  };
   health.espn = {
     ...(health.espn || {}),
     status: espnRows.length ? "healthy" : health.espn?.status || "degraded",
@@ -1317,7 +1506,7 @@ async function main() {
     nflFinals: espnNfl.filter((r) => r.completed).length,
     ncaafFinals: espnNcaaf.filter((r) => r.completed).length,
     overlayApplied: espnOverlayN,
-    reason: `CDN scoreboard NFL ${espnNfl.length} (${espnNfl.filter((r) => r.completed).length} final), NCAAF ${espnNcaaf.length} (${espnNcaaf.filter((r) => r.completed).length} final). Overlayed ${espnOverlayN} library scores.`,
+    reason: `CDN + site.web.api week boards. NFL ${espnNfl.length} (${espnNfl.filter((r) => r.completed).length} final), NCAAF ${espnNcaaf.length} (${espnNcaaf.filter((r) => r.completed).length} final). Overlayed ${espnOverlayN} library scores.`,
   };
 
   const nflFinals = nflLib.filter((r) => r.completed).length;
@@ -1330,7 +1519,7 @@ async function main() {
 
   const digest = {
     ...digestPrev,
-    week: 2,
+    week: currentNflWeek(),
     season: 2026,
     generatedAt: now,
     confidenceTier: "INSUFFICIENT",
@@ -1338,7 +1527,7 @@ async function main() {
     helpers: [
       `${observe.length} upcoming games in the research slate (entire posted NFL + NCAAF weeks), ${watch.length} inside the 3–7 pt issuance band.`,
       `Library covers ${teamsCovered} clubs across ${library.length} games. Research grades ${hits}–${misses}–${pushes} (n=${n}).`,
-      `Public lean: bet/pick % on ${ticketN} games. Money/handle % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled ${espnOverlayN} finals. ${divN} games with a 10-pt+ divergence.`,
+      `Public lean: bet/pick % on ${ticketN} games. Money/handle % on ${moneyN} (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled ${espnOverlayN} finals. ${divN} games with a 10-pt+ divergence.`,
     ],
     hurters: [
       "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
@@ -1364,14 +1553,14 @@ async function main() {
     narrativeStatus: digestPrev.narrativeStatus ?? "generated",
     aiNarrative: null,
     engine: digestPrev.engine ?? "FPI + HFA",
-    summary: `Library ${library.length} games / ${teamsCovered} clubs. Research ${hits}–${misses}–${pushes} (n=${n}). Issued 0. Public lean on ${ticketN} games. Money % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted). ESPN overlay ${espnOverlayN} finals.`,
+    summary: `Library ${library.length} games / ${teamsCovered} clubs. Research ${hits}–${misses}–${pushes} (n=${n}). Issued 0. Public lean on ${ticketN} games. Money % on ${moneyN} (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay ${espnOverlayN} finals.`,
   };
   digest.aiNarrative = [
     `BIS Signal Desk, ${digest.season} week ${digest.week}. Engine: ${digest.engine}.`,
     "Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate.",
     `${watch.length} rows sit in the research (WATCH) band. ${staleFpi.length} STALE_FPI and ${highNoise.length} HIGH_NOISE rows stay suppressed. Issued plays: 0.`,
     `Library ${library.length} games / ${teamsCovered} clubs. Research ${hits}-${misses}-${pushes} (n=${n}) vs stored consensus after finals — diagnostic, not issued.`,
-    `Public lean: ticket/pick % on ${ticketN} games, money/handle % on ${moneyN} (SportsBettingDime + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled ${espnOverlayN} scores. ${divN} games show a 10-pt money-versus-tickets gap.`,
+    `Public lean: ticket/pick % on ${ticketN} games, money/handle % on ${moneyN} (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled ${espnOverlayN} scores. ${divN} games show a 10-pt money-versus-tickets gap.`,
     "An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   ].join(" ");
   digest.narrativeStatus = "generated";
@@ -1415,6 +1604,8 @@ async function main() {
       moneyPct: moneyN,
       sportsbettingdimeLive: sbdRows.length,
       sportsbettingdimeMatched: sbdMatchN,
+      wiseguyteamLive: wgtRows.length,
+      wiseguyteamMatched: wgtMatchN,
       scoresandoddsLive: saoRows.length,
       scoresandoddsMatched: saoMatchN,
       wagertalkLive: wtRows.length,

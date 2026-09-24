@@ -24,35 +24,28 @@ jobs:
         with:
           node-version: "22"
 
-      # These scripts are pure Node (fetch + fs). No npm install required.
+      # FPI + issued-ledger only. The expanded NFL/NCAAF library lives in
+      # refresh-universe.yml — do not commit board.json here or the Odds API
+      # slate will clobber 1,000+ watched games.
       - name: Refresh FPI snapshot
         run: node scripts/update-fpi.mjs
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         continue-on-error: true
 
-      - name: Refresh board from live odds
-        run: node scripts/update-board-from-odds.mjs
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
-
-      - name: Auto-grade completed edges (NCAAF + NFL)
+      - name: Auto-grade issued sides (empty until a human issues)
         run: node scripts/grade-results.mjs
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         continue-on-error: true
 
-      - name: Commit data
+      - name: Commit snapshot and issued ledger
         uses: EndBug/add-and-commit@v9
         with:
-          message: "chore(data): auto-refresh board, FPI, ledger [skip ci]"
+          message: "chore(data): refresh FPI snapshot and issued ledger [skip ci]"
           add: |
-            src/data/board.json
             src/data/snapshot.json
             src/data/ledger.json
-            src/data/digest.json
-            public/data/board.json
             public/data/snapshot.json
             public/data/ledger.json
             src/data/fpi-history/

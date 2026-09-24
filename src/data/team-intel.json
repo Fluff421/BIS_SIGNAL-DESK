@@ -1,9 +1,22 @@
 {
-  "generatedAt": "2026-09-24T20:31:45.650Z",
+  "generatedAt": "2026-09-24T21:34:39.976Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 161,
   "teams": [
+    {
+      "team": "Florida Gators",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 3,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-03T19:30:00.000Z",
+      "games": 12,
+      "upcoming": 8,
+      "rate": 0.75
+    },
     {
       "team": "North Dakota State Bison",
       "league": "NCAAF",
@@ -44,6 +57,19 @@
       "rate": 0.667
     },
     {
+      "team": "Arizona Wildcats",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 0,
+      "misses": 3,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-26T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 7,
+      "rate": 0
+    },
+    {
       "team": "BYU Cougars",
       "league": "NCAAF",
       "n": 3,
@@ -57,14 +83,14 @@
       "rate": 1
     },
     {
-      "team": "Florida Gators",
+      "team": "Cincinnati Bearcats",
       "league": "NCAAF",
       "n": 3,
       "hits": 2,
       "misses": 1,
       "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-19T23:00:00.000Z",
+      "lastResult": "miss",
+      "lastKick": "2026-09-19T19:30:00.000Z",
       "games": 12,
       "upcoming": 9,
       "rate": 0.667
@@ -79,7 +105,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-19T16:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -122,19 +148,6 @@
       "rate": 0.667
     },
     {
-      "team": "James Madison Dukes",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 3,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-20T02:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 1
-    },
-    {
       "team": "Kansas State Wildcats",
       "league": "NCAAF",
       "n": 3,
@@ -144,7 +157,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T16:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 7,
       "rate": 0.667
     },
     {
@@ -157,7 +170,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T23:30:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 7,
       "rate": 0.333
     },
     {
@@ -183,7 +196,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T23:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 7,
       "rate": 0.333
     },
     {
@@ -261,20 +274,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-17T23:30:00.000Z",
       "games": 12,
-      "upcoming": 9,
-      "rate": 0.667
-    },
-    {
-      "team": "South Alabama Jaguars",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-19T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0.667
     },
     {
@@ -287,21 +287,8 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T20:15:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0.333
-    },
-    {
-      "team": "South Florida Bulls",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-19T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 0.667
     },
     {
       "team": "TCU Horned Frogs",
@@ -365,7 +352,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T00:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0
     },
     {
@@ -482,21 +469,21 @@
       "lastResult": "hit",
       "lastKick": "2026-09-19T16:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 1
     },
     {
-      "team": "Arizona Wildcats",
+      "team": "Army Black Knights",
       "league": "NCAAF",
       "n": 2,
-      "hits": 0,
-      "misses": 2,
+      "hits": 1,
+      "misses": 1,
       "pushes": 0,
       "lastResult": "miss",
-      "lastKick": "2026-09-20T02:30:00.000Z",
-      "games": 12,
+      "lastKick": "2026-09-12T16:00:00.000Z",
+      "games": 11,
       "upcoming": 9,
-      "rate": 0
+      "rate": 0.5
     },
     {
       "team": "Auburn Tigers",
@@ -508,7 +495,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:45:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 6,
       "rate": 0.5
     },
     {
@@ -534,7 +521,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T20:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0.5
     },
     {
@@ -588,19 +575,6 @@
       "games": 17,
       "upcoming": 15,
       "rate": 0.5
-    },
-    {
-      "team": "Cincinnati Bearcats",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 2,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-12T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 1
     },
     {
       "team": "Clemson Tigers",
@@ -742,7 +716,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0.5
     },
     {
@@ -772,6 +746,19 @@
       "rate": 1
     },
     {
+      "team": "James Madison Dukes",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-12T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 1
+    },
+    {
       "team": "Kansas City Chiefs",
       "league": "NFL",
       "n": 2,
@@ -782,6 +769,19 @@
       "lastKick": "2026-09-21T00:20:00.000Z",
       "games": 17,
       "upcoming": 15,
+      "rate": 0.5
+    },
+    {
+      "team": "Kennesaw State Owls",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 1,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-12T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 8,
       "rate": 0.5
     },
     {
@@ -885,21 +885,8 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T23:00:00.000Z",
       "games": 12,
-      "upcoming": 8,
+      "upcoming": 7,
       "rate": 0.5
-    },
-    {
-      "team": "Miami (OH) RedHawks",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 2,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-19T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 1
     },
     {
       "team": "Michigan State Spartans",
@@ -950,7 +937,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T19:30:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -963,7 +950,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-12T23:30:00.000Z",
       "games": 11,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0
     },
     {
@@ -978,19 +965,6 @@
       "games": 12,
       "upcoming": 9,
       "rate": 1
-    },
-    {
-      "team": "New Mexico State Aggies",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-13T04:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 0.5
     },
     {
       "team": "Northwestern Wildcats",
@@ -1054,7 +1028,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-12T23:45:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 7,
       "rate": 0
     },
     {
@@ -1071,17 +1045,17 @@
       "rate": 0
     },
     {
-      "team": "Sam Houston State Bearkats",
+      "team": "San Diego State Aztecs",
       "league": "NCAAF",
       "n": 2,
-      "hits": 2,
-      "misses": 0,
+      "hits": 0,
+      "misses": 2,
       "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-19T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 1
+      "lastResult": "miss",
+      "lastKick": "2026-09-20T02:00:00.000Z",
+      "games": 11,
+      "upcoming": 8,
+      "rate": 0
     },
     {
       "team": "Seattle Seahawks",
@@ -1094,6 +1068,32 @@
       "lastKick": "2026-09-20T20:25:00.000Z",
       "games": 17,
       "upcoming": 15,
+      "rate": 0.5
+    },
+    {
+      "team": "South Alabama Jaguars",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 1,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-19T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.5
+    },
+    {
+      "team": "South Florida Bulls",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 1,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
       "rate": 0.5
     },
     {
@@ -1136,6 +1136,32 @@
       "rate": 0.5
     },
     {
+      "team": "Troy Trojans",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 0,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-12T20:00:00.000Z",
+      "games": 12,
+      "upcoming": 8,
+      "rate": 0
+    },
+    {
+      "team": "Tulsa Golden Hurricane",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 1,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-20T00:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 0.5
+    },
+    {
       "team": "UConn Huskies",
       "league": "NCAAF",
       "n": 2,
@@ -1145,7 +1171,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-19T23:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -1253,19 +1279,6 @@
       "rate": 1
     },
     {
-      "team": "Alabama State Hornets",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-12T20:00:00.000Z",
-      "games": 1,
-      "upcoming": 0,
-      "rate": 1
-    },
-    {
       "team": "Arkansas Razorbacks",
       "league": "NCAAF",
       "n": 1,
@@ -1288,19 +1301,6 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
-      "rate": 1
-    },
-    {
-      "team": "Army Black Knights",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-05T16:00:00.000Z",
-      "games": 11,
       "upcoming": 9,
       "rate": 1
     },
@@ -1366,7 +1366,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T19:30:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0
     },
     {
@@ -1431,7 +1431,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-12T19:30:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 0
     },
     {
@@ -1496,7 +1496,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T22:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 7,
       "rate": 1
     },
     {
@@ -1524,6 +1524,19 @@
       "games": 17,
       "upcoming": 15,
       "rate": 0
+    },
+    {
+      "team": "Hawai'i Warriors",
+      "league": "NCAAF",
+      "n": 1,
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-13T04:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 1
     },
     {
       "team": "Houston Texans",
@@ -1563,19 +1576,6 @@
       "games": 12,
       "upcoming": 9,
       "rate": 1
-    },
-    {
-      "team": "Kennesaw State Owls",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 0,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-12T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 0
     },
     {
       "team": "Kent State Golden Flashes",
@@ -1625,6 +1625,19 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-05T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 8,
+      "rate": 1
+    },
+    {
+      "team": "Miami (OH) RedHawks",
+      "league": "NCAAF",
+      "n": 1,
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-12T17:00:00.000Z",
       "games": 12,
       "upcoming": 9,
       "rate": 1
@@ -1705,6 +1718,19 @@
       "lastKick": "2026-09-20T17:00:00.000Z",
       "games": 17,
       "upcoming": 15,
+      "rate": 1
+    },
+    {
+      "team": "New Mexico State Aggies",
+      "league": "NCAAF",
+      "n": 1,
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-06T01:00:00.000Z",
+      "games": 12,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -1838,17 +1864,17 @@
       "rate": 1
     },
     {
-      "team": "San Diego State Aztecs",
+      "team": "Sam Houston State Bearkats",
       "league": "NCAAF",
       "n": 1,
-      "hits": 0,
-      "misses": 1,
+      "hits": 1,
+      "misses": 0,
       "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-06T01:30:00.000Z",
-      "games": 11,
-      "upcoming": 8,
-      "rate": 0
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 9,
+      "rate": 1
     },
     {
       "team": "San Francisco 49ers",
@@ -1938,7 +1964,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-05T18:00:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -1955,30 +1981,17 @@
       "rate": 0
     },
     {
-      "team": "Troy Trojans",
+      "team": "Tulane Green Wave",
       "league": "NCAAF",
       "n": 1,
       "hits": 0,
       "misses": 1,
       "pushes": 0,
       "lastResult": "miss",
-      "lastKick": "2026-09-05T23:00:00.000Z",
+      "lastKick": "2026-09-12T23:00:00.000Z",
       "games": 12,
       "upcoming": 9,
       "rate": 0
-    },
-    {
-      "team": "Tulsa Golden Hurricane",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-20T00:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
-      "rate": 1
     },
     {
       "team": "UAB Blazers",
@@ -2068,21 +2081,8 @@
       "lastResult": "hit",
       "lastKick": "2026-09-19T19:30:00.000Z",
       "games": 11,
-      "upcoming": 8,
+      "upcoming": 7,
       "rate": 1
-    },
-    {
-      "team": "West Georgia Wolves",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 0,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-03T23:00:00.000Z",
-      "games": 2,
-      "upcoming": 0,
-      "rate": 0
     },
     {
       "team": "Western Kentucky Hilltoppers",
@@ -2099,6 +2099,19 @@
     },
     {
       "team": "Abilene Christian Wildcats",
+      "league": "NCAAF",
+      "n": 0,
+      "hits": 0,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": null,
+      "lastKick": null,
+      "games": 1,
+      "upcoming": 0,
+      "rate": null
+    },
+    {
+      "team": "Alabama State Hornets",
       "league": "NCAAF",
       "n": 0,
       "hits": 0,
@@ -2511,19 +2524,6 @@
       "lastKick": null,
       "games": 1,
       "upcoming": 0,
-      "rate": null
-    },
-    {
-      "team": "Hawai'i Warriors",
-      "league": "NCAAF",
-      "n": 0,
-      "hits": 0,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": null,
-      "lastKick": null,
-      "games": 12,
-      "upcoming": 9,
       "rate": null
     },
     {
@@ -3121,7 +3121,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 2,
-      "upcoming": 2,
+      "upcoming": 1,
       "rate": null
     },
     {
@@ -3333,19 +3333,6 @@
       "rate": null
     },
     {
-      "team": "Tulane Green Wave",
-      "league": "NCAAF",
-      "n": 0,
-      "hits": 0,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": null,
-      "lastKick": null,
-      "games": 12,
-      "upcoming": 9,
-      "rate": null
-    },
-    {
       "team": "UC Davis Aggies",
       "league": "NCAAF",
       "n": 0,
@@ -3446,6 +3433,19 @@
       "lastResult": null,
       "lastKick": null,
       "games": 1,
+      "upcoming": 0,
+      "rate": null
+    },
+    {
+      "team": "West Georgia Wolves",
+      "league": "NCAAF",
+      "n": 0,
+      "hits": 0,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": null,
+      "lastKick": null,
+      "games": 2,
       "upcoming": 0,
       "rate": null
     },

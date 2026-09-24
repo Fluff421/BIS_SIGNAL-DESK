@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Expand NFL + NCAAF library and public-lean overlay
+      - name: Expand NFL + NCAAF library and public-lean overlay (SBD + WiseGuyTeam + SAO + WT)
         run: node scripts/refresh-universe.mjs
         continue-on-error: false
 
