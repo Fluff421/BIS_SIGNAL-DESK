@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T21:34:32.515Z",
+  "generatedAt": "2026-09-24T21:35:46.965Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -20,7 +20,7 @@
   },
   "espn": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "fallbackActive": false,
     "reason": "CDN + site.web.api week boards. NFL 107 (32 final), NCAAF 566 (260 final). Overlayed 18 library scores.",
     "httpStatus": 200,
@@ -43,7 +43,7 @@
   },
   "actionnetwork": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "nflEvents": 272,
     "ncaafEvents": 887,
@@ -54,21 +54,21 @@
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "rows": 132,
     "reason": "Contest pick % on 132 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "rows": 138,
     "reason": "Consensus spread pick % on 206 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "rows": 2,
     "nfl": 1,
@@ -78,18 +78,18 @@
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "rows": 85,
     "nfl": 16,
     "ncaaf": 69,
-    "matched": 191,
-    "money": 189,
-    "reason": "Consensus picks page: 85 spread cards with ticket + money % (NFL 16, NCAAF 69). Matched onto 191 library games, money on 189."
+    "matched": 192,
+    "money": 190,
+    "reason": "Consensus picks page: 85 spread cards with ticket + money % (NFL 16, NCAAF 69). Matched onto 192 library games, money on 190."
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "rows": 220,
     "nfl": 33,
@@ -100,13 +100,13 @@
   },
   "wiseguyteam": {
     "status": "healthy",
-    "lastSuccessAt": "2026-09-24T21:34:32.515Z",
+    "lastSuccessAt": "2026-09-24T21:35:46.965Z",
     "httpStatus": 200,
     "rows": 358,
     "nfl": 220,
     "ncaaf": 138,
-    "matched": 365,
-    "money": 365,
-    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 358 games (NFL 220, NCAAF 138). Matched onto 365 library games."
+    "matched": 367,
+    "money": 367,
+    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 358 games (NFL 220, NCAAF 138). Matched onto 367 library games."
   }
 }

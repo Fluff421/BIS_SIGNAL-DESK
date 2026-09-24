@@ -1,7 +1,7 @@
 {
   "week": 3,
   "season": 2026,
-  "generatedAt": "2026-09-24T21:34:32.515Z",
+  "generatedAt": "2026-09-24T21:35:46.965Z",
   "confidenceTier": "INSUFFICIENT",
   "engine": "FPI + HFA",
   "summary": "Library 1159 games / 270 clubs. Research 163–129–2 (n=294). Issued 0. Public lean on 588 games. Money % on 488 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 18 finals.",
@@ -15,7 +15,7 @@
   "helpers": [
     "372 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 95 inside the 3–7 pt issuance band.",
     "Library covers 270 clubs across 1159 games. Research grades 163–129–2 (n=294).",
-    "Public lean: bet/pick % on 588 games. Money/handle % on 488 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 18 finals. 75 games with a 10-pt+ divergence."
+    "Public lean: bet/pick % on 588 games. Money/handle % on 488 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 18 finals. 74 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
@@ -124,6 +124,6 @@
     }
   ],
   "narrativeStatus": "generated",
-  "aiNarrative": "BIS Signal Desk, 2026 week 3. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 95 rows sit in the research (WATCH) band. 57 STALE_FPI and 100 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 163-129-2 (n=294) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 588 games, money/handle % on 488 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 18 scores. 75 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 3. Engine: FPI + HFA. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 95 rows sit in the research (WATCH) band. 57 STALE_FPI and 100 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 163-129-2 (n=294) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 588 games, money/handle % on 488 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 18 scores. 74 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   "narrativeModel": "grok-4.6-desk"
 }
