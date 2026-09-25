@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-20",
+  "updated": "2026-09-25",
   "email": "wmcdaniel@gmail.com",
   "githubAttempt": "Fluff421/custom-claude-skills/signal-desk — write blocked (403). Reconnect GitHub with repo contents write.",
   "priorLogs": [
@@ -19,11 +19,11 @@
   ],
   "regular": {
     "ats": {
-      "hits": 0,
+      "hits": 1,
       "misses": 0,
       "pushes": 0,
-      "n": 0,
-      "rate": null
+      "n": 1,
+      "rate": 1
     },
     "ml": {
       "hits": 0,
@@ -43,8 +43,34 @@
   "target": {
     "ats": 0.75,
     "minN": 30,
-    "status": "Not measurable. n=0 (need 30). rate=n/a"
+    "status": "Not measurable. n=1 (need 30). rate=1"
   },
-  "graded": [],
-  "edgeBuckets": {}
+  "graded": [
+    {
+      "game_id": "401869941",
+      "week": 4,
+      "league": "NCAAF",
+      "kick": "2026-09-24T23:30:00.000Z",
+      "away": "Liberty Flames",
+      "home": "Coastal Carolina Chanticleers",
+      "marketHome": 2.5,
+      "modelHome": -1.4,
+      "edge": 3.9,
+      "edgeTo": "Liberty Flames",
+      "edgeBucket": "3-7",
+      "confidence": "WATCH",
+      "actualMargin": -17,
+      "result": "WIN",
+      "coverBy": 14.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    }
+  ],
+  "edgeBuckets": {
+    "3-7": {
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0
+    }
+  }
 }
