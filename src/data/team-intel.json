@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T01:34:59.931Z",
+  "generatedAt": "2026-09-25T10:14:58.379Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 161,
@@ -16,19 +16,6 @@
       "games": 12,
       "upcoming": 8,
       "rate": 0.75
-    },
-    {
-      "team": "Georgia Bulldogs",
-      "league": "NCAAF",
-      "n": 4,
-      "hits": 4,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-17T16:00:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 1
     },
     {
       "team": "North Dakota State Bison",
@@ -93,6 +80,19 @@
       "lastKick": "2026-09-20T00:15:00.000Z",
       "games": 12,
       "upcoming": 9,
+      "rate": 1
+    },
+    {
+      "team": "Georgia Bulldogs",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 3,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-19T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -161,6 +161,19 @@
       "rate": 0.667
     },
     {
+      "team": "Liberty Flames",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-24T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 8,
+      "rate": 0.667
+    },
+    {
       "team": "LSU Tigers",
       "league": "NCAAF",
       "n": 3,
@@ -187,19 +200,6 @@
       "rate": 0.667
     },
     {
-      "team": "Mississippi State Bulldogs",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 3,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-26T23:45:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 1
-    },
-    {
       "team": "Missouri Tigers",
       "league": "NCAAF",
       "n": 3,
@@ -209,7 +209,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T23:00:00.000Z",
       "games": 12,
-      "upcoming": 5,
+      "upcoming": 7,
       "rate": 0.333
     },
     {
@@ -521,7 +521,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:45:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 6,
       "rate": 0.5
     },
     {
@@ -746,6 +746,19 @@
       "rate": 0
     },
     {
+      "team": "Green Bay Packers",
+      "league": "NFL",
+      "n": 2,
+      "hits": 0,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-09-25T00:15:00.000Z",
+      "games": 17,
+      "upcoming": 14,
+      "rate": 0
+    },
+    {
       "team": "Houston Cougars",
       "league": "NCAAF",
       "n": 2,
@@ -795,19 +808,6 @@
       "lastKick": "2026-09-21T00:20:00.000Z",
       "games": 17,
       "upcoming": 15,
-      "rate": 0.5
-    },
-    {
-      "team": "Liberty Flames",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-19T20:00:00.000Z",
-      "games": 12,
-      "upcoming": 9,
       "rate": 0.5
     },
     {
@@ -951,6 +951,19 @@
       "lastKick": "2026-09-19T16:00:00.000Z",
       "games": 12,
       "upcoming": 9,
+      "rate": 1
+    },
+    {
+      "team": "Mississippi State Bulldogs",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-12T19:30:00.000Z",
+      "games": 12,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -1314,7 +1327,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-20T17:00:00.000Z",
       "games": 17,
-      "upcoming": 15,
+      "upcoming": 14,
       "rate": 0
     },
     {
@@ -1418,7 +1431,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:30:00.000Z",
       "games": 12,
-      "upcoming": 9,
+      "upcoming": 8,
       "rate": 1
     },
     {
@@ -1511,19 +1524,6 @@
       "games": 12,
       "upcoming": 9,
       "rate": 1
-    },
-    {
-      "team": "Green Bay Packers",
-      "league": "NFL",
-      "n": 1,
-      "hits": 0,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-20T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 15,
-      "rate": 0
     },
     {
       "team": "Houston Texans",
