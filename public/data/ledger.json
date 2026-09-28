@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "email": "wmcdaniel@gmail.com",
   "githubAttempt": "Fluff421/custom-claude-skills/signal-desk — write blocked (403). Reconnect GitHub with repo contents write.",
   "priorLogs": [
@@ -20,10 +20,10 @@
   "regular": {
     "ats": {
       "hits": 15,
-      "misses": 9,
+      "misses": 13,
       "pushes": 1,
-      "n": 25,
-      "rate": 0.625
+      "n": 29,
+      "rate": 0.536
     },
     "ml": {
       "hits": 0,
@@ -43,7 +43,7 @@
   "target": {
     "ats": 0.75,
     "minN": 30,
-    "status": "Not measurable. n=25 (need 30). rate=0.625"
+    "status": "Not measurable. n=29 (need 30). rate=0.536"
   },
   "graded": [
     {
@@ -520,17 +520,93 @@
       "coverBy": 10.5,
       "sampleWeight": 1,
       "note": "auto-graded"
+    },
+    {
+      "game_id": "401872950",
+      "week": 3,
+      "league": "NFL",
+      "kick": "2026-09-27T17:00:00.000Z",
+      "away": "Cincinnati Bengals",
+      "home": "Pittsburgh Steelers",
+      "marketHome": 3.5,
+      "modelHome": -0.5,
+      "edge": 4,
+      "edgeTo": "Cincinnati Bengals",
+      "edgeBucket": "3-7",
+      "confidence": "WATCH",
+      "actualMargin": 3,
+      "result": "LOSS",
+      "coverBy": -6.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401872949",
+      "week": 3,
+      "league": "NFL",
+      "kick": "2026-09-27T17:00:00.000Z",
+      "away": "Carolina Panthers",
+      "home": "Cleveland Browns",
+      "marketHome": 2.5,
+      "modelHome": -0.5,
+      "edge": 3,
+      "edgeTo": "Carolina Panthers",
+      "edgeBucket": "3-7",
+      "confidence": "WATCH",
+      "actualMargin": 3,
+      "result": "LOSS",
+      "coverBy": -5.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401872960",
+      "week": 3,
+      "league": "NFL",
+      "kick": "2026-09-27T20:25:00.000Z",
+      "away": "Baltimore Ravens",
+      "home": "Dallas Cowboys",
+      "marketHome": 3.5,
+      "modelHome": 0.1,
+      "edge": 3.4,
+      "edgeTo": "Baltimore Ravens",
+      "edgeBucket": "3-7",
+      "confidence": "WATCH",
+      "actualMargin": -3,
+      "result": "LOSS",
+      "coverBy": -0.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401872958",
+      "week": 3,
+      "league": "NFL",
+      "kick": "2026-09-27T20:05:00.000Z",
+      "away": "Arizona Cardinals",
+      "home": "San Francisco 49ers",
+      "marketHome": -7.5,
+      "modelHome": 10.5,
+      "edge": 18,
+      "edgeTo": "San Francisco 49ers",
+      "edgeBucket": "15+",
+      "confidence": "STALE_FPI",
+      "actualMargin": 6,
+      "result": "LOSS",
+      "coverBy": -1.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
     }
   ],
   "edgeBuckets": {
     "3-7": {
       "hits": 5,
-      "misses": 1,
+      "misses": 4,
       "pushes": 1
     },
     "15+": {
       "hits": 10,
-      "misses": 8,
+      "misses": 9,
       "pushes": 0
     }
   }
