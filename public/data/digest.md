@@ -1,16 +1,15 @@
-# Weekly digest — 2026-09-21
+# Weekly digest — 2026-09-28
 
-**Confidence:** INSUFFICIENT
+**Confidence:** MEDIUM
 
-**ATS:** 0-0-0 (n=0)
+**ATS:** 15-13-1 (n=29)
 
 ## Helpers
-- 100 rows in primary watch band (confidence WATCH or unset).
+- Edges 3–7 pts: 5-4 — primary research band.
+- 94 rows in primary watch band (confidence WATCH or unset).
 
 ## Hurters
-- No graded sides yet — 75% ATS is not measurable (need n≥30).
-- Ensemble remains unfitted (fittedOn2026=false).
-- 82 STALE_FPI rows — suppress from play consideration.
+- 77 STALE_FPI rows — suppress from play consideration.
 
 ## Summary
-BIS desk week snapshot: ATS 0-0-0 (n=0, rate=n/a). Confidence INSUFFICIENT. Helpers: 100 rows in primary watch band (confidence WATCH or unset).. Hurters: No graded sides yet — 75% ATS is not measurable (need n≥30).; Ensemble remains unfitted (fittedOn2026=false).; 82 STALE_FPI rows — suppress from play consideration..
+BIS desk week snapshot: ATS 15-13-1 (n=29, rate=0.536). Confidence MEDIUM. Helpers: Edges 3–7 pts: 5-4 — primary research band.; 94 rows in primary watch band (confidence WATCH or unset).. Hurters: 77 STALE_FPI rows — suppress from play consideration..
