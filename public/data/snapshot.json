@@ -2,7 +2,7 @@
   "asOf": "2026-09-29T21:15:47.144Z",
   "timezone": "America/Chicago",
   "calendar": {
-    "ncaaf": "NCAAF current + weeks 0–13 on file (887 games, 355 finals). Upcoming 532.",
+    "ncaaf": "NCAAF current + weeks 0–13 on file (887 games, 356 finals). Upcoming 531.",
     "nfl": "NFL current + weeks 1–18 on file (272 games, 48 finals). Upcoming 224."
   },
   "sources": [
@@ -11,7 +11,7 @@
     "https://www.scoresandodds.com/ncaaf",
     "https://www.scoresandodds.com/nfl"
   ],
-  "honesty": "Library 1159 games / 270 clubs. NFL finals 48, NCAAF finals 355. Issued n=0. Research n=381 is diagnostic, not the 75% issued target.",
+  "honesty": "Library 1159 games / 270 clubs. NFL finals 48, NCAAF finals 356. Issued n=0. Research n=382 is diagnostic, not the 75% issued target.",
   "ncaafFpi": [
     {
       "team": "Georgia",
