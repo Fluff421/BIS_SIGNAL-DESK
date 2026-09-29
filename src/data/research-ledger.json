@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-09-29T02:35:47.514Z",
+  "generatedAt": "2026-09-29T11:24:24.157Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 381,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 92,
+    "watchOnBoard": 91,
     "observeOnBoard": 328,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=381 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–52–3 (n=119)."
+    "note": "Research sample n=381 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–53–2 (n=119)."
   },
   "ats": {
     "hits": 213,
-    "misses": 163,
-    "pushes": 5,
+    "misses": 164,
+    "pushes": 4,
     "n": 381,
-    "rate": 0.566
+    "rate": 0.564
   },
   "cleanBand": {
     "hits": 64,
-    "misses": 52,
-    "pushes": 3,
+    "misses": 53,
+    "pushes": 2,
     "n": 119,
-    "rate": 0.55,
+    "rate": 0.546,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -5628,8 +5628,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 84,
-      "publicBetsHome": 16,
+      "publicBetsAway": 86,
+      "publicBetsHome": 14,
       "publicMoneyAway": 95,
       "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
@@ -6472,6 +6472,27 @@
       "publicBetsHome": 41,
       "publicMoneyAway": 39,
       "publicMoneyHome": 61,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-09-29T00:15:00.000Z",
+      "away": "Philadelphia Eagles",
+      "home": "Chicago Bears",
+      "side": "Philadelphia Eagles",
+      "edgeTo": "Philadelphia Eagles",
+      "marketHome": 3.5,
+      "modelHome": 1.2,
+      "actualMargin": 20,
+      "homePoints": 27,
+      "awayPoints": 7,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "ALIGNED",
+      "publicBetsAway": 59,
+      "publicBetsHome": 41,
+      "publicMoneyAway": 68,
+      "publicMoneyHome": 32,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -7984,27 +8005,6 @@
       "publicBetsHome": 0,
       "publicMoneyAway": 0,
       "publicMoneyHome": 0,
-      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-10-03T19:30:00.000Z",
-      "away": "Florida Gators",
-      "home": "Missouri Tigers",
-      "side": "Florida Gators",
-      "edgeTo": "Florida Gators",
-      "marketHome": 5,
-      "modelHome": -7.2,
-      "actualMargin": -5,
-      "homePoints": 39,
-      "awayPoints": 44,
-      "result": "push",
-      "class": "RESEARCH",
-      "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 84,
-      "publicBetsHome": 16,
-      "publicMoneyAway": 95,
-      "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
