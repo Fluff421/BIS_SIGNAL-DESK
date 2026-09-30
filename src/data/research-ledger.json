@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-30T11:12:09.959Z",
+  "generatedAt": "2026-09-30T16:50:28.819Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 382,
     "issuedN": 0,
     "remainingResearch": 0,
     "watchOnBoard": 92,
-    "observeOnBoard": 330,
+    "observeOnBoard": 331,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
     "note": "Research sample n=382 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–53–3 (n=120)."
@@ -5628,10 +5628,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 84,
-      "publicBetsHome": 16,
-      "publicMoneyAway": 94,
-      "publicMoneyHome": 6,
+      "publicBetsAway": 83,
+      "publicBetsHome": 17,
+      "publicMoneyAway": 95,
+      "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -7993,7 +7993,7 @@
       "home": "Arizona State Sun Devils",
       "side": "Arizona State Sun Devils",
       "edgeTo": "Arizona State Sun Devils",
-      "marketHome": -4.5,
+      "marketHome": -4,
       "modelHome": 0.4,
       "actualMargin": 63,
       "homePoints": 70,
@@ -8022,10 +8022,10 @@
       "result": "push",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 84,
-      "publicBetsHome": 16,
-      "publicMoneyAway": 94,
-      "publicMoneyHome": 6,
+      "publicBetsAway": 83,
+      "publicBetsHome": 17,
+      "publicMoneyAway": 95,
+      "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
