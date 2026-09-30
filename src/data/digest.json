@@ -1,7 +1,7 @@
 {
   "week": 3,
   "season": 2026,
-  "generatedAt": "2026-09-30T16:50:28.819Z",
+  "generatedAt": "2026-09-30T21:26:25.548Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,13 +11,13 @@
     "rate": null
   },
   "helpers": [
-    "331 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 92 inside the 3–7 pt issuance band.",
+    "333 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 93 inside the 3–7 pt issuance band.",
     "Library covers 270 clubs across 1159 games. Research grades 213–164–5 (n=382).",
-    "Public lean: bet/pick % on 642 games. Money/handle % on 547 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 25 finals. 104 games with a 10-pt+ divergence."
+    "Public lean: bet/pick % on 644 games. Money/handle % on 549 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 25 finals. 101 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "612 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "610 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
     "78 STALE_FPI and 104 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
@@ -58,6 +58,18 @@
       "dataClass": "WATCH",
       "marketHome": 2.5,
       "modelHome": -1.9,
+      "nBooks": 8
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-03T16:00:00.000Z",
+      "matchup": "West Virginia Mountaineers @ Iowa State Cyclones",
+      "edge": 6.5,
+      "edgeTo": "Iowa State Cyclones",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -3,
+      "modelHome": 3.5,
       "nBooks": 8
     },
     {
@@ -107,24 +119,12 @@
       "marketHome": -3,
       "modelHome": 2.9,
       "nBooks": 8
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-10-04T00:00:00.000Z",
-      "matchup": "Arkansas State Red Wolves @ Louisiana Ragin' Cajuns",
-      "edge": 3.7,
-      "edgeTo": "Arkansas State Red Wolves",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -6.5,
-      "modelHome": -10.2,
-      "nBooks": 8
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 3. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 92 rows sit in the research (WATCH) band. 78 STALE_FPI and 104 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 213-164-5 (n=382) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 642 games, money/handle % on 547 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 25 scores. 104 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 213–164–5 (n=382). Issued 0. Public lean on 642 games. Money % on 547 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 25 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 3. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 93 rows sit in the research (WATCH) band. 78 STALE_FPI and 104 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 213-164-5 (n=382) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 644 games, money/handle % on 549 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 25 scores. 101 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 213–164–5 (n=382). Issued 0. Public lean on 644 games. Money % on 549 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 25 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }

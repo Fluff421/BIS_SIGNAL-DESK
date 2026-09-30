@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-30T16:50:28.819Z",
+  "generatedAt": "2026-09-30T21:26:25.548Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 382,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 92,
-    "observeOnBoard": 331,
+    "watchOnBoard": 93,
+    "observeOnBoard": 333,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
     "note": "Research sample n=382 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–53–3 (n=120)."
@@ -5628,8 +5628,8 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 83,
-      "publicBetsHome": 17,
+      "publicBetsAway": 84,
+      "publicBetsHome": 16,
       "publicMoneyAway": 95,
       "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
@@ -8022,8 +8022,8 @@
       "result": "push",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 83,
-      "publicBetsHome": 17,
+      "publicBetsAway": 84,
+      "publicBetsHome": 16,
       "publicMoneyAway": 95,
       "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
