@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-01T11:39:29.818Z",
+  "generatedAt": "2026-10-01T21:50:49.086Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 382,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 95,
+    "watchOnBoard": 96,
     "observeOnBoard": 338,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
@@ -2646,10 +2646,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 64,
-      "publicBetsHome": 36,
-      "publicMoneyAway": 84,
-      "publicMoneyHome": 16,
+      "publicBetsAway": 58,
+      "publicBetsHome": 42,
+      "publicMoneyAway": 79,
+      "publicMoneyHome": 21,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -5628,10 +5628,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 83,
-      "publicBetsHome": 17,
-      "publicMoneyAway": 90,
-      "publicMoneyHome": 10,
+      "publicBetsAway": 81,
+      "publicBetsHome": 19,
+      "publicMoneyAway": 85,
+      "publicMoneyHome": 15,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -7993,7 +7993,7 @@
       "home": "Arizona State Sun Devils",
       "side": "Arizona State Sun Devils",
       "edgeTo": "Arizona State Sun Devils",
-      "marketHome": -4,
+      "marketHome": -3.5,
       "modelHome": 0.4,
       "actualMargin": 63,
       "homePoints": 70,
@@ -8001,10 +8001,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 64,
-      "publicBetsHome": 36,
-      "publicMoneyAway": 84,
-      "publicMoneyHome": 16,
+      "publicBetsAway": 58,
+      "publicBetsHome": 42,
+      "publicMoneyAway": 79,
+      "publicMoneyHome": 21,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
