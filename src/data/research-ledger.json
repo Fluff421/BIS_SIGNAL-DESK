@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-09-30T21:26:25.548Z",
+  "generatedAt": "2026-10-01T02:11:49.463Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 382,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 93,
-    "observeOnBoard": 333,
+    "watchOnBoard": 95,
+    "observeOnBoard": 338,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=382 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–53–3 (n=120)."
+    "note": "Research sample n=382 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–54–2 (n=120)."
   },
   "ats": {
     "hits": 213,
-    "misses": 164,
-    "pushes": 5,
+    "misses": 165,
+    "pushes": 4,
     "n": 382,
-    "rate": 0.564
+    "rate": 0.563
   },
   "cleanBand": {
     "hits": 64,
-    "misses": 53,
-    "pushes": 3,
+    "misses": 54,
+    "pushes": 2,
     "n": 120,
-    "rate": 0.546,
+    "rate": 0.542,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -5630,8 +5630,8 @@
       "dataClass": "WATCH",
       "publicBetsAway": 84,
       "publicBetsHome": 16,
-      "publicMoneyAway": 95,
-      "publicMoneyHome": 5,
+      "publicMoneyAway": 94,
+      "publicMoneyHome": 6,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -8009,23 +8009,23 @@
     },
     {
       "league": "NCAAF",
-      "kick": "2026-10-03T19:30:00.000Z",
-      "away": "Florida Gators",
+      "kick": "2026-10-10T16:00:00.000Z",
+      "away": "Texas A&M Aggies",
       "home": "Missouri Tigers",
-      "side": "Florida Gators",
-      "edgeTo": "Florida Gators",
-      "marketHome": 5,
-      "modelHome": -7.2,
-      "actualMargin": -5,
-      "homePoints": 39,
-      "awayPoints": 44,
-      "result": "push",
+      "side": "Texas A&M Aggies",
+      "edgeTo": "Texas A&M Aggies",
+      "marketHome": -1.5,
+      "modelHome": -14.8,
+      "actualMargin": 29,
+      "homePoints": 35,
+      "awayPoints": 6,
+      "result": "miss",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 84,
-      "publicBetsHome": 16,
-      "publicMoneyAway": 95,
-      "publicMoneyHome": 5,
+      "publicBetsAway": 0,
+      "publicBetsHome": 0,
+      "publicMoneyAway": 0,
+      "publicMoneyHome": 0,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {

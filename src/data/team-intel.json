@@ -1,22 +1,9 @@
 {
-  "generatedAt": "2026-09-30T21:26:30.765Z",
+  "generatedAt": "2026-10-01T02:11:56.066Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 165,
   "teams": [
-    {
-      "team": "Florida Gators",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 3,
-      "misses": 1,
-      "pushes": 1,
-      "lastResult": "push",
-      "lastKick": "2026-10-03T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 7,
-      "rate": 0.7
-    },
     {
       "team": "Georgia Bulldogs",
       "league": "NCAAF",
@@ -39,6 +26,19 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-09-26T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 8,
+      "rate": 0.75
+    },
+    {
+      "team": "Florida Gators",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 3,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-09-26T19:30:00.000Z",
       "games": 12,
       "upcoming": 8,
       "rate": 0.75
@@ -210,6 +210,19 @@
       "lastKick": "2026-09-26T19:30:00.000Z",
       "games": 12,
       "upcoming": 8,
+      "rate": 0.5
+    },
+    {
+      "team": "Texas A&M Aggies",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-10T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 7,
       "rate": 0.5
     },
     {
@@ -703,7 +716,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-19T23:00:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 5,
       "rate": 0.333
     },
     {
@@ -835,19 +848,6 @@
       "games": 12,
       "upcoming": 8,
       "rate": 0.333
-    },
-    {
-      "team": "Texas A&M Aggies",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-19T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 7,
-      "rate": 0.667
     },
     {
       "team": "Texas State Bobcats",
