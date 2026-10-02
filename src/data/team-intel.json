@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T16:40:16.472Z",
+  "generatedAt": "2026-10-02T21:20:51.553Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 165,
@@ -509,6 +509,19 @@
       "lastKick": "2026-09-26T17:00:00.000Z",
       "games": 12,
       "upcoming": 7,
+      "rate": 0.667
+    },
+    {
+      "team": "Florida International Panthers",
+      "league": "NCAAF",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-07T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 6,
       "rate": 0.667
     },
     {
@@ -1108,19 +1121,6 @@
       "games": 12,
       "upcoming": 8,
       "rate": 1
-    },
-    {
-      "team": "Florida International Panthers",
-      "league": "NCAAF",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-26T22:00:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 0.5
     },
     {
       "team": "Georgia Southern Eagles",
