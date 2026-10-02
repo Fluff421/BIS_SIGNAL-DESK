@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T11:09:11.214Z",
+  "generatedAt": "2026-10-02T16:40:08.301Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 385,
@@ -2646,10 +2646,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 54,
-      "publicBetsHome": 46,
-      "publicMoneyAway": 73,
-      "publicMoneyHome": 27,
+      "publicBetsAway": 52,
+      "publicBetsHome": 48,
+      "publicMoneyAway": 70,
+      "publicMoneyHome": 30,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -4265,8 +4265,8 @@
       "dataClass": "STALE_FPI",
       "publicBetsAway": 48,
       "publicBetsHome": 52,
-      "publicMoneyAway": 55,
-      "publicMoneyHome": 45,
+      "publicMoneyAway": 58,
+      "publicMoneyHome": 42,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -5628,10 +5628,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 80,
-      "publicBetsHome": 20,
-      "publicMoneyAway": 85,
-      "publicMoneyHome": 15,
+      "publicBetsAway": 79,
+      "publicBetsHome": 21,
+      "publicMoneyAway": 82,
+      "publicMoneyHome": 18,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -8064,10 +8064,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 54,
-      "publicBetsHome": 46,
-      "publicMoneyAway": 73,
-      "publicMoneyHome": 27,
+      "publicBetsAway": 52,
+      "publicBetsHome": 48,
+      "publicMoneyAway": 70,
+      "publicMoneyHome": 30,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
