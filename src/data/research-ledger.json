@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-01T21:50:49.086Z",
+  "generatedAt": "2026-10-02T02:18:28.624Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 382,
+    "researchN": 383,
     "issuedN": 0,
     "remainingResearch": 0,
     "watchOnBoard": 96,
-    "observeOnBoard": 338,
+    "observeOnBoard": 337,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=382 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–54–2 (n=120)."
+    "note": "Research sample n=383 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 64–54–3 (n=121)."
   },
   "ats": {
     "hits": 213,
     "misses": 165,
-    "pushes": 4,
-    "n": 382,
+    "pushes": 5,
+    "n": 383,
     "rate": 0.563
   },
   "cleanBand": {
     "hits": 64,
     "misses": 54,
-    "pushes": 2,
-    "n": 120,
-    "rate": 0.542,
+    "pushes": 3,
+    "n": 121,
+    "rate": 0.541,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -2648,8 +2648,8 @@
       "dataClass": "LIBRARY",
       "publicBetsAway": 58,
       "publicBetsHome": 42,
-      "publicMoneyAway": 79,
-      "publicMoneyHome": 21,
+      "publicMoneyAway": 78,
+      "publicMoneyHome": 22,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -8003,8 +8003,29 @@
       "dataClass": "WATCH",
       "publicBetsAway": 58,
       "publicBetsHome": 42,
-      "publicMoneyAway": 79,
-      "publicMoneyHome": 21,
+      "publicMoneyAway": 78,
+      "publicMoneyHome": 22,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-03T19:30:00.000Z",
+      "away": "Florida Gators",
+      "home": "Missouri Tigers",
+      "side": "Florida Gators",
+      "edgeTo": "Florida Gators",
+      "marketHome": 5,
+      "modelHome": -7.2,
+      "actualMargin": -5,
+      "homePoints": 39,
+      "awayPoints": 44,
+      "result": "push",
+      "class": "RESEARCH",
+      "dataClass": "HIGH_NOISE",
+      "publicBetsAway": 81,
+      "publicBetsHome": 19,
+      "publicMoneyAway": 85,
+      "publicMoneyHome": 15,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
