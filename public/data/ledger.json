@@ -20,10 +20,10 @@
   "regular": {
     "ats": {
       "hits": 15,
-      "misses": 13,
+      "misses": 14,
       "pushes": 1,
-      "n": 29,
-      "rate": 0.536
+      "n": 30,
+      "rate": 0.517
     },
     "ml": {
       "hits": 0,
@@ -43,7 +43,7 @@
   "target": {
     "ats": 0.75,
     "minN": 30,
-    "status": "Not measurable. n=29 (need 30). rate=0.536"
+    "status": "n=30 rate=0.517 target=0.75"
   },
   "graded": [
     {
@@ -596,12 +596,31 @@
       "coverBy": -1.5,
       "sampleWeight": 1,
       "note": "auto-graded"
+    },
+    {
+      "game_id": "401858245",
+      "week": 5,
+      "league": "NCAAF",
+      "kick": "2026-10-02T23:00:00.000Z",
+      "away": "Pittsburgh Panthers",
+      "home": "Virginia Tech Hokies",
+      "marketHome": -2.5,
+      "modelHome": 0.8,
+      "edge": 3.3,
+      "edgeTo": "Virginia Tech Hokies",
+      "edgeBucket": "3-7",
+      "confidence": "WATCH",
+      "actualMargin": -2,
+      "result": "LOSS",
+      "coverBy": -4.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
     }
   ],
   "edgeBuckets": {
     "3-7": {
       "hits": 5,
-      "misses": 4,
+      "misses": 5,
       "pushes": 1
     },
     "15+": {
