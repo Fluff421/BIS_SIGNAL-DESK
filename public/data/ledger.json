@@ -19,11 +19,11 @@
   ],
   "regular": {
     "ats": {
-      "hits": 26,
-      "misses": 20,
+      "hits": 29,
+      "misses": 22,
       "pushes": 1,
-      "n": 47,
-      "rate": 0.565
+      "n": 52,
+      "rate": 0.569
     },
     "ml": {
       "hits": 0,
@@ -43,7 +43,7 @@
   "target": {
     "ats": 0.75,
     "minN": 30,
-    "status": "n=47 rate=0.565 target=0.75"
+    "status": "n=52 rate=0.569 target=0.75"
   },
   "graded": [
     {
@@ -938,17 +938,112 @@
       "coverBy": 23.5,
       "sampleWeight": 1,
       "note": "auto-graded"
+    },
+    {
+      "game_id": "401869842",
+      "week": 5,
+      "league": "NCAAF",
+      "kick": "2026-10-03T23:30:00.000Z",
+      "away": "Army Black Knights",
+      "home": "Louisiana Tech Bulldogs",
+      "marketHome": -1.5,
+      "modelHome": 1.8,
+      "edge": 3.3,
+      "edgeTo": "Louisiana Tech Bulldogs",
+      "edgeBucket": "3-7",
+      "confidence": "WATCH",
+      "actualMargin": 2,
+      "result": "WIN",
+      "coverBy": 0.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401862792",
+      "week": 5,
+      "league": "NCAAF",
+      "kick": "2026-10-03T23:30:00.000Z",
+      "away": "Temple Owls",
+      "home": "South Florida Bulls",
+      "marketHome": -5.5,
+      "modelHome": 27,
+      "edge": 32.5,
+      "edgeTo": "South Florida Bulls",
+      "edgeBucket": "15+",
+      "confidence": "STALE_FPI",
+      "actualMargin": -4,
+      "result": "LOSS",
+      "coverBy": -9.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401856821",
+      "week": 5,
+      "league": "NCAAF",
+      "kick": "2026-10-03T23:30:00.000Z",
+      "away": "Texas Tech Red Raiders",
+      "home": "Colorado Buffaloes",
+      "marketHome": 13.5,
+      "modelHome": -25,
+      "edge": 38.5,
+      "edgeTo": "Texas Tech Red Raiders",
+      "edgeBucket": "15+",
+      "confidence": "STALE_FPI",
+      "actualMargin": -22,
+      "result": "WIN",
+      "coverBy": 8.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401858249",
+      "week": 5,
+      "league": "NCAAF",
+      "kick": "2026-10-03T23:44:00.000Z",
+      "away": "Miami (FL) Hurricanes",
+      "home": "Clemson Tigers",
+      "marketHome": 14,
+      "modelHome": -15.8,
+      "edge": 29.8,
+      "edgeTo": "Miami (FL) Hurricanes",
+      "edgeBucket": "15+",
+      "confidence": "STALE_FPI",
+      "actualMargin": -28,
+      "result": "WIN",
+      "coverBy": 14,
+      "sampleWeight": 1,
+      "note": "auto-graded"
+    },
+    {
+      "game_id": "401858478",
+      "week": 5,
+      "league": "NCAAF",
+      "kick": "2026-10-03T23:30:00.000Z",
+      "away": "Washington Huskies",
+      "home": "USC Trojans",
+      "marketHome": -7.5,
+      "modelHome": 12.9,
+      "edge": 20.4,
+      "edgeTo": "USC Trojans",
+      "edgeBucket": "15+",
+      "confidence": "STALE_FPI",
+      "actualMargin": 4,
+      "result": "LOSS",
+      "coverBy": -3.5,
+      "sampleWeight": 1,
+      "note": "auto-graded"
     }
   ],
   "edgeBuckets": {
     "3-7": {
-      "hits": 6,
+      "hits": 7,
       "misses": 6,
       "pushes": 1
     },
     "15+": {
-      "hits": 20,
-      "misses": 14,
+      "hits": 22,
+      "misses": 16,
       "pushes": 0
     }
   }
