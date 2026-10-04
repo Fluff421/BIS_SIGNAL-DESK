@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-04T15:49:33.172Z",
+  "generatedAt": "2026-10-04T20:12:53.778Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
-  "withGrades": 166,
+  "withGrades": 167,
   "teams": [
     {
       "team": "Georgia Bulldogs",
@@ -236,6 +236,19 @@
       "lastKick": "2026-10-04T03:00:00.000Z",
       "games": 12,
       "upcoming": 6,
+      "rate": 0.25
+    },
+    {
+      "team": "Baltimore Ravens",
+      "league": "NFL",
+      "n": 4,
+      "hits": 1,
+      "misses": 3,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
       "rate": 0.25
     },
     {
@@ -616,19 +629,6 @@
       "rate": 0.333
     },
     {
-      "team": "Baltimore Ravens",
-      "league": "NFL",
-      "n": 3,
-      "hits": 1,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-27T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0.333
-    },
-    {
       "team": "Baylor Bears",
       "league": "NCAAF",
       "n": 3,
@@ -653,6 +653,19 @@
       "games": 17,
       "upcoming": 14,
       "rate": 1
+    },
+    {
+      "team": "Chicago Bears",
+      "league": "NFL",
+      "n": 3,
+      "hits": 2,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.667
     },
     {
       "team": "Clemson Tigers",
@@ -770,6 +783,19 @@
       "games": 12,
       "upcoming": 8,
       "rate": 0
+    },
+    {
+      "team": "Green Bay Packers",
+      "league": "NFL",
+      "n": 3,
+      "hits": 1,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.333
     },
     {
       "team": "Houston Cougars",
@@ -1227,19 +1253,6 @@
       "rate": 0.5
     },
     {
-      "team": "Chicago Bears",
-      "league": "NFL",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-20T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0.5
-    },
-    {
       "team": "Cincinnati Bearcats",
       "league": "NCAAF",
       "n": 2,
@@ -1316,19 +1329,6 @@
       "games": 17,
       "upcoming": 14,
       "rate": 0.25
-    },
-    {
-      "team": "Green Bay Packers",
-      "league": "NFL",
-      "n": 2,
-      "hits": 0,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-25T00:15:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0
     },
     {
       "team": "Hawai'i Warriors",
@@ -1474,6 +1474,19 @@
       "rate": 1
     },
     {
+      "team": "New York Giants",
+      "league": "NFL",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 1
+    },
+    {
       "team": "North Carolina State Wolfpack",
       "league": "NCAAF",
       "n": 2,
@@ -1561,8 +1574,21 @@
       "lastResult": "miss",
       "lastKick": "2026-09-27T20:05:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 0
+    },
+    {
+      "team": "Temple Owls",
+      "league": "NCAAF",
+      "n": 2,
+      "hits": 2,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-10T19:45:00.000Z",
+      "games": 12,
+      "upcoming": 6,
+      "rate": 1
     },
     {
       "team": "Tulane Green Wave",
@@ -1825,6 +1851,19 @@
       "rate": 0
     },
     {
+      "team": "Indianapolis Colts",
+      "league": "NFL",
+      "n": 1,
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-04T13:30:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 1
+    },
+    {
       "team": "Kennesaw State Owls",
       "league": "NCAAF",
       "n": 1,
@@ -1940,19 +1979,6 @@
       "games": 17,
       "upcoming": 14,
       "rate": 0
-    },
-    {
-      "team": "New York Giants",
-      "league": "NFL",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-27T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 1
     },
     {
       "team": "North Carolina Tar Heels",
@@ -2072,19 +2098,6 @@
       "rate": 1
     },
     {
-      "team": "Temple Owls",
-      "league": "NCAAF",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-05T18:00:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 1
-    },
-    {
       "team": "Tennessee Titans",
       "league": "NFL",
       "n": 1,
@@ -2094,7 +2107,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-13T17:00:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 0
     },
     {
@@ -2211,7 +2224,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": null
     },
     {
@@ -2657,19 +2670,6 @@
       "rate": null
     },
     {
-      "team": "Indianapolis Colts",
-      "league": "NFL",
-      "n": 0,
-      "hits": 0,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": null,
-      "lastKick": null,
-      "games": 17,
-      "upcoming": 14,
-      "rate": null
-    },
-    {
       "team": "Lafayette Leopards",
       "league": "NCAAF",
       "n": 0,
@@ -2887,7 +2887,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": null
     },
     {
@@ -3433,7 +3433,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": null
     },
     {
