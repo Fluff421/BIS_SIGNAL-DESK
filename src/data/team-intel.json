@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T20:12:53.778Z",
+  "generatedAt": "2026-10-05T02:03:11.290Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 167,
@@ -265,6 +265,19 @@
       "rate": 0.5
     },
     {
+      "team": "Buffalo Bills",
+      "league": "NFL",
+      "n": 4,
+      "hits": 3,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.75
+    },
+    {
       "team": "BYU Cougars",
       "league": "NCAAF",
       "n": 4,
@@ -317,6 +330,19 @@
       "rate": 0.25
     },
     {
+      "team": "Kansas City Chiefs",
+      "league": "NFL",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-04T20:25:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.5
+    },
+    {
       "team": "Liberty Flames",
       "league": "NCAAF",
       "n": 4,
@@ -328,6 +354,19 @@
       "games": 12,
       "upcoming": 7,
       "rate": 0.75
+    },
+    {
+      "team": "Los Angeles Rams",
+      "league": "NFL",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.5
     },
     {
       "team": "Louisville Cardinals",
@@ -419,6 +458,19 @@
       "games": 12,
       "upcoming": 7,
       "rate": 0.5
+    },
+    {
+      "team": "Seattle Seahawks",
+      "league": "NFL",
+      "n": 4,
+      "hits": 1,
+      "misses": 2,
+      "pushes": 1,
+      "lastResult": "push",
+      "lastKick": "2026-10-04T20:25:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.375
     },
     {
       "team": "South Carolina Gamecocks",
@@ -642,19 +694,6 @@
       "rate": 0.667
     },
     {
-      "team": "Buffalo Bills",
-      "league": "NFL",
-      "n": 3,
-      "hits": 3,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-27T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 1
-    },
-    {
       "team": "Chicago Bears",
       "league": "NFL",
       "n": 3,
@@ -666,6 +705,19 @@
       "games": 17,
       "upcoming": 13,
       "rate": 0.667
+    },
+    {
+      "team": "Cincinnati Bengals",
+      "league": "NFL",
+      "n": 3,
+      "hits": 1,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.333
     },
     {
       "team": "Clemson Tigers",
@@ -811,6 +863,19 @@
       "rate": 0.333
     },
     {
+      "team": "Houston Texans",
+      "league": "NFL",
+      "n": 3,
+      "hits": 0,
+      "misses": 3,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-04T17:00:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0
+    },
+    {
       "team": "Iowa Hawkeyes",
       "league": "NCAAF",
       "n": 3,
@@ -848,32 +913,6 @@
       "games": 12,
       "upcoming": 7,
       "rate": 1
-    },
-    {
-      "team": "Kansas City Chiefs",
-      "league": "NFL",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-27T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0.667
-    },
-    {
-      "team": "Los Angeles Rams",
-      "league": "NFL",
-      "n": 3,
-      "hits": 1,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-28T00:20:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0.333
     },
     {
       "team": "Louisiana Ragin' Cajuns",
@@ -1041,7 +1080,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-29T00:15:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 0
     },
     {
@@ -1058,17 +1097,17 @@
       "rate": 1
     },
     {
-      "team": "Seattle Seahawks",
+      "team": "San Francisco 49ers",
       "league": "NFL",
       "n": 3,
-      "hits": 1,
-      "misses": 2,
+      "hits": 2,
+      "misses": 1,
       "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-27T17:00:00.000Z",
+      "lastResult": "hit",
+      "lastKick": "2026-10-04T20:25:00.000Z",
       "games": 17,
-      "upcoming": 14,
-      "rate": 0.333
+      "upcoming": 13,
+      "rate": 0.667
     },
     {
       "team": "SMU Mustangs",
@@ -1266,19 +1305,6 @@
       "rate": 1
     },
     {
-      "team": "Cincinnati Bengals",
-      "league": "NFL",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-27T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0.5
-    },
-    {
       "team": "Colorado State Rams",
       "league": "NCAAF",
       "n": 2,
@@ -1301,7 +1327,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-20T20:25:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 0.5
     },
     {
@@ -1344,19 +1370,6 @@
       "rate": 0
     },
     {
-      "team": "Houston Texans",
-      "league": "NFL",
-      "n": 2,
-      "hits": 0,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-27T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 14,
-      "rate": 0
-    },
-    {
       "team": "Jacksonville Jaguars",
       "league": "NFL",
       "n": 2,
@@ -1366,7 +1379,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-27T17:00:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 1
     },
     {
@@ -1418,7 +1431,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-20T20:05:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 0
     },
     {
@@ -1472,6 +1485,19 @@
       "games": 12,
       "upcoming": 7,
       "rate": 1
+    },
+    {
+      "team": "Minnesota Vikings",
+      "league": "NFL",
+      "n": 2,
+      "hits": 1,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-04T20:05:00.000Z",
+      "games": 17,
+      "upcoming": 13,
+      "rate": 0.5
     },
     {
       "team": "New York Giants",
@@ -1549,19 +1575,6 @@
       "lastKick": "2026-09-25T23:00:00.000Z",
       "games": 12,
       "upcoming": 7,
-      "rate": 0.5
-    },
-    {
-      "team": "San Francisco 49ers",
-      "league": "NFL",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-09-27T20:05:00.000Z",
-      "games": 17,
-      "upcoming": 14,
       "rate": 0.5
     },
     {
@@ -1834,7 +1847,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-20T20:05:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 1
     },
     {
@@ -1886,7 +1899,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-13T20:25:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 1
     },
     {
@@ -1900,19 +1913,6 @@
       "lastKick": "2026-09-05T23:00:00.000Z",
       "games": 12,
       "upcoming": 7,
-      "rate": 1
-    },
-    {
-      "team": "Minnesota Vikings",
-      "league": "NFL",
-      "n": 1,
-      "hits": 1,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-13T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 14,
       "rate": 1
     },
     {
@@ -1964,7 +1964,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-20T17:00:00.000Z",
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": 1
     },
     {
@@ -2796,7 +2796,7 @@
       "lastResult": null,
       "lastKick": null,
       "games": 17,
-      "upcoming": 14,
+      "upcoming": 13,
       "rate": null
     },
     {
