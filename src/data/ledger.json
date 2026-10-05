@@ -1,16 +1,16 @@
 {
   "season": 2026,
-  "updated": "2026-10-04",
+  "updated": "2026-10-05",
   "email": "wmcdaniel@gmail.com",
-  "githubAttempt": "Fluff421/custom-claude-skills/signal-desk \u2014 write blocked (403). Reconnect GitHub with repo contents write.",
+  "githubAttempt": "Fluff421/custom-claude-skills/signal-desk — write blocked (403). Reconnect GitHub with repo contents write.",
   "priorLogs": [
     {
       "place": "Fluff421/custom-claude-skills/betting-intelligence",
       "found": "BIM v2.0 skill spec (Aug 12 2026). No graded games."
     },
     {
-      "place": "Grok Automation \u2018Prediction Machine\u2019",
-      "found": "Runs Aug 25\u201328 2026 titled as 2025 W3/W2. Those 2026 weeks have not been played. Not imported."
+      "place": "Grok Automation ‘Prediction Machine’",
+      "found": "Runs Aug 25–28 2026 titled as 2025 W3/W2. Those 2026 weeks have not been played. Not imported."
     },
     {
       "place": "GitHub code search LEDGER.md / ATS",
