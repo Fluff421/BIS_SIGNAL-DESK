@@ -81,9 +81,10 @@ function Home() {
       <section>
         <h2 className="mb-3 font-display text-xl">How a row becomes a play</h2>
         <p className="mb-4 max-w-2xl text-sm leading-relaxed text-muted">
-          The desk is parked on research. Nothing on this board is issued. Promotion is human-gated
-          and blocked until n ≥ 30 graded issued sides. Watching the whole slate fills the library
-          that issuance will eventually draw from.
+          The desk is parked on research. Nothing on this board is a play until a human
+          approves one side on one WATCH row before kickoff. n ≥ 30 is only the gate for
+          discussing 75% — it does not block issuing side 1. Watching the whole slate fills
+          the library that issuance will eventually draw from.
         </p>
         <Pipeline active="research" />
       </section>
@@ -95,7 +96,7 @@ function Home() {
             {ats.hits}–{ats.misses}–{ats.pushes}
           </p>
           <p className="mt-2 text-sm leading-relaxed text-subtle">
-            n = 0. 75% is a target, not a rate, until 30 graded issued sides.
+            n = {ats.n}. 75% is a target, not a rate, until 30 graded issued sides.
           </p>
         </div>
         <div className="rounded-xl bg-surface p-5">
@@ -192,8 +193,8 @@ function Home() {
         <section>
           <h2 className="mb-3 font-display text-xl">Money vs tickets</h2>
           <p className="mb-3 max-w-2xl text-sm text-muted">
-            SportsBettingDime handle share versus ticket share. A 10-pt gap is a research flag, not
-            a play.
+            Handle share versus ticket share from SportsBettingDime and WiseGuyTeam. A 10-pt gap is
+            a research flag, not a play.
           </p>
           <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
             {gaps.map((w) => (
@@ -217,16 +218,17 @@ function Home() {
         <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-muted">
           <li>
             Four times a day the universe job pulls every posted NFL (weeks 1–18) and NCAAF (weeks
-            0–13) line, ESPN results, injuries, weather, SportsBettingDime ticket/money splits,
-            ScoresAndOdds, and the WagerTalk sheet. The library only grows.
+            0–13) line, ESPN results, injuries, weather, SportsBettingDime and WiseGuyTeam
+            ticket/money splits, ScoresAndOdds, and the WagerTalk sheet. The library only grows.
           </li>
           <li>
             After a final, the stored consensus is graded as RESEARCH. That is how club ATS history
             is built. It is never copied into the issued ledger.
           </li>
           <li>
-            SportsBettingDime is the primary handle feed (ticket % and money %). ScoresAndOdds and
-            WagerTalk are backups. Splits persist after kick so Monday still shows Sunday's money.
+            SportsBettingDime is the primary handle feed. WiseGuyTeam is the second live ticket-and-
+            money sample. ScoresAndOdds and WagerTalk are backups. Splits persist after kick so
+            Monday still shows Sunday's money.
           </li>
           <li>
             A row becomes a play only when a human approves it inside the 3–7 pt band with every

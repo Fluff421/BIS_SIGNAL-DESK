@@ -2,7 +2,7 @@
 
 Personal NCAAF / NFL research desk. It watches **every posted NFL and NCAAF game**, grades them after the final as **research** (not issued plays), and keeps ticket % **and** money/handle % on file so the library compounds through the 2026 season.
 
-**75% ATS is a target, not a rate.** Nothing is issued until a human approves a side and `n ≥ 30` graded issued sides exist. Research grades (currently hundreds) are diagnostic only.
+**75% ATS is a target, not a rate.** Nothing is a play until a human approves one side on one WATCH row before kickoff. n ≥ 30 graded issued sides is only the gate for *discussing* 75% — it does not block issuing side 1. Research grades are diagnostic only.
 
 Live repo: [github.com/Fluff421/BIS_SIGNAL-DESK](https://github.com/Fluff421/BIS_SIGNAL-DESK)
 
@@ -61,7 +61,7 @@ Four GitHub Actions keep the tape live. You do not need to run scripts on your m
 - **Thursday–Sunday** — universe job runs four times a day. Public lean fills in. WagerTalk is useful on Sundays.
 - **After each final** — ESPN overlay grades the stored consensus as RESEARCH. Club tapes update. Issued ledger does not.
 - **Monday** — read Digest. Note money-vs-tickets flags that aged into results. Do not quote research ATS as 75%.
-- **When you are ready to issue** — pick a WATCH row with every hard gate green, record it as issued **before kick**, then let the ledger grade it. The 75% clock starts at issued n = 1, and is only discussable at issued n ≥ 30.
+- **When you are ready to issue** — pick a WATCH row with every hard gate green, then record it **before kick** with `issue:play` or Actions → Issue play. Do not hand-edit JSON. The 75% clock starts at issued n = 1, and is only discussable at issued n ≥ 30.
 
 ### What will improve as the year progresses
 
@@ -88,11 +88,28 @@ Four GitHub Actions keep the tape live. You do not need to run scripts on your m
 | [Refresh Universe](https://github.com/Fluff421/BIS_SIGNAL-DESK/actions/workflows/refresh-universe.yml) | 4× daily | Expand NFL + NCAAF library, overlay public lean, grade research, commit JSON |
 | [Refresh Board](https://github.com/Fluff421/BIS_SIGNAL-DESK/actions/workflows/refresh-board.yml) | 4× daily | FPI snapshot + issued ledger only (does **not** overwrite the library) |
 | [Weekly Digest](https://github.com/Fluff421/BIS_SIGNAL-DESK/actions/workflows/weekly-digest.yml) | weekly | Brief from the current board |
-| [CI](https://github.com/Fluff421/BIS_SIGNAL-DESK/actions/workflows/ci.yml) | on push | Typecheck / tests |
+| [CI](https://github.com/Fluff421/BIS_SIGNAL-DESK/actions/workflows/ci.yml) | on push | Typecheck / tests / build |
+| [Issue play](https://github.com/Fluff421/BIS_SIGNAL-DESK/actions/workflows/issue-play.yml) | **manual only** | Writes one WATCH row into `issuedPlays` |
 
 Secrets already used: `ODDS_API_KEY`, `CFBD_API_KEY`. Universe refresh does not need them.
 
 Manual run: Actions → Refresh Universe → Run workflow.
+
+---
+
+## How to issue a side
+
+Nothing is a play until a human records one side on one WATCH row **before kickoff**. The browser cannot persist Issued. Do not hand-edit JSON.
+
+```bash
+npm run issue:play -- --event "<eventId>" --side home|away --note "why this side"
+```
+
+Or Actions → **Issue play** → inputs `event`, `side`, `note`.
+
+The script refuses a missing arg, a row that is not WATCH, any red hard gate, a past kickoff, and a second issue of the same event. It writes only `src/data/board.json` and `public/data/board.json`.
+
+n ≥ 30 is only the gate for discussing 75%. It does not block issuing side 1.
 
 ---
 

@@ -65,9 +65,10 @@ export function PublicLeanCard({ lean }: { lean?: PublicLean | null }) {
         </p>
       ) : null}
       <p className="text-xs leading-relaxed text-muted">
-        Tickets: SportsBettingDime when present, else AN, ScoresAndOdds, WagerTalk, SBR picks, or
-        Covers contest. Money: SportsBettingDime handle share, else ScoresAndOdds, WagerTalk, AN
-        featured, else last persisted snapshot.
+        Tickets: SportsBettingDime when present, else WiseGuyTeam, AN, ScoresAndOdds, WagerTalk, SBR
+        picks, or Covers contest. Money: SportsBettingDime handle share, else WiseGuyTeam,
+        ScoresAndOdds, WagerTalk, AN featured, else last persisted snapshot. Both ticket % and
+        money % are captured — a 10-pt gap is a research flag, not a play.
         {lean.sbrAway != null ? ` SBR ${lean.sbrAway}/${lean.sbrHome}.` : ""}
         {lean.coversAway != null ? ` Covers ${lean.coversAway}/${lean.coversHome}.` : ""}
       </p>

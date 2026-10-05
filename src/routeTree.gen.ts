@@ -14,6 +14,7 @@ import { Route as BoardRouteImport } from './routes/board'
 import { Route as DigestRouteImport } from './routes/digest'
 import { Route as LedgerRouteImport } from './routes/ledger'
 import { Route as ModelRouteImport } from './routes/model'
+import { Route as QualityRouteImport } from './routes/quality'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +41,11 @@ const ModelRoute = ModelRouteImport.update({
   path: '/model',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QualityRoute = QualityRouteImport.update({
+  id: '/quality',
+  path: '/quality',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/digest': typeof DigestRoute
   '/ledger': typeof LedgerRoute
   '/model': typeof ModelRoute
+  '/quality': typeof QualityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/digest': typeof DigestRoute
   '/ledger': typeof LedgerRoute
   '/model': typeof ModelRoute
+  '/quality': typeof QualityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,15 @@ export interface FileRoutesById {
   '/digest': typeof DigestRoute
   '/ledger': typeof LedgerRoute
   '/model': typeof ModelRoute
+  '/quality': typeof QualityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/board' | '/digest' | '/ledger' | '/model'
+  fullPaths: '/' | '/board' | '/digest' | '/ledger' | '/model' | '/quality'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/board' | '/digest' | '/ledger' | '/model'
-  id: '__root__' | '/' | '/board' | '/digest' | '/ledger' | '/model'
+  to: '/' | '/board' | '/digest' | '/ledger' | '/model' | '/quality'
+  id:
+    '__root__' | '/' | '/board' | '/digest' | '/ledger' | '/model' | '/quality'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +87,7 @@ export interface RootRouteChildren {
   DigestRoute: typeof DigestRoute
   LedgerRoute: typeof LedgerRoute
   ModelRoute: typeof ModelRoute
+  QualityRoute: typeof QualityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quality': {
+      id: '/quality'
+      path: '/quality'
+      fullPath: '/quality'
+      preLoaderRoute: typeof QualityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +143,7 @@ const rootRouteChildren: RootRouteChildren = {
   DigestRoute: DigestRoute,
   LedgerRoute: LedgerRoute,
   ModelRoute: ModelRoute,
+  QualityRoute: QualityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

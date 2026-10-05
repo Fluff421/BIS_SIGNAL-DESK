@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from "
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomBytes } from "node:crypto";
+import { preserveIssuedPlays, dropIssuedFromList } from "./preserve-issued.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const KEY = process.env.ODDS_API_KEY || "";
@@ -163,8 +164,11 @@ async function main() {
   }
   const primary = watch.filter((w) => w.confidence !== "STALE_FPI");
   const stale = watch.filter((w) => w.confidence === "STALE_FPI");
+  const issuedPlays = preserveIssuedPlays(prevBoard.issuedPlays, { watch: primary, staleFpi: stale });
   const board = {
-    issuedPlays: prevBoard.issuedPlays || [], watch: primary, staleFpi: stale,
+    issuedPlays,
+    watch: dropIssuedFromList(primary, issuedPlays),
+    staleFpi: dropIssuedFromList(stale, issuedPlays),
     fpiMismatchSample: mismatches.slice(0, 25), aligned: [],
     updated: new Date().toISOString(), source: "the-odds-api+consensus",
   };

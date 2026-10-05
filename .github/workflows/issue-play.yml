@@ -1,0 +1,53 @@
+name: Issue play
+
+on:
+  workflow_dispatch:
+    inputs:
+      event:
+        description: Board eventId of the WATCH row
+        required: true
+        type: string
+      side:
+        description: home or away
+        required: true
+        type: string
+      note:
+        description: Required human note
+        required: true
+        type: string
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: bis-issue-play
+  cancel-in-progress: false
+
+jobs:
+  issue:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Issue one side
+        run: node --experimental-strip-types scripts/issue-play.mjs --event "$EVENT" --side "$SIDE" --note "$NOTE"
+        env:
+          EVENT: ${{ inputs.event }}
+          SIDE: ${{ inputs.side }}
+          NOTE: ${{ inputs.note }}
+
+      - name: Commit board files only
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore(data): issue ${{ inputs.event }} ${{ inputs.side }} [skip ci]"
+          add: |
+            src/data/board.json
+            public/data/board.json
+          default_author: github_actions
+          push: true

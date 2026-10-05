@@ -1,60 +1,103 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { deskDigest } from "@/lib/desk";
+import { ClassBadge } from "@/components/class-badge";
+import { HealthStrip } from "@/components/health-strip";
+import { Button } from "@/components/ui/button";
+import { requestDeskBriefing } from "@/lib/briefing";
 
 export const Route = createFileRoute("/digest")({ component: DigestPage });
 
 function DigestPage() {
+  const g = deskDigest;
+  const [live, setLive] = useState<string | null>(g.aiNarrative);
+  const [status, setStatus] = useState(g.narrativeStatus);
+  const [model, setModel] = useState(g.narrativeModel);
+  const [busy, setBusy] = useState(false);
+
+  async function runBriefing() {
+    setBusy(true);
+    try {
+      const r = await requestDeskBriefing();
+      setLive(r.text);
+      setStatus(r.narrativeStatus);
+      setModel(r.narrativeModel);
+    } finally {
+      setBusy(false);
+    }
+  }
+
   return (
     <article className="max-w-2xl">
-      <h2 className="font-display text-2xl">Daily digest</h2>
-      <p className="mt-1 font-mono text-xs text-muted">Friday, August 28, 2026 · wmcdaniel@gmail.com</p>
+      <h2 className="font-display text-2xl">Weekly digest</h2>
+      <p className="mt-1 font-mono text-xs text-muted">
+        {g.generatedAt.slice(0, 10)} · confidence {g.confidenceTier} · {model}
+      </p>
+
+      <div className="mt-6">
+        <HealthStrip />
+      </div>
 
       <section className="mt-8">
-        <h3 className="font-display text-xl">Clock</h3>
+        <h3 className="font-display text-xl">ATS</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted">
-          NCAAF is Week 0 / Week 1 openers (FBS Saturday Aug 29). NFL is preseason Week 3; regular season
-          Week 1 opens Sept 9. There are no Week 3 college or Week 2 NFL regular-season results to grade.
+          {g.atsRecord.hits}–{g.atsRecord.misses}–{g.atsRecord.pushes} (n={g.atsRecord.n}). Sample
+          insufficient. Do not quote a hit rate. NCAAF and NFL remain unseparated because issued n is
+          still zero in both leagues.
         </p>
       </section>
 
       <section className="mt-6">
-        <h3 className="font-display text-xl">Ledger</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          ATS 0-0-0. Moneyline 0-0-0. Totals 0-0-0. Sample n=0. The 75% ATS target is not a rate yet.
-        </p>
-      </section>
-
-      <section className="mt-6">
-        <h3 className="font-display text-xl">What we searched</h3>
+        <h3 className="font-display text-xl">Helpers</h3>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
-          <li>GitHub Fluff421: BIM skill exists; no pick log.</li>
-          <li>Automations titled as if 2025 W3/W2 were final were not imported.</li>
-          <li>ESPN FPI and ScoresAndOdds retrieved today. Regular-board games are upcoming.</li>
+          {g.helpers.map((h) => (
+            <li key={h}>{h}</li>
+          ))}
         </ul>
       </section>
 
       <section className="mt-6">
-        <h3 className="font-display text-xl">Issued plays</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          None. Watch list only. Closest NCAAF number: Colorado +6.5 at Georgia Tech. Closest NFL Week 1
-          numbers: Bills −1.5, Bears −2.5, Packers −1.5 versus FPI. No units.
-        </p>
+        <h3 className="font-display text-xl">Hurters</h3>
+        <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
+          {g.hurters.map((h) => (
+            <li key={h}>{h}</li>
+          ))}
+        </ul>
       </section>
 
       <section className="mt-6">
-        <h3 className="font-display text-xl">System change</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          Engine is FPI + home-field only. BIM 6-model ensemble remains spec until graded regular-season games exist.
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h3 className="font-display text-xl">Grok briefing</h3>
+          <Button variant="outline" disabled={busy} onClick={() => void runBriefing()}>
+            {busy ? "Composing…" : "Refresh briefing"}
+          </Button>
+        </div>
+        <p className="mt-2 font-mono text-xs text-subtle uppercase">
+          {status} · {model} · no xAI credits
         </p>
+        <p className="mt-3 text-sm leading-relaxed text-fg">{live ?? g.summary}</p>
       </section>
 
       <section className="mt-6">
-        <h3 className="font-display text-xl">GitHub</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          Creating Fluff421/betting-intelligence-ledger failed: the GitHub connector is read-only (403).
-          Reconnect GitHub with repository contents write and the daily job will commit LEDGER.md and MODEL.md.
-          Copies live in this app under data/.
-        </p>
+        <h3 className="font-display text-xl">Top research games</h3>
+        <ul className="mt-3 divide-y divide-border rounded-xl border border-border bg-surface">
+          {g.topGamesNextWeek.map((t) => (
+            <li key={t.matchup} className="px-4 py-3">
+              <p className="text-sm font-medium">{t.matchup}</p>
+              <p className="text-sm text-muted">
+                {t.league} · {t.kick} · {t.edgeTo} {Number(t.edge).toFixed(1)} · {t.confidence} —
+                research only
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
+
+      <p className="mt-8 text-sm text-subtle">
+        Model change this week: none. Rollback is restore the prior model.json plus matching
+        board-history snapshot.
+      </p>
+      <ClassBadge value={g.confidenceTier} className="mt-4" />
     </article>
   );
 }

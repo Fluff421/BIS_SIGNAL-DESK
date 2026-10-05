@@ -1,0 +1,1559 @@
+{
+  "generatedAt": "2026-09-02T18:37:02Z",
+  "teams": [
+    {
+      "canonicalId": "ncaaf-stanford",
+      "displayName": "Stanford Cardinal",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Stanford Cardinal"
+        ],
+        "cfbd": [
+          "Stanford"
+        ],
+        "espn": [
+          "Stanford Cardinal"
+        ],
+        "fpi": [
+          "Stanford"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-miami",
+      "displayName": "Miami Hurricanes",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Miami Hurricanes"
+        ],
+        "cfbd": [
+          "Miami"
+        ],
+        "espn": [
+          "Miami Hurricanes"
+        ],
+        "fpi": [
+          "Miami"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-illinois",
+      "displayName": "Illinois Fighting Illini",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Illinois Fighting Illini"
+        ],
+        "cfbd": [
+          "Illinois"
+        ],
+        "espn": [
+          "Illinois Fighting Illini"
+        ],
+        "fpi": [
+          "Illinois"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-uab",
+      "displayName": "UAB Blazers",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "UAB Blazers"
+        ],
+        "cfbd": [
+          "UAB"
+        ],
+        "espn": [
+          "UAB Blazers"
+        ],
+        "fpi": [
+          "UAB"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-wake-forest",
+      "displayName": "Wake Forest Demon Deacons",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Wake Forest Demon Deacons"
+        ],
+        "cfbd": [
+          "Wake"
+        ],
+        "espn": [
+          "Wake Forest Demon Deacons"
+        ],
+        "fpi": [
+          "Wake"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-akron",
+      "displayName": "Akron Zips",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Akron Zips"
+        ],
+        "cfbd": [
+          "Akron"
+        ],
+        "espn": [
+          "Akron Zips"
+        ],
+        "fpi": [
+          "Akron"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-michigan",
+      "displayName": "Michigan Wolverines",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Michigan Wolverines"
+        ],
+        "cfbd": [
+          "Michigan"
+        ],
+        "espn": [
+          "Michigan Wolverines"
+        ],
+        "fpi": [
+          "Michigan"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-western-michigan",
+      "displayName": "Western Michigan Broncos",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Western Michigan Broncos"
+        ],
+        "cfbd": [
+          "Western"
+        ],
+        "espn": [
+          "Western Michigan Broncos"
+        ],
+        "fpi": [
+          "Western"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-florida",
+      "displayName": "Florida Gators",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Florida Gators"
+        ],
+        "cfbd": [
+          "Florida"
+        ],
+        "espn": [
+          "Florida Gators"
+        ],
+        "fpi": [
+          "Florida"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-florida-atlantic",
+      "displayName": "Florida Atlantic Owls",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Florida Atlantic Owls"
+        ],
+        "cfbd": [
+          "Florida"
+        ],
+        "espn": [
+          "Florida Atlantic Owls"
+        ],
+        "fpi": [
+          "Florida"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-washington",
+      "displayName": "Washington Huskies",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Washington Huskies"
+        ],
+        "cfbd": [
+          "Washington"
+        ],
+        "espn": [
+          "Washington Huskies"
+        ],
+        "fpi": [
+          "Washington"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-washington-state",
+      "displayName": "Washington State Cougars",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Washington State Cougars"
+        ],
+        "cfbd": [
+          "Washington"
+        ],
+        "espn": [
+          "Washington State Cougars"
+        ],
+        "fpi": [
+          "Washington"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-oklahoma-state",
+      "displayName": "Oklahoma State Cowboys",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Oklahoma State Cowboys"
+        ],
+        "cfbd": [
+          "Oklahoma"
+        ],
+        "espn": [
+          "Oklahoma State Cowboys"
+        ],
+        "fpi": [
+          "Oklahoma"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-oregon",
+      "displayName": "Oregon Ducks",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Oregon Ducks"
+        ],
+        "cfbd": [
+          "Oregon"
+        ],
+        "espn": [
+          "Oregon Ducks"
+        ],
+        "fpi": [
+          "Oregon"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-lsu",
+      "displayName": "LSU Tigers",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "LSU Tigers"
+        ],
+        "cfbd": [
+          "LSU"
+        ],
+        "espn": [
+          "LSU Tigers"
+        ],
+        "fpi": [
+          "LSU"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-clemson",
+      "displayName": "Clemson Tigers",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Clemson Tigers"
+        ],
+        "cfbd": [
+          "Clemson"
+        ],
+        "espn": [
+          "Clemson Tigers"
+        ],
+        "fpi": [
+          "Clemson"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-south-florida-bulls",
+      "displayName": "South Florida Bulls",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "South Florida Bulls"
+        ],
+        "cfbd": [
+          "South"
+        ],
+        "espn": [
+          "South Florida Bulls"
+        ],
+        "fpi": [
+          "South"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-florida-international-panthers",
+      "displayName": "Florida International Panthers",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Florida International Panthers"
+        ],
+        "cfbd": [
+          "Florida"
+        ],
+        "espn": [
+          "Florida International Panthers"
+        ],
+        "fpi": [
+          "Florida"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-ole-miss-rebels",
+      "displayName": "Ole Miss Rebels",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Ole Miss Rebels"
+        ],
+        "cfbd": [
+          "Ole"
+        ],
+        "espn": [
+          "Ole Miss Rebels"
+        ],
+        "fpi": [
+          "Ole"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-louisvilles",
+      "displayName": "Louisville Cardinals",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Louisville Cardinals"
+        ],
+        "cfbd": [
+          "Louisville"
+        ],
+        "espn": [
+          "Louisville Cardinals"
+        ],
+        "fpi": [
+          "Louisville"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-iowa-hawkeyes",
+      "displayName": "Iowa Hawkeyes",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Iowa Hawkeyes"
+        ],
+        "cfbd": [
+          "Iowa"
+        ],
+        "espn": [
+          "Iowa Hawkeyes"
+        ],
+        "fpi": [
+          "Iowa"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-iowa-state-cyclones",
+      "displayName": "Iowa State Cyclones",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Iowa State Cyclones"
+        ],
+        "cfbd": [
+          "Iowa"
+        ],
+        "espn": [
+          "Iowa State Cyclones"
+        ],
+        "fpi": [
+          "Iowa"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-eastern-michigan-eagles",
+      "displayName": "Eastern Michigan Eagles",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Eastern Michigan Eagles"
+        ],
+        "cfbd": [
+          "Eastern"
+        ],
+        "espn": [
+          "Eastern Michigan Eagles"
+        ],
+        "fpi": [
+          "Eastern"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-san-jose-state-spartans",
+      "displayName": "San Jose State Spartans",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "San Jose State Spartans"
+        ],
+        "cfbd": [
+          "San"
+        ],
+        "espn": [
+          "San Jose State Spartans"
+        ],
+        "fpi": [
+          "San"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-georgia-tech-yellow-jackets",
+      "displayName": "Georgia Tech Yellow Jackets",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Georgia Tech Yellow Jackets"
+        ],
+        "cfbd": [
+          "Georgia"
+        ],
+        "espn": [
+          "Georgia Tech Yellow Jackets"
+        ],
+        "fpi": [
+          "Georgia"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-colorado-buffaloes",
+      "displayName": "Colorado Buffaloes",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Colorado Buffaloes"
+        ],
+        "cfbd": [
+          "Colorado"
+        ],
+        "espn": [
+          "Colorado Buffaloes"
+        ],
+        "fpi": [
+          "Colorado"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "nfl-san-francisco-49ers",
+      "displayName": "San Francisco 49ers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "San Francisco 49ers"
+        ],
+        "cfbd": [
+          "San"
+        ],
+        "espn": [
+          "San Francisco 49ers"
+        ],
+        "fpi": [
+          "San"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-miami-dolphins",
+      "displayName": "Miami Dolphins",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Miami Dolphins"
+        ],
+        "cfbd": [
+          "Miami"
+        ],
+        "espn": [
+          "Miami Dolphins"
+        ],
+        "fpi": [
+          "Miami"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-los-angeles-chargers",
+      "displayName": "Los Angeles Chargers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Los Angeles Chargers"
+        ],
+        "cfbd": [
+          "Los"
+        ],
+        "espn": [
+          "Los Angeles Chargers"
+        ],
+        "fpi": [
+          "Los"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-arizonas",
+      "displayName": "Arizona Cardinals",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Arizona Cardinals"
+        ],
+        "cfbd": [
+          "Arizona"
+        ],
+        "espn": [
+          "Arizona Cardinals"
+        ],
+        "fpi": [
+          "Arizona"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-las-vegas-raiders",
+      "displayName": "Las Vegas Raiders",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Las Vegas Raiders"
+        ],
+        "cfbd": [
+          "Las"
+        ],
+        "espn": [
+          "Las Vegas Raiders"
+        ],
+        "fpi": [
+          "Las"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-los-angeles-rams",
+      "displayName": "Los Angeles Rams",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Los Angeles Rams"
+        ],
+        "cfbd": [
+          "Los"
+        ],
+        "espn": [
+          "Los Angeles Rams"
+        ],
+        "fpi": [
+          "Los"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-new-york-giants",
+      "displayName": "New York Giants",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "New York Giants"
+        ],
+        "cfbd": [
+          "New"
+        ],
+        "espn": [
+          "New York Giants"
+        ],
+        "fpi": [
+          "New"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-seattle-seahawks",
+      "displayName": "Seattle Seahawks",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Seattle Seahawks"
+        ],
+        "cfbd": [
+          "Seattle"
+        ],
+        "espn": [
+          "Seattle Seahawks"
+        ],
+        "fpi": [
+          "Seattle"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-jacksonville-jaguars",
+      "displayName": "Jacksonville Jaguars",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Jacksonville Jaguars"
+        ],
+        "cfbd": [
+          "Jacksonville"
+        ],
+        "espn": [
+          "Jacksonville Jaguars"
+        ],
+        "fpi": [
+          "Jacksonville"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-cleveland-browns",
+      "displayName": "Cleveland Browns",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Cleveland Browns"
+        ],
+        "cfbd": [
+          "Cleveland"
+        ],
+        "espn": [
+          "Cleveland Browns"
+        ],
+        "fpi": [
+          "Cleveland"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-baltimore-ravens",
+      "displayName": "Baltimore Ravens",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Baltimore Ravens"
+        ],
+        "cfbd": [
+          "Baltimore"
+        ],
+        "espn": [
+          "Baltimore Ravens"
+        ],
+        "fpi": [
+          "Baltimore"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-new-orleans-saints",
+      "displayName": "New Orleans Saints",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "New Orleans Saints"
+        ],
+        "cfbd": [
+          "New"
+        ],
+        "espn": [
+          "New Orleans Saints"
+        ],
+        "fpi": [
+          "New"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-detroit-lions",
+      "displayName": "Detroit Lions",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Detroit Lions"
+        ],
+        "cfbd": [
+          "Detroit"
+        ],
+        "espn": [
+          "Detroit Lions"
+        ],
+        "fpi": [
+          "Detroit"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-tampa-bay-buccaneers",
+      "displayName": "Tampa Bay Buccaneers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Tampa Bay Buccaneers"
+        ],
+        "cfbd": [
+          "Tampa"
+        ],
+        "espn": [
+          "Tampa Bay Buccaneers"
+        ],
+        "fpi": [
+          "Tampa"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-new-york-jets",
+      "displayName": "New York Jets",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "New York Jets"
+        ],
+        "cfbd": [
+          "New"
+        ],
+        "espn": [
+          "New York Jets"
+        ],
+        "fpi": [
+          "New"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-green-bay-packers",
+      "displayName": "Green Bay Packers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Green Bay Packers"
+        ],
+        "cfbd": [
+          "Green"
+        ],
+        "espn": [
+          "Green Bay Packers"
+        ],
+        "fpi": [
+          "Green"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-kansas-city-chiefs",
+      "displayName": "Kansas City Chiefs",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Kansas City Chiefs"
+        ],
+        "cfbd": [
+          "Kansas"
+        ],
+        "espn": [
+          "Kansas City Chiefs"
+        ],
+        "fpi": [
+          "Kansas"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-indianapolis-colts",
+      "displayName": "Indianapolis Colts",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Indianapolis Colts"
+        ],
+        "cfbd": [
+          "Indianapolis"
+        ],
+        "espn": [
+          "Indianapolis Colts"
+        ],
+        "fpi": [
+          "Indianapolis"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-philadelphia-eagles",
+      "displayName": "Philadelphia Eagles",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Philadelphia Eagles"
+        ],
+        "cfbd": [
+          "Philadelphia"
+        ],
+        "espn": [
+          "Philadelphia Eagles"
+        ],
+        "fpi": [
+          "Philadelphia"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-washington-commanders",
+      "displayName": "Washington Commanders",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Washington Commanders"
+        ],
+        "cfbd": [
+          "Washington"
+        ],
+        "espn": [
+          "Washington Commanders"
+        ],
+        "fpi": [
+          "Washington"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-dallas",
+      "displayName": "Dallas Cowboys",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Dallas Cowboys"
+        ],
+        "cfbd": [
+          "Dallas"
+        ],
+        "espn": [
+          "Dallas Cowboys"
+        ],
+        "fpi": [
+          "Dallas"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-new-england-patriots",
+      "displayName": "New England Patriots",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "New England Patriots"
+        ],
+        "cfbd": [
+          "New"
+        ],
+        "espn": [
+          "New England Patriots"
+        ],
+        "fpi": [
+          "New"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-pittsburgh-steelers",
+      "displayName": "Pittsburgh Steelers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Pittsburgh Steelers"
+        ],
+        "cfbd": [
+          "Pittsburgh"
+        ],
+        "espn": [
+          "Pittsburgh Steelers"
+        ],
+        "fpi": [
+          "Pittsburgh"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-tennessee-titans",
+      "displayName": "Tennessee Titans",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Tennessee Titans"
+        ],
+        "cfbd": [
+          "Tennessee"
+        ],
+        "espn": [
+          "Tennessee Titans"
+        ],
+        "fpi": [
+          "Tennessee"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-chicago-bears",
+      "displayName": "Chicago Bears",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Chicago Bears"
+        ],
+        "cfbd": [
+          "Chicago"
+        ],
+        "espn": [
+          "Chicago Bears"
+        ],
+        "fpi": [
+          "Chicago"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-minnesota-vikings",
+      "displayName": "Minnesota Vikings",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Minnesota Vikings"
+        ],
+        "cfbd": [
+          "Minnesota"
+        ],
+        "espn": [
+          "Minnesota Vikings"
+        ],
+        "fpi": [
+          "Minnesota"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-cincinnati-bengals",
+      "displayName": "Cincinnati Bengals",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Cincinnati Bengals"
+        ],
+        "cfbd": [
+          "Cincinnati"
+        ],
+        "espn": [
+          "Cincinnati Bengals"
+        ],
+        "fpi": [
+          "Cincinnati"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-buffalo-bills",
+      "displayName": "Buffalo Bills",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Buffalo Bills"
+        ],
+        "cfbd": [
+          "Buffalo"
+        ],
+        "espn": [
+          "Buffalo Bills"
+        ],
+        "fpi": [
+          "Buffalo"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-denver",
+      "displayName": "Denver Broncos",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Denver Broncos"
+        ],
+        "cfbd": [
+          "Denver"
+        ],
+        "espn": [
+          "Denver Broncos"
+        ],
+        "fpi": [
+          "Denver"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-atlanta-falcons",
+      "displayName": "Atlanta Falcons",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Atlanta Falcons"
+        ],
+        "cfbd": [
+          "Atlanta"
+        ],
+        "espn": [
+          "Atlanta Falcons"
+        ],
+        "fpi": [
+          "Atlanta"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-carolina-panthers",
+      "displayName": "Carolina Panthers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Carolina Panthers"
+        ],
+        "cfbd": [
+          "Carolina"
+        ],
+        "espn": [
+          "Carolina Panthers"
+        ],
+        "fpi": [
+          "Carolina"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-houston-texans",
+      "displayName": "Houston Texans",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Houston Texans"
+        ],
+        "cfbd": [
+          "Houston"
+        ],
+        "espn": [
+          "Houston Texans"
+        ],
+        "fpi": [
+          "Houston"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "ncaaf-tcu",
+      "displayName": "TCU",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "TCU"
+        ],
+        "cfbd": [
+          "TCU"
+        ],
+        "espn": [
+          "TCU"
+        ],
+        "fpi": [
+          "TCU"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-north-carolina",
+      "displayName": "North Carolina",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "North Carolina"
+        ],
+        "cfbd": [
+          "North"
+        ],
+        "espn": [
+          "North Carolina"
+        ],
+        "fpi": [
+          "North"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-usc",
+      "displayName": "USC",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "USC"
+        ],
+        "cfbd": [
+          "USC"
+        ],
+        "espn": [
+          "USC"
+        ],
+        "fpi": [
+          "USC"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-san-jose-state",
+      "displayName": "San Jose State",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "San Jose State"
+        ],
+        "cfbd": [
+          "San"
+        ],
+        "espn": [
+          "San Jose State"
+        ],
+        "fpi": [
+          "San"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-florida-state",
+      "displayName": "Florida State",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Florida State"
+        ],
+        "cfbd": [
+          "Florida"
+        ],
+        "espn": [
+          "Florida State"
+        ],
+        "fpi": [
+          "Florida"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-new-mexico-state",
+      "displayName": "New Mexico State",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "New Mexico State"
+        ],
+        "cfbd": [
+          "New"
+        ],
+        "espn": [
+          "New Mexico State"
+        ],
+        "fpi": [
+          "New"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-rutgers",
+      "displayName": "Rutgers",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Rutgers"
+        ],
+        "cfbd": [
+          "Rutgers"
+        ],
+        "espn": [
+          "Rutgers"
+        ],
+        "fpi": [
+          "Rutgers"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-umass",
+      "displayName": "UMass",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "UMass"
+        ],
+        "cfbd": [
+          "UMass"
+        ],
+        "espn": [
+          "UMass"
+        ],
+        "fpi": [
+          "UMass"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-georgia-tech",
+      "displayName": "Georgia Tech",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Georgia Tech"
+        ],
+        "cfbd": [
+          "Georgia"
+        ],
+        "espn": [
+          "Georgia Tech"
+        ],
+        "fpi": [
+          "Georgia"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "ncaaf-colorado",
+      "displayName": "Colorado",
+      "league": "NCAAF",
+      "aliases": {
+        "oddsApi": [
+          "Colorado"
+        ],
+        "cfbd": [
+          "Colorado"
+        ],
+        "espn": [
+          "Colorado"
+        ],
+        "fpi": [
+          "Colorado"
+        ]
+      },
+      "conference": null,
+      "subdivision": "FBS"
+    },
+    {
+      "canonicalId": "nfl-texans",
+      "displayName": "Texans",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Texans"
+        ],
+        "cfbd": [
+          "Texans"
+        ],
+        "espn": [
+          "Texans"
+        ],
+        "fpi": [
+          "Texans"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-bills",
+      "displayName": "Bills",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Bills"
+        ],
+        "cfbd": [
+          "Bills"
+        ],
+        "espn": [
+          "Bills"
+        ],
+        "fpi": [
+          "Bills"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-panthers",
+      "displayName": "Panthers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Panthers"
+        ],
+        "cfbd": [
+          "Panthers"
+        ],
+        "espn": [
+          "Panthers"
+        ],
+        "fpi": [
+          "Panthers"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-bears",
+      "displayName": "Bears",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Bears"
+        ],
+        "cfbd": [
+          "Bears"
+        ],
+        "espn": [
+          "Bears"
+        ],
+        "fpi": [
+          "Bears"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-vikings",
+      "displayName": "Vikings",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Vikings"
+        ],
+        "cfbd": [
+          "Vikings"
+        ],
+        "espn": [
+          "Vikings"
+        ],
+        "fpi": [
+          "Vikings"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    },
+    {
+      "canonicalId": "nfl-packers",
+      "displayName": "Packers",
+      "league": "NFL",
+      "aliases": {
+        "oddsApi": [
+          "Packers"
+        ],
+        "cfbd": [
+          "Packers"
+        ],
+        "espn": [
+          "Packers"
+        ],
+        "fpi": [
+          "Packers"
+        ]
+      },
+      "conference": null,
+      "subdivision": "NFL"
+    }
+  ]
+}

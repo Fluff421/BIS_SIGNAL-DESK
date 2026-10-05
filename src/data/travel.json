@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-09-10T13:58:38.971Z",
+  "rows": [
+    {
+      "home": "Las Vegas Raiders",
+      "away": "Miami Dolphins",
+      "league": "NFL",
+      "travelMilesAway": 2171,
+      "tzDeltaHours": -3,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Buffalo Bills",
+      "away": "Detroit Lions",
+      "league": "NFL",
+      "travelMilesAway": 219,
+      "tzDeltaHours": 0,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Kansas City Chiefs",
+      "away": "Denver Broncos",
+      "league": "NFL",
+      "travelMilesAway": 564,
+      "tzDeltaHours": 1,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Indianapolis Colts",
+      "away": "Baltimore Ravens",
+      "league": "NFL",
+      "travelMilesAway": 509,
+      "tzDeltaHours": 0,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Pittsburgh Steelers",
+      "away": "Atlanta Falcons",
+      "league": "NFL",
+      "travelMilesAway": 522,
+      "tzDeltaHours": 0,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Tennessee Titans",
+      "away": "New York Jets",
+      "league": "NFL",
+      "travelMilesAway": 757,
+      "tzDeltaHours": -1,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Atlanta Falcons",
+      "away": "Carolina Panthers",
+      "league": "NFL",
+      "travelMilesAway": 226,
+      "tzDeltaHours": 0,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Denver Broncos",
+      "away": "Jacksonville Jaguars",
+      "league": "NFL",
+      "travelMilesAway": 1468,
+      "tzDeltaHours": -2,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Carolina Panthers",
+      "away": "Chicago Bears",
+      "league": "NFL",
+      "travelMilesAway": 586,
+      "tzDeltaHours": 1,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Houston Texans",
+      "away": "Cincinnati Bengals",
+      "league": "NFL",
+      "travelMilesAway": 898,
+      "tzDeltaHours": -1,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "New York Giants",
+      "away": "Dallas Cowboys",
+      "league": "NFL",
+      "travelMilesAway": 1385,
+      "tzDeltaHours": 1,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "provisional"
+    },
+    {
+      "home": "Georgia Tech",
+      "away": "Colorado",
+      "league": "NCAAF",
+      "travelMilesAway": null,
+      "tzDeltaHours": null,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "missing"
+    },
+    {
+      "home": "Texans",
+      "away": "Bills",
+      "league": "NFL",
+      "travelMilesAway": null,
+      "tzDeltaHours": null,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "missing"
+    },
+    {
+      "home": "Panthers",
+      "away": "Bears",
+      "league": "NFL",
+      "travelMilesAway": null,
+      "tzDeltaHours": null,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "missing"
+    },
+    {
+      "home": "Vikings",
+      "away": "Packers",
+      "league": "NFL",
+      "travelMilesAway": null,
+      "tzDeltaHours": null,
+      "restNote": "Week-1 / early-season: prior-week rest not chained. Travel is home-stadium to home-stadium.",
+      "quality": "missing"
+    }
+  ]
+}

@@ -58,13 +58,15 @@ function RowCard({ w, onOpen }: { w: WatchRow; onOpen: () => void }) {
         {w.lowLiquidity ? " · low liquidity" : ""}
       </p>
       <p className="mt-1 font-mono text-[11px] text-muted">{publicLeanLine(w.publicBetting)}</p>
-      <p className="mt-2 text-xs text-subtle">Open for gate audit. Not an issued play.</p>
+      <p className="mt-2 text-xs text-subtle">
+        {w.dataClass === "ISSUED" ? "Issued play." : "Open for gate audit. Not an issued play."}
+      </p>
     </button>
   );
 }
 
 function BoardPage() {
-  const [band, setBand] = useState<"slate" | "watch" | "library">("slate");
+  const [band, setBand] = useState<"slate" | "watch" | "issued" | "library">("slate");
   const [hideStale, setHideStale] = useState(true);
   const [hideNoise, setHideNoise] = useState(true);
   const [league, setLeague] = useState<"ALL" | "NCAAF" | "NFL">("ALL");
@@ -75,6 +77,7 @@ function BoardPage() {
   const rows = useMemo(() => {
     let list: WatchRow[] = [];
     if (band === "watch") list = [...deskBoard.watch];
+    else if (band === "issued") list = [...(deskBoard.issuedPlays as WatchRow[])];
     else if (band === "library") list = [...(deskBoard.library ?? [])];
     else {
       list = [...(deskBoard.observe ?? deskBoard.watch)];
@@ -120,10 +123,9 @@ function BoardPage() {
       <div>
         <h2 className="font-display text-2xl">Board</h2>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-          Issued plays: none. The research slate is every posted NFL and NCAAF game with a line —
-          {c.observe} upcoming across {c.teamsCovered} clubs. The 3–7 pt band stays the only issuance
-          candidate set. Watching more games builds the library ({c.library} on file, {c.completed}{" "}
-          finals); it does not mint tickets.
+          Issued plays live in their own band. A WATCH card is research, not a ticket. HIGH_NOISE and
+          STALE_FPI stay suppressed. n ≥ 30 is only the gate for discussing 75% — it does not block
+          issuing side 1.
         </p>
       </div>
 
@@ -142,6 +144,7 @@ function BoardPage() {
             [
               ["slate", `Research slate (${c.observe})`],
               ["watch", `Issuance band (${c.watch})`],
+              ["issued", `Issued (${c.issued ?? deskBoard.issuedPlays.length})`],
               ["library", `Recent finals (${deskBoard.library?.length ?? 0})`],
             ] as const
           ).map(([id, label]) => (
@@ -220,7 +223,9 @@ function BoardPage() {
         )}
       </section>
 
-      {open ? <MatchupSheet row={open} onClose={() => setOpen(null)} /> : null}
+      {open ? (
+        <MatchupSheet row={open} issued={band === "issued"} onClose={() => setOpen(null)} />
+      ) : null}
     </div>
   );
 }

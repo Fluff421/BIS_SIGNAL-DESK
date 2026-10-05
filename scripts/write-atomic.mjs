@@ -12,9 +12,10 @@
  * copying would have to land its temp in the target's directory, which is the
  * one thing a staged path is not allowed to do.
  */
-import { existsSync, mkdirSync, renameSync } from "node:fs";
+import { existsSync, mkdirSync, renameSync, writeFileSync } from "node:fs";
 import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { randomBytes } from "node:crypto";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -66,6 +67,22 @@ export function handOver(staged, target, { rename = renameSync } = {}) {
     }
     throw err;
   }
+}
+
+/** Stage JSON next to the target (or under src/data when the target is in public/) then rename. */
+export function writeJsonAtomic(targetPath, obj, { root = ROOT } = {}) {
+  const target = isAbsolute(targetPath) ? targetPath : resolve(root, targetPath);
+  mkdirSync(dirname(target), { recursive: true });
+  const publicDir = join(root, "public");
+  const stageDir = isInside(publicDir, target) ? join(root, "src/data") : dirname(target);
+  mkdirSync(stageDir, { recursive: true });
+  const staged = join(stageDir, `.${randomBytes(6).toString("hex")}.tmp`);
+  writeFileSync(staged, JSON.stringify(obj, null, 2) + "\n");
+  const problem = stagingError({ staged, target, publicDir });
+  if (problem) {
+    throw new Error(problem);
+  }
+  handOver(staged, target);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

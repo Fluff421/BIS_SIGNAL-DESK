@@ -8,6 +8,7 @@ import {
   deskContext,
   deskEspn,
   deskResearch,
+  deskLedger,
   deskTeamIntel,
   deskPublicBetting,
   FPI_AGE_HOURS,
@@ -60,9 +61,9 @@ function QualityPage() {
 
       <section className="rounded-xl border border-border bg-surface p-5">
         <h3 className="font-display text-xl">Path to 30 issued sides</h3>
-        <p className="mt-2 font-display text-3xl tabular-nums">0 / 30 issued</p>
+        <p className="mt-2 font-display text-3xl tabular-nums">{deskLedger.regular.ats.n} / 30 issued</p>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-elevated">
-          <div className="h-full bg-watch" style={{ width: "0%" }} />
+          <div className="h-full bg-watch" style={{ width: `${Math.min(100, (deskLedger.regular.ats.n / 30) * 100)}%` }} />
         </div>
         <p className="mt-2 text-sm leading-relaxed text-muted">{deskResearch.pathTo30.note}</p>
         <p className="mt-3 font-mono text-xs text-subtle">

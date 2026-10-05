@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, renameSync } from "
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomBytes } from "node:crypto";
+import { preserveIssuedPlays, dropIssuedFromList } from "./preserve-issued.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const UA =
@@ -886,6 +887,7 @@ function buildRow(g, fpiHome, fpiAway, existing, publicBet) {
     confidence: dataClass,
     dataClass,
     nBooks: Math.max(g.nBooks || 0, prior.nBooks || 0),
+    lowLiquidity: Math.max(g.nBooks || 0, prior.nBooks || 0) < 3,
     spreadStddev: prior.spreadStddev ?? null,
     lineMovement: prior.lineMovement ?? 0,
     bookmakers: prior.bookmakers?.length ? prior.bookmakers : g.bookmakers,
@@ -1332,7 +1334,7 @@ async function main() {
     .slice(0, 160);
   const libraryPreview = recentCompleted;
 
-  const board = {
+  const draft = {
     issuedPlays: [],
     watch: watch.map(stripInternal),
     highNoise: highNoise.map(stripInternal),
@@ -1361,6 +1363,16 @@ async function main() {
       divergenceFlags: divN,
       espnOverlay: espnOverlayN,
     },
+  };
+  const issuedPlays = preserveIssuedPlays(boardPrev.issuedPlays, draft);
+  draft.watch = dropIssuedFromList(draft.watch, issuedPlays);
+  draft.highNoise = dropIssuedFromList(draft.highNoise, issuedPlays);
+  draft.staleFpi = dropIssuedFromList(draft.staleFpi, issuedPlays);
+  draft.observe = dropIssuedFromList(draft.observe, issuedPlays);
+  const board = {
+    ...draft,
+    issuedPlays,
+    counts: { ...draft.counts, issued: issuedPlays.length, watch: draft.watch.length },
   };
 
   const research = {

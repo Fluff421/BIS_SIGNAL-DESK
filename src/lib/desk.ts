@@ -15,8 +15,7 @@ import travel from "@/data/travel.json";
 import researchLedger from "@/data/research-ledger.json";
 import teamIntel from "@/data/team-intel.json";
 import publicBetting from "@/data/public-betting.json";
-import history2024 from "@/data/history/ncaaf-games-2024.json";
-import { evaluateCandidate, type CandidateInput, type GateResult } from "@/lib/gates";
+import { evaluateCandidate, unresolvedContextFor, type CandidateInput, type GateResult } from "@/lib/gates";
 
 export type PublicLean = {
   betsAway: number | null;
@@ -161,12 +160,13 @@ export const deskHealth = health as typeof health & {
   wagertalk?: { status: string; reason?: string; rows?: number; nfl?: number; ncaaf?: number };
   scoresandodds?: { status: string; reason?: string; rows?: number; nfl?: number; ncaaf?: number; matched?: number; money?: number };
   sportsbettingdime?: { status: string; reason?: string; rows?: number; nfl?: number; ncaaf?: number; matched?: number; money?: number };
+  wiseguyteam?: { status: string; reason?: string; rows?: number; nfl?: number; ncaaf?: number; matched?: number; money?: number };
 };
 export const deskTeams = teams as { teams: Array<{ canonicalId: string; displayName: string; league: string; conference: string | null }> };
 export const deskBacktest = backtest;
 export const deskCalibration = calibration;
 export const deskContext = contextLayer;
-export const deskHistorySample = (history2024 as { rows: Array<Record<string, unknown>> }).rows.slice(0, 8);
+export const deskHistorySample: Array<Record<string, unknown>> = [];
 export const deskPublicBetting = publicBetting as {
   generatedAt: string;
   source: string;
@@ -244,6 +244,8 @@ export function gateForRow(row: WatchRow): GateResult {
     storedLine: row.marketHome != null && Boolean(row.observedAt),
     humanReview: row.humanReview ?? "none",
     gradedN: deskLedger.regular.ats.n,
+    kick: row.kick,
+    lowLiquidity: row.lowLiquidity,
   };
   return evaluateCandidate(input, DESK_NOW);
 }
@@ -363,12 +365,7 @@ export function travelFor(home: string, away: string): TravelRow | null {
 }
 
 export function contextUnresolved(row: WatchRow): boolean {
-  if (row.league === "NFL") {
-    const homeInj = injuryFor(row.home);
-    const awayInj = injuryFor(row.away);
-    return !(homeInj && awayInj);
-  }
-  return true;
+  return unresolvedContextFor(row, { nfl: deskInjuries.nfl, ncaaf: deskInjuries.ncaaf });
 }
 
 export const deskEspn = espnLive as {

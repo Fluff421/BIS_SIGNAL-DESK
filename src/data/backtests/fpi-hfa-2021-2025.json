@@ -1,0 +1,77 @@
+{
+  "id": "fpi-hfa-2021-2025",
+  "version": "2026.09.02",
+  "league": "NCAAF",
+  "seasons": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "holdoutSeason": 2025,
+  "engine": "model_home_margin = home_fpi - away_fpi + 2.5 HFA",
+  "target": "ATS vs closing home spread (home covers if actualMargin + closeHome > 0)",
+  "leakageControls": [
+    "Pregame FPI only \u2014 never post-game ratings.",
+    "Closing line is the evaluation price; open line is recorded separately when present.",
+    "NFL excluded from this file (separate calibration).",
+    "Postseason excluded."
+  ],
+  "limitations": [
+    "This committed file is a methodology + bucket report for the desk UI.",
+    "It is not a claim of 75% ATS and must not be marketed as such.",
+    "Live 2026 performance is unmeasured until n\u226530 graded issued sides.",
+    "Historical closing lines from public sources vary by book; treat as approximate."
+  ],
+  "overall": {
+    "n": 2764,
+    "ats": 0.512,
+    "brier": 0.248,
+    "vsCloseCLV": 0.01
+  },
+  "holdout2025": {
+    "n": 612,
+    "ats": 0.507,
+    "note": "No material lift vs close in holdout."
+  },
+  "byBucket": [
+    {
+      "band": "<3",
+      "n": 1840,
+      "hits": 912,
+      "misses": 900,
+      "pushes": 28,
+      "ats": 0.503,
+      "note": "Inside the number \u2014 no edge vs close."
+    },
+    {
+      "band": "3-7",
+      "n": 620,
+      "hits": 328,
+      "misses": 284,
+      "pushes": 8,
+      "ats": 0.536,
+      "note": "Primary research band in this backtest."
+    },
+    {
+      "band": "7-15",
+      "n": 210,
+      "hits": 98,
+      "misses": 108,
+      "pushes": 4,
+      "ats": 0.476,
+      "note": "Overconfident; underperforms."
+    },
+    {
+      "band": "15+",
+      "n": 94,
+      "hits": 31,
+      "misses": 62,
+      "pushes": 1,
+      "ats": 0.333,
+      "note": "STALE/mismatch analogue \u2014 suppress."
+    }
+  ],
+  "conclusion": "Only the 3\u20137 point band showed modest lift in this backtest. 15+ is anti-predictive. Do not issue plays from STALE_FPI or HIGH_NOISE."
+}

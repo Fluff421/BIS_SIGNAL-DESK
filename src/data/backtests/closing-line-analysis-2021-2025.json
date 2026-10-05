@@ -1,0 +1,5 @@
+{
+  "id": "closing-line-analysis-2021-2025",
+  "finding": "No reliable CLV in 15+ band. 3\u20137 band CLV \u2248 +0.3 pts in this report.",
+  "note": "Do not issue until live CLV is measured on issued plays."
+}

@@ -1,0 +1,60 @@
+{
+  "id": "calibration-2021-2025",
+  "engine": "FPI+HFA",
+  "byBucket": [
+    {
+      "band": "<3",
+      "n": 1840,
+      "hits": 912,
+      "misses": 900,
+      "pushes": 28,
+      "ats": 0.503,
+      "note": "Inside the number \u2014 no edge vs close."
+    },
+    {
+      "band": "3-7",
+      "n": 620,
+      "hits": 328,
+      "misses": 284,
+      "pushes": 8,
+      "ats": 0.536,
+      "note": "Primary research band in this backtest."
+    },
+    {
+      "band": "7-15",
+      "n": 210,
+      "hits": 98,
+      "misses": 108,
+      "pushes": 4,
+      "ats": 0.476,
+      "note": "Overconfident; underperforms."
+    },
+    {
+      "band": "15+",
+      "n": 94,
+      "hits": 31,
+      "misses": 62,
+      "pushes": 1,
+      "ats": 0.333,
+      "note": "STALE/mismatch analogue \u2014 suppress."
+    }
+  ],
+  "reliability": [
+    {
+      "p": 0.5,
+      "observed": 0.51,
+      "n": 1400
+    },
+    {
+      "p": 0.55,
+      "observed": 0.53,
+      "n": 620
+    },
+    {
+      "p": 0.65,
+      "observed": 0.48,
+      "n": 210
+    }
+  ],
+  "note": "Probabilities are illustrative logistic transforms of edge; not a fitted probability model."
+}

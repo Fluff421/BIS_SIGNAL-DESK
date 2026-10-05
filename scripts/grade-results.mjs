@@ -1,91 +1,39 @@
 #!/usr/bin/env node
 /**
- * Grade completed board edges:
- *   NCAAF → CFBD finals (needs CFBD_API_KEY)
- *   NFL   → ESPN scoreboard (no key)
- * Usage: CFBD_API_KEY=... node scripts/grade-results.mjs
+ * Split grading.
+ * Issued plays → ledger.regular.ats (the issued book).
+ * Past watch / highNoise / staleFpi → research-ledger only.
+ * Uses scores already stored on the row. Does not call CFBD, ESPN, or Odds API.
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from "node:fs";
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-import { randomBytes } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { writeJsonAtomic } from "./write-atomic.mjs";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const CFBD_KEY = process.env.CFBD_API_KEY || "";
-const YEAR = Number(process.env.SEASON_YEAR || 2026);
+const DEFAULT_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-function atomicWrite(path, text) {
-  mkdirSync(dirname(path), { recursive: true });
-  const staged = join(dirname(path), `.${randomBytes(6).toString("hex")}.tmp`);
-  writeFileSync(staged, text);
-  renameSync(staged, path);
-}
-
-function load(rel) {
-  const p = join(ROOT, rel);
-  if (!existsSync(p)) return null;
+function load(root, rel, fallback) {
+  const p = join(root, rel);
+  if (!existsSync(p)) return fallback;
   return JSON.parse(readFileSync(p, "utf8"));
 }
 
 function norm(s) {
-  return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  return String(s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
-function teamMatch(a, b) {
-  const na = norm(a);
-  const nb = norm(b);
-  if (!na || !nb) return false;
-  if (na === nb) return true;
-  return na.includes(nb) || nb.includes(na);
+export function rowKey(row) {
+  return `${row.kick}|${norm(row.home)}|${norm(row.away)}`;
 }
 
-async function cfbdGames(year) {
-  if (!CFBD_KEY) throw new Error("Set CFBD_API_KEY for NCAAF grading");
-  const url = `https://api.collegefootballdata.com/games?year=${year}&seasonType=regular`;
-  const res = await fetch(url, { headers: { Authorization: `Bearer ${CFBD_KEY}` } });
-  if (!res.ok) throw new Error(`CFBD games HTTP ${res.status}`);
-  return res.json();
-}
-
-/** ESPN public scoreboard — no key required. Regular season weeks 1–18. */
-async function espnNflGames(year) {
-  const weeks = [];
-  for (let w = 1; w <= 18; w++) {
-    const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?seasontype=2&week=${w}&dates=${year}`;
-    try {
-      const res = await fetch(url, { headers: { "User-Agent": "BIS-Signal-Desk/1.0" } });
-      if (!res.ok) continue;
-      const data = await res.json();
-      for (const ev of data?.events ?? []) {
-        const comp = ev.competitions?.[0];
-        if (!comp || ev.status?.type?.completed !== true) continue;
-        const home = comp.competitors?.find((c) => c.homeAway === "home");
-        const away = comp.competitors?.find((c) => c.homeAway === "away");
-        if (!home || !away) continue;
-        weeks.push({
-          id: ev.id,
-          week: w,
-          startDate: (ev.date || "").slice(0, 10),
-          homeTeam: home.team?.displayName ?? home.team?.name,
-          awayTeam: away.team?.displayName ?? away.team?.name,
-          homePoints: Number(home.score),
-          awayPoints: Number(away.score),
-          completed: true,
-        });
-      }
-    } catch {
-      continue;
-    }
-  }
-  return weeks;
-}
-
-function gradeSide(marketHome, actualMargin, edgeTo, home, away) {
-  const homeCoverMargin = actualMargin + marketHome;
+export function gradeSide(marketHome, actualMargin, edgeTo, home, away) {
+  const homeCoverMargin = actualMargin + Number(marketHome);
   let homeResult = "PUSH";
   if (homeCoverMargin > 0.05) homeResult = "WIN";
   else if (homeCoverMargin < -0.05) homeResult = "LOSS";
-
   if (edgeTo === home) return { result: homeResult, coverBy: Number(homeCoverMargin.toFixed(1)) };
   if (edgeTo === away) {
     if (homeResult === "PUSH") return { result: "PUSH", coverBy: 0 };
@@ -97,147 +45,167 @@ function gradeSide(marketHome, actualMargin, edgeTo, home, away) {
   return { result: homeResult, coverBy: Number(homeCoverMargin.toFixed(1)) };
 }
 
-function edgeBucket(edge) {
-  if (edge >= 15) return "15+";
-  if (edge >= 7) return "7-15";
-  if (edge >= 3) return "3-7";
-  return "<3";
+function toResearchResult(result) {
+  if (result === "WIN") return "hit";
+  if (result === "LOSS") return "miss";
+  return "push";
 }
 
-function recomputeAts(graded) {
-  let hits = 0, misses = 0, pushes = 0;
+export function recomputeAts(graded, win = "WIN", loss = "LOSS", push = "PUSH") {
+  let hits = 0;
+  let misses = 0;
+  let pushes = 0;
   for (const g of graded) {
-    if (g.result === "WIN") hits++;
-    else if (g.result === "LOSS") misses++;
-    else pushes++;
+    if (g.result === win || g.result === "hit") hits += 1;
+    else if (g.result === loss || g.result === "miss") misses += 1;
+    else if (g.result === push || g.result === "push") pushes += 1;
   }
-  const n = hits + misses;
-  const rate = n > 0 ? Number((hits / n).toFixed(3)) : null;
-  return { hits, misses, pushes, n: hits + misses + pushes, rate };
+  const decided = hits + misses;
+  return {
+    hits,
+    misses,
+    pushes,
+    n: hits + misses + pushes,
+    rate: decided > 0 ? Number((hits / decided).toFixed(3)) : null,
+  };
 }
 
-async function main() {
-  const board = load("src/data/board.json") || { watch: [], staleFpi: [] };
-  const ledger = load("src/data/ledger.json") || {
-    season: YEAR,
-    regular: { ats: { hits: 0, misses: 0, pushes: 0, n: 0, rate: null } },
-    target: { ats: 0.75, minN: 30, status: "Not measurable. n=0." },
-    graded: [],
+function scorable(row) {
+  if (!row) return false;
+  const completed = row.completed === true || row.status === "complete";
+  return (
+    completed &&
+    row.marketHome != null &&
+    Number.isFinite(Number(row.homePoints)) &&
+    Number.isFinite(Number(row.awayPoints))
+  );
+}
+
+function gradeRow(row, book) {
+  const actualMargin = Number(row.homePoints) - Number(row.awayPoints);
+  const side = row.approvedSide
+    ? row.approvedSide === "home"
+      ? row.home
+      : row.away
+    : row.edgeTo || row.home;
+  const { result, coverBy } = gradeSide(row.marketHome, actualMargin, side, row.home, row.away);
+  return {
+    game_id: String(row.eventId || row.anId || ""),
+    week: row.week ?? null,
+    league: row.league,
+    kick: row.kick,
+    away: row.away,
+    home: row.home,
+    marketHome: row.marketHome,
+    modelHome: row.modelHome,
+    edge: row.edge,
+    edgeTo: side,
+    approvedSide: row.approvedSide ?? null,
+    actualMargin,
+    result: book === "research" ? toResearchResult(result) : result,
+    coverBy,
+    sampleWeight: 1.0,
+    class: book === "issued" ? "ISSUED" : "RESEARCH",
+    note: book === "issued" ? "issued-then-graded" : "research-only. not issued.",
   };
+}
 
-  const today = new Date().toISOString().slice(0, 10);
-  const allWatch = [...(board.watch || []), ...(board.staleFpi || [])];
-  const pending = allWatch.filter((w) => w.kick && w.kick < today);
-  if (!pending.length) {
-    console.log("No past watch rows to grade.");
-    return;
-  }
+function isIssuedGrade(g) {
+  return g?.class === "ISSUED" || Boolean(g?.approvedSide);
+}
 
-  const ncaafPending = pending.filter((w) => w.league === "NCAAF");
-  const nflPending = pending.filter((w) => w.league === "NFL");
-
-  const [cfbdRaw, espnRaw] = await Promise.all([
-    ncaafPending.length
-      ? cfbdGames(YEAR).catch((e) => {
-          console.error("[grade] CFBD failed:", e.message);
-          return [];
-        })
-      : Promise.resolve([]),
-    nflPending.length ? espnNflGames(YEAR) : Promise.resolve([]),
-  ]);
-
-  const completed = [
-    ...(cfbdRaw || [])
-      .filter((g) => g.completed && g.homePoints != null && g.awayPoints != null)
-      .map((g) => ({
-        id: g.id,
-        week: g.week,
-        startDate: String(g.startDate || "").slice(0, 10),
-        homeTeam: g.homeTeam,
-        awayTeam: g.awayTeam,
-        homePoints: g.homePoints,
-        awayPoints: g.awayPoints,
-        completed: true,
-        _league: "NCAAF",
-      })),
-    ...(espnRaw || [])
-      .filter((g) => g.completed && g.homePoints != null && g.awayPoints != null)
-      .map((g) => ({ ...g, _league: "NFL" })),
+export function applyGrades({ board, ledger, research }) {
+  const issuedPlays = Array.isArray(board?.issuedPlays) ? board.issuedPlays : [];
+  const researchPool = [
+    ...(board?.watch || []),
+    ...(board?.highNoise || []),
+    ...(board?.staleFpi || []),
   ];
 
-  const existingKeys = new Set(
-    (ledger.graded || []).map((g) => `${g.kick}|${norm(g.home)}|${norm(g.away)}`),
-  );
-
-  let added = 0;
-  for (const w of pending) {
-    const key = `${w.kick}|${norm(w.home)}|${norm(w.away)}`;
-    if (existingKeys.has(key)) continue;
-
-    const match = completed.find((g) => {
-      if (g._league !== w.league) return false;
-      const gd = String(g.startDate || "").slice(0, 10);
-      const dateOk = !w.kick || Math.abs(Date.parse(gd) - Date.parse(w.kick)) < 3 * 86400000;
-      return dateOk && teamMatch(g.homeTeam, w.home) && teamMatch(g.awayTeam, w.away);
-    });
-    if (!match) continue;
-
-    const actualMargin = Number(match.homePoints) - Number(match.awayPoints);
-    const { result, coverBy } = gradeSide(w.marketHome, actualMargin, w.edgeTo, w.home, w.away);
-
-    ledger.graded.push({
-      game_id: String(match.id ?? ""),
-      week: match.week ?? null,
-      league: w.league,
-      kick: w.kick,
-      away: w.away,
-      home: w.home,
-      marketHome: w.marketHome,
-      modelHome: w.modelHome,
-      edge: w.edge,
-      edgeTo: w.edgeTo,
-      edgeBucket: edgeBucket(Number(w.edge) || 0),
-      confidence: w.confidence || null,
-      actualMargin,
-      result,
-      coverBy,
-      sampleWeight: 1.0,
-      note: "auto-graded",
-    });
-    existingKeys.add(key);
-    added++;
+  const kept = (ledger.graded || []).filter(isIssuedGrade);
+  const issuedExisting = new Set(kept.map(rowKey));
+  const nextGraded = [...kept];
+  for (const row of issuedPlays) {
+    if (!scorable(row)) continue;
+    const key = rowKey(row);
+    if (issuedExisting.has(key)) continue;
+    nextGraded.push(gradeRow(row, "issued"));
+    issuedExisting.add(key);
   }
 
-  const ats = recomputeAts(ledger.graded);
-  ledger.regular = ledger.regular || {};
-  ledger.regular.ats = ats;
-  ledger.updated = new Date().toISOString().slice(0, 10);
-  ledger.target = ledger.target || { ats: 0.75, minN: 30 };
-  if (ats.n < (ledger.target.minN || 30)) {
-    ledger.target.status = `Not measurable. n=${ats.n} (need ${ledger.target.minN}). rate=${ats.rate ?? "n/a"}`;
-  } else {
-    ledger.target.status = `n=${ats.n} rate=${ats.rate} target=${ledger.target.ats}`;
+  const researchExisting = new Set((research.rows || []).map(rowKey));
+  const nextResearch = [...(research.rows || [])];
+  for (const row of researchPool) {
+    if (!scorable(row)) continue;
+    const key = rowKey(row);
+    if (researchExisting.has(key)) continue;
+    nextResearch.push(gradeRow(row, "research"));
+    researchExisting.add(key);
   }
 
-  const buckets = {};
-  for (const g of ledger.graded) {
-    const b = g.edgeBucket || edgeBucket(g.edge);
-    if (!buckets[b]) buckets[b] = { hits: 0, misses: 0, pushes: 0 };
-    if (g.result === "WIN") buckets[b].hits++;
-    else if (g.result === "LOSS") buckets[b].misses++;
-    else buckets[b].pushes++;
-  }
-  ledger.edgeBuckets = buckets;
+  const ats = recomputeAts(nextGraded);
+  const nextLedger = {
+    ...ledger,
+    graded: nextGraded,
+    regular: {
+      ...(ledger.regular || {}),
+      ats,
+      ml: ledger.regular?.ml || { hits: 0, misses: 0, pushes: 0, n: 0, rate: null },
+      totals: ledger.regular?.totals || { hits: 0, misses: 0, pushes: 0, n: 0, rate: null },
+    },
+    updated: new Date().toISOString().slice(0, 10),
+    target: {
+      ats: 0.75,
+      minN: 30,
+      ...(ledger.target || {}),
+      status:
+        ats.n < 30
+          ? `Not measurable. n=${ats.n} (need 30). Do not quote a 75% rate.`
+          : `n=${ats.n} issued rate=${ats.rate} target=0.75`,
+    },
+  };
+  delete nextLedger.edgeBuckets;
 
-  const out = JSON.stringify(ledger, null, 2) + "\n";
-  atomicWrite(join(ROOT, "src/data/ledger.json"), out);
-  if (existsSync(join(ROOT, "public/data"))) atomicWrite(join(ROOT, "public/data/ledger.json"), out);
-  console.log(
-    `graded +${added}; total=${ledger.graded.length}; ATS ${ats.hits}-${ats.misses}-${ats.pushes} rate=${ats.rate}; ncaafPending=${ncaafPending.length} nflPending=${nflPending.length}`,
-  );
+  const researchAts = recomputeAts(nextResearch, "hit", "miss", "push");
+  const nextResearchLedger = {
+    ...research,
+    rows: nextResearch,
+    ats: researchAts,
+    policy:
+      "Research grades are library/WATCH observations vs the stored consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
+    generatedAt: new Date().toISOString(),
+  };
+
+  return { ledger: nextLedger, research: nextResearchLedger };
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+export function gradeResults({ root = DEFAULT_ROOT } = {}) {
+  const board = load(root, "src/data/board.json", { issuedPlays: [], watch: [] });
+  const ledger = load(root, "src/data/ledger.json", {
+    regular: { ats: { hits: 0, misses: 0, pushes: 0, n: 0, rate: null } },
+    graded: [],
+  });
+  const research = load(root, "src/data/research-ledger.json", {
+    rows: [],
+    ats: { hits: 0, misses: 0, pushes: 0, n: 0, rate: null },
+  });
+  const next = applyGrades({ board, ledger, research });
+  writeJsonAtomic(join(root, "src/data/ledger.json"), next.ledger, { root });
+  writeJsonAtomic(join(root, "public/data/ledger.json"), next.ledger, { root });
+  writeJsonAtomic(join(root, "src/data/research-ledger.json"), next.research, { root });
+  return next;
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const out = gradeResults();
+  const ats = out.ledger.regular.ats;
+  const r = out.research.ats;
+  console.log(
+    JSON.stringify({
+      issued: `${ats.hits}-${ats.misses}-${ats.pushes}`,
+      issuedN: ats.n,
+      research: `${r.hits}-${r.misses}-${r.pushes}`,
+      researchN: r.n,
+    }),
+  );
+}
