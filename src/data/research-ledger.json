@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-06T03:03:31.650Z",
+  "generatedAt": "2026-10-06T12:04:10.968Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 457,
+    "researchN": 458,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 80,
-    "observeOnBoard": 309,
+    "watchOnBoard": 81,
+    "observeOnBoard": 308,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=457 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 88–69–4 (n=161)."
+    "note": "Research sample n=458 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 88–70–4 (n=162)."
   },
   "ats": {
     "hits": 253,
-    "misses": 198,
+    "misses": 199,
     "pushes": 6,
-    "n": 457,
-    "rate": 0.56
+    "n": 458,
+    "rate": 0.559
   },
   "cleanBand": {
     "hits": 88,
-    "misses": 69,
+    "misses": 70,
     "pushes": 4,
-    "n": 161,
-    "rate": 0.559,
+    "n": 162,
+    "rate": 0.556,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -6808,6 +6808,27 @@
       "publicBetsHome": 37,
       "publicMoneyAway": 56,
       "publicMoneyHome": 44,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-10-06T00:15:00.000Z",
+      "away": "Atlanta Falcons",
+      "home": "New Orleans Saints",
+      "side": "New Orleans Saints",
+      "edgeTo": "New Orleans Saints",
+      "marketHome": -1.5,
+      "modelHome": 0.8,
+      "actualMargin": -21,
+      "homePoints": 24,
+      "awayPoints": 45,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "ALIGNED",
+      "publicBetsAway": 59,
+      "publicBetsHome": 41,
+      "publicMoneyAway": 73,
+      "publicMoneyHome": 27,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
