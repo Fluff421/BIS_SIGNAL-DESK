@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-10-07T02:26:36.147Z",
+  "generatedAt": "2026-10-07T11:49:38.759Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 460,
+    "researchN": 461,
     "issuedN": 0,
     "remainingResearch": 0,
     "watchOnBoard": 76,
-    "observeOnBoard": 310,
+    "observeOnBoard": 309,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=460 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 88–71–4 (n=163)."
+    "note": "Research sample n=461 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 88–71–4 (n=163)."
   },
   "ats": {
-    "hits": 254,
+    "hits": 255,
     "misses": 200,
     "pushes": 6,
-    "n": 460,
-    "rate": 0.559
+    "n": 461,
+    "rate": 0.56
   },
   "cleanBand": {
     "hits": 88,
@@ -3003,10 +3003,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 0,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 0,
-      "publicMoneyHome": 0,
+      "publicBetsAway": 56,
+      "publicBetsHome": 44,
+      "publicMoneyAway": 44,
+      "publicMoneyHome": 56,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -8106,10 +8106,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 40,
-      "publicBetsHome": 60,
-      "publicMoneyAway": 21,
-      "publicMoneyHome": 79,
+      "publicBetsAway": 39,
+      "publicBetsHome": 61,
+      "publicMoneyAway": 20,
+      "publicMoneyHome": 80,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -9559,6 +9559,27 @@
       "publicBetsHome": 64,
       "publicMoneyAway": 35,
       "publicMoneyHome": 65,
+      "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-07T00:00:00.000Z",
+      "away": "Southern Miss Golden Eagles",
+      "home": "Troy Trojans",
+      "side": "Troy Trojans",
+      "edgeTo": "Troy Trojans",
+      "marketHome": -9.5,
+      "modelHome": 6.5,
+      "actualMargin": 21,
+      "homePoints": 55,
+      "awayPoints": 34,
+      "result": "hit",
+      "class": "RESEARCH",
+      "dataClass": "STALE_FPI",
+      "publicBetsAway": 49,
+      "publicBetsHome": 51,
+      "publicMoneyAway": 45,
+      "publicMoneyHome": 55,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {

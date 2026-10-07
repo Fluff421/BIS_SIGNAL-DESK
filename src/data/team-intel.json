@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-07T02:26:41.980Z",
+  "generatedAt": "2026-10-07T11:49:44.957Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
-  "withGrades": 167,
+  "withGrades": 168,
   "teams": [
     {
       "team": "LSU Tigers",
@@ -833,7 +833,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-03T23:00:00.000Z",
       "games": 12,
-      "upcoming": 7,
+      "upcoming": 6,
       "rate": 1
     },
     {
@@ -2081,7 +2081,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-05T21:00:00.000Z",
       "games": 12,
-      "upcoming": 8,
+      "upcoming": 7,
       "rate": 1
     },
     {
@@ -2109,6 +2109,19 @@
       "games": 17,
       "upcoming": 13,
       "rate": 0
+    },
+    {
+      "team": "Troy Trojans",
+      "league": "NCAAF",
+      "n": 1,
+      "hits": 1,
+      "misses": 0,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-07T00:00:00.000Z",
+      "games": 12,
+      "upcoming": 5,
+      "rate": 1
     },
     {
       "team": "Tulsa Golden Hurricane",
@@ -3330,19 +3343,6 @@
       "lastKick": null,
       "games": 2,
       "upcoming": 0,
-      "rate": null
-    },
-    {
-      "team": "Troy Trojans",
-      "league": "NCAAF",
-      "n": 0,
-      "hits": 0,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": null,
-      "lastKick": null,
-      "games": 12,
-      "upcoming": 7,
       "rate": null
     },
     {
