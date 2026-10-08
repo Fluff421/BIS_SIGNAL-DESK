@@ -17,4 +17,33 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
-      - run: npm run check:auth
+      # check:auth probes a live dev server and exits 2 when none is running.
+      # CI has no preview, so serve the committed app-env on a throwaway port
+      # and require that file to keep sign-in off. Do not change the CLI:
+      # a missing server must stay exit 2.
+      - name: Auth stays off
+        run: |
+          node --input-type=module <<'EOF' &
+          import { createServer } from "node:http";
+          import { readFileSync } from "node:fs";
+          const body = readFileSync(".grok/app-env.json");
+          createServer((req, res) => {
+            const path = (req.url || "").split("?")[0];
+            if (req.method === "GET" && path === "/__app-env") {
+              res.writeHead(200, { "content-type": "application/json" });
+              res.end(body);
+              return;
+            }
+            res.writeHead(404);
+            res.end();
+          }).listen(8099, "127.0.0.1");
+          EOF
+          ok=0
+          for i in $(seq 1 25); do
+            curl -sf http://127.0.0.1:8099/__app-env >/dev/null && ok=1 && break
+            sleep 0.2
+          done
+          test "$ok" = 1
+          node scripts/check-auth-invariant.mjs --dev-url http://127.0.0.1:8099
+          node --input-type=module -e "import { buildAuthEnabled } from './scripts/check-auth-invariant.mjs'; if (buildAuthEnabled() !== false) { console.error('sign-in must stay off'); process.exit(1); } console.log('[auth-invariant] committed app-env: sign-in off');"
+
