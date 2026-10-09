@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T02:57:43.899Z",
+  "generatedAt": "2026-10-09T11:56:39.885Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 168,
@@ -29,6 +29,19 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0.833
+    },
+    {
+      "team": "South Florida Bulls",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 2,
+      "misses": 4,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-08T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 6,
+      "rate": 0.333
     },
     {
       "team": "Alabama Crimson Tide",
@@ -159,19 +172,6 @@
       "games": 12,
       "upcoming": 6,
       "rate": 0.8
-    },
-    {
-      "team": "South Florida Bulls",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 2,
-      "misses": 3,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-03T23:30:00.000Z",
-      "games": 12,
-      "upcoming": 7,
-      "rate": 0.4
     },
     {
       "team": "Texas Tech Red Raiders",
@@ -473,6 +473,19 @@
       "rate": 0.375
     },
     {
+      "team": "South Alabama Jaguars",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 3,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-08T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 6,
+      "rate": 0.75
+    },
+    {
       "team": "South Carolina Gamecocks",
       "league": "NCAAF",
       "n": 4,
@@ -677,7 +690,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-04T00:00:00.000Z",
       "games": 12,
-      "upcoming": 7,
+      "upcoming": 6,
       "rate": 0.667
     },
     {
@@ -744,6 +757,19 @@
       "games": 12,
       "upcoming": 7,
       "rate": 0.667
+    },
+    {
+      "team": "Dallas Cowboys",
+      "league": "NFL",
+      "n": 3,
+      "hits": 1,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-09T00:15:00.000Z",
+      "games": 17,
+      "upcoming": 12,
+      "rate": 0.333
     },
     {
       "team": "Detroit Lions",
@@ -1149,19 +1175,6 @@
       "rate": 0.333
     },
     {
-      "team": "South Alabama Jaguars",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-03T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 7,
-      "rate": 0.667
-    },
-    {
       "team": "Syracuse Orange",
       "league": "NCAAF",
       "n": 3,
@@ -1184,7 +1197,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-03T23:00:00.000Z",
       "games": 12,
-      "upcoming": 6,
+      "upcoming": 5,
       "rate": 0.333
     },
     {
@@ -1342,19 +1355,6 @@
       "games": 11,
       "upcoming": 6,
       "rate": 1
-    },
-    {
-      "team": "Dallas Cowboys",
-      "league": "NFL",
-      "n": 2,
-      "hits": 1,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-09-20T20:25:00.000Z",
-      "games": 17,
-      "upcoming": 13,
-      "rate": 0.5
     },
     {
       "team": "Delaware Fightin Blue Hens",
@@ -1613,7 +1613,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-27T20:05:00.000Z",
       "games": 17,
-      "upcoming": 13,
+      "upcoming": 12,
       "rate": 0
     },
     {
