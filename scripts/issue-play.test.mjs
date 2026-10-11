@@ -3,7 +3,7 @@ import test from "node:test";
 import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { issuePlay, parseIssueArgs } from "./issue-play.mjs";
+import { issuePlay, parseIssueArgs, resolveSide } from "./issue-play.mjs";
 
 const FUTURE = "2027-01-10T18:00:00.000Z";
 const PAST = "2026-09-01T18:00:00.000Z";
@@ -70,6 +70,64 @@ function fixtureRoot(row = watchRow()) {
 function readBoard(root, rel) {
   return JSON.parse(readFileSync(join(root, rel), "utf8"));
 }
+
+test("Home with a trailing space is the home club", () => {
+  const parsed = parseIssueArgs(["--event", "evt-test-1", "--side", "Home ", "--note", "why"]);
+  assert.equal(parsed.error, undefined);
+  assert.equal(parsed.side, "Home");
+  const root = fixtureRoot();
+  const result = issuePlay({
+    event: "evt-test-1",
+    side: "Home ",
+    note: "capital H and a space",
+    root,
+    now: NOW,
+  });
+  assert.equal(result.ok, true, result.error);
+  const src = readBoard(root, "src/data/board.json");
+  const ledger = readBoard(root, "src/data/ledger.json");
+  const pubLedger = readBoard(root, "public/data/ledger.json");
+  assert.equal(src.issuedPlays[0].approvedSide, "home");
+  assert.equal(src.issuedPlays[0].sideTeam, "Kansas City Chiefs");
+  assert.equal(src.watch.length, 0);
+  assert.equal(ledger.open[0].sideTeam, "Kansas City Chiefs");
+  assert.equal(ledger.open[0].result, "OPEN");
+  assert.equal(ledger.regular.ats.n, 0);
+  assert.equal(JSON.stringify(ledger.open), JSON.stringify(pubLedger.open));
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("a watched club name resolves to that side", () => {
+  const row = watchRow();
+  assert.equal(resolveSide("Kansas City Chiefs", row), "home");
+  assert.equal(resolveSide("Buffalo Bills", row), "away");
+  const root = fixtureRoot();
+  const result = issuePlay({
+    event: "evt-test-1",
+    side: "Buffalo Bills",
+    note: "away club by name",
+    root,
+    now: NOW,
+  });
+  assert.equal(result.ok, true, result.error);
+  assert.equal(readBoard(root, "src/data/board.json").issuedPlays[0].approvedSide, "away");
+  rmSync(root, { recursive: true, force: true });
+});
+
+test("a side that is neither home, away, nor a club is refused", () => {
+  const root = fixtureRoot();
+  const result = issuePlay({
+    event: "evt-test-1",
+    side: "maybe",
+    note: "unclear",
+    root,
+    now: NOW,
+  });
+  assert.equal(result.ok, false);
+  assert.match(result.error, /must be home or away/);
+  assert.equal(readBoard(root, "src/data/board.json").issuedPlays.length, 0);
+  rmSync(root, { recursive: true, force: true });
+});
 
 test("refuse-without-side", () => {
   const parsed = parseIssueArgs(["--event", "evt-test-1", "--note", "why"]);

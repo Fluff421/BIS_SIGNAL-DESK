@@ -59,7 +59,9 @@ function RowCard({ w, onOpen }: { w: WatchRow; onOpen: () => void }) {
       </p>
       <p className="mt-1 font-mono text-[11px] text-muted">{publicLeanLine(w.publicBetting)}</p>
       <p className="mt-2 text-xs text-subtle">
-        {w.dataClass === "ISSUED" ? "Issued play." : "Open for gate audit. Not an issued play."}
+        {w.dataClass === "ISSUED"
+          ? `Issued play${w.sideTeam ? `: ${w.sideTeam}` : ""}.`
+          : "Watched. Open the card to issue one side as a play."}
       </p>
     </button>
   );
@@ -73,14 +75,16 @@ function BoardPage() {
   const [q, setQ] = useState("");
   const [sort, setSort] = useState<"edge" | "kick" | "books">("kick");
   const [open, setOpen] = useState<WatchRow | null>(null);
+  const [moved, setMoved] = useState<WatchRow[]>([]);
 
   const rows = useMemo(() => {
     let list: WatchRow[] = [];
-    if (band === "watch") list = [...deskBoard.watch];
-    else if (band === "issued") list = [...(deskBoard.issuedPlays as WatchRow[])];
+    const movedIds = new Set(moved.map((r) => r.eventId).filter(Boolean));
+    if (band === "watch") list = [...deskBoard.watch].filter((r) => !movedIds.has(r.eventId || ""));
+    else if (band === "issued") list = [...(deskBoard.issuedPlays as WatchRow[]), ...moved];
     else if (band === "library") list = [...(deskBoard.library ?? [])];
     else {
-      list = [...(deskBoard.observe ?? deskBoard.watch)];
+      list = [...(deskBoard.observe ?? deskBoard.watch)].filter((r) => !movedIds.has(r.eventId || ""));
       if (hideNoise) list = list.filter((r) => r.dataClass !== "HIGH_NOISE");
       if (hideStale) list = list.filter((r) => r.dataClass !== "STALE_FPI");
     }
@@ -103,7 +107,7 @@ function BoardPage() {
       if (sort === "books") return (b.nBooks ?? 0) - (a.nBooks ?? 0);
       return Number(b.edge) - Number(a.edge);
     });
-  }, [band, hideStale, hideNoise, league, q, sort]);
+  }, [band, hideStale, hideNoise, league, q, sort, moved]);
 
   const groups = useMemo(() => {
     const map = new Map<string, WatchRow[]>();
@@ -144,7 +148,7 @@ function BoardPage() {
             [
               ["slate", `Research slate (${c.observe})`],
               ["watch", `Issuance band (${c.watch})`],
-              ["issued", `Issued (${c.issued ?? deskBoard.issuedPlays.length})`],
+              ["issued", `Issued (${(c.issued ?? deskBoard.issuedPlays.length) + moved.length})`],
               ["library", `Recent finals (${deskBoard.library?.length ?? 0})`],
             ] as const
           ).map(([id, label]) => (
@@ -224,7 +228,16 @@ function BoardPage() {
       </section>
 
       {open ? (
-        <MatchupSheet row={open} issued={band === "issued"} onClose={() => setOpen(null)} />
+        <MatchupSheet
+          row={open}
+          issued={band === "issued" || open.dataClass === "ISSUED"}
+          onClose={() => setOpen(null)}
+          onIssued={(row) => {
+            setMoved((prev) => (prev.some((r) => r.eventId === row.eventId) ? prev : [...prev, row]));
+            setOpen(row);
+            setBand("issued");
+          }}
+        />
       ) : null}
     </div>
   );

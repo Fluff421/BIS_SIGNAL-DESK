@@ -84,6 +84,9 @@ export type WatchRow = {
   homeAbbr?: string;
   awayAbbr?: string;
   anId?: string;
+  approvedSide?: string;
+  sideTeam?: string;
+  issueNote?: string;
 };
 
 export type AlignedRow = {
@@ -116,6 +119,18 @@ export const deskLedger = ledger as typeof ledger & {
     totals: { hits: number; misses: number; pushes: number; n: number; rate: number | null };
   };
   graded: unknown[];
+  open?: Array<{
+    eventId?: string;
+    league?: string;
+    kick?: string;
+    away?: string;
+    home?: string;
+    sideTeam?: string;
+    approvedSide?: string;
+    issueNote?: string;
+    result?: string;
+    marketHome?: number | null;
+  }>;
   target: { ats: number; minN: number; status: string };
   priorLogs: { place: string; found: string }[];
 };

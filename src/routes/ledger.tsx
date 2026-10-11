@@ -15,6 +15,7 @@ function LedgerPage() {
   const n = deskLedger.regular.ats.n;
   const pct = Math.min(100, (n / toward) * 100);
   const researchRows = deskResearch.rows ?? [];
+  const openPlays = deskLedger.open ?? [];
 
   return (
     <div className="flex flex-col gap-8">
@@ -60,6 +61,29 @@ function LedgerPage() {
         <p className="mt-2 font-mono text-xs text-subtle">
           {n} / {toward} graded issued sides · play threshold: {deskModel.playThreshold}
         </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 font-display text-xl">Open issued plays</h3>
+        {openPlays.length === 0 ? (
+          <p className="rounded-xl border border-border bg-surface px-4 py-6 text-sm text-muted">
+            None yet. Issuing a watched game writes it here before the final. It does not change the 0–0–0 issued ATS.
+          </p>
+        ) : (
+          <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
+            {openPlays.map((r) => (
+              <li key={r.eventId || `${r.kick}-${r.home}`} className="px-4 py-3">
+                <p className="text-sm">
+                  {r.away} @ {r.home}
+                </p>
+                <p className="mt-1 font-mono text-[11px] text-subtle">
+                  Play: {r.sideTeam || r.approvedSide} · {r.league} · {r.kick ? fmtKickLong(r.kick) : ""} · {r.result || "OPEN"}
+                </p>
+                {r.issueNote ? <p className="mt-1 text-sm text-muted">{r.issueNote}</p> : null}
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
 
       <section>

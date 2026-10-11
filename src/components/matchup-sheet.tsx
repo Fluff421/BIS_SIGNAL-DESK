@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ClassBadge } from "@/components/class-badge";
 import { TeamMark } from "@/components/team-mark";
 import { EdgeMeter } from "@/components/edge-meter";
@@ -16,6 +16,7 @@ import {
   type WatchRow,
 } from "@/lib/desk";
 import { kickMs } from "@/lib/gates";
+import { issueWatchedPlay } from "@/lib/issue-desk";
 
 function unknown(v: unknown) {
   if (v == null || v === "") return "unknown";
@@ -26,10 +27,12 @@ export function MatchupSheet({
   row,
   onClose,
   issued = false,
+  onIssued,
 }: {
   row: WatchRow;
   onClose: () => void;
   issued?: boolean;
+  onIssued?: (row: WatchRow) => void;
 }) {
   const gate = gateForRow(row);
   const wx = weatherFor(row.home);
@@ -41,13 +44,10 @@ export function MatchupSheet({
   const future = kick != null && kick > Date.now();
   const canClick = gate.allHardGreen && future && !issued;
   const [note, setNote] = useState("");
-  const [picked, setPicked] = useState<"home" | "away" | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [done, setDone] = useState<{ team: string; matchup: string } | null>(null);
   const eventId = row.eventId || "";
-  const cmd = useMemo(() => {
-    if (!picked) return "";
-    const n = note.trim() || "<required note>";
-    return `npm run issue:play -- --event "${eventId}" --side ${picked} --note "${n.replace(/"/g, '\\"')}"`;
-  }, [eventId, note, picked]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -57,9 +57,31 @@ export function MatchupSheet({
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  function choose(side: "home" | "away") {
-    if (!canClick || !note.trim()) return;
-    setPicked(side);
+  async function choose(side: "home" | "away") {
+    if (!canClick || !note.trim() || busy) return;
+    setBusy(true);
+    setError("");
+    try {
+      const result = await issueWatchedPlay({
+        data: { event: eventId, side, note: note.trim() },
+      });
+      if (!result.ok) {
+        setError(result.error);
+        return;
+      }
+      setDone({ team: result.team, matchup: result.matchup });
+      onIssued?.({
+        ...row,
+        dataClass: "ISSUED",
+        approvedSide: result.side,
+        sideTeam: result.team,
+        issueNote: note.trim(),
+      } as WatchRow);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not issue this play.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   return (
@@ -199,63 +221,49 @@ export function MatchupSheet({
           ))}
         </ul>
 
-        {issued ? (
-          <p className="mt-5 rounded-lg bg-elevated px-3 py-3 text-sm text-muted">
-            Already issued. This card is not a WATCH candidate.
+        {issued || done ? (
+          <p className="mt-5 rounded-lg bg-elevated px-3 py-3 text-sm text-fg">
+            Issued play{done ? `: ${done.team}` : ""}. {done ? `${done.matchup} moved from watched to the Issued band and the open ledger.` : "This card is no longer a watched candidate."} Issued ATS stays 0–0–0 until the game is graded.
           </p>
         ) : (
           <section className="mt-5 rounded-lg border border-border bg-elevated p-4">
-            <h3 className="font-display text-lg">Human issue</h3>
+            <h3 className="font-display text-lg">Issue this watched game</h3>
             <p className="mt-1 text-sm text-muted">
-              A click here does not write the ledger. The source of truth is{" "}
-              <span className="font-mono text-xs">issue:play</span> or the Issue play Action.
+              {row.away} at {row.home}. A tap writes the side onto the issued board and the open ledger. It is not graded yet.
             </p>
             <label className="mt-3 block text-sm">
               Note (required)
               <textarea
                 value={note}
-                onChange={(e) => {
-                  setNote(e.target.value);
-                  setPicked(null);
-                }}
+                onChange={(e) => setNote(e.target.value)}
                 rows={3}
+                placeholder="Why this side, before kickoff"
                 className="mt-1 min-h-11 w-full rounded-sm border border-border bg-surface px-3 py-2 text-sm text-fg"
               />
             </label>
-            <div className="mt-3 grid grid-cols-2 gap-2">
+            <div className="mt-3 grid grid-cols-1 gap-2">
               <Button
                 variant="outline"
-                disabled={!canClick || !note.trim()}
+                disabled={!canClick || !note.trim() || busy}
                 onClick={() => choose("away")}
               >
-                Away
+                {busy ? "Issuing…" : `Issue ${row.away}`}
               </Button>
               <Button
-                variant="outline"
-                disabled={!canClick || !note.trim()}
+                disabled={!canClick || !note.trim() || busy}
                 onClick={() => choose("home")}
               >
-                Home
+                {busy ? "Issuing…" : `Issue ${row.home}`}
               </Button>
             </div>
             {!canClick ? (
               <p className="mt-3 text-sm text-muted">
-                Home / Away stay disabled until every hard gate is green and kickoff is still ahead.
-                n ≥ 30 is not a pre-issue gate.
+                Issue stays off until every hard gate is green and kickoff is still ahead. n ≥ 30 does not block the first play.
               </p>
-            ) : null}
-            {picked ? (
-              <div className="mt-3 space-y-2 text-sm">
-                <p className="font-mono text-xs text-watch break-all">{cmd}</p>
-                <p className="text-muted">
-                  GitHub Action inputs: event={eventId} · side={picked} · note={note.trim()}
-                </p>
-                <p className="text-muted">
-                  This preview cannot commit to the repo. Run the command or Actions → Issue play.
-                  React state is not Issued.
-                </p>
-              </div>
-            ) : null}
+            ) : (
+              <p className="mt-3 text-sm text-subtle">Watched, and ready. Pick the club you are approving.</p>
+            )}
+            {error ? <p className="mt-3 text-sm text-miss">{error}</p> : null}
           </section>
         )}
 

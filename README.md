@@ -61,7 +61,7 @@ Four GitHub Actions keep the tape live. You do not need to run scripts on your m
 - **Thursday–Sunday** — universe job runs four times a day. Public lean fills in. WagerTalk is useful on Sundays.
 - **After each final** — ESPN overlay grades the stored consensus as RESEARCH. Club tapes update. Issued ledger does not.
 - **Monday** — read Digest. Note money-vs-tickets flags that aged into results. Do not quote research ATS as 75%.
-- **When you are ready to issue** — pick a WATCH row with every hard gate green, then record it **before kick** with `issue:play` or Actions → Issue play. Do not hand-edit JSON. The 75% clock starts at issued n = 1, and is only discussable at issued n ≥ 30.
+- **When you are ready to issue** — open a watched game, write a note, and tap the club. That writes the play onto the issued board and the open ledger. The same path is Actions → Issue play (`event`, `side`, `note`). `Home` with a space is accepted. Do not hand-edit JSON. Issued ATS stays 0–0–0 until that play is graded. 75% is only discussable at issued n ≥ 30.
 
 ### What will improve as the year progresses
 

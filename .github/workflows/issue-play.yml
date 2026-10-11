@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       side:
-        description: home or away
+        description: home or away. "Home" and the club name also work.
         required: true
         type: string
       note:
