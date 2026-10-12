@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "email": "wmcdaniel@gmail.com",
   "githubAttempt": "Fluff421/custom-claude-skills/signal-desk — write blocked (403). Reconnect GitHub with repo contents write.",
   "priorLogs": [
@@ -19,11 +19,11 @@
   ],
   "regular": {
     "ats": {
-      "hits": 0,
+      "hits": 1,
       "misses": 0,
       "pushes": 0,
-      "n": 0,
-      "rate": null
+      "n": 1,
+      "rate": 1
     },
     "ml": {
       "hits": 0,
@@ -43,9 +43,29 @@
   "target": {
     "ats": 0.75,
     "minN": 30,
-    "status": "Not measurable. n=0 (need 30). Do not quote a 75% rate."
+    "status": "Not measurable. n=1 (need 30). Do not quote a 75% rate."
   },
-  "graded": [],
+  "graded": [
+    {
+      "game_id": "an-290909",
+      "week": 5,
+      "league": "NFL",
+      "kick": "2026-10-11T17:00:00.000Z",
+      "away": "Indianapolis Colts",
+      "home": "Pittsburgh Steelers",
+      "marketHome": -2.5,
+      "modelHome": 1.7,
+      "edge": 4.2,
+      "edgeTo": "Pittsburgh Steelers",
+      "approvedSide": "home",
+      "actualMargin": 12,
+      "result": "WIN",
+      "coverBy": 9.5,
+      "sampleWeight": 1,
+      "class": "ISSUED",
+      "note": "issued-then-graded"
+    }
+  ],
   "open": [
     {
       "eventId": "an-290909",
