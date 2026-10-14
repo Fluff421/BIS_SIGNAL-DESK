@@ -113,25 +113,28 @@ export const deskBoard = board as {
   source: string;
   counts: Record<string, number>;
 };
-export const deskLedger = ledger as typeof ledger & {
+export type OpenPlay = {
+  eventId?: string;
+  game_id?: string;
+  league?: string;
+  kick?: string;
+  away?: string;
+  home?: string;
+  sideTeam?: string;
+  approvedSide?: string;
+  issueNote?: string;
+  result?: string;
+  marketHome?: number | null;
+};
+
+export const deskLedger = ledger as Omit<typeof ledger, "open"> & {
   regular: {
     ats: { hits: number; misses: number; pushes: number; n: number; rate: number | null };
     ml: { hits: number; misses: number; pushes: number; n: number; rate: number | null };
     totals: { hits: number; misses: number; pushes: number; n: number; rate: number | null };
   };
   graded: unknown[];
-  open?: Array<{
-    eventId?: string;
-    league?: string;
-    kick?: string;
-    away?: string;
-    home?: string;
-    sideTeam?: string;
-    approvedSide?: string;
-    issueNote?: string;
-    result?: string;
-    marketHome?: number | null;
-  }>;
+  open?: OpenPlay[];
   target: { ats: number; minN: number; status: string };
   priorLogs: { place: string; found: string }[];
 };
