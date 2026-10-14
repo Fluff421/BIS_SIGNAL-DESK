@@ -99,7 +99,9 @@ Manual run: Actions → Refresh Universe → Run workflow.
 
 ## How to issue a side
 
-Nothing is a play until a human records one side on one WATCH row **before kickoff**. The browser cannot persist Issued. Do not hand-edit JSON.
+Nothing is a play until you approve one side on one watched game **before kickoff**. On the Board, open a watched card, write the note, and tap the club. That writes the issued board and the open ledger. Do not hand-edit JSON.
+
+The Issue play Action uses a **home / away** choice, so `Home` with a capital letter cannot fail the run. `home` is the home club. `away` is the away club. It still refuses a missing note, a row that is not WATCH, a red hard gate, a past kickoff, and a second issue of the same event. It commits the board and the ledger.
 
 ```bash
 npm run issue:play -- --event "<eventId>" --side home|away --note "why this side"
@@ -107,7 +109,7 @@ npm run issue:play -- --event "<eventId>" --side home|away --note "why this side
 
 Or Actions → **Issue play** → inputs `event`, `side`, `note`.
 
-The script refuses a missing arg, a row that is not WATCH, any red hard gate, a past kickoff, and a second issue of the same event. It writes only `src/data/board.json` and `public/data/board.json`.
+The script refuses a missing arg, a row that is not WATCH, any red hard gate, a past kickoff, and a second issue of the same event. It writes `src/data/board.json`, `public/data/board.json`, and both ledger files.
 
 n ≥ 30 is only the gate for discussing 75%. It does not block issuing side 1.
 

@@ -143,10 +143,25 @@ export function applyGrades({ board, ledger, research }) {
     researchExisting.add(key);
   }
 
+  const gradedIds = new Set(
+    nextGraded.map((g) => String(g.game_id || "")).filter(Boolean),
+  );
+  const open = (Array.isArray(ledger.open) ? ledger.open : []).filter((row) => {
+    const id = String(row?.eventId || row?.game_id || "");
+    return !id || !gradedIds.has(id);
+  });
+  const issuedPlaysNext = issuedPlays.map((row) => {
+    const id = String(row?.eventId || "");
+    const graded = nextGraded.find((g) => String(g.game_id || "") === id);
+    if (!graded) return row;
+    return { ...row, result: graded.result, dataClass: "ISSUED" };
+  });
+
   const ats = recomputeAts(nextGraded);
   const nextLedger = {
     ...ledger,
     graded: nextGraded,
+    open,
     regular: {
       ...(ledger.regular || {}),
       ats,
@@ -176,7 +191,7 @@ export function applyGrades({ board, ledger, research }) {
     generatedAt: new Date().toISOString(),
   };
 
-  return { ledger: nextLedger, research: nextResearchLedger };
+  return { ledger: nextLedger, research: nextResearchLedger, issuedPlays: issuedPlaysNext };
 }
 
 export function gradeResults({ root = DEFAULT_ROOT } = {}) {
@@ -190,6 +205,11 @@ export function gradeResults({ root = DEFAULT_ROOT } = {}) {
     ats: { hits: 0, misses: 0, pushes: 0, n: 0, rate: null },
   });
   const next = applyGrades({ board, ledger, research });
+  if (Array.isArray(next.issuedPlays)) {
+    board.issuedPlays = next.issuedPlays;
+    writeJsonAtomic(join(root, "src/data/board.json"), board, { root });
+    writeJsonAtomic(join(root, "public/data/board.json"), board, { root });
+  }
   writeJsonAtomic(join(root, "src/data/ledger.json"), next.ledger, { root });
   writeJsonAtomic(join(root, "public/data/ledger.json"), next.ledger, { root });
   writeJsonAtomic(join(root, "src/data/research-ledger.json"), next.research, { root });

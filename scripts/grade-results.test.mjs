@@ -63,6 +63,21 @@ test("issued finals grade into the issued book only", () => {
   assert.equal(out.research.ats.n, 1);
 });
 
+test("a graded issued play leaves the open ledger", () => {
+  const out = applyGrades({
+    board: { issuedPlays: [issuedRow], watch: [], highNoise: [], staleFpi: [] },
+    ledger: {
+      regular: { ats: { hits: 0, misses: 0, pushes: 0, n: 0, rate: null } },
+      graded: [],
+      open: [{ eventId: "iss-1", result: "OPEN", sideTeam: "Home Pro" }],
+    },
+    research: { rows: [], ats: { hits: 0, misses: 0, pushes: 0, n: 0, rate: null } },
+  });
+  assert.equal(out.ledger.open.length, 0);
+  assert.equal(out.issuedPlays[0].result, "WIN");
+  assert.equal(out.ledger.graded[0].result, "WIN");
+});
+
 test("contaminated auto-graded watch rows are dropped from issued ATS", () => {
   const out = applyGrades({
     board: { issuedPlays: [], watch: [watchRow], highNoise: [], staleFpi: [] },

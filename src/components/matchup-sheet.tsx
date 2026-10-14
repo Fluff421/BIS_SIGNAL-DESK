@@ -46,7 +46,7 @@ export function MatchupSheet({
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [done, setDone] = useState<{ team: string; matchup: string } | null>(null);
+  const [done, setDone] = useState<{ team: string; matchup: string; pushed: boolean } | null>(null);
   const eventId = row.eventId || "";
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export function MatchupSheet({
         setError(result.error);
         return;
       }
-      setDone({ team: result.team, matchup: result.matchup });
+      setDone({ team: result.team, matchup: result.matchup, pushed: result.pushed });
       onIssued?.({
         ...row,
         dataClass: "ISSUED",
@@ -223,7 +223,13 @@ export function MatchupSheet({
 
         {issued || done ? (
           <p className="mt-5 rounded-lg bg-elevated px-3 py-3 text-sm text-fg">
-            Issued play{done ? `: ${done.team}` : ""}. {done ? `${done.matchup} moved from watched to the Issued band and the open ledger.` : "This card is no longer a watched candidate."} Issued ATS stays 0–0–0 until the game is graded.
+            Issued play: {done?.team || row.sideTeam || "side recorded"}.{" "}
+            {done
+              ? `${done.matchup} left Watched and is now on the Issued band and the open ledger.`
+              : "This game already left Watched."}{" "}
+            {row.result && row.result !== "OPEN"
+              ? `Graded ${row.result}.`
+              : "It stays open until the final is graded. Issued ATS does not move before that."}
           </p>
         ) : (
           <section className="mt-5 rounded-lg border border-border bg-elevated p-4">

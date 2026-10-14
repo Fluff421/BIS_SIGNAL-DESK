@@ -66,21 +66,5 @@
       "note": "issued-then-graded"
     }
   ],
-  "open": [
-    {
-      "eventId": "an-290909",
-      "game_id": "an-290909",
-      "league": "NFL",
-      "kick": "2026-10-11T17:00:00.000Z",
-      "away": "Indianapolis Colts",
-      "home": "Pittsburgh Steelers",
-      "approvedSide": "home",
-      "sideTeam": "Pittsburgh Steelers",
-      "marketHome": -2.5,
-      "issuedAt": "2026-10-11T00:13:53.546Z",
-      "issueNote": "I agree, based on the situation, Divisional game, and home field advantage",
-      "result": "OPEN",
-      "class": "ISSUED"
-    }
-  ]
+  "open": []
 }

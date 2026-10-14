@@ -71,7 +71,7 @@ function Home() {
           after kick — the library the 75% issued target will eventually draw from.
         </p>
         <p className="mt-3 text-sm text-muted">
-          Issued n stays 0 until a human approves a cohort. Research n = {deskResearch.ats.n} is
+          Issued record is {ats.hits}–{ats.misses}–{ats.pushes} (n={ats.n}). A play exists only after you approve one watched side. Research n = {deskResearch.ats.n} is
           diagnostic. Ticket % on {cov.ticketPct ?? 0} games, money/handle % on {cov.moneyPct ?? 0}.
         </p>
       </section>
@@ -81,10 +81,10 @@ function Home() {
       <section>
         <h2 className="mb-3 font-display text-xl">How a row becomes a play</h2>
         <p className="mb-4 max-w-2xl text-sm leading-relaxed text-muted">
-          The desk is parked on research. Nothing on this board is a play until a human
-          approves one side on one WATCH row before kickoff. n ≥ 30 is only the gate for
+          The watch band is research. A game becomes a play only when you approve one side
+          on one watched row before kickoff. n ≥ 30 is only the gate for
           discussing 75% — it does not block issuing side 1. Watching the whole slate fills
-          the library that issuance will eventually draw from.
+          the library that issuance draws from.
         </p>
         <Pipeline active="research" />
       </section>

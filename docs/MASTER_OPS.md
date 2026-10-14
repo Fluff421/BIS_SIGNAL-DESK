@@ -1,12 +1,12 @@
 # BIS Signal Desk — Master Operations
 
 **Target:** 75% ATS after n ≥ 30 graded **issued** regular-season sides.
-**Honesty:** Issued ATS starts at 0-0-0. Research grades are diagnostic only. Automation never promotes a row.
+**Honesty:** Issued ATS counts only human-approved sides after the final. Research grades are diagnostic only. Automation never promotes a row.
 
 ## Product contract
 
 - Nothing is a play until a human explicitly approves one side on one WATCH row **before kickoff**.
-- `issue:play` / the Issue play Action is the source of truth. The browser cannot persist Issued.
+- The Board click and the Issue play Action both run `issue:play`. A click writes the issued board and the open ledger. The Action commits those files.
 - WATCH is the issuance band. HIGH_NOISE and STALE_FPI stay suppressed.
 - Research grades must never be copied into the issued record.
 - n ≥ 30 graded issued sides is only the gate for **discussing** 75%. It does not block issuing side 1.
@@ -67,7 +67,7 @@ npm run issue:play -- --event "<eventId>" --side home|away --note "why this side
 
 Or Actions → **Issue play** → `event`, `side`, `note`.
 
-The script refuses missing args, a row not in WATCH, a red hard gate, a past kickoff, and a second issue of the same eventId. It writes only `src/data/board.json` and `public/data/board.json`.
+The script refuses missing args, a row not in WATCH, a red hard gate, a past kickoff, and a second issue of the same eventId. It writes `src/data/board.json`, `public/data/board.json`, and both ledger files. A graded final leaves the open list and updates issued ATS.
 
 ## GitHub Actions
 
@@ -77,6 +77,6 @@ The script refuses missing args, a row not in WATCH, a red hard gate, a past kic
 | `refresh-universe.yml` | 4× daily + manual | library / board / public lean |
 | `refresh-board.yml` | 4× daily + manual | FPI snapshot + issued ledger |
 | `weekly-digest.yml` | Monday + manual | digest |
-| `issue-play.yml` | **manual only** | the two board files |
+| `issue-play.yml` | **manual only** | board and ledger |
 
 Never commit API keys.

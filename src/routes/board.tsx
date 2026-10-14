@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { deskBoard, fmtKickLong, fmtSpread, publicLeanLine, type WatchRow } from "@/lib/desk";
 import { ClassBadge } from "@/components/class-badge";
@@ -60,7 +60,9 @@ function RowCard({ w, onOpen }: { w: WatchRow; onOpen: () => void }) {
       <p className="mt-1 font-mono text-[11px] text-muted">{publicLeanLine(w.publicBetting)}</p>
       <p className="mt-2 text-xs text-subtle">
         {w.dataClass === "ISSUED"
-          ? `Issued play${w.sideTeam ? `: ${w.sideTeam}` : ""}.`
+          ? `Issued play${w.sideTeam ? `: ${w.sideTeam}` : ""}${
+              w.result && w.result !== "OPEN" ? ` · graded ${w.result}` : " · open until the final"
+            }.`
           : "Watched. Open the card to issue one side as a play."}
       </p>
     </button>
@@ -68,7 +70,7 @@ function RowCard({ w, onOpen }: { w: WatchRow; onOpen: () => void }) {
 }
 
 function BoardPage() {
-  const [band, setBand] = useState<"slate" | "watch" | "issued" | "library">("slate");
+  const [band, setBand] = useState<"slate" | "watch" | "issued" | "library">("watch");
   const [hideStale, setHideStale] = useState(true);
   const [hideNoise, setHideNoise] = useState(true);
   const [league, setLeague] = useState<"ALL" | "NCAAF" | "NFL">("ALL");
@@ -76,15 +78,31 @@ function BoardPage() {
   const [sort, setSort] = useState<"edge" | "kick" | "books">("kick");
   const [open, setOpen] = useState<WatchRow | null>(null);
   const [moved, setMoved] = useState<WatchRow[]>([]);
+  const [boardLive, setBoardLive] = useState(deskBoard);
+
+  useEffect(() => {
+    let stop = false;
+    fetch("/data/board.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => {
+        if (!stop && j?.watch && j?.issuedPlays) setBoardLive(j);
+      })
+      .catch(() => {});
+    return () => {
+      stop = true;
+    };
+  }, [moved.length]);
+
+  const board = boardLive;
 
   const rows = useMemo(() => {
     let list: WatchRow[] = [];
     const movedIds = new Set(moved.map((r) => r.eventId).filter(Boolean));
-    if (band === "watch") list = [...deskBoard.watch].filter((r) => !movedIds.has(r.eventId || ""));
-    else if (band === "issued") list = [...(deskBoard.issuedPlays as WatchRow[]), ...moved];
-    else if (band === "library") list = [...(deskBoard.library ?? [])];
+    if (band === "watch") list = [...board.watch].filter((r) => !movedIds.has(r.eventId || ""));
+    else if (band === "issued") list = [...(board.issuedPlays as WatchRow[]), ...moved];
+    else if (band === "library") list = [...(board.library ?? [])];
     else {
-      list = [...(deskBoard.observe ?? deskBoard.watch)].filter((r) => !movedIds.has(r.eventId || ""));
+      list = [...(board.observe ?? board.watch)].filter((r) => !movedIds.has(r.eventId || ""));
       if (hideNoise) list = list.filter((r) => r.dataClass !== "HIGH_NOISE");
       if (hideStale) list = list.filter((r) => r.dataClass !== "STALE_FPI");
     }
@@ -107,7 +125,7 @@ function BoardPage() {
       if (sort === "books") return (b.nBooks ?? 0) - (a.nBooks ?? 0);
       return Number(b.edge) - Number(a.edge);
     });
-  }, [band, hideStale, hideNoise, league, q, sort, moved]);
+  }, [band, hideStale, hideNoise, league, q, sort, moved, board]);
 
   const groups = useMemo(() => {
     const map = new Map<string, WatchRow[]>();
@@ -120,16 +138,16 @@ function BoardPage() {
     return [...map.entries()];
   }, [rows]);
 
-  const c = deskBoard.counts;
+  const c = board.counts;
 
   return (
     <div className="flex flex-col gap-8">
       <div>
         <h2 className="font-display text-2xl">Board</h2>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-          Issued plays live in their own band. A WATCH card is research, not a ticket. HIGH_NOISE and
-          STALE_FPI stay suppressed. n ≥ 30 is only the gate for discussing 75% — it does not block
-          issuing side 1.
+          Watched games are the ones you can turn into a play. Open a card, write why, and tap the
+          club. That writes the side onto the Issued band and the open ledger. It is not graded
+          until the final. HIGH_NOISE and STALE_FPI stay off the play list.
         </p>
       </div>
 
@@ -147,9 +165,9 @@ function BoardPage() {
           {(
             [
               ["slate", `Research slate (${c.observe})`],
-              ["watch", `Issuance band (${c.watch})`],
-              ["issued", `Issued (${(c.issued ?? deskBoard.issuedPlays.length) + moved.length})`],
-              ["library", `Recent finals (${deskBoard.library?.length ?? 0})`],
+              ["watch", `Watched (${c.watch})`],
+              ["issued", `Issued (${(c.issued ?? board.issuedPlays.length) + moved.length})`],
+              ["library", `Recent finals (${board.library?.length ?? 0})`],
             ] as const
           ).map(([id, label]) => (
             <Button key={id} variant={band === id ? "primary" : "outline"} onClick={() => setBand(id)}>
@@ -205,11 +223,11 @@ function BoardPage() {
 
       <section>
         <h3 className="mb-3 font-mono text-xs tracking-wide text-muted uppercase">Aligned · no play</h3>
-        {deskBoard.aligned.length === 0 ? (
+        {!(board.aligned ?? []).length ? (
           <p className="text-sm text-muted">No aligned rows in this snapshot.</p>
         ) : (
           <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
-            {deskBoard.aligned.slice(0, 12).map((g) => (
+            {(board.aligned ?? []).slice(0, 12).map((g) => (
               <li
                 key={`${g.away}-${g.home}`}
                 className="flex flex-col gap-1 px-4 py-3 sm:flex-row sm:justify-between"

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { deskLedger, deskModel, deskResearch, fmtKickLong } from "@/lib/desk";
 import { wilsonInterval, fmtInterval } from "@/lib/stats";
@@ -6,16 +7,29 @@ import { ClassBadge } from "@/components/class-badge";
 export const Route = createFileRoute("/ledger")({ component: LedgerPage });
 
 function LedgerPage() {
-  const books = [
-    { label: "ATS", book: deskLedger.regular.ats },
-    { label: "Moneyline", book: deskLedger.regular.ml },
-    { label: "Totals", book: deskLedger.regular.totals },
-  ];
-  const toward = deskLedger.target.minN;
-  const n = deskLedger.regular.ats.n;
-  const pct = Math.min(100, (n / toward) * 100);
   const researchRows = deskResearch.rows ?? [];
-  const openPlays = deskLedger.open ?? [];
+  const [live, setLive] = useState(deskLedger);
+  useEffect(() => {
+    let stop = false;
+    fetch("/data/ledger.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => {
+        if (!stop && j?.regular?.ats) setLive(j);
+      })
+      .catch(() => {});
+    return () => {
+      stop = true;
+    };
+  }, []);
+  const books = [
+    { label: "ATS", book: live.regular.ats },
+    { label: "Moneyline", book: live.regular.ml },
+    { label: "Totals", book: live.regular.totals },
+  ];
+  const toward = live.target.minN;
+  const n = live.regular.ats.n;
+  const pct = Math.min(100, (n / toward) * 100);
+  const openPlays = (live.open ?? []).filter((r) => r.result !== "WIN" && r.result !== "LOSS" && r.result !== "PUSH");
 
   return (
     <div className="flex flex-col gap-8">
@@ -47,7 +61,7 @@ function LedgerPage() {
 
       <section className="rounded-xl border border-border p-5">
         <h3 className="font-display text-xl">Sample toward measurability</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted">{deskLedger.target.status}</p>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{live.target.status}</p>
         <div
           className="mt-4 h-2 overflow-hidden rounded-full bg-elevated"
           role="progressbar"
@@ -67,7 +81,7 @@ function LedgerPage() {
         <h3 className="mb-3 font-display text-xl">Open issued plays</h3>
         {openPlays.length === 0 ? (
           <p className="rounded-xl border border-border bg-surface px-4 py-6 text-sm text-muted">
-            None yet. Issuing a watched game writes it here before the final. It does not change the 0–0–0 issued ATS.
+            No open plays. Issuing a watched game writes it here until the final is graded.
           </p>
         ) : (
           <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
@@ -88,7 +102,7 @@ function LedgerPage() {
 
       <section>
         <h3 className="mb-3 font-mono text-xs tracking-wide text-muted uppercase">Issued & graded rows</h3>
-        {deskLedger.graded.length === 0 ? (
+        {(live.graded ?? []).length === 0 ? (
           <div className="rounded-xl border border-border bg-surface px-4 py-10 text-center">
             <p className="text-sm text-muted">
               Empty. No 2026 regular-season side has been issued, so nothing can be graded. Final
@@ -101,7 +115,7 @@ function LedgerPage() {
           </div>
         ) : (
           <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
-            {(deskLedger.graded as Array<Record<string, unknown>>).map((r) => (
+            {((live.graded ?? []) as Array<Record<string, unknown>>).map((r) => (
               <li
                 key={String(r.game_id || `${r.kick}-${r.away}-${r.home}`)}
                 className="flex flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
@@ -170,7 +184,7 @@ function LedgerPage() {
       <section className="rounded-xl border border-border p-5">
         <h3 className="font-display text-xl">Prior logs searched</h3>
         <ul className="mt-4 space-y-3">
-          {deskLedger.priorLogs.map((p) => (
+          {(live.priorLogs ?? []).map((p) => (
             <li key={p.place}>
               <p className="text-sm font-medium">{p.place}</p>
               <p className="text-sm text-muted">{p.found}</p>

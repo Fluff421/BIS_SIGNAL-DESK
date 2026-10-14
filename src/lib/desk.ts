@@ -87,6 +87,7 @@ export type WatchRow = {
   approvedSide?: string;
   sideTeam?: string;
   issueNote?: string;
+  result?: string;
 };
 
 export type AlignedRow = {

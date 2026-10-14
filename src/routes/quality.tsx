@@ -70,7 +70,8 @@ function QualityPage() {
           Research {deskResearch.ats.hits}–{deskResearch.ats.misses}–{deskResearch.ats.pushes} (n=
           {deskResearch.ats.n}
           {deskResearch.ats.rate != null ? ` · ${Math.round(deskResearch.ats.rate * 100)}%` : ""}) is
-          diagnostic and already past 30. Issued stays 0–0–0 until you approve a cohort. Library{" "}
+          diagnostic. Issued record is {deskLedger.regular.ats.hits}–{deskLedger.regular.ats.misses}–{deskLedger.regular.ats.pushes} (n=
+          {deskLedger.regular.ats.n}). 75% is not quotable until n=30. Library{" "}
           {c.library} / {c.teamsCovered} clubs · slate {c.observe}.
         </p>
       </section>
