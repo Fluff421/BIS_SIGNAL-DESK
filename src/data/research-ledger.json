@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-15T20:22:06.407Z",
+  "generatedAt": "2026-10-16T01:26:02.532Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 533,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 72,
+    "watchOnBoard": 71,
     "observeOnBoard": 300,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
@@ -863,8 +863,8 @@
       "dataClass": "ALIGNED",
       "publicBetsAway": 58,
       "publicBetsHome": 42,
-      "publicMoneyAway": 48,
-      "publicMoneyHome": 52,
+      "publicMoneyAway": 49,
+      "publicMoneyHome": 51,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -1638,10 +1638,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 38,
-      "publicBetsHome": 62,
-      "publicMoneyAway": 27,
-      "publicMoneyHome": 73,
+      "publicBetsAway": 39,
+      "publicBetsHome": 61,
+      "publicMoneyAway": 29,
+      "publicMoneyHome": 71,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -4263,10 +4263,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 74,
-      "publicBetsHome": 26,
-      "publicMoneyAway": 58,
-      "publicMoneyHome": 42,
+      "publicBetsAway": 75,
+      "publicBetsHome": 25,
+      "publicMoneyAway": 61,
+      "publicMoneyHome": 39,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -5229,8 +5229,8 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 75,
-      "publicBetsHome": 25,
+      "publicBetsAway": 74,
+      "publicBetsHome": 26,
       "publicMoneyAway": 79,
       "publicMoneyHome": 21,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
@@ -5819,8 +5819,8 @@
       "dataClass": "WATCH",
       "publicBetsAway": 58,
       "publicBetsHome": 42,
-      "publicMoneyAway": 48,
-      "publicMoneyHome": 52,
+      "publicMoneyAway": 49,
+      "publicMoneyHome": 51,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -8127,10 +8127,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 38,
-      "publicBetsHome": 62,
-      "publicMoneyAway": 27,
-      "publicMoneyHome": 73,
+      "publicBetsAway": 39,
+      "publicBetsHome": 61,
+      "publicMoneyAway": 29,
+      "publicMoneyHome": 71,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
