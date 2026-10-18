@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T14:38:17.509Z",
+  "generatedAt": "2026-10-18T19:27:25.696Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -898,7 +898,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-11T17:00:00.000Z",
       "games": 17,
-      "upcoming": 12,
+      "upcoming": 11,
       "rate": 0.25
     },
     {
@@ -926,6 +926,19 @@
       "games": 12,
       "upcoming": 6,
       "rate": 0.75
+    },
+    {
+      "team": "Jacksonville Jaguars",
+      "league": "NFL",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-18T13:30:00.000Z",
+      "games": 17,
+      "upcoming": 11,
+      "rate": 0.5
     },
     {
       "team": "Kansas City Chiefs",
@@ -1251,19 +1264,6 @@
       "games": 12,
       "upcoming": 6,
       "rate": 0.5
-    },
-    {
-      "team": "Jacksonville Jaguars",
-      "league": "NFL",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-11T13:30:00.000Z",
-      "games": 17,
-      "upcoming": 12,
-      "rate": 0.667
     },
     {
       "team": "Maryland Terrapins",

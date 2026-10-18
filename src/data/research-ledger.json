@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-18T14:38:12.426Z",
+  "generatedAt": "2026-10-18T19:27:20.695Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 594,
+    "researchN": 595,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 62,
-    "observeOnBoard": 261,
+    "watchOnBoard": 65,
+    "observeOnBoard": 275,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=594 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 116–124–5 (n=245)."
+    "note": "Research sample n=595 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 116–125–5 (n=246)."
   },
   "ats": {
     "hits": 304,
-    "misses": 282,
+    "misses": 283,
     "pushes": 8,
-    "n": 594,
-    "rate": 0.519
+    "n": 595,
+    "rate": 0.518
   },
   "cleanBand": {
     "hits": 116,
-    "misses": 124,
+    "misses": 125,
     "pushes": 5,
-    "n": 245,
-    "rate": 0.484,
+    "n": 246,
+    "rate": 0.482,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -9898,6 +9898,27 @@
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
+      "league": "NFL",
+      "kick": "2026-10-18T13:30:00.000Z",
+      "away": "Houston Texans",
+      "home": "Jacksonville Jaguars",
+      "side": "Jacksonville Jaguars",
+      "edgeTo": "Jacksonville Jaguars",
+      "marketHome": -2.5,
+      "modelHome": 1.6,
+      "actualMargin": -3,
+      "homePoints": 31,
+      "awayPoints": 34,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "WATCH",
+      "publicBetsAway": 50,
+      "publicBetsHome": 50,
+      "publicMoneyAway": 52,
+      "publicMoneyHome": 48,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
       "league": "NCAAF",
       "kick": "2026-10-07T00:00:00.000Z",
       "away": "Southern Miss Golden Eagles",
@@ -11867,8 +11888,8 @@
       "dataClass": "STALE_FPI",
       "publicBetsAway": 60,
       "publicBetsHome": 40,
-      "publicMoneyAway": 70,
-      "publicMoneyHome": 30,
+      "publicMoneyAway": 57,
+      "publicMoneyHome": 43,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -12466,7 +12487,7 @@
       "home": "Auburn Tigers",
       "side": "LSU Tigers",
       "edgeTo": "LSU Tigers",
-      "marketHome": 6.5,
+      "marketHome": 7,
       "modelHome": -7.1,
       "actualMargin": 41,
       "homePoints": 51,
