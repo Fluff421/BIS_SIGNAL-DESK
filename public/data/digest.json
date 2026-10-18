@@ -1,7 +1,7 @@
 {
   "week": 6,
   "season": 2026,
-  "generatedAt": "2026-10-18T01:08:02.245Z",
+  "generatedAt": "2026-10-18T09:40:48.861Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,55 +11,19 @@
     "rate": null
   },
   "helpers": [
-    "265 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 65 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 296–266–8 (n=570).",
-    "Public lean: bet/pick % on 785 games. Money/handle % on 696 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 27 finals. 156 games with a 10-pt+ divergence."
+    "261 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 67 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 303–283–8 (n=594).",
+    "Public lean: bet/pick % on 804 games. Money/handle % on 715 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 27 finals. 154 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "463 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "61 STALE_FPI and 86 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "444 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "61 STALE_FPI and 82 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
-    {
-      "league": "NCAAF",
-      "kick": "2026-10-17T23:00:00.000Z",
-      "matchup": "Arkansas Razorbacks @ Vanderbilt Commodores",
-      "edge": 4.4,
-      "edgeTo": "Vanderbilt Commodores",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -5.5,
-      "modelHome": -1.1,
-      "nBooks": 10
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-10-17T23:30:00.000Z",
-      "matchup": "Oklahoma State Cowboys @ Houston Cougars",
-      "edge": 6.2,
-      "edgeTo": "Houston Cougars",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -4,
-      "modelHome": 2.2,
-      "nBooks": 10
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-10-17T23:30:00.000Z",
-      "matchup": "Wisconsin Badgers @ UCLA Bruins",
-      "edge": 4,
-      "edgeTo": "UCLA Bruins",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": -1.5,
-      "modelHome": 2.5,
-      "nBooks": 10
-    },
     {
       "league": "NFL",
       "kick": "2026-10-18T13:30:00.000Z",
@@ -119,12 +83,48 @@
       "marketHome": -1.5,
       "modelHome": 1.8,
       "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-23T23:00:00.000Z",
+      "matchup": "Duke Blue Devils @ Virginia Cavaliers",
+      "edge": 3.3,
+      "edgeTo": "Virginia Cavaliers",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -2.5,
+      "modelHome": 0.8,
+      "nBooks": 3
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-24T16:00:00.000Z",
+      "matchup": "Baylor Bears @ Kansas Jayhawks",
+      "edge": 6.2,
+      "edgeTo": "Baylor Bears",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 2.5,
+      "modelHome": -3.7,
+      "nBooks": 3
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-24T16:00:00.000Z",
+      "matchup": "Virginia Tech Hokies @ Clemson Tigers",
+      "edge": 4.2,
+      "edgeTo": "Clemson Tigers",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -1.5,
+      "modelHome": 2.7,
+      "nBooks": 3
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 6. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 65 rows sit in the research (WATCH) band. 61 STALE_FPI and 86 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 296-266-8 (n=570) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 785 games, money/handle % on 696 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 27 scores. 156 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 296–266–8 (n=570). Issued 0. Public lean on 785 games. Money % on 696 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 27 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 6. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 67 rows sit in the research (WATCH) band. 61 STALE_FPI and 82 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 303-283-8 (n=594) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 804 games, money/handle % on 715 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 27 scores. 154 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 303–283–8 (n=594). Issued 0. Public lean on 804 games. Money % on 715 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 27 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
