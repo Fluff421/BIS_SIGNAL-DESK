@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-10-19T10:50:45.479Z",
+  "generatedAt": "2026-10-19T17:31:21.616Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 604,
+    "researchN": 606,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 60,
-    "observeOnBoard": 266,
+    "watchOnBoard": 61,
+    "observeOnBoard": 264,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=604 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 119–130–5 (n=254)."
+    "note": "Research sample n=606 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 119–130–5 (n=254)."
   },
   "ats": {
     "hits": 307,
-    "misses": 289,
+    "misses": 291,
     "pushes": 8,
-    "n": 604,
-    "rate": 0.515
+    "n": 606,
+    "rate": 0.513
   },
   "cleanBand": {
     "hits": 119,
@@ -2562,10 +2562,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 43,
-      "publicBetsHome": 57,
-      "publicMoneyAway": 54,
-      "publicMoneyHome": 46,
+      "publicBetsAway": 38,
+      "publicBetsHome": 62,
+      "publicMoneyAway": 46,
+      "publicMoneyHome": 54,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -12671,6 +12671,27 @@
     },
     {
       "league": "NCAAF",
+      "kick": "2026-10-24T16:00:00.000Z",
+      "away": "California Golden Bears",
+      "home": "SMU Mustangs",
+      "side": "SMU Mustangs",
+      "edgeTo": "SMU Mustangs",
+      "marketHome": -18.5,
+      "modelHome": 16.2,
+      "actualMargin": 10,
+      "homePoints": 34,
+      "awayPoints": 24,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "STALE_FPI",
+      "publicBetsAway": 0,
+      "publicBetsHome": 0,
+      "publicMoneyAway": 0,
+      "publicMoneyHome": 0,
+      "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
+    },
+    {
+      "league": "NCAAF",
       "kick": "2026-10-24T19:30:00.000Z",
       "away": "Oklahoma Sooners",
       "home": "Mississippi State Bulldogs",
@@ -12689,6 +12710,27 @@
       "publicMoneyAway": 0,
       "publicMoneyHome": 0,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-24T16:00:00.000Z",
+      "away": "LSU Tigers",
+      "home": "Auburn Tigers",
+      "side": "LSU Tigers",
+      "edgeTo": "LSU Tigers",
+      "marketHome": 8.5,
+      "modelHome": -7.1,
+      "actualMargin": 41,
+      "homePoints": 51,
+      "awayPoints": 10,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "STALE_FPI",
+      "publicBetsAway": 38,
+      "publicBetsHome": 62,
+      "publicMoneyAway": 46,
+      "publicMoneyHome": 54,
+      "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
       "league": "NCAAF",
