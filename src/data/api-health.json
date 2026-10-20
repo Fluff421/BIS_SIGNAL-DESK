@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T01:52:30.674Z",
+  "generatedAt": "2026-10-20T10:07:55.888Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -20,16 +20,16 @@
   },
   "espn": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "fallbackActive": false,
-    "reason": "CDN + site.web.api week boards. NFL 107 (92 final), NCAAF 566 (510 final). Overlayed 25 library scores.",
+    "reason": "CDN + site.web.api week boards. NFL 107 (93 final), NCAAF 566 (510 final). Overlayed 25 library scores.",
     "httpStatus": 200,
     "scoreboard": "healthy",
     "fpiSource": "cfbd-fallback",
     "nflEvents": 107,
     "ncaafEvents": 566,
     "ncaafFinals": 510,
-    "nflFinals": 92,
+    "nflFinals": 93,
     "overlayApplied": 25
   },
   "grok": {
@@ -43,7 +43,7 @@
   },
   "actionnetwork": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
     "nflEvents": 272,
     "ncaafEvents": 887,
@@ -54,59 +54,59 @@
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
-    "rows": 88,
-    "reason": "Contest pick % on 88 matchups (not licensed handle)."
+    "rows": 90,
+    "reason": "Contest pick % on 90 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
     "rows": 126,
     "reason": "Consensus spread pick % on 511 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
-    "rows": 1,
-    "nfl": 1,
-    "ncaaf": 0,
-    "matchedMoney": 317,
-    "reason": "Live consensus sheet: 1 football rows with ticket/money %. Matched onto 317 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
+    "rows": 3,
+    "nfl": 0,
+    "ncaaf": 3,
+    "matchedMoney": 318,
+    "reason": "Live consensus sheet: 3 football rows with ticket/money %. Matched onto 318 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
-    "rows": 23,
+    "rows": 35,
     "nfl": 14,
-    "ncaaf": 9,
-    "matched": 448,
-    "money": 445,
-    "reason": "Consensus picks page: 23 spread cards with ticket + money % (NFL 14, NCAAF 9). Matched onto 448 library games, money on 445."
+    "ncaaf": 21,
+    "matched": 474,
+    "money": 471,
+    "reason": "Consensus picks page: 35 spread cards with ticket + money % (NFL 14, NCAAF 21). Matched onto 474 library games, money on 471."
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
-    "rows": 120,
-    "nfl": 29,
+    "rows": 119,
+    "nfl": 28,
     "ncaaf": 91,
     "matched": 564,
     "money": 564,
-    "reason": "Live ticket % and money/handle % on 120 games (NFL 29, NCAAF 91). Matched onto 564 library games."
+    "reason": "Live ticket % and money/handle % on 119 games (NFL 28, NCAAF 91). Matched onto 564 library games."
   },
   "wiseguyteam": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-20T01:52:30.674Z",
+    "lastSuccessAt": "2026-10-20T10:07:55.888Z",
     "httpStatus": 200,
-    "rows": 251,
-    "nfl": 160,
+    "rows": 250,
+    "nfl": 159,
     "ncaaf": 91,
     "matched": 576,
     "money": 576,
-    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 251 games (NFL 160, NCAAF 91). Matched onto 576 library games."
+    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 250 games (NFL 159, NCAAF 91). Matched onto 576 library games."
   }
 }

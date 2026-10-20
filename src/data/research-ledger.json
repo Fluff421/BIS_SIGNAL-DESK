@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-20T01:52:30.674Z",
+  "generatedAt": "2026-10-20T10:07:55.888Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 604,
+    "researchN": 605,
     "issuedN": 0,
     "remainingResearch": 0,
     "watchOnBoard": 63,
-    "observeOnBoard": 266,
+    "observeOnBoard": 265,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=604 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 119–130–5 (n=254)."
+    "note": "Research sample n=605 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 119–131–5 (n=255)."
   },
   "ats": {
     "hits": 307,
-    "misses": 289,
+    "misses": 290,
     "pushes": 8,
-    "n": 604,
-    "rate": 0.515
+    "n": 605,
+    "rate": 0.514
   },
   "cleanBand": {
     "hits": 119,
-    "misses": 130,
+    "misses": 131,
     "pushes": 5,
-    "n": 254,
-    "rate": 0.478,
+    "n": 255,
+    "rate": 0.476,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -8211,10 +8211,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 0,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 0,
-      "publicMoneyHome": 0,
+      "publicBetsAway": 68,
+      "publicBetsHome": 32,
+      "publicMoneyAway": 46,
+      "publicMoneyHome": 54,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -10147,6 +10147,27 @@
       "publicBetsHome": 40,
       "publicMoneyAway": 62,
       "publicMoneyHome": 38,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-10-20T00:15:00.000Z",
+      "away": "Washington Commanders",
+      "home": "San Francisco 49ers",
+      "side": "San Francisco 49ers",
+      "edgeTo": "San Francisco 49ers",
+      "marketHome": -7.5,
+      "modelHome": 6.1,
+      "actualMargin": 6,
+      "homePoints": 23,
+      "awayPoints": 17,
+      "result": "miss",
+      "class": "RESEARCH",
+      "dataClass": "HIGH_NOISE",
+      "publicBetsAway": 33,
+      "publicBetsHome": 67,
+      "publicMoneyAway": 41,
+      "publicMoneyHome": 59,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -12676,7 +12697,7 @@
       "home": "Mississippi State Bulldogs",
       "side": "Oklahoma Sooners",
       "edgeTo": "Oklahoma Sooners",
-      "marketHome": 3.5,
+      "marketHome": 4,
       "modelHome": -1.7,
       "actualMargin": 28,
       "homePoints": 41,
