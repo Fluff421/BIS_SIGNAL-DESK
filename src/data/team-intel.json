@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T01:39:21.234Z",
+  "generatedAt": "2026-10-21T10:15:17.756Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -237,6 +237,19 @@
       "games": 17,
       "upcoming": 11,
       "rate": 0.25
+    },
+    {
+      "team": "South Alabama Jaguars",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 4,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-20T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 5,
+      "rate": 0.667
     },
     {
       "team": "Texas A&M Aggies",
@@ -590,19 +603,6 @@
       "rate": 0.4
     },
     {
-      "team": "South Alabama Jaguars",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 4,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-08T23:30:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 0.8
-    },
-    {
       "team": "Tennessee Volunteers",
       "league": "NCAAF",
       "n": 5,
@@ -824,6 +824,19 @@
       "rate": 0.5
     },
     {
+      "team": "Delaware Fightin Blue Hens",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 3,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-20T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 5,
+      "rate": 0.75
+    },
+    {
       "team": "Detroit Lions",
       "league": "NFL",
       "n": 4,
@@ -848,6 +861,19 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0.75
+    },
+    {
+      "team": "Florida International Panthers",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-20T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 4,
+      "rate": 0.5
     },
     {
       "team": "Florida State Seminoles",
@@ -989,7 +1015,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-10T23:00:00.000Z",
       "games": 12,
-      "upcoming": 6,
+      "upcoming": 5,
       "rate": 0.25
     },
     {
@@ -1251,32 +1277,6 @@
       "games": 17,
       "upcoming": 11,
       "rate": 0.333
-    },
-    {
-      "team": "Delaware Fightin Blue Hens",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-13T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 0.667
-    },
-    {
-      "team": "Florida International Panthers",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 2,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-07T23:30:00.000Z",
-      "games": 12,
-      "upcoming": 5,
-      "rate": 0.667
     },
     {
       "team": "Iowa State Cyclones",
@@ -2003,7 +2003,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-05T23:00:00.000Z",
       "games": 12,
-      "upcoming": 6,
+      "upcoming": 5,
       "rate": 1
     },
     {
@@ -2016,7 +2016,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T23:00:00.000Z",
       "games": 12,
-      "upcoming": 6,
+      "upcoming": 5,
       "rate": 1
     },
     {
