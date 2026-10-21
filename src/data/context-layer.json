@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T10:15:10.411Z",
+  "generatedAt": "2026-10-21T15:58:45.865Z",
   "policy": "A weak input lowers confidence. It never fabricates an adjustment. Rumor and undated social posts are not verified.",
   "features": [
     {
@@ -47,8 +47,8 @@
       "label": "Public betting share",
       "quality": "provisional",
       "source": "sportsbettingdime.com (ticket % + money/handle %) + wiseguyteam.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com + actionnetwork.com + sportsbookreview.com + covers.com contests",
-      "observedAt": "2026-10-21T10:15:10.411Z",
-      "note": "Bet/pick % on 818/1159 library games. Money/handle % on 729 (SportsBettingDime live 116, matched 564; WiseGuyTeam live 247, matched 576; ScoresAndOdds live 45; WagerTalk live 1; ESPN finals overlay 25; prior snapshots persisted). Ticket volume on 734. SBR 511, Covers 420. 173 games show a 10-pt+ money−ticket divergence."
+      "observedAt": "2026-10-21T15:58:45.865Z",
+      "note": "Bet/pick % on 818/1159 library games. Money/handle % on 729 (SportsBettingDime live 116, matched 564; WiseGuyTeam live 249, matched 576; ScoresAndOdds live 46; WagerTalk live 1; ESPN finals overlay 25; prior snapshots persisted). Ticket volume on 734. SBR 511, Covers 421. 176 games show a 10-pt+ money−ticket divergence."
     }
   ]
 }
