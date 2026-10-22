@@ -1,7 +1,7 @@
 {
-  "week": 6,
+  "week": 7,
   "season": 2026,
-  "generatedAt": "2026-10-21T20:40:10.714Z",
+  "generatedAt": "2026-10-22T01:34:09.890Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,14 +11,14 @@
     "rate": null
   },
   "helpers": [
-    "262 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 64 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 308–292–8 (n=608).",
-    "Public lean: bet/pick % on 821 games. Money/handle % on 733 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 25 finals. 173 games with a 10-pt+ divergence."
+    "268 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 64 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 309–295–8 (n=612).",
+    "Public lean: bet/pick % on 831 games. Money/handle % on 744 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 27 finals. 168 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "426 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "67 STALE_FPI and 75 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "415 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "72 STALE_FPI and 76 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
@@ -76,11 +76,11 @@
       "league": "NCAAF",
       "kick": "2026-10-24T20:00:00.000Z",
       "matchup": "Eastern Michigan Eagles @ Ohio Bobcats",
-      "edge": 3,
+      "edge": 3.5,
       "edgeTo": "Eastern Michigan Eagles",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -12.5,
+      "marketHome": -12,
       "modelHome": -15.5,
       "nBooks": 8
     },
@@ -123,8 +123,8 @@
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 6. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 64 rows sit in the research (WATCH) band. 67 STALE_FPI and 75 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 308-292-8 (n=608) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 821 games, money/handle % on 733 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 25 scores. 173 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 308–292–8 (n=608). Issued 0. Public lean on 821 games. Money % on 733 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 25 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 7. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 64 rows sit in the research (WATCH) band. 72 STALE_FPI and 76 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 309-295-8 (n=612) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 831 games, money/handle % on 744 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 27 scores. 168 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 309–295–8 (n=612). Issued 0. Public lean on 831 games. Money % on 744 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 27 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
