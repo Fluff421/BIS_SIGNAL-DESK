@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T01:34:37.131Z",
+  "generatedAt": "2026-10-23T10:09:55.256Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -148,6 +148,32 @@
       "rate": 0.167
     },
     {
+      "team": "James Madison Dukes",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 5,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-22T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 3,
+      "rate": 0.833
+    },
+    {
+      "team": "Liberty Flames",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 5,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-22T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 5,
+      "rate": 0.833
+    },
+    {
       "team": "Los Angeles Rams",
       "league": "NFL",
       "n": 6,
@@ -171,6 +197,19 @@
       "lastKick": "2026-10-17T23:30:00.000Z",
       "games": 12,
       "upcoming": 4,
+      "rate": 0.5
+    },
+    {
+      "team": "Memphis Tigers",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 3,
+      "misses": 3,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-22T23:30:00.000Z",
+      "games": 12,
+      "upcoming": 3,
       "rate": 0.5
     },
     {
@@ -369,6 +408,19 @@
       "rate": 1
     },
     {
+      "team": "Chicago Bears",
+      "league": "NFL",
+      "n": 5,
+      "hits": 4,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-23T00:15:00.000Z",
+      "games": 17,
+      "upcoming": 10,
+      "rate": 0.8
+    },
+    {
       "team": "Duke Blue Devils",
       "league": "NCAAF",
       "n": 5,
@@ -391,7 +443,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-15T23:30:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 3,
       "rate": 0.4
     },
     {
@@ -447,19 +499,6 @@
       "rate": 0.7
     },
     {
-      "team": "James Madison Dukes",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 5,
-      "misses": 0,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-03T19:45:00.000Z",
-      "games": 12,
-      "upcoming": 4,
-      "rate": 1
-    },
-    {
       "team": "Kansas City Chiefs",
       "league": "NFL",
       "n": 5,
@@ -483,32 +522,6 @@
       "lastKick": "2026-10-17T16:00:00.000Z",
       "games": 12,
       "upcoming": 5,
-      "rate": 0.6
-    },
-    {
-      "team": "Liberty Flames",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 4,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-08T23:00:00.000Z",
-      "games": 12,
-      "upcoming": 6,
-      "rate": 0.8
-    },
-    {
-      "team": "Memphis Tigers",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 3,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-16T23:30:00.000Z",
-      "games": 12,
-      "upcoming": 4,
       "rate": 0.6
     },
     {
@@ -768,7 +781,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-17T00:00:00.000Z",
       "games": 12,
-      "upcoming": 6,
+      "upcoming": 5,
       "rate": 0.5
     },
     {
@@ -809,19 +822,6 @@
       "games": 12,
       "upcoming": 6,
       "rate": 0.5
-    },
-    {
-      "team": "Chicago Bears",
-      "league": "NFL",
-      "n": 4,
-      "hits": 3,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-18T17:00:00.000Z",
-      "games": 17,
-      "upcoming": 11,
-      "rate": 0.75
     },
     {
       "team": "Cincinnati Bengals",
@@ -1366,7 +1366,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-18T17:00:00.000Z",
       "games": 17,
-      "upcoming": 11,
+      "upcoming": 10,
       "rate": 0.667
     },
     {
@@ -1665,7 +1665,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-14T23:30:00.000Z",
       "games": 12,
-      "upcoming": 5,
+      "upcoming": 4,
       "rate": 0
     },
     {
