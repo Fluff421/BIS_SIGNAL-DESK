@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T10:09:47.258Z",
+  "generatedAt": "2026-10-23T15:46:05.516Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -20,7 +20,7 @@
   },
   "espn": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "fallbackActive": false,
     "reason": "CDN + site.web.api week boards. NFL 107 (94 final), NCAAF 566 (517 final). Overlayed 25 library scores.",
     "httpStatus": 200,
@@ -43,7 +43,7 @@
   },
   "actionnetwork": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
     "nflEvents": 272,
     "ncaafEvents": 887,
@@ -54,21 +54,21 @@
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
-    "rows": 92,
-    "reason": "Contest pick % on 92 matchups (not licensed handle)."
+    "rows": 94,
+    "reason": "Contest pick % on 94 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
     "rows": 126,
     "reason": "Consensus spread pick % on 511 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
     "rows": 5,
     "nfl": 0,
@@ -78,18 +78,18 @@
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
-    "rows": 60,
+    "rows": 64,
     "nfl": 14,
-    "ncaaf": 46,
-    "matched": 498,
-    "money": 495,
-    "reason": "Consensus picks page: 60 spread cards with ticket + money % (NFL 14, NCAAF 46). Matched onto 498 library games, money on 495."
+    "ncaaf": 50,
+    "matched": 502,
+    "money": 499,
+    "reason": "Consensus picks page: 64 spread cards with ticket + money % (NFL 14, NCAAF 50). Matched onto 502 library games, money on 499."
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
     "rows": 183,
     "nfl": 28,
@@ -100,7 +100,7 @@
   },
   "wiseguyteam": {
     "status": "healthy",
-    "lastSuccessAt": "2026-10-23T10:09:47.258Z",
+    "lastSuccessAt": "2026-10-23T15:46:05.516Z",
     "httpStatus": 200,
     "rows": 287,
     "nfl": 158,
