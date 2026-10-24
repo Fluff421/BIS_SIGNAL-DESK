@@ -1,7 +1,7 @@
 {
   "week": 7,
   "season": 2026,
-  "generatedAt": "2026-10-24T09:35:45.443Z",
+  "generatedAt": "2026-10-24T14:36:47.160Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,14 +11,14 @@
     "rate": null
   },
   "helpers": [
-    "267 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 63 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 313–299–8 (n=620).",
-    "Public lean: bet/pick % on 840 games. Money/handle % on 756 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 25 finals. 169 games with a 10-pt+ divergence."
+    "265 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 63 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 313–301–8 (n=622).",
+    "Public lean: bet/pick % on 840 games. Money/handle % on 756 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 27 finals. 164 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
     "403 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "75 STALE_FPI and 77 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "74 STALE_FPI and 76 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
@@ -76,11 +76,11 @@
       "league": "NCAAF",
       "kick": "2026-10-24T23:00:00.000Z",
       "matchup": "Virginia Tech Hokies @ Clemson Tigers",
-      "edge": 4.9,
+      "edge": 5.4,
       "edgeTo": "Clemson Tigers",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -2.5,
+      "marketHome": -3,
       "modelHome": 2.4,
       "nBooks": 10
     },
@@ -123,8 +123,8 @@
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 7. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 63 rows sit in the research (WATCH) band. 75 STALE_FPI and 77 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 313-299-8 (n=620) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 840 games, money/handle % on 756 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 25 scores. 169 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 313–299–8 (n=620). Issued 0. Public lean on 840 games. Money % on 756 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 25 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 7. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 63 rows sit in the research (WATCH) band. 74 STALE_FPI and 76 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 313-301-8 (n=622) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 840 games, money/handle % on 756 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 27 scores. 164 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 313–301–8 (n=622). Issued 0. Public lean on 840 games. Money % on 756 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 27 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
