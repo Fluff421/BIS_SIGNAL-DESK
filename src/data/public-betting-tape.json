@@ -1,297 +1,7 @@
 {
-  "generatedAt": "2026-10-24T14:36:47.160Z",
+  "generatedAt": "2026-10-24T19:31:48.899Z",
   "source": "sportsbettingdime.com + wiseguyteam.com (ticket % + money/handle %) + scoresandodds.com + wagertalk.com/odds",
   "snapshots": [
-    {
-      "at": "2026-10-10T20:34:48.361Z",
-      "nfl": 38,
-      "ncaaf": 164,
-      "wiseguyteam": 306,
-      "scoresandodds": 71,
-      "wagertalk": 46,
-      "rows": [
-        {
-          "league": "NFL",
-          "away": "Philadelphia Eagles",
-          "home": "Jacksonville Jaguars",
-          "betsAway": 43,
-          "moneyAway": 50
-        },
-        {
-          "league": "NFL",
-          "away": "Cincinnati Bengals",
-          "home": "Miami Dolphins",
-          "betsAway": 75,
-          "moneyAway": 86
-        },
-        {
-          "league": "NFL",
-          "away": "Oakland Raiders",
-          "home": "New England Patriots",
-          "betsAway": 73,
-          "moneyAway": 78
-        },
-        {
-          "league": "NFL",
-          "away": "Minnesota Vikings",
-          "home": "New Orleans Saints",
-          "betsAway": 55,
-          "moneyAway": 53
-        },
-        {
-          "league": "NFL",
-          "away": "Cleveland Browns",
-          "home": "New York Jets",
-          "betsAway": 84,
-          "moneyAway": 77
-        },
-        {
-          "league": "NFL",
-          "away": "Indianapolis Colts",
-          "home": "Pittsburgh Steelers",
-          "betsAway": 64,
-          "moneyAway": 57
-        },
-        {
-          "league": "NFL",
-          "away": "Houston Texans",
-          "home": "Tennessee Titans",
-          "betsAway": 67,
-          "moneyAway": 63
-        },
-        {
-          "league": "NFL",
-          "away": "New York Giants",
-          "home": "Washington Commanders",
-          "betsAway": 72,
-          "moneyAway": 72
-        },
-        {
-          "league": "NFL",
-          "away": "Chicago Bears",
-          "home": "Green Bay Packers",
-          "betsAway": 57,
-          "moneyAway": 51
-        },
-        {
-          "league": "NFL",
-          "away": "Denver Broncos",
-          "home": "Los Angeles Chargers",
-          "betsAway": 52,
-          "moneyAway": 52
-        },
-        {
-          "league": "NFL",
-          "away": "Detroit Lions",
-          "home": "Arizona Cardinals",
-          "betsAway": 53,
-          "moneyAway": 60
-        },
-        {
-          "league": "NFL",
-          "away": "San Francisco 49ers",
-          "home": "Seattle Seahawks",
-          "betsAway": 81,
-          "moneyAway": 86
-        },
-        {
-          "league": "NFL",
-          "away": "Baltimore Ravens",
-          "home": "Atlanta Falcons",
-          "betsAway": 55,
-          "moneyAway": 49
-        },
-        {
-          "league": "NFL",
-          "away": "Buffalo Bills",
-          "home": "Los Angeles Rams",
-          "betsAway": 75,
-          "moneyAway": 65
-        },
-        {
-          "league": "NFL",
-          "away": "Seattle Seahawks",
-          "home": "Denver Broncos",
-          "betsAway": 52,
-          "moneyAway": 63
-        },
-        {
-          "league": "NFL",
-          "away": "Houston Texans",
-          "home": "Jacksonville Jaguars",
-          "betsAway": 35,
-          "moneyAway": 58
-        },
-        {
-          "league": "NFL",
-          "away": "Chicago Bears",
-          "home": "Atlanta Falcons",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Baltimore Ravens",
-          "home": "Cleveland Browns",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Tennessee Titans",
-          "home": "Indianapolis Colts",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "New York Jets",
-          "home": "New England Patriots",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "New Orleans Saints",
-          "home": "New York Giants",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Carolina Panthers",
-          "home": "Philadelphia Eagles",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Pittsburgh Steelers",
-          "home": "Tampa Bay Buccaneers",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Arizona Cardinals",
-          "home": "Los Angeles Rams",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Los Angeles Chargers",
-          "home": "Kansas City Chiefs",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Buffalo Bills",
-          "home": "Oakland Raiders",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Dallas Cowboys",
-          "home": "Green Bay Packers",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Washington Commanders",
-          "home": "San Francisco 49ers",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "New England Patriots",
-          "home": "Chicago Bears",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Pittsburgh Steelers",
-          "home": "New Orleans Saints",
-          "betsAway": 41,
-          "moneyAway": 89
-        },
-        {
-          "league": "NFL",
-          "away": "San Francisco 49ers",
-          "home": "Atlanta Falcons",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Cincinnati Bengals",
-          "home": "Baltimore Ravens",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Tampa Bay Buccaneers",
-          "home": "Carolina Panthers",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "New York Giants",
-          "home": "Houston Texans",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Indianapolis Colts",
-          "home": "Minnesota Vikings",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Miami Dolphins",
-          "home": "New York Jets",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Cleveland Browns",
-          "home": "Tennessee Titans",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NFL",
-          "away": "Denver Broncos",
-          "home": "Arizona Cardinals",
-          "betsAway": 0,
-          "moneyAway": 0
-        },
-        {
-          "league": "NCAAF",
-          "away": "South Carolina State Bulldogs",
-          "home": "Charleston Southern Buccaneers",
-          "betsAway": 7,
-          "moneyAway": 7
-        },
-        {
-          "league": "NCAAF",
-          "away": "South Carolina Gamecocks",
-          "home": "Florida Gators",
-          "betsAway": 35,
-          "moneyAway": 56
-        }
-      ]
-    },
     {
       "at": "2026-10-11T01:57:38.326Z",
       "nfl": 41,
@@ -14789,6 +14499,296 @@
           "home": "Marist Red Foxes",
           "betsAway": 0,
           "moneyAway": 0
+        }
+      ]
+    },
+    {
+      "at": "2026-10-24T19:31:48.899Z",
+      "nfl": 36,
+      "ncaaf": 208,
+      "wiseguyteam": 273,
+      "scoresandodds": 67,
+      "wagertalk": 43,
+      "rows": [
+        {
+          "league": "NFL",
+          "away": "Pittsburgh Steelers",
+          "home": "New Orleans Saints",
+          "betsAway": 47,
+          "moneyAway": 47
+        },
+        {
+          "league": "NFL",
+          "away": "San Francisco 49ers",
+          "home": "Atlanta Falcons",
+          "betsAway": 68,
+          "moneyAway": 60
+        },
+        {
+          "league": "NFL",
+          "away": "Cincinnati Bengals",
+          "home": "Baltimore Ravens",
+          "betsAway": 68,
+          "moneyAway": 71
+        },
+        {
+          "league": "NFL",
+          "away": "Tampa Bay Buccaneers",
+          "home": "Carolina Panthers",
+          "betsAway": 34,
+          "moneyAway": 57
+        },
+        {
+          "league": "NFL",
+          "away": "New York Giants",
+          "home": "Houston Texans",
+          "betsAway": 59,
+          "moneyAway": 46
+        },
+        {
+          "league": "NFL",
+          "away": "Indianapolis Colts",
+          "home": "Minnesota Vikings",
+          "betsAway": 54,
+          "moneyAway": 58
+        },
+        {
+          "league": "NFL",
+          "away": "Miami Dolphins",
+          "home": "New York Jets",
+          "betsAway": 47,
+          "moneyAway": 51
+        },
+        {
+          "league": "NFL",
+          "away": "Cleveland Browns",
+          "home": "Tennessee Titans",
+          "betsAway": 72,
+          "moneyAway": 63
+        },
+        {
+          "league": "NFL",
+          "away": "Denver Broncos",
+          "home": "Arizona Cardinals",
+          "betsAway": 60,
+          "moneyAway": 67
+        },
+        {
+          "league": "NFL",
+          "away": "Green Bay Packers",
+          "home": "Detroit Lions",
+          "betsAway": 65,
+          "moneyAway": 70
+        },
+        {
+          "league": "NFL",
+          "away": "Los Angeles Rams",
+          "home": "Oakland Raiders",
+          "betsAway": 41,
+          "moneyAway": 38
+        },
+        {
+          "league": "NFL",
+          "away": "Kansas City Chiefs",
+          "home": "Seattle Seahawks",
+          "betsAway": 89,
+          "moneyAway": 89
+        },
+        {
+          "league": "NFL",
+          "away": "Dallas Cowboys",
+          "home": "Philadelphia Eagles",
+          "betsAway": 66,
+          "moneyAway": 72
+        },
+        {
+          "league": "NFL",
+          "away": "Carolina Panthers",
+          "home": "Green Bay Packers",
+          "betsAway": 67,
+          "moneyAway": 51
+        },
+        {
+          "league": "NFL",
+          "away": "Baltimore Ravens",
+          "home": "Buffalo Bills",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Tennessee Titans",
+          "home": "Cincinnati Bengals",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Arizona Cardinals",
+          "home": "Dallas Cowboys",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Minnesota Vikings",
+          "home": "Detroit Lions",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Indianapolis Colts",
+          "home": "Jacksonville Jaguars",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Oakland Raiders",
+          "home": "New York Jets",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Cleveland Browns",
+          "home": "Pittsburgh Steelers",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Atlanta Falcons",
+          "home": "Tampa Bay Buccaneers",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Los Angeles Chargers",
+          "home": "Los Angeles Rams",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Kansas City Chiefs",
+          "home": "Denver Broncos",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "New England Patriots",
+          "home": "Miami Dolphins",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Philadelphia Eagles",
+          "home": "Washington Commanders",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Chicago Bears",
+          "home": "Seattle Seahawks",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Jacksonville Jaguars",
+          "home": "Baltimore Ravens",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Cincinnati Bengals",
+          "home": "Atlanta Falcons",
+          "betsAway": 24,
+          "moneyAway": 27
+        },
+        {
+          "league": "NFL",
+          "away": "Denver Broncos",
+          "home": "Carolina Panthers",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Dallas Cowboys",
+          "home": "Indianapolis Colts",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "New York Jets",
+          "home": "Kansas City Chiefs",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Detroit Lions",
+          "home": "Miami Dolphins",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Cleveland Browns",
+          "home": "New Orleans Saints",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "New York Giants",
+          "home": "Philadelphia Eagles",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NFL",
+          "away": "Los Angeles Rams",
+          "home": "Washington Commanders",
+          "betsAway": 0,
+          "moneyAway": 0
+        },
+        {
+          "league": "NCAAF",
+          "away": "Rice Owls",
+          "home": "Florida Atlantic Owls",
+          "betsAway": 34,
+          "moneyAway": 38
+        },
+        {
+          "league": "NCAAF",
+          "away": "California Golden Bears",
+          "home": "SMU Mustangs",
+          "betsAway": 57,
+          "moneyAway": 63
+        },
+        {
+          "league": "NCAAF",
+          "away": "Indiana Hoosiers",
+          "home": "Michigan Wolverines",
+          "betsAway": 62,
+          "moneyAway": 56
+        },
+        {
+          "league": "NCAAF",
+          "away": "Pittsburgh Panthers",
+          "home": "Miami (FL) Hurricanes",
+          "betsAway": 46,
+          "moneyAway": 41
         }
       ]
     }
