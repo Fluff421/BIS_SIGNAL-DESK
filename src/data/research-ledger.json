@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T11:11:40.554Z",
+  "generatedAt": "2026-10-26T17:25:12.653Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
     "researchN": 676,
@@ -1638,10 +1638,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 50,
-      "publicBetsHome": 50,
-      "publicMoneyAway": 97,
-      "publicMoneyHome": 3,
+      "publicBetsAway": 38,
+      "publicBetsHome": 63,
+      "publicMoneyAway": 95,
+      "publicMoneyHome": 5,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -2037,10 +2037,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "LIBRARY",
-      "publicBetsAway": 0,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 0,
-      "publicMoneyHome": 0,
+      "publicBetsAway": 61,
+      "publicBetsHome": 39,
+      "publicMoneyAway": 51,
+      "publicMoneyHome": 49,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -5985,9 +5985,9 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 100,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 100,
+      "publicBetsAway": 36,
+      "publicBetsHome": 64,
+      "publicMoneyAway": 0,
       "publicMoneyHome": 0,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
@@ -8127,10 +8127,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "ALIGNED",
-      "publicBetsAway": 50,
-      "publicBetsHome": 50,
-      "publicMoneyAway": 97,
-      "publicMoneyHome": 3,
+      "publicBetsAway": 38,
+      "publicBetsHome": 63,
+      "publicMoneyAway": 95,
+      "publicMoneyHome": 5,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -12579,10 +12579,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 50,
-      "publicBetsHome": 50,
-      "publicMoneyAway": 97,
-      "publicMoneyHome": 3,
+      "publicBetsAway": 38,
+      "publicBetsHome": 63,
+      "publicMoneyAway": 95,
+      "publicMoneyHome": 5,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -12789,10 +12789,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 50,
-      "publicBetsHome": 50,
-      "publicMoneyAway": 99,
-      "publicMoneyHome": 1,
+      "publicBetsAway": 25,
+      "publicBetsHome": 75,
+      "publicMoneyAway": 0,
+      "publicMoneyHome": 0,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
