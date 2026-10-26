@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T01:15:41.509Z",
+  "generatedAt": "2026-10-26T11:11:45.533Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 169,
@@ -26,19 +26,6 @@
       "pushes": 0,
       "lastResult": "miss",
       "lastKick": "2026-10-24T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 4,
-      "rate": 0.5
-    },
-    {
-      "team": "Texas Tech Red Raiders",
-      "league": "NCAAF",
-      "n": 8,
-      "hits": 4,
-      "misses": 4,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-31T16:00:00.000Z",
       "games": 12,
       "upcoming": 4,
       "rate": 0.5
@@ -161,6 +148,19 @@
       "rate": 0.286
     },
     {
+      "team": "Seattle Seahawks",
+      "league": "NFL",
+      "n": 7,
+      "hits": 2,
+      "misses": 4,
+      "pushes": 1,
+      "lastResult": "hit",
+      "lastKick": "2026-10-26T00:20:00.000Z",
+      "games": 17,
+      "upcoming": 10,
+      "rate": 0.357
+    },
+    {
       "team": "South Florida Bulls",
       "league": "NCAAF",
       "n": 7,
@@ -187,6 +187,19 @@
       "rate": 0.286
     },
     {
+      "team": "Texas Tech Red Raiders",
+      "league": "NCAAF",
+      "n": 7,
+      "hits": 3,
+      "misses": 4,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-10-24T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 5,
+      "rate": 0.429
+    },
+    {
       "team": "Arizona Wildcats",
       "league": "NCAAF",
       "n": 6,
@@ -196,7 +209,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-24T23:30:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 5,
       "rate": 0.5
     },
     {
@@ -406,19 +419,6 @@
       "games": 12,
       "upcoming": 3,
       "rate": 0.5
-    },
-    {
-      "team": "Seattle Seahawks",
-      "league": "NFL",
-      "n": 6,
-      "hits": 1,
-      "misses": 4,
-      "pushes": 1,
-      "lastResult": "miss",
-      "lastKick": "2026-10-16T00:15:00.000Z",
-      "games": 17,
-      "upcoming": 11,
-      "rate": 0.25
     },
     {
       "team": "Texas A&M Aggies",
@@ -716,7 +716,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-18T20:25:00.000Z",
       "games": 17,
-      "upcoming": 12,
+      "upcoming": 11,
       "rate": 0.6
     },
     {
@@ -796,19 +796,6 @@
       "games": 12,
       "upcoming": 5,
       "rate": 0.8
-    },
-    {
-      "team": "Ole Miss Rebels",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 2,
-      "misses": 3,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-31T16:45:00.000Z",
-      "games": 12,
-      "upcoming": 4,
-      "rate": 0.4
     },
     {
       "team": "Oregon State Beavers",
@@ -1214,6 +1201,19 @@
       "rate": 0.5
     },
     {
+      "team": "Ole Miss Rebels",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-17T19:30:00.000Z",
+      "games": 12,
+      "upcoming": 5,
+      "rate": 0.5
+    },
+    {
       "team": "Philadelphia Eagles",
       "league": "NFL",
       "n": 4,
@@ -1288,7 +1288,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-26T20:15:00.000Z",
       "games": 12,
-      "upcoming": 2,
+      "upcoming": 3,
       "rate": 0.333
     },
     {
