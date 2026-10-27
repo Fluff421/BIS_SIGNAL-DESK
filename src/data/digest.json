@@ -1,78 +1,130 @@
 {
-  "week": 1,
+  "week": 7,
   "season": 2026,
-  "generatedAt": "2026-10-26T19:37:14.311Z",
+  "generatedAt": "2026-10-27T02:07:48.044Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
-    "hits": 1,
+    "hits": 0,
     "misses": 0,
     "pushes": 0,
-    "n": 1,
-    "rate": 1
+    "n": 0,
+    "rate": null
   },
   "helpers": [
-    "56 rows in primary watch band (confidence WATCH or unset)."
+    "247 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 56 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 344–326–8 (n=678).",
+    "Public lean: bet/pick % on 873 games. Money/handle % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 26 finals. 190 games with a 10-pt+ divergence."
   ],
   "hurters": [
-    "69 STALE_FPI rows — suppress from play consideration."
+    "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
+    "368 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "67 STALE_FPI and 74 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
-    "Do not raise playThreshold until n≥30 and selective hit rate supports it"
+    "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
     {
-      "league": "NFL",
-      "kick": "2026-11-29T21:25:00.000Z",
-      "matchup": "Washington Commanders @ Arizona Cardinals",
-      "edge": 6.9,
-      "edgeTo": "Washington Commanders",
+      "league": "NCAAF",
+      "kick": "2026-10-28T00:00:00.000Z",
+      "matchup": "Sam Houston State Bearkats @ Missouri State Bears",
+      "edge": 5.8,
+      "edgeTo": "Missouri State Bears",
       "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -5.5,
+      "modelHome": 0.3,
+      "nBooks": 6
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-31T16:00:00.000Z",
+      "matchup": "Wisconsin Badgers @ Iowa Hawkeyes",
+      "edge": 6.4,
+      "edgeTo": "Iowa Hawkeyes",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -3.5,
+      "modelHome": 2.9,
+      "nBooks": 6
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-31T19:00:00.000Z",
+      "matchup": "UConn Huskies @ Air Force Falcons",
+      "edge": 5,
+      "edgeTo": "Air Force Falcons",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -2.5,
+      "modelHome": 2.5,
+      "nBooks": 6
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-10-31T19:30:00.000Z",
+      "matchup": "Florida International Panthers @ Liberty Flames",
+      "edge": 4.5,
+      "edgeTo": "Liberty Flames",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -14,
+      "modelHome": -9.5,
+      "nBooks": 6
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-11-01T18:00:00.000Z",
+      "matchup": "Atlanta Falcons @ Tampa Bay Buccaneers",
+      "edge": 6.1,
+      "edgeTo": "Tampa Bay Buccaneers",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -2.5,
+      "modelHome": 3.6,
+      "nBooks": 7
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-11-01T18:00:00.000Z",
+      "matchup": "Baltimore Ravens @ Buffalo Bills",
+      "edge": 5.8,
+      "edgeTo": "Buffalo Bills",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -3.5,
+      "modelHome": 2.3,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-07T20:30:00.000Z",
+      "matchup": "Alabama Crimson Tide @ LSU Tigers",
+      "edge": 6,
+      "edgeTo": "LSU Tigers",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -4,
+      "modelHome": 2,
+      "nBooks": 4
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-11-08T14:30:00.000Z",
+      "matchup": "Cincinnati Bengals @ Atlanta Falcons",
+      "edge": 5.6,
+      "edgeTo": "Cincinnati Bengals",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
       "marketHome": 4.5,
-      "modelHome": -2.4
-    },
-    {
-      "league": "NFL",
-      "kick": "2026-12-15T01:15:00.000Z",
-      "matchup": "Pittsburgh Steelers @ Jacksonville Jaguars",
-      "edge": 6.9,
-      "edgeTo": "Jacksonville Jaguars",
-      "confidence": "WATCH",
-      "marketHome": -3,
-      "modelHome": 3.9
-    },
-    {
-      "league": "NFL",
-      "kick": "2026-11-09T01:20:00.000Z",
-      "matchup": "Tampa Bay Buccaneers @ Chicago Bears",
-      "edge": 6.6,
-      "edgeTo": "Chicago Bears",
-      "confidence": "WATCH",
-      "marketHome": -3.5,
-      "modelHome": 3.1
-    },
-    {
-      "league": "NFL",
-      "kick": "2026-11-17T01:15:00.000Z",
-      "matchup": "Los Angeles Chargers @ Baltimore Ravens",
-      "edge": 6.6,
-      "edgeTo": "Baltimore Ravens",
-      "confidence": "WATCH",
-      "marketHome": -3.5,
-      "modelHome": 3.1
-    },
-    {
-      "league": "NFL",
-      "kick": "2027-01-03T18:00:00.000Z",
-      "matchup": "Minnesota Vikings @ New York Jets",
-      "edge": 6.6,
-      "edgeTo": "Minnesota Vikings",
-      "confidence": "WATCH",
-      "marketHome": 3.5,
-      "modelHome": -3.1
+      "modelHome": -1.1,
+      "nBooks": 7
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": null,
-  "summary": "BIS desk week snapshot: ATS 1-0-0 (n=1, rate=1). Confidence INSUFFICIENT. Helpers: 56 rows in primary watch band (confidence WATCH or unset).. Hurters: 69 STALE_FPI rows — suppress from play consideration.."
+  "aiNarrative": "BIS Signal Desk, 2026 week 7. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 56 rows sit in the research (WATCH) band. 67 STALE_FPI and 74 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 344-326-8 (n=678) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 873 games, money/handle % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 26 scores. 190 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 344–326–8 (n=678). Issued 0. Public lean on 873 games. Money % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 26 finals.",
+  "narrativeStatus": "generated",
+  "narrativeModel": "grok-4.6-desk"
 }
