@@ -1,7 +1,7 @@
 {
   "week": 7,
   "season": 2026,
-  "generatedAt": "2026-10-27T21:22:08.158Z",
+  "generatedAt": "2026-10-28T02:21:04.816Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,14 +11,14 @@
     "rate": null
   },
   "helpers": [
-    "246 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 58 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 345–326–8 (n=679).",
-    "Public lean: bet/pick % on 873 games. Money/handle % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 26 finals. 193 games with a 10-pt+ divergence."
+    "245 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 58 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 345–327–8 (n=680).",
+    "Public lean: bet/pick % on 873 games. Money/handle % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 26 finals. 192 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
     "368 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "67 STALE_FPI and 74 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "66 STALE_FPI and 74 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
@@ -28,11 +28,11 @@
       "league": "NCAAF",
       "kick": "2026-10-28T00:00:00.000Z",
       "matchup": "Sam Houston State Bearkats @ Missouri State Bears",
-      "edge": 6.3,
+      "edge": 5.8,
       "edgeTo": "Missouri State Bears",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -6,
+      "marketHome": -5.5,
       "modelHome": 0.3,
       "nBooks": 9
     },
@@ -52,11 +52,11 @@
       "league": "NCAAF",
       "kick": "2026-10-31T19:00:00.000Z",
       "matchup": "UConn Huskies @ Air Force Falcons",
-      "edge": 5,
+      "edge": 4,
       "edgeTo": "Air Force Falcons",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -2.5,
+      "marketHome": -1.5,
       "modelHome": 2.5,
       "nBooks": 9
     },
@@ -123,8 +123,8 @@
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 7. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 58 rows sit in the research (WATCH) band. 67 STALE_FPI and 74 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 345-326-8 (n=679) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 873 games, money/handle % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 26 scores. 193 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 345–326–8 (n=679). Issued 0. Public lean on 873 games. Money % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 26 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 7. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 58 rows sit in the research (WATCH) band. 66 STALE_FPI and 74 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 345-327-8 (n=680) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 873 games, money/handle % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 26 scores. 192 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 345–327–8 (n=680). Issued 0. Public lean on 873 games. Money % on 791 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 26 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
