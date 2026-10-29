@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T02:28:58.018Z",
+  "generatedAt": "2026-10-29T11:34:11.025Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 169,
@@ -302,6 +302,19 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0.333
+    },
+    {
+      "team": "Jacksonville State Gamecocks",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 4,
+      "misses": 1,
+      "pushes": 1,
+      "lastResult": "hit",
+      "lastKick": "2026-10-29T00:00:00.000Z",
+      "games": 12,
+      "upcoming": 4,
+      "rate": 0.75
     },
     {
       "team": "James Madison Dukes",
@@ -692,19 +705,6 @@
       "games": 12,
       "upcoming": 5,
       "rate": 0.6
-    },
-    {
-      "team": "Jacksonville State Gamecocks",
-      "league": "NCAAF",
-      "n": 5,
-      "hits": 3,
-      "misses": 1,
-      "pushes": 1,
-      "lastResult": "push",
-      "lastKick": "2026-10-14T00:00:00.000Z",
-      "games": 12,
-      "upcoming": 5,
-      "rate": 0.7
     },
     {
       "team": "Kansas City Chiefs",
@@ -1162,6 +1162,19 @@
       "rate": 0.5
     },
     {
+      "team": "Kennesaw State Owls",
+      "league": "NCAAF",
+      "n": 4,
+      "hits": 2,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-28T23:00:00.000Z",
+      "games": 12,
+      "upcoming": 3,
+      "rate": 0.5
+    },
+    {
       "team": "Marshall Thundering Herd",
       "league": "NCAAF",
       "n": 4,
@@ -1381,19 +1394,6 @@
       "games": 12,
       "upcoming": 5,
       "rate": 0.5
-    },
-    {
-      "team": "Kennesaw State Owls",
-      "league": "NCAAF",
-      "n": 3,
-      "hits": 1,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-14T23:30:00.000Z",
-      "games": 12,
-      "upcoming": 4,
-      "rate": 0.333
     },
     {
       "team": "Kent State Golden Flashes",
@@ -1795,7 +1795,7 @@
       "lastResult": "miss",
       "lastKick": "2026-09-13T04:00:00.000Z",
       "games": 12,
-      "upcoming": 5,
+      "upcoming": 4,
       "rate": 0.5
     },
     {
@@ -2094,7 +2094,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-05T23:00:00.000Z",
       "games": 12,
-      "upcoming": 5,
+      "upcoming": 4,
       "rate": 1
     },
     {
