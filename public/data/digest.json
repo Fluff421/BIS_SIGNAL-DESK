@@ -1,7 +1,7 @@
 {
   "week": 8,
   "season": 2026,
-  "generatedAt": "2026-10-30T11:26:36.596Z",
+  "generatedAt": "2026-10-30T21:33:06.746Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,14 +11,14 @@
     "rate": null
   },
   "helpers": [
-    "250 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 59 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 348–328–8 (n=684).",
-    "Public lean: bet/pick % on 882 games. Money/handle % on 801 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 25 finals. 195 games with a 10-pt+ divergence."
+    "248 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 59 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 349–329–8 (n=686).",
+    "Public lean: bet/pick % on 882 games. Money/handle % on 801 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 27 finals. 207 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
     "358 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "69 STALE_FPI and 74 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "67 STALE_FPI and 74 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
@@ -40,11 +40,11 @@
       "league": "NCAAF",
       "kick": "2026-10-31T19:00:00.000Z",
       "matchup": "UConn Huskies @ Air Force Falcons",
-      "edge": 4,
+      "edge": 3.5,
       "edgeTo": "Air Force Falcons",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -1.5,
+      "marketHome": -1,
       "modelHome": 2.5,
       "nBooks": 9
     },
@@ -52,11 +52,11 @@
       "league": "NCAAF",
       "kick": "2026-10-31T19:30:00.000Z",
       "matchup": "Florida International Panthers @ Liberty Flames",
-      "edge": 4.5,
+      "edge": 4,
       "edgeTo": "Liberty Flames",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -14,
+      "marketHome": -13.5,
       "modelHome": -9.5,
       "nBooks": 9
     },
@@ -76,11 +76,11 @@
       "league": "NFL",
       "kick": "2026-11-01T18:00:00.000Z",
       "matchup": "Baltimore Ravens @ Buffalo Bills",
-      "edge": 5.3,
+      "edge": 5.8,
       "edgeTo": "Buffalo Bills",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -3,
+      "marketHome": -3.5,
       "modelHome": 2.3,
       "nBooks": 8
     },
@@ -88,11 +88,11 @@
       "league": "NFL",
       "kick": "2026-11-02T01:20:00.000Z",
       "matchup": "Philadelphia Eagles @ Washington Commanders",
-      "edge": 5.7,
+      "edge": 5.2,
       "edgeTo": "Washington Commanders",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -6.5,
+      "marketHome": -6,
       "modelHome": -0.8,
       "nBooks": 8
     },
@@ -100,11 +100,11 @@
       "league": "NCAAF",
       "kick": "2026-11-05T00:30:00.000Z",
       "matchup": "Central Michigan Chippewas @ Eastern Michigan Eagles",
-      "edge": 4,
+      "edge": 5,
       "edgeTo": "Eastern Michigan Eagles",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -1.5,
+      "marketHome": -2.5,
       "modelHome": 2.5,
       "nBooks": 3
     },
@@ -112,19 +112,19 @@
       "league": "NCAAF",
       "kick": "2026-11-07T20:30:00.000Z",
       "matchup": "Alabama Crimson Tide @ LSU Tigers",
-      "edge": 6,
+      "edge": 6.5,
       "edgeTo": "LSU Tigers",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -4,
+      "marketHome": -4.5,
       "modelHome": 2,
       "nBooks": 6
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 8. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 59 rows sit in the research (WATCH) band. 69 STALE_FPI and 74 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 348-328-8 (n=684) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 882 games, money/handle % on 801 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 25 scores. 195 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 348–328–8 (n=684). Issued 0. Public lean on 882 games. Money % on 801 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 25 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 8. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 59 rows sit in the research (WATCH) band. 67 STALE_FPI and 74 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 349-329-8 (n=686) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 882 games, money/handle % on 801 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 27 scores. 207 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 349–329–8 (n=686). Issued 0. Public lean on 882 games. Money % on 801 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 27 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
