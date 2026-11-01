@@ -2,7 +2,7 @@
   "asOf": "2026-11-01T11:40:29.817Z",
   "timezone": "America/Chicago",
   "calendar": {
-    "ncaaf": "NCAAF current + weeks 0–13 on file (887 games, 633 finals). Upcoming 254.",
+    "ncaaf": "NCAAF current + weeks 0–13 on file (887 games, 646 finals). Upcoming 241.",
     "nfl": "NFL current + weeks 1–18 on file (272 games, 108 finals). Upcoming 164."
   },
   "sources": [
@@ -11,7 +11,7 @@
     "https://www.scoresandodds.com/ncaaf",
     "https://www.scoresandodds.com/nfl"
   ],
-  "honesty": "Library 1159 games / 270 clubs. NFL finals 108, NCAAF finals 633. Issued n=0. Research n=722 is diagnostic, not the 75% issued target.",
+  "honesty": "Library 1159 games / 270 clubs. NFL finals 108, NCAAF finals 646. Issued n=0. Research n=735 is diagnostic, not the 75% issued target.",
   "ncaafFpi": [
     {
       "team": "Ohio State",
