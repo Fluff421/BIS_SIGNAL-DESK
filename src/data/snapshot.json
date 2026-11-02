@@ -3,7 +3,7 @@
   "timezone": "America/Chicago",
   "calendar": {
     "ncaaf": "NCAAF current + weeks 0–13 on file (887 games, 646 finals). Upcoming 241.",
-    "nfl": "NFL current + weeks 1–18 on file (272 games, 119 finals). Upcoming 153."
+    "nfl": "NFL current + weeks 1–18 on file (272 games, 120 finals). Upcoming 152."
   },
   "sources": [
     "https://www.espn.com/college-football/fpi",
@@ -11,7 +11,7 @@
     "https://www.scoresandodds.com/ncaaf",
     "https://www.scoresandodds.com/nfl"
   ],
-  "honesty": "Library 1159 games / 270 clubs. NFL finals 119, NCAAF finals 646. Issued n=0. Research n=749 is diagnostic, not the 75% issued target.",
+  "honesty": "Library 1159 games / 270 clubs. NFL finals 120, NCAAF finals 646. Issued n=0. Research n=750 is diagnostic, not the 75% issued target.",
   "ncaafFpi": [
     {
       "team": "Notre Dame",
