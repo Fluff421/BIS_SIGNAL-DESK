@@ -1,54 +1,100 @@
 {
-  "week": 1,
+  "week": 8,
   "season": 2026,
-  "generatedAt": "2026-11-02T22:30:00.456Z",
+  "generatedAt": "2026-11-02T23:54:14.684Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
-    "hits": 1,
+    "hits": 0,
     "misses": 0,
     "pushes": 0,
-    "n": 1,
-    "rate": 1
+    "n": 0,
+    "rate": null
   },
   "helpers": [
-    "57 rows in primary watch band (confidence WATCH or unset)."
+    "232 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 58 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 378–361–10 (n=749).",
+    "Public lean: bet/pick % on 918 games. Money/handle % on 841 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 23 finals. 200 games with a 10-pt+ divergence."
   ],
   "hurters": [
-    "53 STALE_FPI rows — suppress from play consideration."
+    "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
+    "318 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "53 STALE_FPI and 70 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
-    "Do not raise playThreshold until n≥30 and selective hit rate supports it"
+    "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
     {
       "league": "NCAAF",
-      "kick": "2026-11-21T16:00:00.000Z",
-      "matchup": "Texas A&M Aggies @ Oklahoma Sooners",
-      "edge": 6.9,
-      "edgeTo": "Texas A&M Aggies",
+      "kick": "2026-11-05T00:30:00.000Z",
+      "matchup": "Central Michigan Chippewas @ Eastern Michigan Eagles",
+      "edge": 4,
+      "edgeTo": "Eastern Michigan Eagles",
       "confidence": "WATCH",
-      "marketHome": -2.5,
-      "modelHome": -9.4
+      "dataClass": "WATCH",
+      "marketHome": -1.5,
+      "modelHome": 2.5,
+      "nBooks": 7
     },
     {
       "league": "NFL",
-      "kick": "2026-11-29T21:25:00.000Z",
-      "matchup": "Washington Commanders @ Arizona Cardinals",
-      "edge": 6.9,
-      "edgeTo": "Washington Commanders",
-      "confidence": "WATCH",
-      "marketHome": 4.5,
-      "modelHome": -2.4
-    },
-    {
-      "league": "NFL",
-      "kick": "2026-12-15T01:15:00.000Z",
-      "matchup": "Pittsburgh Steelers @ Jacksonville Jaguars",
-      "edge": 6.9,
+      "kick": "2026-11-06T01:15:00.000Z",
+      "matchup": "Jacksonville Jaguars @ Baltimore Ravens",
+      "edge": 4.8,
       "edgeTo": "Jacksonville Jaguars",
       "confidence": "WATCH",
-      "marketHome": -3,
-      "modelHome": 3.9
+      "dataClass": "WATCH",
+      "marketHome": 9.5,
+      "modelHome": 4.7,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-07T17:00:00.000Z",
+      "matchup": "Clemson Tigers @ Syracuse Orange",
+      "edge": 4.7,
+      "edgeTo": "Clemson Tigers",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 2.5,
+      "modelHome": -2.2,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-07T17:30:00.000Z",
+      "matchup": "Duke Blue Devils @ North Carolina State Wolfpack",
+      "edge": 3.7,
+      "edgeTo": "Duke Blue Devils",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 4.5,
+      "modelHome": 0.8,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-07T20:00:00.000Z",
+      "matchup": "Delaware Fightin Blue Hens @ Kennesaw State Owls",
+      "edge": 3,
+      "edgeTo": "Delaware Fightin Blue Hens",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 2.5,
+      "modelHome": -0.5,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-07T20:45:00.000Z",
+      "matchup": "UCF Knights @ Kansas Jayhawks",
+      "edge": 6.6,
+      "edgeTo": "Kansas Jayhawks",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -2.5,
+      "modelHome": 4.1,
+      "nBooks": 7
     },
     {
       "league": "NCAAF",
@@ -57,22 +103,28 @@
       "edge": 6.8,
       "edgeTo": "Florida International Panthers",
       "confidence": "WATCH",
+      "dataClass": "WATCH",
       "marketHome": -4.5,
-      "modelHome": 2.3
+      "modelHome": 2.3,
+      "nBooks": 13
     },
     {
-      "league": "NFL",
-      "kick": "2026-11-17T01:15:00.000Z",
-      "matchup": "Los Angeles Chargers @ Baltimore Ravens",
-      "edge": 6.6,
-      "edgeTo": "Baltimore Ravens",
+      "league": "NCAAF",
+      "kick": "2026-11-08T00:30:00.000Z",
+      "matchup": "Georgia Bulldogs @ Ole Miss Rebels",
+      "edge": 4.9,
+      "edgeTo": "Georgia Bulldogs",
       "confidence": "WATCH",
-      "marketHome": -3.5,
-      "modelHome": 3.1
+      "dataClass": "WATCH",
+      "marketHome": 3.5,
+      "modelHome": -1.4,
+      "nBooks": 7
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": null,
-  "summary": "BIS desk week snapshot: ATS 1-0-0 (n=1, rate=1). Confidence INSUFFICIENT. Helpers: 57 rows in primary watch band (confidence WATCH or unset).. Hurters: 53 STALE_FPI rows — suppress from play consideration.."
+  "aiNarrative": "BIS Signal Desk, 2026 week 8. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 58 rows sit in the research (WATCH) band. 53 STALE_FPI and 70 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 378-361-10 (n=749) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 918 games, money/handle % on 841 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 23 scores. 200 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 378–361–10 (n=749). Issued 0. Public lean on 918 games. Money % on 841 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 23 finals.",
+  "narrativeStatus": "generated",
+  "narrativeModel": "grok-4.6-desk"
 }
