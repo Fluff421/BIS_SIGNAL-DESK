@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T23:54:23.267Z",
+  "generatedAt": "2026-11-03T12:50:45.103Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -16,6 +16,19 @@
       "games": 12,
       "upcoming": 2,
       "rate": 0.444
+    },
+    {
+      "team": "Utah Utes",
+      "league": "NCAAF",
+      "n": 9,
+      "hits": 8,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-11-07T17:00:00.000Z",
+      "games": 12,
+      "upcoming": 3,
+      "rate": 0.889
     },
     {
       "team": "Alabama Crimson Tide",
@@ -135,6 +148,19 @@
       "rate": 0.375
     },
     {
+      "team": "Seattle Seahawks",
+      "league": "NFL",
+      "n": 8,
+      "hits": 2,
+      "misses": 5,
+      "pushes": 1,
+      "lastResult": "miss",
+      "lastKick": "2026-11-03T01:15:00.000Z",
+      "games": 17,
+      "upcoming": 9,
+      "rate": 0.313
+    },
+    {
       "team": "South Florida Bulls",
       "league": "NCAAF",
       "n": 8,
@@ -174,19 +200,6 @@
       "rate": 0.5
     },
     {
-      "team": "Utah Utes",
-      "league": "NCAAF",
-      "n": 8,
-      "hits": 7,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-31T19:45:00.000Z",
-      "games": 12,
-      "upcoming": 4,
-      "rate": 0.875
-    },
-    {
       "team": "Baltimore Ravens",
       "league": "NFL",
       "n": 7,
@@ -209,7 +222,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-31T19:30:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 3,
       "rate": 0.714
     },
     {
@@ -328,19 +341,6 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0.571
-    },
-    {
-      "team": "Seattle Seahawks",
-      "league": "NFL",
-      "n": 7,
-      "hits": 2,
-      "misses": 4,
-      "pushes": 1,
-      "lastResult": "hit",
-      "lastKick": "2026-10-26T00:20:00.000Z",
-      "games": 17,
-      "upcoming": 10,
-      "rate": 0.357
     },
     {
       "team": "Texas State Bobcats",
@@ -794,7 +794,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-23T00:15:00.000Z",
       "games": 17,
-      "upcoming": 10,
+      "upcoming": 9,
       "rate": 0.8
     },
     {
