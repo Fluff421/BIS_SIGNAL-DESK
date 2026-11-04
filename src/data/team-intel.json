@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T03:02:05.559Z",
+  "generatedAt": "2026-11-04T13:07:31.072Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -16,19 +16,6 @@
       "games": 12,
       "upcoming": 2,
       "rate": 0.444
-    },
-    {
-      "team": "Utah Utes",
-      "league": "NCAAF",
-      "n": 9,
-      "hits": 8,
-      "misses": 1,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-11-07T17:00:00.000Z",
-      "games": 12,
-      "upcoming": 3,
-      "rate": 0.889
     },
     {
       "team": "Alabama Crimson Tide",
@@ -107,6 +94,19 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0.625
+    },
+    {
+      "team": "Miami (OH) RedHawks",
+      "league": "NCAAF",
+      "n": 8,
+      "hits": 4,
+      "misses": 4,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-11-04T01:00:00.000Z",
+      "games": 12,
+      "upcoming": 3,
+      "rate": 0.5
     },
     {
       "team": "North Dakota State Bison",
@@ -200,6 +200,19 @@
       "rate": 0.5
     },
     {
+      "team": "Utah Utes",
+      "league": "NCAAF",
+      "n": 8,
+      "hits": 7,
+      "misses": 1,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-10-31T19:45:00.000Z",
+      "games": 12,
+      "upcoming": 4,
+      "rate": 0.875
+    },
+    {
       "team": "Baltimore Ravens",
       "league": "NFL",
       "n": 7,
@@ -222,7 +235,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-31T19:30:00.000Z",
       "games": 12,
-      "upcoming": 3,
+      "upcoming": 4,
       "rate": 0.714
     },
     {
@@ -301,19 +314,6 @@
       "lastKick": "2026-10-31T19:15:00.000Z",
       "games": 12,
       "upcoming": 3,
-      "rate": 0.571
-    },
-    {
-      "team": "Miami (OH) RedHawks",
-      "league": "NCAAF",
-      "n": 7,
-      "hits": 4,
-      "misses": 3,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-24T17:00:00.000Z",
-      "games": 12,
-      "upcoming": 4,
       "rate": 0.571
     },
     {
@@ -993,6 +993,19 @@
       "rate": 0.4
     },
     {
+      "team": "Ohio Bobcats",
+      "league": "NCAAF",
+      "n": 5,
+      "hits": 2,
+      "misses": 3,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-11-04T00:00:00.000Z",
+      "games": 12,
+      "upcoming": 2,
+      "rate": 0.4
+    },
+    {
       "team": "Pittsburgh Steelers",
       "league": "NFL",
       "n": 5,
@@ -1158,7 +1171,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-24T19:30:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 3,
       "rate": 0.5
     },
     {
@@ -1277,19 +1290,6 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0
-    },
-    {
-      "team": "Ohio Bobcats",
-      "league": "NCAAF",
-      "n": 4,
-      "hits": 2,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-18T02:00:00.000Z",
-      "games": 12,
-      "upcoming": 3,
-      "rate": 0.5
     },
     {
       "team": "Philadelphia Eagles",
@@ -2016,7 +2016,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-12T19:30:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 3,
       "rate": 1
     },
     {
