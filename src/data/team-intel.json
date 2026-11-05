@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T03:31:22.813Z",
+  "generatedAt": "2026-11-05T13:16:22.543Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -252,6 +252,19 @@
       "rate": 0.714
     },
     {
+      "team": "Eastern Michigan Eagles",
+      "league": "NCAAF",
+      "n": 7,
+      "hits": 3,
+      "misses": 4,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-11-05T00:30:00.000Z",
+      "games": 12,
+      "upcoming": 2,
+      "rate": 0.429
+    },
+    {
       "team": "Georgia State Panthers",
       "league": "NCAAF",
       "n": 7,
@@ -481,19 +494,6 @@
       "pushes": 0,
       "lastResult": "hit",
       "lastKick": "2026-10-31T19:00:00.000Z",
-      "games": 12,
-      "upcoming": 3,
-      "rate": 0.5
-    },
-    {
-      "team": "Eastern Michigan Eagles",
-      "league": "NCAAF",
-      "n": 6,
-      "hits": 3,
-      "misses": 3,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-24T20:00:00.000Z",
       "games": 12,
       "upcoming": 3,
       "rate": 0.5
@@ -1418,7 +1418,7 @@
       "lastResult": "miss",
       "lastKick": "2026-10-10T19:30:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 3,
       "rate": 0.333
     },
     {
