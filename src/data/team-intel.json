@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T22:39:52.245Z",
+  "generatedAt": "2026-11-05T03:31:22.813Z",
   "policy": "Per-club research ATS vs the stored consensus after a final. This is a library, not an issued record. Do not quote it as the 75% target.",
   "teamCount": 270,
   "withGrades": 170,
@@ -29,6 +29,19 @@
       "games": 12,
       "upcoming": 4,
       "rate": 0.5
+    },
+    {
+      "team": "Georgia Bulldogs",
+      "league": "NCAAF",
+      "n": 8,
+      "hits": 6,
+      "misses": 2,
+      "pushes": 0,
+      "lastResult": "hit",
+      "lastKick": "2026-11-14T16:00:00.000Z",
+      "games": 12,
+      "upcoming": 2,
+      "rate": 0.75
     },
     {
       "team": "Indiana Hoosiers",
@@ -236,19 +249,6 @@
       "lastKick": "2026-10-31T19:30:00.000Z",
       "games": 12,
       "upcoming": 4,
-      "rate": 0.714
-    },
-    {
-      "team": "Georgia Bulldogs",
-      "league": "NCAAF",
-      "n": 7,
-      "hits": 5,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "hit",
-      "lastKick": "2026-10-31T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 2,
       "rate": 0.714
     },
     {
@@ -733,6 +733,19 @@
       "rate": 0.5
     },
     {
+      "team": "Toledo Rockets",
+      "league": "NCAAF",
+      "n": 6,
+      "hits": 2,
+      "misses": 4,
+      "pushes": 0,
+      "lastResult": "miss",
+      "lastKick": "2026-11-05T00:00:00.000Z",
+      "games": 12,
+      "upcoming": 3,
+      "rate": 0.333
+    },
+    {
       "team": "USC Trojans",
       "league": "NCAAF",
       "n": 6,
@@ -1084,16 +1097,16 @@
       "rate": 0.4
     },
     {
-      "team": "Toledo Rockets",
+      "team": "UMass Minutemen",
       "league": "NCAAF",
       "n": 5,
       "hits": 2,
       "misses": 3,
       "pushes": 0,
       "lastResult": "miss",
-      "lastKick": "2026-10-10T19:30:00.000Z",
+      "lastKick": "2026-11-05T00:00:00.000Z",
       "games": 12,
-      "upcoming": 4,
+      "upcoming": 3,
       "rate": 0.4
     },
     {
@@ -1316,19 +1329,6 @@
       "games": 17,
       "upcoming": 9,
       "rate": 0.25
-    },
-    {
-      "team": "UMass Minutemen",
-      "league": "NCAAF",
-      "n": 4,
-      "hits": 2,
-      "misses": 2,
-      "pushes": 0,
-      "lastResult": "miss",
-      "lastKick": "2026-10-03T19:30:00.000Z",
-      "games": 12,
-      "upcoming": 4,
-      "rate": 0.5
     },
     {
       "team": "Utah State Aggies",
@@ -1730,7 +1730,7 @@
       "lastResult": "hit",
       "lastKick": "2026-10-24T19:30:00.000Z",
       "games": 12,
-      "upcoming": 3,
+      "upcoming": 2,
       "rate": 1
     },
     {
@@ -2146,7 +2146,7 @@
       "lastResult": "hit",
       "lastKick": "2026-09-06T02:00:00.000Z",
       "games": 12,
-      "upcoming": 3,
+      "upcoming": 2,
       "rate": 1
     },
     {
