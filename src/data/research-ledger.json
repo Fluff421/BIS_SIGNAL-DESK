@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-05T13:16:12.853Z",
+  "generatedAt": "2026-11-05T22:41:07.684Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 756,
+    "researchN": 757,
     "issuedN": 0,
     "remainingResearch": 0,
-    "watchOnBoard": 57,
-    "observeOnBoard": 234,
+    "watchOnBoard": 59,
+    "observeOnBoard": 239,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=756 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 159–163–6 (n=328)."
+    "note": "Research sample n=757 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 160–163–6 (n=329)."
   },
   "ats": {
-    "hits": 379,
+    "hits": 380,
     "misses": 367,
     "pushes": 10,
-    "n": 756,
-    "rate": 0.508
+    "n": 757,
+    "rate": 0.509
   },
   "cleanBand": {
-    "hits": 159,
+    "hits": 160,
     "misses": 163,
     "pushes": 6,
-    "n": 328,
-    "rate": 0.494,
+    "n": 329,
+    "rate": 0.495,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -483,10 +483,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 64,
-      "publicBetsHome": 36,
-      "publicMoneyAway": 32,
-      "publicMoneyHome": 68,
+      "publicBetsAway": 63,
+      "publicBetsHome": 38,
+      "publicMoneyAway": 30,
+      "publicMoneyHome": 70,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -8778,10 +8778,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 48,
-      "publicBetsHome": 52,
-      "publicMoneyAway": 41,
-      "publicMoneyHome": 59,
+      "publicBetsAway": 46,
+      "publicBetsHome": 54,
+      "publicMoneyAway": 36,
+      "publicMoneyHome": 64,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -8988,10 +8988,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 37,
-      "publicBetsHome": 63,
-      "publicMoneyAway": 18,
-      "publicMoneyHome": 82,
+      "publicBetsAway": 39,
+      "publicBetsHome": 61,
+      "publicMoneyAway": 19,
+      "publicMoneyHome": 81,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -11172,10 +11172,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 63,
-      "publicBetsHome": 37,
-      "publicMoneyAway": 52,
-      "publicMoneyHome": 48,
+      "publicBetsAway": 64,
+      "publicBetsHome": 36,
+      "publicMoneyAway": 55,
+      "publicMoneyHome": 45,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -11468,8 +11468,8 @@
       "dataClass": "ALIGNED",
       "publicBetsAway": 70,
       "publicBetsHome": 30,
-      "publicMoneyAway": 27,
-      "publicMoneyHome": 73,
+      "publicMoneyAway": 29,
+      "publicMoneyHome": 71,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -13692,10 +13692,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 64,
-      "publicBetsHome": 36,
-      "publicMoneyAway": 47,
-      "publicMoneyHome": 53,
+      "publicBetsAway": 63,
+      "publicBetsHome": 37,
+      "publicMoneyAway": 51,
+      "publicMoneyHome": 49,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -15742,7 +15742,7 @@
       "home": "Florida Atlantic Owls",
       "side": "Florida Atlantic Owls",
       "edgeTo": "Florida Atlantic Owls",
-      "marketHome": 6.5,
+      "marketHome": 7,
       "modelHome": 16,
       "actualMargin": -2,
       "homePoints": 14,
@@ -15750,10 +15750,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 48,
-      "publicBetsHome": 52,
-      "publicMoneyAway": 41,
-      "publicMoneyHome": 59,
+      "publicBetsAway": 46,
+      "publicBetsHome": 54,
+      "publicMoneyAway": 36,
+      "publicMoneyHome": 64,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -15763,7 +15763,7 @@
       "home": "Southern Miss Golden Eagles",
       "side": "James Madison Dukes",
       "edgeTo": "James Madison Dukes",
-      "marketHome": 14.5,
+      "marketHome": 13.5,
       "modelHome": -20.8,
       "actualMargin": -3,
       "homePoints": 24,
@@ -15771,10 +15771,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 63,
-      "publicBetsHome": 37,
-      "publicMoneyAway": 52,
-      "publicMoneyHome": 48,
+      "publicBetsAway": 64,
+      "publicBetsHome": 36,
+      "publicMoneyAway": 55,
+      "publicMoneyHome": 45,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -15813,10 +15813,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 37,
-      "publicBetsHome": 63,
-      "publicMoneyAway": 18,
-      "publicMoneyHome": 82,
+      "publicBetsAway": 39,
+      "publicBetsHome": 61,
+      "publicMoneyAway": 19,
+      "publicMoneyHome": 81,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -15826,7 +15826,7 @@
       "home": "Troy Trojans",
       "side": "Louisiana Tech Bulldogs",
       "edgeTo": "Louisiana Tech Bulldogs",
-      "marketHome": 4.5,
+      "marketHome": 5.5,
       "modelHome": -5.2,
       "actualMargin": 39,
       "homePoints": 39,
@@ -15838,6 +15838,27 @@
       "publicBetsHome": 0,
       "publicMoneyAway": 0,
       "publicMoneyHome": 0,
+      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-07T17:00:00.000Z",
+      "away": "BYU Cougars",
+      "home": "Utah Utes",
+      "side": "Utah Utes",
+      "edgeTo": "Utah Utes",
+      "marketHome": -4.5,
+      "modelHome": 5.9,
+      "actualMargin": 8,
+      "homePoints": 21,
+      "awayPoints": 13,
+      "result": "hit",
+      "class": "RESEARCH",
+      "dataClass": "HIGH_NOISE",
+      "publicBetsAway": 63,
+      "publicBetsHome": 37,
+      "publicMoneyAway": 51,
+      "publicMoneyHome": 49,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
