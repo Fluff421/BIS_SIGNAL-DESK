@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-06T22:09:05.025Z",
+  "generatedAt": "2026-11-07T02:51:57.513Z",
   "policy": "Research grades are library/WATCH observations vs the stored Action Network consensus after a final. They are not issued plays. Do not quote them as the 75% issued-ATS target.",
   "pathTo30": {
-    "researchN": 758,
+    "researchN": 756,
     "issuedN": 0,
     "remainingResearch": 0,
     "watchOnBoard": 57,
-    "observeOnBoard": 238,
+    "observeOnBoard": 240,
     "libraryOnBoard": 1159,
     "teamsCovered": 270,
-    "note": "Research sample n=758 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 161–163–6 (n=330)."
+    "note": "Research sample n=756 (≥30). Issued 75% still requires human-approved issued sides. Clean-band diagnostic 160–163–6 (n=329)."
   },
   "ats": {
-    "hits": 382,
-    "misses": 366,
+    "hits": 381,
+    "misses": 365,
     "pushes": 10,
-    "n": 758,
+    "n": 756,
     "rate": 0.511
   },
   "cleanBand": {
-    "hits": 161,
+    "hits": 160,
     "misses": 163,
     "pushes": 6,
-    "n": 330,
-    "rate": 0.497,
+    "n": 329,
+    "rate": 0.495,
     "note": "WATCH leans plus |spread|<14, excluding STALE_FPI blowouts. Still not issued."
   },
   "rows": [
@@ -483,10 +483,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "WATCH",
-      "publicBetsAway": 0,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 26,
-      "publicMoneyHome": 74,
+      "publicBetsAway": 44,
+      "publicBetsHome": 56,
+      "publicMoneyAway": 21,
+      "publicMoneyHome": 79,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -1260,10 +1260,10 @@
       "result": "hit",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 0,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 0,
-      "publicMoneyHome": 0,
+      "publicBetsAway": 54,
+      "publicBetsHome": 46,
+      "publicMoneyAway": 82,
+      "publicMoneyHome": 18,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -8990,8 +8990,8 @@
       "dataClass": "STALE_FPI",
       "publicBetsAway": 36,
       "publicBetsHome": 64,
-      "publicMoneyAway": 20,
-      "publicMoneyHome": 80,
+      "publicMoneyAway": 19,
+      "publicMoneyHome": 81,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -11487,10 +11487,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "ALIGNED",
-      "publicBetsAway": 56,
-      "publicBetsHome": 44,
-      "publicMoneyAway": 35,
-      "publicMoneyHome": 65,
+      "publicBetsAway": 57,
+      "publicBetsHome": 43,
+      "publicMoneyAway": 39,
+      "publicMoneyHome": 61,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -13715,8 +13715,8 @@
       "dataClass": "HIGH_NOISE",
       "publicBetsAway": 61,
       "publicBetsHome": 39,
-      "publicMoneyAway": 50,
-      "publicMoneyHome": 50,
+      "publicMoneyAway": 51,
+      "publicMoneyHome": 49,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -14574,10 +14574,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "STALE_FPI",
-      "publicBetsAway": 56,
-      "publicBetsHome": 44,
-      "publicMoneyAway": 54,
-      "publicMoneyHome": 46,
+      "publicBetsAway": 53,
+      "publicBetsHome": 47,
+      "publicMoneyAway": 48,
+      "publicMoneyHome": 52,
       "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
     },
     {
@@ -15800,33 +15800,12 @@
     },
     {
       "league": "NCAAF",
-      "kick": "2026-11-07T21:00:00.000Z",
-      "away": "Rice Owls",
-      "home": "North Texas Mean Green",
-      "side": "North Texas Mean Green",
-      "edgeTo": "North Texas Mean Green",
-      "marketHome": -16.5,
-      "modelHome": 40.9,
-      "actualMargin": 7,
-      "homePoints": 48,
-      "awayPoints": 41,
-      "result": "miss",
-      "class": "RESEARCH",
-      "dataClass": "STALE_FPI",
-      "publicBetsAway": 56,
-      "publicBetsHome": 44,
-      "publicMoneyAway": 54,
-      "publicMoneyHome": 46,
-      "note": "Market-favorite ATS vs stored consensus after final. Library grade. Not an issued play."
-    },
-    {
-      "league": "NCAAF",
       "kick": "2026-11-07T21:15:00.000Z",
       "away": "Vanderbilt Commodores",
       "home": "Mississippi State Bulldogs",
       "side": "Mississippi State Bulldogs",
       "edgeTo": "Mississippi State Bulldogs",
-      "marketHome": -3,
+      "marketHome": -2.5,
       "modelHome": 10,
       "actualMargin": 24,
       "homePoints": 38,
@@ -15836,8 +15815,8 @@
       "dataClass": "HIGH_NOISE",
       "publicBetsAway": 36,
       "publicBetsHome": 64,
-      "publicMoneyAway": 20,
-      "publicMoneyHome": 80,
+      "publicMoneyAway": 19,
+      "publicMoneyHome": 81,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
@@ -15855,31 +15834,10 @@
       "result": "miss",
       "class": "RESEARCH",
       "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 0,
-      "publicBetsHome": 0,
-      "publicMoneyAway": 0,
-      "publicMoneyHome": 0,
-      "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-11-07T17:00:00.000Z",
-      "away": "BYU Cougars",
-      "home": "Utah Utes",
-      "side": "Utah Utes",
-      "edgeTo": "Utah Utes",
-      "marketHome": -4.5,
-      "modelHome": 5.9,
-      "actualMargin": 8,
-      "homePoints": 21,
-      "awayPoints": 13,
-      "result": "hit",
-      "class": "RESEARCH",
-      "dataClass": "HIGH_NOISE",
-      "publicBetsAway": 61,
-      "publicBetsHome": 39,
-      "publicMoneyAway": 50,
-      "publicMoneyHome": 50,
+      "publicBetsAway": 54,
+      "publicBetsHome": 46,
+      "publicMoneyAway": 82,
+      "publicMoneyHome": 18,
       "note": "Model lean graded vs stored Action Network consensus after final. Not an issued play."
     },
     {
