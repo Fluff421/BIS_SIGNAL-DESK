@@ -1,7 +1,7 @@
 {
   "week": 9,
   "season": 2026,
-  "generatedAt": "2026-11-07T20:56:09.312Z",
+  "generatedAt": "2026-11-08T02:32:14.904Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -11,43 +11,19 @@
     "rate": null
   },
   "helpers": [
-    "225 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 55 inside the 3–7 pt issuance band.",
-    "Library covers 270 clubs across 1159 games. Research grades 391–370–10 (n=771).",
-    "Public lean: bet/pick % on 934 games. Money/handle % on 859 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 21 finals. 219 games with a 10-pt+ divergence."
+    "203 upcoming games in the research slate (entire posted NFL + NCAAF weeks), 52 inside the 3–7 pt issuance band.",
+    "Library covers 270 clubs across 1159 games. Research grades 400–385–10 (n=795).",
+    "Public lean: bet/pick % on 936 games. Money/handle % on 861 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay filled 21 finals. 218 games with a 10-pt+ divergence."
   ],
   "hurters": [
     "Issued n remains 0 — 75% ATS is still a target, not a measured rate.",
-    "300 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
-    "51 STALE_FPI and 67 HIGH_NOISE upcoming rows stay suppressed for issuance."
+    "298 library games still have no handle split (SportsBettingDime covers the live slate; completed weeks keep the last persisted snapshot).",
+    "42 STALE_FPI and 64 HIGH_NOISE upcoming rows stay suppressed for issuance."
   ],
   "modelAdjustments": [
     "Do not raise playThreshold until n≥30 issued and selective hit rate supports it"
   ],
   "topGamesNextWeek": [
-    {
-      "league": "NCAAF",
-      "kick": "2026-11-07T17:30:00.000Z",
-      "matchup": "Duke Blue Devils @ North Carolina State Wolfpack",
-      "edge": 3.7,
-      "edgeTo": "Duke Blue Devils",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": 4.5,
-      "modelHome": 0.8,
-      "nBooks": 9
-    },
-    {
-      "league": "NCAAF",
-      "kick": "2026-11-07T20:30:00.000Z",
-      "matchup": "Western Kentucky Hilltoppers @ Middle Tennessee Blue Raiders",
-      "edge": 3.7,
-      "edgeTo": "Middle Tennessee Blue Raiders",
-      "confidence": "WATCH",
-      "dataClass": "WATCH",
-      "marketHome": 2.5,
-      "modelHome": 6.2,
-      "nBooks": 9
-    },
     {
       "league": "NCAAF",
       "kick": "2026-11-08T00:30:00.000Z",
@@ -100,11 +76,11 @@
       "league": "NFL",
       "kick": "2026-11-08T21:25:00.000Z",
       "matchup": "Green Bay Packers @ New England Patriots",
-      "edge": 3.6,
+      "edge": 4.1,
       "edgeTo": "New England Patriots",
       "confidence": "WATCH",
       "dataClass": "WATCH",
-      "marketHome": -3,
+      "marketHome": -3.5,
       "modelHome": 0.6,
       "nBooks": 9
     },
@@ -119,12 +95,36 @@
       "marketHome": 3,
       "modelHome": -2.4,
       "nBooks": 9
+    },
+    {
+      "league": "NFL",
+      "kick": "2026-11-13T01:15:00.000Z",
+      "matchup": "Washington Commanders @ New York Giants",
+      "edge": 3.1,
+      "edgeTo": "New York Giants",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": -1.5,
+      "modelHome": 1.6,
+      "nBooks": 7
+    },
+    {
+      "league": "NCAAF",
+      "kick": "2026-11-14T16:00:00.000Z",
+      "matchup": "Louisville Cardinals @ North Carolina Tar Heels",
+      "edge": 5.6,
+      "edgeTo": "Louisville Cardinals",
+      "confidence": "WATCH",
+      "dataClass": "WATCH",
+      "marketHome": 2.5,
+      "modelHome": -3.1,
+      "nBooks": 3
     }
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 9. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 55 rows sit in the research (WATCH) band. 51 STALE_FPI and 67 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 391-370-10 (n=771) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 934 games, money/handle % on 859 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 21 scores. 219 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
-  "summary": "Library 1159 games / 270 clubs. Research 391–370–10 (n=771). Issued 0. Public lean on 934 games. Money % on 859 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 21 finals.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 9. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 52 rows sit in the research (WATCH) band. 42 STALE_FPI and 64 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 400-385-10 (n=795) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 936 games, money/handle % on 861 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 21 scores. 218 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "summary": "Library 1159 games / 270 clubs. Research 400–385–10 (n=795). Issued 0. Public lean on 936 games. Money % on 861 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 21 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
 }
