@@ -1,7 +1,7 @@
 {
-  "week": 9,
+  "week": 10,
   "season": 2026,
-  "generatedAt": "2026-11-11T23:29:18.670Z",
+  "generatedAt": "2026-11-12T13:49:32.026Z",
   "confidenceTier": "INSUFFICIENT",
   "atsRecord": {
     "hits": 0,
@@ -123,7 +123,7 @@
   ],
   "engine": "FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.",
   "watchThreshold": 3,
-  "aiNarrative": "BIS Signal Desk, 2026 week 9. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 54 rows sit in the research (WATCH) band. 53 STALE_FPI and 65 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 417-399-11 (n=827) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 972 games, money/handle % on 897 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 0 scores. 248 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
+  "aiNarrative": "BIS Signal Desk, 2026 week 10. Engine: FPI + HFA only. Ensemble weight = 0 until n>=30 graded sides.. Issued ATS is 0-0-0 (n=0). The 75% target is not measurable. Do not quote a hit rate. 54 rows sit in the research (WATCH) band. 53 STALE_FPI and 65 HIGH_NOISE rows stay suppressed. Issued plays: 0. Library 1159 games / 270 clubs. Research 417-399-11 (n=827) vs stored consensus after finals — diagnostic, not issued. Public lean: ticket/pick % on 972 games, money/handle % on 897 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted snapshots). ESPN overlay filled 0 scores. 248 games show a 10-pt money-versus-tickets gap. An LLM cannot promote a row to ISSUED. Human review and n>=30 graded issued sides remain hard gates.",
   "summary": "Library 1159 games / 270 clubs. Research 417–399–11 (n=827). Issued 0. Public lean on 972 games. Money % on 897 (SportsBettingDime + WiseGuyTeam + ScoresAndOdds + WagerTalk + persisted). ESPN overlay 0 finals.",
   "narrativeStatus": "generated",
   "narrativeModel": "grok-4.6-desk"
