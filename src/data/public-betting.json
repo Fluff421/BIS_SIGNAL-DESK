@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T22:44:54.717Z",
+  "generatedAt": "2026-11-13T03:26:53.965Z",
   "source": "SportsBettingDime (ticket % + money/handle % on the live NFL/NCAAF slate) + WiseGuyTeam sharp-report (ticket % + money/handle %) + ScoresAndOdds consensus + Action Network scoreboard (ticket volume) + WagerTalk consensus + SBR spread pick % + Covers contest pick %",
   "methodology": "Ticket/bet % prefers SportsBettingDime spread betsPercentage, then WiseGuyTeam, then Action Network public figures, then ScoresAndOdds, then WagerTalk, then SBR pick %, then Covers contest pick %. Money/handle % prefers SportsBettingDime stakePercentage, then WiseGuyTeam handle share, then ScoresAndOdds, then WagerTalk, then Action Network featured-game money %, then the last persisted snapshot so completed games keep their split. Covers/SBR are pick shares, not licensed sportsbook handle. Divergence = money% − ticket% on the away side when both exist. A 10-pt+ divergence is a research flag, not a ticket.",
   "quality": "provisional",
