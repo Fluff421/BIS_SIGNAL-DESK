@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T00:50:07.761Z",
+  "generatedAt": "2026-11-17T14:32:45.245Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -20,16 +20,16 @@
   },
   "espn": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "fallbackActive": false,
-    "reason": "CDN + site.web.api week boards. NFL 149 (148 final), NCAAF 768 (743 final). Overlayed 0 library scores.",
+    "reason": "CDN + site.web.api week boards. NFL 149 (149 final), NCAAF 768 (743 final). Overlayed 0 library scores.",
     "httpStatus": 200,
     "scoreboard": "healthy",
     "fpiSource": "cfbd-fallback",
     "nflEvents": 149,
     "ncaafEvents": 768,
     "ncaafFinals": 743,
-    "nflFinals": 148,
+    "nflFinals": 149,
     "overlayApplied": 0
   },
   "grok": {
@@ -43,7 +43,7 @@
   },
   "actionnetwork": {
     "status": "degraded",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
     "nflEvents": 0,
     "ncaafEvents": 0,
@@ -54,59 +54,59 @@
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
-    "rows": 79,
-    "reason": "Contest pick % on 79 matchups (not licensed handle)."
+    "rows": 78,
+    "reason": "Contest pick % on 78 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
-    "rows": 144,
+    "rows": 143,
     "reason": "Consensus spread pick % on 735 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
-    "rows": 1,
-    "nfl": 1,
-    "ncaaf": 0,
+    "rows": 3,
+    "nfl": 0,
+    "ncaaf": 3,
     "matchedMoney": 520,
-    "reason": "Live consensus sheet: 1 football rows with ticket/money %. Matched onto 520 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
+    "reason": "Live consensus sheet: 3 football rows with ticket/money %. Matched onto 520 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
-    "rows": 19,
-    "nfl": 14,
-    "ncaaf": 5,
+    "rows": 26,
+    "nfl": 13,
+    "ncaaf": 13,
     "matched": 685,
     "money": 680,
-    "reason": "Consensus picks page: 19 spread cards with ticket + money % (NFL 14, NCAAF 5). Matched onto 685 library games, money on 680."
+    "reason": "Consensus picks page: 26 spread cards with ticket + money % (NFL 13, NCAAF 13). Matched onto 685 library games, money on 680."
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
-    "rows": 111,
-    "nfl": 30,
+    "rows": 110,
+    "nfl": 29,
     "ncaaf": 81,
     "matched": 781,
     "money": 781,
-    "reason": "Live ticket % and money/handle % on 111 games (NFL 30, NCAAF 81). Matched onto 781 library games."
+    "reason": "Live ticket % and money/handle % on 110 games (NFL 29, NCAAF 81). Matched onto 781 library games."
   },
   "wiseguyteam": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-17T00:50:07.761Z",
+    "lastSuccessAt": "2026-11-17T14:32:45.245Z",
     "httpStatus": 200,
-    "rows": 172,
-    "nfl": 103,
+    "rows": 171,
+    "nfl": 102,
     "ncaaf": 69,
     "matched": 731,
     "money": 731,
-    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 172 games (NFL 103, NCAAF 69). Matched onto 731 library games."
+    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 171 games (NFL 102, NCAAF 69). Matched onto 731 library games."
   }
 }
