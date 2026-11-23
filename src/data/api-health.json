@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T03:44:12.981Z",
+  "generatedAt": "2026-11-23T16:05:11.940Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -20,16 +20,16 @@
   },
   "espn": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "fallbackActive": false,
-    "reason": "CDN + site.web.api week boards. NFL 148 (146 final), NCAAF 759 (759 final). Overlayed 0 library scores.",
+    "reason": "CDN + site.web.api week boards. NFL 148 (147 final), NCAAF 759 (759 final). Overlayed 0 library scores.",
     "httpStatus": 200,
     "scoreboard": "healthy",
     "fpiSource": "cfbd-fallback",
     "nflEvents": 148,
     "ncaafEvents": 759,
     "ncaafFinals": 759,
-    "nflFinals": 146,
+    "nflFinals": 147,
     "overlayApplied": 0
   },
   "grok": {
@@ -43,7 +43,7 @@
   },
   "actionnetwork": {
     "status": "degraded",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
     "nflEvents": 0,
     "ncaafEvents": 0,
@@ -54,59 +54,59 @@
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
-    "rows": 68,
-    "reason": "Contest pick % on 68 matchups (not licensed handle)."
+    "rows": 76,
+    "reason": "Contest pick % on 76 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
     "rows": 92,
     "reason": "Consensus spread pick % on 735 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
-    "rows": 11,
-    "nfl": 11,
+    "rows": 1,
+    "nfl": 1,
     "ncaaf": 0,
     "matchedMoney": 520,
-    "reason": "Live consensus sheet: 11 football rows with ticket/money %. Matched onto 520 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
+    "reason": "Live consensus sheet: 1 football rows with ticket/money %. Matched onto 520 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
-    "rows": 73,
+    "rows": 13,
     "nfl": 13,
-    "ncaaf": 60,
+    "ncaaf": 0,
     "matched": 685,
     "money": 680,
-    "reason": "Consensus picks page: 73 spread cards with ticket + money % (NFL 13, NCAAF 60). Matched onto 685 library games, money on 680."
+    "reason": "Consensus picks page: 13 spread cards with ticket + money % (NFL 13, NCAAF 0). Matched onto 685 library games, money on 680."
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
-    "rows": 112,
-    "nfl": 32,
+    "rows": 111,
+    "nfl": 31,
     "ncaaf": 80,
     "matched": 781,
     "money": 781,
-    "reason": "Live ticket % and money/handle % on 112 games (NFL 32, NCAAF 80). Matched onto 781 library games."
+    "reason": "Live ticket % and money/handle % on 111 games (NFL 31, NCAAF 80). Matched onto 781 library games."
   },
   "wiseguyteam": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-23T03:44:12.981Z",
+    "lastSuccessAt": "2026-11-23T16:05:11.940Z",
     "httpStatus": 200,
-    "rows": 163,
-    "nfl": 91,
-    "ncaaf": 72,
+    "rows": 168,
+    "nfl": 90,
+    "ncaaf": 78,
     "matched": 731,
     "money": 731,
-    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 163 games (NFL 91, NCAAF 72). Matched onto 731 library games."
+    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 168 games (NFL 90, NCAAF 78). Matched onto 731 library games."
   }
 }
