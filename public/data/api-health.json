@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T03:21:16.762Z",
+  "generatedAt": "2026-11-24T15:56:35.385Z",
   "odds": {
     "status": "healthy",
     "lastSuccessAt": "2026-09-02T18:37:02Z",
@@ -20,16 +20,16 @@
   },
   "espn": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "fallbackActive": false,
-    "reason": "CDN + site.web.api week boards. NFL 148 (147 final), NCAAF 778 (754 final). Overlayed 0 library scores.",
+    "reason": "CDN + site.web.api week boards. NFL 148 (148 final), NCAAF 778 (754 final). Overlayed 0 library scores.",
     "httpStatus": 200,
     "scoreboard": "healthy",
     "fpiSource": "cfbd-fallback",
     "nflEvents": 148,
     "ncaafEvents": 778,
     "ncaafFinals": 754,
-    "nflFinals": 147,
+    "nflFinals": 148,
     "overlayApplied": 0
   },
   "grok": {
@@ -43,7 +43,7 @@
   },
   "actionnetwork": {
     "status": "degraded",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
     "nflEvents": 0,
     "ncaafEvents": 0,
@@ -54,59 +54,59 @@
   },
   "covers": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
-    "rows": 78,
-    "reason": "Contest pick % on 78 matchups (not licensed handle)."
+    "rows": 79,
+    "reason": "Contest pick % on 79 matchups (not licensed handle)."
   },
   "sbr": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
     "rows": 95,
     "reason": "Consensus spread pick % on 735 matched library games."
   },
   "wagertalk": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
-    "rows": 1,
-    "nfl": 1,
-    "ncaaf": 0,
+    "rows": 2,
+    "nfl": 0,
+    "ncaaf": 2,
     "matchedMoney": 520,
-    "reason": "Live consensus sheet: 1 football rows with ticket/money %. Matched onto 520 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
+    "reason": "Live consensus sheet: 2 football rows with ticket/money %. Matched onto 520 library games. Weekday slates are thin; Thursday–Sunday fills the tape."
   },
   "scoresandodds": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
-    "rows": 14,
-    "nfl": 13,
-    "ncaaf": 1,
+    "rows": 20,
+    "nfl": 16,
+    "ncaaf": 4,
     "matched": 685,
     "money": 680,
-    "reason": "Consensus picks page: 14 spread cards with ticket + money % (NFL 13, NCAAF 1). Matched onto 685 library games, money on 680."
+    "reason": "Consensus picks page: 20 spread cards with ticket + money % (NFL 16, NCAAF 4). Matched onto 685 library games, money on 680."
   },
   "sportsbettingdime": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
-    "rows": 111,
-    "nfl": 31,
+    "rows": 110,
+    "nfl": 30,
     "ncaaf": 80,
     "matched": 781,
     "money": 781,
-    "reason": "Live ticket % and money/handle % on 111 games (NFL 31, NCAAF 80). Matched onto 781 library games."
+    "reason": "Live ticket % and money/handle % on 110 games (NFL 30, NCAAF 80). Matched onto 781 library games."
   },
   "wiseguyteam": {
     "status": "healthy",
-    "lastSuccessAt": "2026-11-24T03:21:16.762Z",
+    "lastSuccessAt": "2026-11-24T15:56:35.385Z",
     "httpStatus": 200,
     "rows": 168,
-    "nfl": 90,
-    "ncaaf": 78,
+    "nfl": 89,
+    "ncaaf": 79,
     "matched": 731,
     "money": 731,
-    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 168 games (NFL 90, NCAAF 78). Matched onto 731 library games."
+    "reason": "WiseGuyTeam sharp-report: ticket % and money/handle % on 168 games (NFL 89, NCAAF 79). Matched onto 731 library games."
   }
 }
