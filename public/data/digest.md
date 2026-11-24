@@ -1,4 +1,4 @@
-# Weekly digest — 2026-11-16
+# Weekly digest — 2026-11-24
 
 **Confidence:** INSUFFICIENT
 
